@@ -94,13 +94,10 @@ Pushing a version tag (`git tag v0.1.0 && git push origin v0.1.0`) runs `.github
 
 Moving the floating `v0` tag afterwards (`git tag -f v0 v0.1.0 && git push -f origin v0`) doesn't start a release.
 
-Then list the MCP server in the [MCP registry](https://github.com/modelcontextprotocol/registry) by hand, once the
-package is on PyPI (the registry reads the `mcp-name` line in the README that PyPI shows):
+When the release run succeeds, `.github/workflows/mcp-registry.yml` lists the MCP server in the
+[MCP registry](https://github.com/modelcontextprotocol/registry) (the registry reads the `mcp-name` line in the README
+that PyPI shows). It signs in with GitHub's OIDC token, which proves the `io.github.stackvitals` namespace; a browser
+sign-in can't, because it can't read organization roles. To list again by hand: `gh workflow run mcp-registry.yml`.
 
-```sh
-mcp-publisher login github     # a browser sign-in as a member of the owner named in server.json
-mcp-publisher publish          # from the repo root; reads server.json
-```
-
-Bump `version` in `server.json` (both places) with the package version before each listing.
+Bump `version` in `server.json` (both places) with the package version before each release.
 
