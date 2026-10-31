@@ -1,0 +1,26 @@
+repo,url,truth,stackvitals_source,stackvitals_right,devlake_right,merges_right
+AnyayayPlus/Chemistry-Note,https://github.com/AnyayayPlus/Chemistry-Note/actions,deploy_workflow every_merge,deploy_workflow,True,True,True
+Comcast/react-data-grid,https://github.com/Comcast/react-data-grid/actions,release_workflow releases,release_workflow,True,False,False
+Lingyan000/fluxdo,https://github.com/Lingyan000/fluxdo/actions,release_workflow releases,releases,True,False,False
+Naptie/nearcade,https://github.com/Naptie/nearcade/actions,deploy_workflow deployments every_merge,deployments,True,False,True
+The-OpenROAD-Project/OpenROAD-flow-scripts,https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/actions,none,none,True,True,False
+TryGhost/Ghost-CLI,https://github.com/TryGhost/Ghost-CLI/actions,releases,releases,True,False,False
+Yakifo/amqtt,https://github.com/Yakifo/amqtt/actions,deployments release_workflow releases,releases,True,False,False
+aegis-aead/libaegis,https://github.com/aegis-aead/libaegis/actions,releases,releases,True,False,False
+aeonfun/aeon,https://github.com/aeonfun/aeon/actions,none,none,True,True,False
+baggepinnen/LowLevelParticleFilters.jl,https://github.com/baggepinnen/LowLevelParticleFilters.jl/actions,releases,releases,True,False,False
+bartfeenstra/betty,https://github.com/bartfeenstra/betty/actions,release_workflow releases,releases,True,False,False
+chipsec/chipsec,https://github.com/chipsec/chipsec/actions,releases,releases,True,False,False
+convox/convox,https://github.com/convox/convox/actions,deploy_workflow release_workflow releases,releases,True,False,False
+cwida/duckpgq-extension,https://github.com/cwida/duckpgq-extension/actions,none,none,True,True,False
+edwardgushchin/SDL3-CS,https://github.com/edwardgushchin/SDL3-CS/actions,deployments releases,deployments,True,False,False
+electron/forge,https://github.com/electron/forge/actions,deployments releases,releases,True,False,False
+enjoy-digital/litedram,https://github.com/enjoy-digital/litedram/actions,release_workflow,none,False,False,False
+firedancer-io/firedancer,https://github.com/firedancer-io/firedancer/actions,releases,releases,True,False,False
+go-delve/mcp-dap-server,https://github.com/go-delve/mcp-dap-server/actions,release_workflow releases,none,False,False,False
+google/jetpack-camera-app,https://github.com/google/jetpack-camera-app/actions,none,none,True,True,False
+leanprover-community/quote4,https://github.com/leanprover-community/quote4/actions,none,none,True,True,False
+openstyles/stylus,https://github.com/openstyles/stylus/actions,release_workflow releases,releases,True,False,False
+oxidecomputer/console,https://github.com/oxidecomputer/console/actions,deploy_workflow deployments every_merge,deployments,True,False,True
+preloopdev/preloop,https://github.com/preloopdev/preloop/actions,release_workflow releases,releases,True,False,False
+tracel-ai/burn-onnx,https://github.com/tracel-ai/burn-onnx/actions,release_workflow releases,releases,True,False,False

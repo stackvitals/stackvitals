@@ -1,0 +1,76 @@
+{
+ "busiest_reviewers": {
+  "by_repo": {
+   "biggest": {
+    "items": 50,
+    "repo": "vitejs/vite",
+    "share": 0.0422
+   },
+   "boot_high": 0.8688,
+   "boot_low": 0.695,
+   "k": 932,
+   "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+   "n": 1186,
+   "repo_wilson_high": 0.9008,
+   "repo_wilson_low": 0.5973,
+   "repos": 26,
+   "without_biggest": {
+    "high": 0.8022,
+    "k": 885,
+    "low": 0.754,
+    "n": 1136
+   }
+  },
+  "high": 0.8082,
+  "hits": 932,
+  "low": 0.7616,
+  "share": 0.7858
+ },
+ "held_out": {
+  "busiest_reviewers": 405,
+  "prs": 555,
+  "suggested": 440
+ },
+ "last_per_repo": 50,
+ "prs": 1186,
+ "repos": 26,
+ "suggested": {
+  "by_repo": {
+   "biggest": {
+    "items": 50,
+    "repo": "vitejs/vite",
+    "share": 0.0422
+   },
+   "boot_high": 0.8888,
+   "boot_low": 0.7477,
+   "k": 975,
+   "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+   "n": 1186,
+   "repo_wilson_high": 0.924,
+   "repo_wilson_low": 0.6373,
+   "repos": 26,
+   "without_biggest": {
+    "high": 0.8391,
+    "k": 929,
+    "low": 0.7943,
+    "n": 1136
+   }
+  },
+  "high": 0.8428,
+  "hits": 975,
+  "low": 0.7993,
+  "share": 0.8221
+ },
+ "suggested_vs_busiest": {
+  "only_a": 93,
+  "only_b": 50,
+  "p": 0.000406,
+  "significant": true,
+  "test": "McNemar exact"
+ },
+ "tune": {
+  "busiest_reviewers": 527,
+  "prs": 631,
+  "suggested": 535
+ }
+}

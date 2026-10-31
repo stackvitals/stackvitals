@@ -1,0 +1,16 @@
+StackVitals
+Copyright the StackVitals contributors. Licensed under the Apache License, Version 2.0 (see LICENSE).
+The published benchmark data and accuracy labels under bench/ are licensed under CC BY 4.0 (see bench/LICENSE-DATA.md).
+
+This product includes software from other projects, under their own licences:
+
+- Apache DevLake (https://github.com/apache/incubator-devlake), Apache License 2.0. The DORA, GitHub, Engineering
+  Overview and Contributor Experience dashboard SQL in src/stackvitals/core/devlake_dora.sql and
+  src/stackvitals/core/explore.py is ported from DevLake's Grafana dashboards to DuckDB; the changes are listed at the top
+  of devlake_dora.sql. Copyright The Apache Software Foundation.
+- The web app's bundled libraries and font (Preact, uPlot, the IBM Plex fonts, TweetNaCl and others) are listed with
+  their licences in src/stackvitals/web/app/LICENSES.md.
+- OSV-Scanner (https://github.com/google/osv-scanner), Apache License 2.0, is downloaded at run time (pinned by SHA-256),
+  not redistributed.
+- The Connections page draws product logos from simple-icons (https://simpleicons.org), CC0 1.0; the marks are
+  trademarks of their owners and are shown only to name each integration.

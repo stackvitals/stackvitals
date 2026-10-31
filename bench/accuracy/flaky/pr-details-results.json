@@ -1,0 +1,230 @@
+{
+ "labelled_items": 231,
+ "repos": 47,
+ "repos_with_edit_workflows": 16,
+ "fired": 24,
+ "fired_repos": 4,
+ "caused_by_change": 1,
+ "caused_low": 0.0074,
+ "caused_high": 0.2024,
+ "verdict_before": {
+  "new": 2,
+  "known flaky": 21,
+  "flaked before": 1
+ },
+ "by_repo": {
+  "repos": 4,
+  "k": 1,
+  "n": 24,
+  "boot_low": 0.0,
+  "boot_high": 0.5,
+  "repo_wilson_low": 0.0017,
+  "repo_wilson_high": 0.5307,
+  "biggest": {
+   "repo": "DataDog/datadog-api-client-go",
+   "items": 18,
+   "share": 0.75
+  },
+  "without_biggest": {
+   "k": 1,
+   "n": 6,
+   "low": 0.0301,
+   "high": 0.5635
+  },
+  "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once"
+ },
+ "matched": [
+  {
+   "repo": "chroma-core/chroma",
+   "job": "Check PR Title",
+   "caused": "yes",
+   "was": [
+    "new"
+   ]
+  },
+  {
+   "repo": "databendlabs/databend",
+   "job": "ai_assistance",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "databendlabs/databend",
+   "job": "ai_assistance",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "databendlabs/databend",
+   "job": "ai_assistance",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "databendlabs/databend",
+   "job": "ai_assistance",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "flaked before"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "DataDog/datadog-api-client-go",
+   "job": "changelog",
+   "caused": "no",
+   "was": [
+    "known flaky"
+   ]
+  },
+  {
+   "repo": "kili-technology/kili-python-sdk",
+   "job": "Validate PR title 2",
+   "caused": "no",
+   "was": [
+    "new"
+   ]
+  }
+ ]
+}

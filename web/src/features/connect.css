@@ -1,0 +1,153 @@
+/* Connect GitHub, the repo picker, the Welcome screen and setup's plan and live steps. Loads with Welcome and Setup only. */
+.gh-avatar { border-radius: 50%; flex: none; background: var(--surface-2); display: grid; place-items: center; color: var(--ink-3); object-fit: cover; }
+.account-bar { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.account-bar.is-compact { gap: 8px; font-size: 13.5px; }
+.account-text { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; }
+.account-text small { color: var(--ink-2); font-size: 12.5px; }
+.account-bar.is-compact .account-text small { display: none; }
+
+.connect { display: flex; flex-direction: column; gap: 14px; }
+.connect-or { display: flex; align-items: center; gap: 10px; color: var(--ink-3); font-size: 13px; margin: 0; }
+.connect-or::before, .connect-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.connect-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.connect-steps > li { display: flex; gap: 12px; align-items: flex-start; }
+.connect-steps > li > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.connect-steps > li > div > .field { width: 100%; margin: 0; }
+.connect-steps p { margin: 0; color: var(--ink-2); font-size: 14px; }
+.step-n { width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px; display: grid; place-items: center; flex: none; margin-top: 1px; }
+.connect-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; flex-wrap: wrap; }
+.remember { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; }
+.pick-hint { margin: 2px 0 0; padding: 10px 12px; border: 1px dashed var(--line-strong); border-radius: 12px; font-size: 13px; width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.pick-hint-row { display: flex; align-items: center; gap: 8px; color: var(--ink-3); }
+.pick-hint-row.is-on { color: var(--ink); font-weight: 600; }
+.pick-hint .radio { width: 14px; height: 14px; border-radius: 50%; border: 1.6px solid var(--line-strong); flex: none; }
+.pick-hint .radio.is-on { border: 4px solid var(--accent); }
+.pick-hint-chip { margin-left: auto; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line-strong); color: var(--ink-2);
+  border-radius: 6px; padding: 1px 8px; font: 500 12px var(--mono, monospace); pointer-events: none; }
+.pick-hint-chip .ic { width: 12px; height: 12px; color: var(--good); }
+.pick-hint-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+.pick-hint figcaption { color: var(--ink-2); }
+.connect-result { display: flex; flex-direction: column; gap: 12px; }
+.abilities { display: flex; flex-direction: column; gap: 10px; }
+.ability-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.ability-list li { display: flex; align-items: center; gap: 8px; }
+.ability-list li > span:first-of-type { flex: 1; min-width: 0; }
+.ability-list .ic { width: 17px; height: 17px; color: var(--good); flex: none; }
+.ability-list .is-missing .ic { color: var(--bad); }
+.note-act { display: block; margin-top: 8px; }
+.note b { font-weight: 700; }
+
+/* Repo picker */
+.picker { display: flex; flex-direction: column; gap: 14px; }
+.picker .search-field { flex: none; }
+.picker-group { display: flex; flex-direction: column; gap: 6px; }
+.picker-owner { font-size: 13px; font-weight: 700; color: var(--ink-2); margin: 0 4px; display: flex; gap: 8px; align-items: baseline; text-transform: none; }
+.picker-owner .num { color: var(--ink-3); font-weight: 600; }
+.picker .row-title { display: inline-flex; align-items: center; gap: 6px; }
+.picker .row-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.repo-lock { width: 14px; height: 14px; color: var(--ink-3); }
+.checking { display: inline-flex; color: var(--ink-3); }
+.picker-none { color: var(--ink-2); margin: 0 4px; }
+
+/* Setup: plan and live steps */
+.plan { list-style: none; margin: 0; padding: 4px 0; }
+.plan-row { display: flex; align-items: center; gap: 14px; padding: 12px 16px; }
+.plan-row + .plan-row { border-top: 1px solid var(--line); }
+.plan-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.plan-text small { color: var(--ink-2); font-size: 13.5px; }
+.wf-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.wf-chip { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 4px 11px; font: inherit; font-size: 13px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2); cursor: pointer; }
+.wf-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+.wf-chip .ic { width: 14px; height: 14px; }
+.advanced { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.adv-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+.adv-row > span:first-child { flex: 1 1 200px; }
+.yaml-peek { margin-top: 12px; }
+.yaml-peek summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 14px; padding: 4px 0; }
+.yaml-peek .code { margin-top: 8px; }
+.yaml-peek pre { max-height: 360px; }
+.go-card { display: flex; flex-direction: column; gap: 14px; }
+.go-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 14.5px; }
+.go-list li { display: flex; gap: 8px; align-items: flex-start; }
+.go-list .ic { width: 18px; height: 18px; color: var(--good); flex: none; margin-top: 1px; }
+.go-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.go-or { margin: 0; color: var(--ink-2); font-size: 13.5px; }
+.setup-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.setup-step { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; }
+.setup-mark { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; flex: none; background: var(--surface-2); color: var(--ink-3); }
+.setup-mark .ic { width: 16px; height: 16px; }
+.setup-step.is-running .setup-mark { background: var(--accent-soft); color: var(--accent); }
+.setup-step.is-done .setup-mark { background: var(--good-soft); color: var(--good); }
+.setup-step.is-failed .setup-mark { background: var(--bad-soft); color: var(--bad); }
+.setup-step.is-waiting .setup-mark { background: var(--watch-soft); color: var(--watch); }
+.setup-step.is-pending b, .setup-step.is-skipped b { color: var(--ink-2); font-weight: 600; }
+.setup-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; align-items: flex-start; padding-top: 3px; }
+.setup-body p { margin: 0; color: var(--ink-2); font-size: 14px; }
+.setup-fix { display: flex; gap: 6px; align-items: flex-start; color: var(--ink) !important; }
+.setup-fix .ic { width: 16px; height: 16px; color: var(--accent); flex: none; margin-top: 2px; }
+.setup-site { font-size: 14px; color: var(--ink-2); }
+.jobs { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; width: 100%; }
+.jobs > li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.job-state { color: var(--ink-3); }
+.job-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); }
+.job-dot.is-in_progress { background: var(--accent); } .job-dot.is-success { background: var(--good); } .job-dot.is-failure { background: var(--bad); }
+.job-steps { list-style: none; margin: 0; padding: 0 0 0 16px; width: 100%; display: flex; flex-direction: column; gap: 3px; color: var(--ink-2); }
+.job-steps li { display: flex; align-items: center; gap: 6px; }
+.job-steps .ic, .job-steps .spin { width: 13px; height: 13px; }
+.job-steps .is-success .ic { color: var(--good); } .job-steps .is-failure .ic { color: var(--bad); }
+
+/* Instrument (sheet design): Connect, the account bar, permissions and the repo picker. Steps numbered in blue rings with bold sans
+   figures; the pick sketch a grey panel with a bold label; names 600, headings 700; mono only for the repo id */
+[data-design="sheet"] .connect { gap: 20px; }
+[data-design="sheet"] .connect-or { font: 600 14px var(--font); color: var(--ink-2); }
+[data-design="sheet"] .connect-or::before, [data-design="sheet"] .connect-or::after { background: var(--line-strong); }
+[data-design="sheet"] .connect-steps { gap: 0; }
+[data-design="sheet"] .connect-steps > li { gap: 14px; }
+[data-design="sheet"] .connect-steps > li + li { border-top: 1px solid var(--line); margin-top: 22px; padding-top: 22px; }
+[data-design="sheet"] .connect-steps > li > div > b { font-weight: 700; font-size: 18px; line-height: 1.25; }
+[data-design="sheet"] .connect-steps p { font-size: 15px; color: var(--ink-2); }
+[data-design="sheet"] .step-n { width: 30px; height: 30px; margin-top: -2px; background: var(--accent-soft); border: 1.5px solid var(--sv-blue); color: var(--accent);
+  font: 700 15px/1 var(--font); font-variant-numeric: tabular-nums; border-radius: 50% !important; }
+[data-design="sheet"] .connect-steps .btn { min-height: 44px; }
+[data-design="sheet"] .pick-hint { margin-top: 6px; background: var(--surface-2); border: 1px solid var(--line-strong); padding: 14px 16px; gap: 8px; font-size: 15px; }
+[data-design="sheet"] .pick-hint-tag { font: 700 13.5px/1.3 var(--font); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); border-bottom: 1px solid var(--line-strong); padding-bottom: 8px; }
+[data-design="sheet"] .pick-hint-row { gap: 10px; color: var(--ink-2); flex-wrap: wrap; }
+[data-design="sheet"] .pick-hint-row.is-on { color: var(--ink); font-weight: 600; }
+[data-design="sheet"] .pick-hint .radio, [data-design="sheet"] .pick-hint .radio.is-on { width: 15px; height: 15px; border: 1.5px solid var(--ink); background: var(--surface); display: inline-grid; place-items: center; }
+[data-design="sheet"] .pick-hint .radio.is-on { border-color: var(--sv-blue); }
+[data-design="sheet"] .pick-hint .radio.is-on::after { content: ""; width: 7px; height: 7px; background: var(--sv-blue); border-radius: 50% !important; }
+/* The picked repo sits under its option, as on the sheet Welcome's sketch */
+[data-design="sheet"] .pick-hint-row.is-on { display: grid; grid-template-columns: 15px auto; justify-content: start; row-gap: 6px; }
+[data-design="sheet"] .pick-hint-chip { grid-column: 2; justify-self: start; margin: 0; font: 400 13.5px var(--mono); color: var(--ink); background: var(--surface); border-color: var(--line-strong); padding: 2px 8px; }
+[data-design="sheet"] .pick-hint figcaption { font-size: 14.5px; }
+[data-design="sheet"] .connect-steps .field-label { font-size: 18px; font-weight: 700; line-height: 1.25; }
+[data-design="sheet"] .pick-hint-chip .ic { color: var(--good); }
+[data-design="sheet"] .remember { font-size: 15px; }
+[data-design="sheet"] .connect-result { gap: 14px; }
+[data-design="sheet"] .account-bar b { font-weight: 600; }
+[data-design="sheet"] .account-text small { font-size: 14px; color: var(--ink-2); }
+[data-design="sheet"] .gh-avatar { border: 1.5px solid var(--line-strong); background: var(--surface-2); }
+[data-design="sheet"] .ability-list { gap: 8px; font-size: 15px; }
+[data-design="sheet"] .ability-list li { align-items: flex-start; flex-wrap: wrap; gap: 4px 10px; }
+[data-design="sheet"] .ability-list .ic { margin-top: 3px; color: var(--good); }
+[data-design="sheet"] .ability-list .is-missing .ic { color: var(--bad); }
+[data-design="sheet"] .picker-owner { font: 700 15px var(--font); color: var(--ink); margin: 0; }
+[data-design="sheet"] .picker-owner .num { font: 600 14px var(--font); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+[data-design="sheet"] .picker .glist.card { border: 1.5px solid var(--frame); }
+[data-design="sheet"] .picker .row-title { font-weight: 600; }
+@media (max-width: 640px) {
+  [data-design="sheet"] .connect-steps > li { gap: 10px; }
+  [data-design="sheet"] .connect-row { flex-direction: column; align-items: stretch; }
+  [data-design="sheet"] .pick-hint { padding: 12px; }
+  [data-design="sheet"] .account-bar { flex-wrap: wrap; gap: 8px 12px; }
+  [data-design="sheet"] .account-text { flex: 1 1 160px; }
+  [data-design="sheet"] .account-text small { overflow-wrap: anywhere; }
+  [data-design="sheet"] .account-bar.is-compact .account-text { flex: 0 1 auto; }
+  [data-design="sheet"] .ability-list li > span:first-of-type { flex: 1 1 180px; }
+  [data-design="sheet"] .ability-list li > .pill { margin-left: 27px; }
+  [data-design="sheet"] .picker .row { gap: 8px 10px; padding: 10px 12px; }
+  [data-design="sheet"] .picker .row-text { flex: 1 1 0; }
+  [data-design="sheet"] .picker .row-sub { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  [data-design="sheet"] .picker .row-trail { margin-left: 42px; order: 3; flex: 1 1 100%; }
+  [data-design="sheet"] .picker .row-chev { margin-left: auto; }
+}

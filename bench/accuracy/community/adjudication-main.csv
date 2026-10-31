@@ -1,0 +1,113 @@
+id,field,first,second,final,winner,reason
+100,kind,drive_by,peer_help,drive_by,first,"Only asks to be assigned; gives no answer, workaround or explanation."
+101,kind,peer_help,drive_by,peer_help,first,"Outside user reports a fix PR with tests; real help, no project voice."
+102,kind,peer_help,project_answer,peer_help,first,"Volunteer gives concrete reasoning why the cap can be lifted and how; user voice, not acting for the project."
+103,kind,drive_by,project_answer,drive_by,first,Claims the docs part and asks if anyone started; no answer and no project role.
+106,kind,peer_help,project_answer,project_answer,second,"Writes as the team (we saw, we found, we have a fix); speaks for the project."
+108,kind,peer_help,project_answer,peer_help,first,Volunteer lays out the root cause and a concrete fix; helpful but not speaking for the project.
+109,kind,drive_by,project_answer,drive_by,first,Just asks to be assigned; nothing answered.
+111,kind,peer_help,drive_by,peer_help,first,"Offers a plausible explanation (float divergence, near-tied logits) and a test plan; peer explanation."
+117,kind,project_answer,peer_help,project_answer,first,"Main content is a triage verdict: empty template, nothing actionable, same as earlier closed filings."
+12,kind,drive_by,project_answer,drive_by,first,Says they are investigating and will send a PR; no content that answers anything.
+120,kind,drive_by,project_answer,drive_by,first,Claim plus a generic plan restating the feature and a scope question; no answer.
+121,kind,drive_by,project_answer,drive_by,first,Offers to help and asks how to split the work; no answer or project action.
+131,kind,peer_help,drive_by,peer_help,first,Beyond a me-too it pinpoints the cause in code (hard-coded loopback viewer URL); a peer explanation.
+133,kind,peer_help,drive_by,peer_help,first,"Reproduced, explains the double call and has a tested fix; real help from a user."
+136,kind,peer_help,drive_by,peer_help,first,"Gives a concrete code-level fix approach (scope the filter per call); peer help, no project voice."
+137,kind,peer_help,drive_by,peer_help,first,Explains the cause (only one parser made Thought optional) and a fix approach; peer help.
+15,kind,drive_by,peer_help,peer_help,second,Names the exact function and fix behavior for unset max tokens; concrete peer help.
+153,kind,peer_help,drive_by,peer_help,first,"Crude but explains the 403: the source website itself is broken, not the extension."
+155,kind,unclear,drive_by,unclear,first,Comment text is empty; nothing to judge.
+156,kind,unclear,drive_by,unclear,first,Comment text is empty; nothing to judge.
+159,kind,drive_by,peer_help,drive_by,first,"Design opinion that never answers whether the signature is exportable; commentary, not an answer."
+16,kind,project_answer,peer_help,peer_help,second,"Answers the sync question with an explanation and a pointer, but no project voice or project action."
+164,kind,unclear,peer_help,drive_by,neither,"Reads as quoting earlier advice then reporting own setup has no permission issue; a me-too, not an answer."
+169,kind,peer_help,drive_by,peer_help,first,"Points to a related issue and its PR; a helpful cross-reference, not a triage verdict."
+172,kind,peer_help,drive_by,drive_by,second,Mainly thanks the reporter and confirms their revert works; adds no new answer.
+176,kind,project_answer,drive_by,project_answer,first,A triage command on the issue; a process action done for the project.
+177,kind,unclear,drive_by,unclear,first,"Bare external repo link with no words; cannot tell if it is a fix, tool or spam."
+18,kind,project_answer,peer_help,peer_help,second,Explains why the connection-type check skips filters on DDS; explanation without project voice.
+180,kind,peer_help,drive_by,peer_help,first,"Bare reference to an earlier issue; a minimal pointer that helps, no project voice."
+182,kind,peer_help,project_answer,peer_help,first,"Reproduced and links own fix PR with tests; contributor help, not a project closure."
+183,kind,drive_by,project_answer,drive_by,first,Claims the docs task and describes what they will add; no answer yet.
+184,kind,drive_by,project_answer,drive_by,first,Claim that restates the reporter's breakdown plus own credentials; no new answer.
+185,kind,peer_help,project_answer,peer_help,first,Traces the root cause (minimal effort value bypasses validation) with a fix; peer help.
+186,kind,drive_by,peer_help,drive_by,first,Shares one personal timing number with no conclusion; does not answer the request.
+189,kind,drive_by,project_answer,drive_by,first,Only offers to open a PR.
+19,kind,project_answer,peer_help,peer_help,second,"Gives a recommendation and explains the USB 3.0 vs 3.1 limit; helpful, no project voice."
+190,kind,drive_by,peer_help,drive_by,first,"Detailed confirmation it still reproduces and a PR status note; no cause, workaround or fix."
+193,kind,peer_help,drive_by,peer_help,first,"Shares experience plus a plausible explanation (slow last seeder); a peer explanation, if speculative."
+20,kind,project_answer,peer_help,peer_help,second,Answers the feasibility question with specs; informative but no project voice or action.
+200,kind,drive_by,project_answer,drive_by,first,"Claim plus link to own comments elsewhere, deferring closure to others; no answer."
+206,kind,unclear,project_answer,drive_by,neither,"Says they will look at it; no answer and no project voice, so neither unclear nor project_answer."
+207,kind,unclear,drive_by,unclear,first,Just a name with no context; the text does not say what it means.
+214,kind,drive_by,peer_help,drive_by,first,Reports own results on other hardware; does not answer the report.
+221,kind,peer_help,drive_by,peer_help,first,Pins the cause in the token decode code with a clear explanation; peer help alongside a claim.
+222,kind,peer_help,project_answer,peer_help,first,"Reproduces, extends the diagnosis and offers a patch; helpful, but no project voice."
+226,kind,drive_by,peer_help,drive_by,first,Praise and commentary on the proposal; no answer.
+227,kind,peer_help,drive_by,peer_help,first,"Opened a draft fix PR and asks a maintainer to accept; contributor help, not the project."
+230,kind,peer_help,drive_by,peer_help,first,"Opened a draft fix and explains it, asking maintainers to accept; peer help."
+234,kind,drive_by,peer_help,drive_by,first,"Quotes a point and agrees with it; an opinion, not an answer."
+241,kind,project_answer,drive_by,project_answer,first,Confirms repro on a build and assigns a developer; triage done for the project.
+243,kind,project_answer,drive_by,project_answer,first,Assigns the issue to a developer; a triage action.
+246,kind,drive_by,peer_help,drive_by,first,An opinion on what to prioritize; no answer.
+248,kind,peer_help,project_answer,peer_help,first,Explains the inclusion criteria but disclaims knowing the project's plans; not acting for the project.
+250,kind,drive_by,peer_help,drive_by,first,Intent to investigate only; no findings yet.
+251,kind,unclear,project_answer,project_answer,second,Routes the issue to a named developer with a relevance call; its only function is triage.
+264,kind,drive_by,peer_help,drive_by,first,"Supports the feature with a use case; a reasoned +1, not an answer."
+266,kind,peer_help,drive_by,peer_help,first,Points to own PR solving part of the issue; contributor help.
+269,kind,peer_help,drive_by,peer_help,first,Gives a workaround (use the proof-of-concept build) and the status; user voice.
+27,kind,peer_help,drive_by,peer_help,first,Reproduces and adds a new failing case (framing overhead); diagnostic help beyond a me-too.
+273,kind,drive_by,project_answer,drive_by,first,Takes the task and promises a PR; no answer.
+275,kind,drive_by,project_answer,drive_by,first,Claim that follows the reporter's own fix idea; adds no new answer.
+276,kind,peer_help,drive_by,project_answer,neither,"Its whole content is a closure call (addressed by a PR), matching the codebook's fixed-in example."
+283,kind,peer_help,drive_by,peer_help,first,Has a local fix with tests and describes the approach; peer help.
+285,kind,drive_by,peer_help,drive_by,first,"Suggestions about test fixtures; commentary, no answer."
+29,kind,peer_help,drive_by,peer_help,first,Offline reproduction findings and a scoped fix approach; more than a claim.
+295,kind,project_answer,peer_help,project_answer,first,"Speaks as we and sets the intended menu behavior, rejecting the proposed fix; a product decision."
+296,kind,drive_by,peer_help,drive_by,first,UX opinions and suggestions; does not answer the report.
+30,kind,peer_help,drive_by,peer_help,first,"Reproduces, explains the timeout collapse cause and has a fix; peer help."
+300,kind,drive_by,peer_help,drive_by,first,Design suggestion for the feature request; no answer.
+309,kind,drive_by,peer_help,drive_by,first,"Plans to look into build config, no findings; intent only."
+31,kind,peer_help,drive_by,peer_help,first,Structured fix proposal with problem and root cause analysis; outside contributor help.
+312,kind,drive_by,peer_help,drive_by,first,"Partial confirmation, could not reproduce, asks for a payload; no answer."
+316,kind,drive_by,peer_help,drive_by,first,Wants to work on it and explains motivation; no answer.
+318,kind,drive_by,peer_help,drive_by,first,Status note that the bug persists and the alpha lacks features; no answer.
+319,kind,peer_help,drive_by,drive_by,second,Same-here plus another unrelated crash of their own; no new answer.
+33,kind,peer_help,drive_by,peer_help,first,Fix proposal with independent reproduction toward root cause; outside contributor help.
+333,kind,peer_help,drive_by,peer_help,first,Confirms and explains the cause: the language variable is read in one place only; peer explanation.
+335,kind,peer_help,project_answer,peer_help,first,"Reproduced and explains the config discovery gap, preparing a fix; peer help."
+336,kind,peer_help,project_answer,peer_help,first,"Explains it is an upstream bug and links upstream fixes, deferring to the project; peer help."
+34,kind,project_answer,drive_by,project_answer,first,Reopens the issue for payment; a project process action.
+342,kind,project_answer,peer_help,project_answer,first,"Links the duplicate, says where to follow and which logs are needed; triage work."
+347,kind,project_answer,peer_help,project_answer,first,Explains the design as our forcing variable; project voice saying the behavior is intended.
+349,kind,peer_help,drive_by,peer_help,first,Reproduces and traces the byte rewrite through the code; diagnosis from a user.
+35,kind,project_answer,drive_by,project_answer,first,Says it is likely fixed and applies a retest label; a process action closing the loop.
+36,kind,project_answer,drive_by,project_answer,first,Flags it as a duplicate of another issue; a triage call.
+361,kind,peer_help,drive_by,peer_help,first,Says the firmware fix will ship and offers compiling it as a workaround; user voice.
+362,kind,peer_help,drive_by,peer_help,first,Reports the bug is fixed for them in a newer version; useful upgrade hint from a user.
+372,kind,drive_by,project_answer,drive_by,first,Only asks to be assigned.
+373,kind,peer_help,project_answer,peer_help,first,"Explains the root cause (read-write lock probe) and has a fix; asks to be assigned, so not the project."
+374,kind,project_answer,peer_help,peer_help,second,"A PR author folds the reporter's fix and test into their own PR; contributor help, no project voice."
+376,kind,project_answer,peer_help,project_answer,first,Asks the reporter to run a test to decide if the root manager is at fault; triage-style info request.
+377,kind,project_answer,peer_help,project_answer,first,"Closes the request: the feature already exists, the system froze the app, and how to fix it."
+380,kind,unclear,drive_by,unclear,first,Three words with no clear meaning; the text does not say.
+392,kind,peer_help,drive_by,peer_help,first,Explains the past blocker (font engine limits) and asks if it is now solved; an explanation.
+399,kind,unclear,project_answer,project_answer,second,Gathers the reporter's requirements before editing the template; acting on the request for the project.
+42,kind,peer_help,project_answer,project_answer,second,"Main content is a verified closure call: already fixed, by which change and in which version."
+44,kind,peer_help,project_answer,peer_help,first,"Could not reproduce and explains why, plus a related gap found; investigation report, not a closure."
+46,kind,peer_help,project_answer,peer_help,first,Explains where the odd name comes from and pings someone else for intent; peer explanation.
+52,kind,project_answer,peer_help,project_answer,first,Points to an earlier issue as the same problem; a duplicate triage call.
+55,kind,project_answer,peer_help,peer_help,second,"Explains the error as a design limit in hedged user voice, then asks what the feature means; not the project."
+79,kind,peer_help,drive_by,peer_help,first,"Confirms and gives a detailed code-level cause; we refers to their own team, not the project."
+85,kind,drive_by,peer_help,drive_by,first,Wants the feature too and adds a wish; a +1.
+87,kind,drive_by,project_answer,drive_by,first,Only claims the issue.
+88,kind,project_answer,peer_help,peer_help,second,"Mostly explains a remaining overflow bug in the helper; peer diagnosis, not a closure call."
+89,kind,project_answer,peer_help,peer_help,second,Explains the IME root cause and links a related fix PR by someone else; explanation-led peer help.
+9,kind,peer_help,drive_by,peer_help,first,Shares a workaround setting that stops stuck tooltips; real peer help.
+90,kind,drive_by,peer_help,drive_by,first,"Raises a concern on the owner's question; opinion, no answer."
+91,kind,project_answer,peer_help,project_answer,first,Dismisses the report as being on an outdated version; a triage call.
+94,kind,unclear,peer_help,drive_by,neither,"Commenter's own lines urge adding the cheat feature; the explanation reads as quoted. An opinion, not an answer."
+96,kind,drive_by,peer_help,drive_by,first,+1 with implementation suggestions; no answer.
+98,kind,drive_by,peer_help,drive_by,first,Only says they would like to look into it.
+99,kind,drive_by,peer_help,drive_by,first,"Reproduced and asks to open a PR, but gives no cause or fix."

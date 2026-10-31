@@ -1,0 +1,63 @@
+/* Setup: Instrument styles this page here over the shared base in features/connect.css: framed panels; steps numbered in
+   a ring with a bold sans figure, done fills mint, the state follows the title as a mark and a bold word. */
+[data-design="sheet"][data-page="setup"] .card { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="setup"] .setup-steps { counter-reset: svst; gap: 0; }
+[data-design="sheet"][data-page="setup"] .setup-step { counter-increment: svst; gap: 14px; padding: 14px 0; }
+[data-design="sheet"][data-page="setup"] .setup-step + .setup-step { border-top: 1px solid var(--line); }
+[data-design="sheet"][data-page="setup"] .setup-step:first-child { padding-top: 2px; }
+[data-design="sheet"][data-page="setup"] .setup-step:last-child { padding-bottom: 2px; }
+[data-design="sheet"][data-page="setup"] .setup-mark { width: 30px; height: 30px; border: 1.5px solid var(--ink-2); border-radius: 50% !important; background: var(--surface); color: var(--ink); }
+[data-design="sheet"][data-page="setup"] .setup-mark > * { display: none; }
+[data-design="sheet"][data-page="setup"] .setup-mark::before { content: counter(svst); font: 700 15px/1 var(--font); font-variant-numeric: tabular-nums; }
+[data-design="sheet"][data-page="setup"] .setup-step.is-running .setup-mark { border-color: var(--sv-blue); color: var(--accent); background: var(--accent-soft);
+  animation: svStepNow 1.2s var(--sv-ease) infinite alternate; }
+@keyframes svStepNow { to { border-color: var(--line-strong); } }
+[data-design="sheet"][data-page="setup"] .setup-step.is-done .setup-mark { border-color: #000000; background: var(--sv-mint); color: #000000; }
+[data-design="sheet"][data-page="setup"] .setup-step.is-failed .setup-mark { border-color: var(--sv-coral); background: var(--bad-soft); color: var(--bad); }
+[data-design="sheet"][data-page="setup"] .setup-step.is-waiting .setup-mark { border-color: var(--sv-amber); background: var(--watch-soft); color: var(--watch); }
+[data-design="sheet"][data-page="setup"] .setup-step:is(.is-pending, .is-skipped) .setup-mark { color: var(--ink-2); border-color: var(--line-strong); }
+[data-design="sheet"][data-page="setup"] .setup-step.is-skipped .setup-mark { border-style: dashed; }
+[data-design="sheet"][data-page="setup"] .setup-body { padding-top: 3px; gap: 6px; }
+[data-design="sheet"][data-page="setup"] .setup-body > b { font-weight: 700; font-size: 16.5px; }
+[data-design="sheet"][data-page="setup"] .setup-step:is(.is-pending, .is-skipped) .setup-body > b { color: var(--ink-2); font-weight: 600; }
+/* The state word after the title; the visually hidden "(state)" already names it for screen readers, so the word is hidden from them */
+[data-design="sheet"][data-page="setup"] .setup-step:is(.is-running, .is-done, .is-failed, .is-waiting, .is-skipped) .setup-body > b::after {
+  display: inline-block; margin-left: 12px; padding-left: 19px; font: 700 14.5px/1.5 var(--font); vertical-align: 0; background: left center / 13px 13px no-repeat; }
+[data-design="sheet"][data-page="setup"] .setup-step.is-running .setup-body > b::after { content: "running"; content: "running" / ""; color: var(--accent); background-image: none; padding-left: 0; }
+[data-design="sheet"][data-page="setup"] .setup-step.is-done .setup-body > b::after { content: "done"; content: "done" / ""; color: var(--good); background-image: var(--mark-good); }
+[data-design="sheet"][data-page="setup"] .setup-step.is-failed .setup-body > b::after { content: "failed"; content: "failed" / ""; color: var(--bad); background-image: var(--mark-bad); }
+[data-design="sheet"][data-page="setup"] .setup-step.is-waiting .setup-body > b::after { content: "waiting"; content: "waiting" / ""; color: var(--watch); background-image: var(--mark-watch); }
+[data-design="sheet"][data-page="setup"] .setup-step.is-skipped .setup-body > b::after { content: "skipped"; content: "skipped" / ""; color: var(--ink-2); padding-left: 0; }
+[data-design="sheet"][data-page="setup"] .setup-body p { font-size: 15px; color: var(--ink-2); }
+[data-design="sheet"][data-page="setup"] .setup-fix { padding: 8px 12px; background: var(--accent-soft); border-left: 4px solid var(--sv-blue); }
+[data-design="sheet"][data-page="setup"] .setup-fix .ic { display: none; }
+[data-design="sheet"][data-page="setup"] .setup-site { font-size: 15px; }
+[data-design="sheet"][data-page="setup"] .jobs { font-size: 15px; }
+[data-design="sheet"][data-page="setup"] .jobs > li b { font-weight: 600; }
+[data-design="sheet"][data-page="setup"] .job-state { font-size: 14px; color: var(--ink-2); }
+[data-design="sheet"][data-page="setup"] .job-dot { width: 10px; height: 10px; background: none; border: 1.5px solid var(--ink-2); }
+[data-design="sheet"][data-page="setup"] .job-dot.is-in_progress { background: var(--sv-blue); border-color: var(--sv-blue); }
+[data-design="sheet"][data-page="setup"] .job-dot.is-success { width: 13px; height: 13px; border: 0; background: var(--mark-good) center / contain no-repeat; }
+[data-design="sheet"][data-page="setup"] .job-dot.is-failure { width: 13px; height: 13px; border: 0; background: var(--mark-bad) center / contain no-repeat; }
+[data-design="sheet"][data-page="setup"] .job-steps { border-left: 1.5px solid var(--line-strong); padding-left: 14px; margin-left: 4px; font-size: 14px; }
+[data-design="sheet"][data-page="setup"] .job-steps .is-success .ic { color: var(--good); }
+
+/* The plan: rows in a framed panel, workflow chips as rectangles (picked = blue tint and edge), the file peek a plain link */
+[data-design="sheet"][data-page="setup"] .plan { padding: 0; }
+[data-design="sheet"][data-page="setup"] .plan-row { padding: 14px 18px; }
+[data-design="sheet"][data-page="setup"] .plan-text b { font-weight: 700; font-size: 16.5px; }
+[data-design="sheet"][data-page="setup"] .plan-text small { font-size: 15px; }
+[data-design="sheet"][data-page="setup"] .wf-chip { padding: 4px 11px; font-size: 14px; font-weight: 600; background: var(--surface); border: 1.5px solid var(--line-strong); color: var(--ink); }
+[data-design="sheet"][data-page="setup"] .wf-chip:hover { border-color: var(--ink); }
+[data-design="sheet"][data-page="setup"] .wf-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--sv-blue); color: var(--ink); font-weight: 600; }
+[data-design="sheet"][data-page="setup"] .wf-chip[aria-pressed="true"] .ic { color: var(--accent); }
+[data-design="sheet"][data-page="setup"] .adv-row { font-size: 15px; }
+[data-design="sheet"][data-page="setup"] .yaml-peek summary { font-weight: 600; font-size: 15px; color: var(--accent); }
+[data-design="sheet"][data-page="setup"] .go-or { font-size: 15px; }
+[data-design="sheet"][data-page="setup"] .cmd-note { font-size: 14px; }
+[data-design="sheet"][data-page="setup"] .go-list { gap: 0; counter-reset: go; font-size: 15.5px; }
+[data-design="sheet"][data-page="setup"] .go-list li { counter-increment: go; padding: 9px 0; gap: 12px; align-items: baseline; }
+[data-design="sheet"][data-page="setup"] .go-list li + li { border-top: 1px solid var(--line); }
+[data-design="sheet"][data-page="setup"] .go-list .ic { display: none; }
+[data-design="sheet"][data-page="setup"] .go-list li::before { content: counter(go); font: 700 15px var(--font); font-variant-numeric: tabular-nums; color: var(--ink-2); flex: none; width: 18px; text-align: right; }
+@media (prefers-reduced-motion: reduce) { [data-design="sheet"][data-page="setup"] .setup-step.is-running .setup-mark { animation: none; } }

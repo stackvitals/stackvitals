@@ -1,0 +1,66 @@
+{
+ "by_repo": {
+  "biggest": {
+   "items": 5,
+   "repo": "openworkflowdev/openworkflow",
+   "share": 1.0
+  },
+  "boot_high": 0.0,
+  "boot_low": 0.0,
+  "k": 0,
+  "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+  "n": 5,
+  "repo_wilson_high": 0.7935,
+  "repo_wilson_low": 0.0,
+  "repos": 1,
+  "without_biggest": {
+   "high": 1.0,
+   "k": 0,
+   "low": 0.0,
+   "n": 0
+  }
+ },
+ "failures": 36,
+ "harmless_called_safe": {
+  "new_rule": {
+   "called_safe": 5,
+   "high": 0.4879,
+   "low": 0.1181,
+   "n": 19,
+   "share": 0.2632
+  },
+  "old_rule": {
+   "called_safe": 19,
+   "high": 1.0,
+   "low": 0.8318,
+   "n": 19,
+   "share": 1.0
+  }
+ },
+ "new_rule": {
+  "caused_by_change": 0,
+  "high": 0.4345,
+  "low": 0.0,
+  "n": 5,
+  "share": 0.0,
+  "unclear": 2
+ },
+ "new_rule_demoted": {
+  "caused_by_change": 15,
+  "high": 0.6861,
+  "low": 0.3443,
+  "n": 29,
+  "share": 0.5172,
+  "unclear": 0
+ },
+ "old_rule": {
+  "caused_by_change": 15,
+  "high": 0.6055,
+  "low": 0.2888,
+  "n": 34,
+  "share": 0.4412,
+  "unclear": 2
+ },
+ "repos": 9,
+ "safe_flakes": 3
+}

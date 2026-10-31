@@ -1,0 +1,97 @@
+/* Design tokens: graphite and slate, one accent (Harbor blue), gain and loss always paired with an arrow or a word. */
+:root {
+  --bg: #F3F4F6;
+  --sidebar: #ECEEF1;
+  --surface: #FFFFFF;
+  --surface-2: #F6F7F9;
+  --field: #EEF0F3;
+  --ink: #1B1F24;
+  --ink-2: #4F5763;
+  --ink-3: #626A76;
+  --line: #E0E3E8;
+  --line-strong: #C9CED6;
+  --accent: #2160C4;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E5EDFA;
+  --good: #146F40;
+  --good-soft: #E3F2E9;
+  --good-solid: #146F40;
+  --good-solid-ink: #FFFFFF;
+  --bad: #B8322A;
+  --bad-soft: #FBE9E7;
+  --bad-solid: #B8322A;
+  --bad-solid-ink: #FFFFFF;
+  --watch: #8A4F06;
+  --watch-soft: #FAEFDD;
+  --neutral-soft: #E7E9ED;
+  --neutral-ink: #3C434D;
+  --scrim: rgba(20, 26, 33, .36);
+  --shadow-1: 0 1px 2px rgba(22, 30, 40, .06);
+  --shadow-pop: 0 18px 50px rgba(22, 30, 40, .18), 0 2px 6px rgba(22, 30, 40, .08);
+  --focus: #2160C4;
+  --code-bg: #1E242C; --code-ink: #E6EBF1; --code-dim: #9AA5B1; --code-line: #2E3640;
+  --logo-tile: #2160C4; --logo-fg: #FFFFFF; --logo-acc: #7CF0B6;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+
+  /* Motion: spring-like curves, 220 to 420 ms */
+  --spring: cubic-bezier(.32, .72, 0, 1);
+  --spring-pop: cubic-bezier(.34, 1.4, .64, 1);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --dur-1: 220ms; --dur-2: 320ms; --dur-3: 420ms;
+
+  --r-lg: 20px; --r-md: 14px; --r-sm: 10px;
+  --side-w: 252px;
+  --top-h: 56px;
+  --gutter: 40px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E141B; --sidebar: #111922; --surface: #17202A; --surface-2: #1C2631; --field: #212C38;
+    --ink: #E9EEF3; --ink-2: #AEB8C4; --ink-3: #94A0AD; --line: #26313D; --line-strong: #364352;
+    --accent: #79AEFF; --accent-ink: #0B1A30; --accent-soft: #1B2B42;
+    --good: #4CC487; --good-soft: #14291E; --good-solid: #3DB878; --good-solid-ink: #062012;
+    --bad: #FF8578; --bad-soft: #331A19; --bad-solid: #F06A5D; --bad-solid-ink: #2A0703;
+    --watch: #F0B45C; --watch-soft: #2D2416; --neutral-soft: #26313D; --neutral-ink: #D5DCE4;
+    --scrim: rgba(0, 0, 0, .55);
+    --shadow-1: 0 0 0 1px rgba(255, 255, 255, .04);
+    --shadow-pop: 0 18px 50px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .07);
+    --focus: #79AEFF;
+    --code-bg: #0B1016; --code-line: #1F2A35;
+    --logo-tile: #2F6FD8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E141B; --sidebar: #111922; --surface: #17202A; --surface-2: #1C2631; --field: #212C38;
+  --ink: #E9EEF3; --ink-2: #AEB8C4; --ink-3: #94A0AD; --line: #26313D; --line-strong: #364352;
+  --accent: #79AEFF; --accent-ink: #0B1A30; --accent-soft: #1B2B42;
+  --good: #4CC487; --good-soft: #14291E; --good-solid: #3DB878; --good-solid-ink: #062012;
+  --bad: #FF8578; --bad-soft: #331A19; --bad-solid: #F06A5D; --bad-solid-ink: #2A0703;
+  --watch: #F0B45C; --watch-soft: #2D2416; --neutral-soft: #26313D; --neutral-ink: #D5DCE4;
+  --scrim: rgba(0, 0, 0, .55);
+  --shadow-1: 0 0 0 1px rgba(255, 255, 255, .04);
+  --shadow-pop: 0 18px 50px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .07);
+  --focus: #79AEFF;
+  --code-bg: #0B1016; --code-line: #1F2A35;
+  --logo-tile: #2F6FD8;
+  color-scheme: dark;
+}
+
+/* More contrast when asked: secondary text matches the main ink, lines and surfaces get edges. */
+@media (prefers-contrast: more) {
+  :root { --ink-2: var(--ink); --ink-3: #3A414B; --line: #9AA2AD; --line-strong: #6B7480; --shadow-1: 0 0 0 1px var(--line-strong); }
+  :root[data-theme="dark"] { --ink-3: #C9D1DA; --line: #5B6774; --line-strong: #8794A2; }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --ink-3: #C9D1DA; --line: #5B6774; --line-strong: #8794A2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-1: 1ms; --dur-2: 1ms; --dur-3: 1ms; }
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; transition-delay: 0ms !important; scroll-behavior: auto !important; }
+}
+:root.calm { --dur-1: 1ms; --dur-2: 1ms; --dur-3: 1ms; }
+:root.calm *, :root.calm *::before, :root.calm *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; transition-delay: 0ms !important; }

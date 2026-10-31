@@ -1,0 +1,351 @@
+{
+ "rule": "a pull request's job failed in a step the default branch failed in during the 3 days before",
+ "checked": 184,
+ "fires": 20,
+ "repos": 10,
+ "main_still_failing": 5,
+ "by_labeller": {
+  "claude": {
+   "labelled": 20,
+   "caused": 4,
+   "not_caused": 15,
+   "unclear": 1,
+   "caused_low": 0.0851,
+   "caused_high": 0.4333
+  },
+  "gemini": {
+   "labelled": 20,
+   "caused": 4,
+   "not_caused": 16,
+   "unclear": 0,
+   "caused_low": 0.0807,
+   "caused_high": 0.416
+  },
+  "adjudicated": {
+   "labelled": 20,
+   "caused": 4,
+   "not_caused": 16,
+   "unclear": 0,
+   "caused_low": 0.0807,
+   "caused_high": 0.416
+  }
+ },
+ "same_error": {
+  "fires": 12,
+  "repos": 5,
+  "by_labeller": {
+   "claude": {
+    "labelled": 12,
+    "caused": 0,
+    "not_caused": 11,
+    "unclear": 1,
+    "caused_low": 0.0,
+    "caused_high": 0.2588
+   },
+   "gemini": {
+    "labelled": 12,
+    "caused": 0,
+    "not_caused": 12,
+    "unclear": 0,
+    "caused_low": 0.0,
+    "caused_high": 0.2425
+   },
+   "adjudicated": {
+    "labelled": 12,
+    "caused": 0,
+    "not_caused": 12,
+    "unclear": 0,
+    "caused_low": 0.0,
+    "caused_high": 0.2425
+   }
+  }
+ },
+ "masking_pool": {
+  "failures": 36,
+  "blocked": 29,
+  "step_fires": 9,
+  "same_error_fires": 7
+ },
+ "fired": {
+  "33": {
+   "repo": "SeleniumHQ/docker-selenium",
+   "sample": "known_flaky_failure",
+   "event": "pull_request",
+   "ago": "31 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "53": {
+   "repo": "openworkflowdev/openworkflow",
+   "sample": "flagged",
+   "event": "pull_request",
+   "ago": "13 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "55": {
+   "repo": "openworkflowdev/openworkflow",
+   "sample": "flagged",
+   "event": "pull_request",
+   "ago": "14 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "74": {
+   "repo": "open-ani/mediamp",
+   "sample": "flagged",
+   "event": "pull_request",
+   "ago": "2 days",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "82": {
+   "repo": "omnifaces/omnifaces",
+   "sample": "unflagged_failure",
+   "event": "pull_request",
+   "ago": "under an hour",
+   "main_final_failed": true,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "unclear",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "84": {
+   "repo": "omnifaces/omnifaces",
+   "sample": "unflagged_failure",
+   "event": "pull_request",
+   "ago": "1 hours",
+   "main_final_failed": true,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "136": {
+   "repo": "tun-rs/tun-rs",
+   "sample": "unflagged_failure",
+   "event": "pull_request",
+   "ago": "under an hour",
+   "main_final_failed": true,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "yes",
+    "gemini": "no",
+    "adjudicated": "yes"
+   }
+  },
+  "137": {
+   "repo": "tun-rs/tun-rs",
+   "sample": "unflagged_failure",
+   "event": "pull_request",
+   "ago": "4 hours",
+   "main_final_failed": true,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "yes",
+    "gemini": "yes",
+    "adjudicated": "yes"
+   }
+  },
+  "146": {
+   "repo": "paritytech/revive",
+   "sample": "unflagged_failure",
+   "event": "pull_request",
+   "ago": "5 hours",
+   "main_final_failed": true,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "162": {
+   "repo": "trezor/blockbook",
+   "sample": "flagged",
+   "event": "pull_request",
+   "ago": "under an hour",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "185": {
+   "repo": "Comcast/react-data-grid",
+   "sample": "flagged",
+   "event": "pull_request",
+   "ago": "9 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "no",
+    "gemini": "yes",
+    "adjudicated": "no"
+   }
+  },
+  "233": {
+   "repo": "GAM-team/GAM",
+   "sample": "flagged",
+   "event": "push",
+   "ago": "2 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1002": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "26 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1003": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "24 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1004": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "24 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1005": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "23 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1009": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "2 days",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  },
+  "1010": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "45 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "yes",
+    "gemini": "yes",
+    "adjudicated": "yes"
+   }
+  },
+  "1011": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "45 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": false,
+   "labels": {
+    "claude": "yes",
+    "gemini": "yes",
+    "adjudicated": "yes"
+   }
+  },
+  "1012": {
+   "repo": "munich-quantum-toolkit/core",
+   "sample": "asof_known",
+   "event": "pull_request",
+   "ago": "45 hours",
+   "main_final_failed": false,
+   "main_log": true,
+   "same_error": true,
+   "labels": {
+    "claude": "no",
+    "gemini": "no",
+    "adjudicated": "no"
+   }
+  }
+ }
+}

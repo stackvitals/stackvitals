@@ -1,0 +1,21 @@
+{
+ "by_merges_then_releases": {
+  "elite -> elite/high/medium": 148,
+  "elite -> low": 125,
+  "elite -> medium": 44,
+  "high -> elite/high/medium": 1225,
+  "high -> low": 1676,
+  "high -> medium": 471,
+  "low -> elite/high/medium": 169,
+  "low -> low": 79,
+  "low -> medium": 33,
+  "medium -> elite/high/medium": 224,
+  "medium -> low": 342,
+  "medium -> medium": 82
+ },
+ "generated": "2026-10-21T22:08:35Z",
+ "repos": 4618,
+ "tier_changes": 2860,
+ "tier_changes_share": 0.6193,
+ "undecided_capped": 1597
+}

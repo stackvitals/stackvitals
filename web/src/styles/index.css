@@ -1,0 +1,8 @@
+/* The global stylesheet, ending with Instrument (sheet.css); a page's own styles sit beside it in pages/<id>.css and load with the page. */
+@import "uplot/dist/uPlot.min.css";
+@import "./tokens.css";
+@import "./base.css";
+@import "./shell.css";
+@import "./components.css";
+@import "./charts.css";
+@import "./sheet.css";

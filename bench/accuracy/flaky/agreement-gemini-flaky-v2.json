@@ -1,0 +1,109 @@
+{
+ "first": "Claude",
+ "second": "gemini-3.5-flash-lite",
+ "codebook": 2,
+ "fields": {
+  "cause": {
+   "n": 60,
+   "agree": 0.5833,
+   "kappa": 0.5085,
+   "confusion": {
+    "unclear|infrastructure": 2,
+    "workflow|code_change": 1,
+    "dependency|network": 2,
+    "unclear|code_change": 9,
+    "unclear|test": 3,
+    "dependency|code_change": 1,
+    "network|test": 1,
+    "code_change|dependency": 1,
+    "unclear|workflow": 4,
+    "workflow|infrastructure": 1
+   },
+   "disagree": [
+    101,
+    115,
+    138,
+    14,
+    152,
+    153,
+    16,
+    190,
+    228,
+    232,
+    238,
+    241,
+    245,
+    246,
+    255,
+    35,
+    47,
+    6,
+    64,
+    7,
+    73,
+    8,
+    85,
+    88,
+    9
+   ]
+  },
+  "caused_by_change": {
+   "n": 60,
+   "agree": 0.5167,
+   "kappa": 0.2204,
+   "confusion": {
+    "unclear|no": 3,
+    "no|yes": 6,
+    "yes|no": 1,
+    "unclear|yes": 9,
+    "no|unclear": 10
+   },
+   "disagree": [
+    106,
+    115,
+    138,
+    14,
+    152,
+    153,
+    16,
+    183,
+    186,
+    190,
+    202,
+    204,
+    228,
+    23,
+    232,
+    238,
+    241,
+    245,
+    246,
+    247,
+    255,
+    35,
+    51,
+    53,
+    6,
+    60,
+    64,
+    9,
+    92
+   ]
+  },
+  "own_failure": {
+   "n": 60,
+   "agree": 0.9333,
+   "kappa": 0.5767,
+   "confusion": {
+    "unclear|yes": 3,
+    "no|yes": 1
+   },
+   "disagree": [
+    150,
+    247,
+    254,
+    6
+   ]
+  }
+ }
+}

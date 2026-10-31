@@ -1,0 +1,86 @@
+{
+ "agreement": {
+  "repos": 7,
+  "same_sources": 6,
+  "same_workflow_labels": 37,
+  "workflows": 37
+ },
+ "generated": "2026-10-22T10:16:14Z",
+ "labeller": "Claude and Gemini 3.5 Flash-Lite; disagreements adjudicated blind by Claude; no person audited",
+ "repos": 25,
+ "source_right": {
+  "devlake": {
+   "high": 0.4343,
+   "low": 0.115,
+   "n": 25,
+   "share": 0.24
+  },
+  "merges": {
+   "high": 0.2996,
+   "low": 0.0417,
+   "n": 25,
+   "share": 0.12
+  },
+  "stackvitals": {
+   "high": 0.9778,
+   "low": 0.7503,
+   "n": 25,
+   "share": 0.92
+  }
+ },
+ "source_right_tests": {
+  "devlake": {
+   "only_a": 17,
+   "only_b": 0,
+   "p": 1.5e-05,
+   "significant": true,
+   "test": "McNemar exact"
+  },
+  "merges": {
+   "only_a": 20,
+   "only_b": 0,
+   "p": 2e-06,
+   "significant": true,
+   "test": "McNemar exact"
+  }
+ },
+ "truth_mix": {
+  "deploy_workflow": 4,
+  "deployments": 5,
+  "every_merge": 3,
+  "none": 5,
+  "release_workflow": 10,
+  "releases": 16
+ },
+ "workflow_rule": {
+  "devlake": {
+   "precision": {
+    "high": 0.7935,
+    "low": 0.0,
+    "n": 1,
+    "share": 0.0
+   },
+   "recall": {
+    "high": 0.1759,
+    "low": 0.0,
+    "n": 18,
+    "share": 0.0
+   }
+  },
+  "stackvitals": {
+   "precision": {
+    "high": 0.9448,
+    "low": 0.6243,
+    "n": 19,
+    "share": 0.8421
+   },
+   "recall": {
+    "high": 0.969,
+    "low": 0.672,
+    "n": 18,
+    "share": 0.8889
+   }
+  }
+ },
+ "workflows": 155
+}

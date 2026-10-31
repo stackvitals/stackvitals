@@ -1,0 +1,130 @@
+{
+ "projects": [
+  {
+   "answers": {
+    "anyone_answered": 0.8348,
+    "days": 30,
+    "km": {
+     "answered": 13,
+     "at_least": 698.5052777777778,
+     "high": null,
+     "low": null,
+     "median": null,
+     "waiting": 102
+    },
+    "median_hours": 18.25,
+    "solved_share": 0.0696,
+    "team_answered": 0.113,
+    "topics": 115
+   },
+   "complete": false,
+   "forum": "https://discuss.python.org",
+   "forum_share": 0.1619,
+   "forum_topics_30d": 129,
+   "github_issues_30d": 668,
+   "repo": "python/cpython",
+   "topics_read": 120
+  },
+  {
+   "answers": {
+    "anyone_answered": 0.6333,
+    "days": 30,
+    "km": {
+     "answered": 6,
+     "at_least": 463.28305555555556,
+     "high": null,
+     "low": null,
+     "median": null,
+     "waiting": 114
+    },
+    "median_hours": 5.49,
+    "solved_share": 0.1833,
+    "team_answered": 0.05,
+    "topics": 120
+   },
+   "complete": false,
+   "forum": "https://users.rust-lang.org",
+   "forum_share": 0.2968,
+   "forum_topics_30d": 192,
+   "github_issues_30d": 455,
+   "repo": "rust-lang/rust",
+   "topics_read": 120
+  },
+  {
+   "answers": {
+    "anyone_answered": 0.2308,
+    "days": 30,
+    "km": {
+     "answered": 2,
+     "at_least": 597.9033333333333,
+     "high": null,
+     "low": null,
+     "median": null,
+     "waiting": 24
+    },
+    "median_hours": 0.51,
+    "solved_share": 0.0769,
+    "team_answered": 0.0769,
+    "topics": 26
+   },
+   "complete": false,
+   "forum": "https://discuss.pytorch.org",
+   "forum_share": 0.0346,
+   "forum_topics_30d": 28,
+   "github_issues_30d": 782,
+   "repo": "pytorch/pytorch",
+   "topics_read": 120
+  },
+  {
+   "answers": {
+    "anyone_answered": 0.7333,
+    "days": 30,
+    "km": {
+     "answered": 16,
+     "at_least": 686.4886111111111,
+     "high": null,
+     "low": null,
+     "median": null,
+     "waiting": 104
+    },
+    "median_hours": 2.06,
+    "solved_share": 0.2,
+    "team_answered": 0.1333,
+    "topics": 120
+   },
+   "complete": false,
+   "forum": "https://discourse.julialang.org",
+   "forum_share": 0.4684,
+   "forum_topics_30d": 126,
+   "github_issues_30d": 143,
+   "repo": "JuliaLang/julia",
+   "topics_read": 120
+  },
+  {
+   "answers": {
+    "anyone_answered": 0.5083,
+    "days": 30,
+    "km": {
+     "answered": 1,
+     "at_least": 222.82472222222222,
+     "high": null,
+     "low": null,
+     "median": null,
+     "waiting": 119
+    },
+    "median_hours": 54.98,
+    "solved_share": 0.0,
+    "team_answered": 0.0083,
+    "topics": 120
+   },
+   "complete": false,
+   "forum": "https://discuss.huggingface.co",
+   "forum_share": 0.6765,
+   "forum_topics_30d": 368,
+   "github_issues_30d": 176,
+   "repo": "huggingface/transformers",
+   "topics_read": 120
+  }
+ ],
+ "read": "2026-10-23"
+}

@@ -1,0 +1,36 @@
+repo,url,truth,stackvitals_source,stackvitals_right,devlake_right,merges_right
+SlimPlanet/SlimFaas,https://github.com/SlimPlanet/SlimFaas/actions,deploy_workflow every_merge releases,releases,True,False,True
+TykTechnologies/tyk-identity-broker,https://github.com/TykTechnologies/tyk-identity-broker/actions,deploy_workflow release_workflow,release_workflow,True,False,False
+WFCD/genesis,https://github.com/WFCD/genesis/actions,deploy_workflow releases,deployments,False,False,False
+aserto-dev/topaz,https://github.com/aserto-dev/topaz/actions,deploy_workflow release_workflow releases,releases,True,False,False
+auth0/auth0-java,https://github.com/auth0/auth0-java/actions,deployments release_workflow releases,releases,True,False,False
+bytecodealliance/jco,https://github.com/bytecodealliance/jco/actions,release_workflow releases,releases,True,False,False
+danyadev/vk-desktop,https://github.com/danyadev/vk-desktop/actions,release_workflow releases,none,False,False,False
+databricks/terraform-provider-databricks,https://github.com/databricks/terraform-provider-databricks/actions,releases,releases,True,False,False
+dataelement/bisheng,https://github.com/dataelement/bisheng/actions,deploy_workflow release_workflow releases,releases,True,False,False
+e2nIEE/pandapower,https://github.com/e2nIEE/pandapower/actions,releases,releases,True,False,False
+emoss08/Trenova,https://github.com/emoss08/Trenova/actions,deploy_workflow release_workflow releases,releases,True,False,False
+envoyproxy/gateway,https://github.com/envoyproxy/gateway/actions,deploy_workflow release_workflow releases,releases,True,False,False
+foundryvtt/pf2e,https://github.com/foundryvtt/pf2e/actions,release_workflow releases,releases,True,False,False
+google-deepmind/mujoco_warp,https://github.com/google-deepmind/mujoco_warp/actions,release_workflow releases,releases,True,False,False
+hvoss-tech/AutoForge,https://github.com/hvoss-tech/AutoForge/actions,deployments release_workflow releases,releases,True,False,False
+knadh/listmonk,https://github.com/knadh/listmonk/actions,deploy_workflow release_workflow releases,release_workflow,True,False,False
+leeguooooo/iphone-use,https://github.com/leeguooooo/iphone-use/actions,release_workflow releases,releases,True,False,False
+lnbits/lnbits,https://github.com/lnbits/lnbits/actions,deploy_workflow release_workflow releases,releases,True,False,False
+magpylib/magpylib,https://github.com/magpylib/magpylib/actions,deployments release_workflow releases,releases,True,False,False
+moralmunky/Home-Assistant-Mail-And-Packages,https://github.com/moralmunky/Home-Assistant-Mail-And-Packages/actions,release_workflow releases,releases,True,False,False
+openhab/openhab-core,https://github.com/openhab/openhab-core/actions,none,none,True,True,False
+openhpc/ohpc,https://github.com/openhpc/ohpc/actions,releases,releases,True,False,False
+patchzyy/Wiicompiled,https://github.com/patchzyy/Wiicompiled/actions,releases,releases,True,False,False
+petarzarkov/dunx,https://github.com/petarzarkov/dunx/actions,releases,deployments,False,False,False
+pmmmwh/react-refresh-webpack-plugin,https://github.com/pmmmwh/react-refresh-webpack-plugin/actions,releases,releases,True,False,False
+python-websockets/websockets,https://github.com/python-websockets/websockets/actions,release_workflow releases,releases,True,False,False
+scverse/gget,https://github.com/scverse/gget/actions,release_workflow releases,deploy_workflow,False,False,False
+sergiotapia/magnetissimo,https://github.com/sergiotapia/magnetissimo/actions,deploy_workflow release_workflow releases,releases,True,False,False
+the1812/Touhou-Tagger,https://github.com/the1812/Touhou-Tagger/actions,release_workflow releases,releases,True,False,False
+ubccpsc/310,https://github.com/ubccpsc/310/actions,deploy_workflow deployments every_merge,none,False,True,True
+vprover/vampire,https://github.com/vprover/vampire/actions,releases,releases,True,False,False
+vstakhov/libucl,https://github.com/vstakhov/libucl/actions,none,none,True,True,False
+weaviate/weaviate-python-client,https://github.com/weaviate/weaviate-python-client/actions,release_workflow releases,releases,True,False,False
+yellow-hammer/vscode-1c-platform-tools,https://github.com/yellow-hammer/vscode-1c-platform-tools/actions,release_workflow releases,releases,True,False,False
+yomorun/yomo,https://github.com/yomorun/yomo/actions,release_workflow releases,releases,True,False,False

@@ -1,0 +1,20 @@
+name = "stackvitals-relay"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Logs stay off: the relay never prints bodies, and Cloudflare's own request logs are not kept either.
+[observability]
+enabled = false
+
+# CLIENT_SECRET is a secret (npx wrangler secret put CLIENT_SECRET). The rest are plain settings.
+[vars]
+CLIENT_ID = ""
+# Every address the app is served from, comma-separated, exactly as the browser shows it (scheme and host, no path).
+ALLOWED_ORIGINS = "https://stackvitals.github.io"
+
+# Optional: Cloudflare's rate limiter, 20 calls a minute per caller address.
+# [[unsafe.bindings]]
+# name = "LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 20, period = 60 }

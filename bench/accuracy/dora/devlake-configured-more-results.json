@@ -1,0 +1,293 @@
+{
+ "pattern": "(?i)(deploy|release|publish|push-image)",
+ "repos": 35,
+ "read": "2026-10-22",
+ "devlake_configured": {
+  "right": 13,
+  "share": 0.3714,
+  "low": 0.2317,
+  "high": 0.5366
+ },
+ "against_stackvitals": {
+  "only_a": 19,
+  "only_b": 2,
+  "p": 0.000221,
+  "significant": true,
+  "test": "McNemar exact"
+ },
+ "repos_detail": [
+  {
+   "repo": "SlimPlanet/SlimFaas",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish-dotnet-nuget.yml",
+    ".github/workflows/publish-python-pypi.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "TykTechnologies/tyk-identity-broker",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-bot.yaml",
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "WFCD/genesis",
+   "devlake_configured_right": true,
+   "stackvitals_right": false,
+   "counted": [
+    ".github/workflows/release.yaml"
+   ]
+  },
+  {
+   "repo": "aserto-dev/topaz",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "auth0/auth0-java",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "bytecodealliance/jco",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/create-release-pr.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/tag-release.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "danyadev/vk-desktop",
+   "devlake_configured_right": false,
+   "stackvitals_right": false,
+   "counted": []
+  },
+  {
+   "repo": "databricks/terraform-provider-databricks",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-build-check.yml"
+   ]
+  },
+  {
+   "repo": "dataelement/bisheng",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "e2nIEE/pandapower",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "emoss08/Trenova",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "envoyproxy/gateway",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/monthly-release-issue.yaml",
+    ".github/workflows/release.yaml"
+   ]
+  },
+  {
+   "repo": "foundryvtt/pf2e",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-anachronism.yml",
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "google-deepmind/mujoco_warp",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "hvoss-tech/AutoForge",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "knadh/listmonk",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/github-pages.yml",
+    ".github/workflows/release.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "leeguooooo/iphone-use",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-binaries.yml"
+   ]
+  },
+  {
+   "repo": "lnbits/lnbits",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-rc.yml",
+    ".github/workflows/release.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "magpylib/magpylib",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "moralmunky/Home-Assistant-Mail-And-Packages",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-drafter.yaml",
+    ".github/workflows/release.yaml"
+   ]
+  },
+  {
+   "repo": "openhab/openhab-core",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "openhpc/ohpc",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/build-container.yml",
+    ".github/workflows/build-ohpc-analysis-container.yml",
+    ".github/workflows/build-ohpc-lint-container.yml",
+    ".github/workflows/build-ohpc-validate-container.yml"
+   ]
+  },
+  {
+   "repo": "patchzyy/Wiicompiled",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "petarzarkov/dunx",
+   "devlake_configured_right": false,
+   "stackvitals_right": false,
+   "counted": []
+  },
+  {
+   "repo": "pmmmwh/react-refresh-webpack-plugin",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "python-websockets/websockets",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "scverse/gget",
+   "devlake_configured_right": false,
+   "stackvitals_right": false,
+   "counted": [
+    ".github/workflows/deploy.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "sergiotapia/magnetissimo",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "the1812/Touhou-Tagger",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/build.yml",
+    ".github/workflows/npmpublish.yml",
+    ".github/workflows/winget.yml"
+   ]
+  },
+  {
+   "repo": "ubccpsc/310",
+   "devlake_configured_right": true,
+   "stackvitals_right": false,
+   "counted": [
+    ".github/workflows/deploy.yml"
+   ]
+  },
+  {
+   "repo": "vprover/vampire",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "vstakhov/libucl",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "weaviate/weaviate-python-client",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "yellow-hammer/vscode-1c-platform-tools",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "yomorun/yomo",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  }
+ ]
+}

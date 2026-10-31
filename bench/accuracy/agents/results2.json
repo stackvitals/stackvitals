@@ -1,0 +1,255 @@
+{
+ "items": 100,
+ "repos": 44,
+ "stackvitals_alone": {
+  "items": 100,
+  "right": 68,
+  "wrong": 17,
+  "unclear": 15,
+  "low": 0.5834,
+  "high": 0.7633
+ },
+ "stackvitals_with_triage": {
+  "items": 100,
+  "right": 87,
+  "wrong": 12,
+  "unclear": 1,
+  "low": 0.7902,
+  "high": 0.9224
+ },
+ "pr_details_items": 9,
+ "stackvitals_alone_without_pr_details": {
+  "items": 91,
+  "right": 60,
+  "wrong": 16,
+  "unclear": 15,
+  "low": 0.5573,
+  "high": 0.7485
+ },
+ "stackvitals_with_triage_without_pr_details": {
+  "items": 91,
+  "right": 79,
+  "wrong": 11,
+  "unclear": 1,
+  "low": 0.7835,
+  "high": 0.9229
+ },
+ "arms": {
+  "a-sonnet": {
+   "items": 100,
+   "right": 87,
+   "wrong": 13,
+   "unclear": 0,
+   "low": 0.7902,
+   "high": 0.9224,
+   "github_calls": 213,
+   "calls_per_item": 2.1,
+   "without_pr_details": {
+    "items": 91,
+    "right": 86,
+    "wrong": 5,
+    "unclear": 0,
+    "low": 0.8778,
+    "high": 0.9763,
+    "by_repo": {
+     "repos": 42,
+     "k": 86,
+     "n": 91,
+     "boot_low": 0.8889,
+     "boot_high": 0.9895,
+     "repo_wilson_low": 0.832,
+     "repo_wilson_high": 0.9835,
+     "biggest": {
+      "repo": "trezor/blockbook",
+      "items": 4,
+      "share": 0.044
+     },
+     "without_biggest": {
+      "k": 84,
+      "n": 87,
+      "low": 0.9035,
+      "high": 0.9882
+     },
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once"
+    }
+   },
+   "pr_details_items": {
+    "items": 9,
+    "said_flake_as_labelled": 1
+   }
+  },
+  "b-sonnet": {
+   "items": 100,
+   "right": 89,
+   "wrong": 11,
+   "unclear": 0,
+   "low": 0.8137,
+   "high": 0.9375,
+   "github_calls": 216,
+   "calls_per_item": 2.2,
+   "without_pr_details": {
+    "items": 91,
+    "right": 88,
+    "wrong": 3,
+    "unclear": 0,
+    "low": 0.9075,
+    "high": 0.9887,
+    "by_repo": {
+     "repos": 42,
+     "k": 88,
+     "n": 91,
+     "boot_low": 0.9259,
+     "boot_high": 1.0,
+     "repo_wilson_low": 0.8631,
+     "repo_wilson_high": 0.9927,
+     "biggest": {
+      "repo": "trezor/blockbook",
+      "items": 4,
+      "share": 0.044
+     },
+     "without_biggest": {
+      "k": 84,
+      "n": 87,
+      "low": 0.9035,
+      "high": 0.9882
+     },
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once"
+    }
+   },
+   "pr_details_items": {
+    "items": 9,
+    "said_flake_as_labelled": 1
+   }
+  },
+  "a-haiku": {
+   "items": 51,
+   "right": 44,
+   "wrong": 6,
+   "unclear": 1,
+   "low": 0.7428,
+   "high": 0.9319,
+   "github_calls": 142,
+   "calls_per_item": 2.8,
+   "without_pr_details": {
+    "items": 48,
+    "right": 44,
+    "wrong": 3,
+    "unclear": 1,
+    "low": 0.8045,
+    "high": 0.9671,
+    "by_repo": {
+     "repos": 24,
+     "k": 44,
+     "n": 48,
+     "boot_low": 0.8095,
+     "boot_high": 1.0,
+     "repo_wilson_low": 0.7415,
+     "repo_wilson_high": 0.9768,
+     "biggest": {
+      "repo": "openworkflowdev/openworkflow",
+      "items": 4,
+      "share": 0.0833
+     },
+     "without_biggest": {
+      "k": 40,
+      "n": 44,
+      "low": 0.7884,
+      "high": 0.9641
+     },
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once"
+    }
+   },
+   "pr_details_items": {
+    "items": 3,
+    "said_flake_as_labelled": 0
+   }
+  },
+  "b-haiku": {
+   "items": 51,
+   "right": 43,
+   "wrong": 8,
+   "unclear": 0,
+   "low": 0.7199,
+   "high": 0.9183,
+   "github_calls": 114,
+   "calls_per_item": 2.2,
+   "without_pr_details": {
+    "items": 48,
+    "right": 43,
+    "wrong": 5,
+    "unclear": 0,
+    "low": 0.7783,
+    "high": 0.9547,
+    "by_repo": {
+     "repos": 24,
+     "k": 43,
+     "n": 48,
+     "boot_low": 0.8,
+     "boot_high": 0.9792,
+     "repo_wilson_low": 0.7153,
+     "repo_wilson_high": 0.9671,
+     "biggest": {
+      "repo": "openworkflowdev/openworkflow",
+      "items": 4,
+      "share": 0.0833
+     },
+     "without_biggest": {
+      "k": 40,
+      "n": 44,
+      "low": 0.7884,
+      "high": 0.9641
+     },
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once"
+    }
+   },
+   "pr_details_items": {
+    "items": 3,
+    "said_flake_as_labelled": 0
+   }
+  }
+ },
+ "paired": {
+  "a-sonnet_vs_alone": {
+   "only_a": 28,
+   "only_b": 2,
+   "p": 1e-06,
+   "significant": true,
+   "test": "McNemar exact"
+  },
+  "b-sonnet_vs_alone": {
+   "only_a": 31,
+   "only_b": 3,
+   "p": 1e-06,
+   "significant": true,
+   "test": "McNemar exact"
+  },
+  "a-haiku_vs_alone": {
+   "only_a": 14,
+   "only_b": 3,
+   "p": 0.012726,
+   "significant": true,
+   "test": "McNemar exact"
+  },
+  "b-haiku_vs_alone": {
+   "only_a": 13,
+   "only_b": 3,
+   "p": 0.021271,
+   "significant": true,
+   "test": "McNemar exact"
+  },
+  "a-sonnet_vs_b-sonnet": {
+   "only_a": 1,
+   "only_b": 3,
+   "p": 0.625,
+   "significant": false,
+   "test": "McNemar exact"
+  },
+  "a-haiku_vs_b-haiku": {
+   "only_a": 4,
+   "only_b": 3,
+   "p": 1.0,
+   "significant": false,
+   "test": "McNemar exact"
+  }
+ }
+}

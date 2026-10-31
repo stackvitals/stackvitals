@@ -1,0 +1,60 @@
+{
+ "by_repo": {
+  "biggest": {
+   "items": 2,
+   "repo": "omnifaces/omnifaces",
+   "share": 0.5
+  },
+  "boot_high": 0.0,
+  "boot_low": 0.0,
+  "k": 0,
+  "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+  "n": 4,
+  "repo_wilson_high": 0.6576,
+  "repo_wilson_low": 0.0,
+  "repos": 2,
+  "without_biggest": {
+   "high": 0.6576,
+   "k": 0,
+   "low": 0.0,
+   "n": 2
+  }
+ },
+ "logs": 284,
+ "matched": {
+  "caused": 0,
+  "caused_high": 0.1487,
+  "caused_low": 0.0,
+  "n": 24,
+  "not_caused": 22,
+  "unclear": 2
+ },
+ "never_flaked": {
+  "all": {
+   "caused": 58,
+   "caused_high": 0.6839,
+   "caused_low": 0.4929,
+   "n": 116,
+   "not_caused": 40,
+   "unclear": 18
+  },
+  "matched": {
+   "caused": 0,
+   "caused_high": 0.4899,
+   "caused_low": 0.0,
+   "n": 6,
+   "not_caused": 4,
+   "unclear": 2
+  }
+ },
+ "signatures": {
+  "benchmarks regress": 2,
+  "deadline exceeded": 5,
+  "expected condition failed: waiting for": 2,
+  "matcher did not succeed in time": 5,
+  "retries 20 exhausted": 5,
+  "returned http 500": 3,
+  "timed out after": 1,
+  "timeout of 60000ms exceeded": 1
+ }
+}

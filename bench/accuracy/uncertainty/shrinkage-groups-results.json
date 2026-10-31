@@ -1,0 +1,105 @@
+{
+ "note": "Shrinkage of first-try share by peer group, half the repos fit the priors, the other half tested (seed 13, 20 draws); a finer group falls back to language and size, then all repos, under 20 repos.",
+ "groups": {
+  "lang_size": {
+   "priors": 31,
+   "by_sample_size": {
+    "10": {
+     "rmse_pulled": 0.1097,
+     "squared_error_cut": 0.0828,
+     "predictive_coverage_pit": 0.9477
+    },
+    "20": {
+     "rmse_pulled": 0.0914,
+     "squared_error_cut": 0.0332,
+     "predictive_coverage_pit": 0.949
+    },
+    "3": {
+     "rmse_pulled": 0.1519,
+     "squared_error_cut": 0.2929,
+     "predictive_coverage_pit": 0.9463
+    },
+    "5": {
+     "rmse_pulled": 0.1319,
+     "squared_error_cut": 0.1953,
+     "predictive_coverage_pit": 0.9475
+    }
+   }
+  },
+  "lang_size_duration": {
+   "priors": 70,
+   "by_sample_size": {
+    "10": {
+     "rmse_pulled": 0.1104,
+     "squared_error_cut": 0.0713,
+     "predictive_coverage_pit": 0.9447
+    },
+    "20": {
+     "rmse_pulled": 0.0912,
+     "squared_error_cut": 0.0373,
+     "predictive_coverage_pit": 0.948
+    },
+    "3": {
+     "rmse_pulled": 0.1529,
+     "squared_error_cut": 0.2833,
+     "predictive_coverage_pit": 0.9423
+    },
+    "5": {
+     "rmse_pulled": 0.1329,
+     "squared_error_cut": 0.1831,
+     "predictive_coverage_pit": 0.9444
+    }
+   }
+  },
+  "lang_size_workflows": {
+   "priors": 72,
+   "by_sample_size": {
+    "10": {
+     "rmse_pulled": 0.1102,
+     "squared_error_cut": 0.0747,
+     "predictive_coverage_pit": 0.9457
+    },
+    "20": {
+     "rmse_pulled": 0.0914,
+     "squared_error_cut": 0.0339,
+     "predictive_coverage_pit": 0.9488
+    },
+    "3": {
+     "rmse_pulled": 0.1524,
+     "squared_error_cut": 0.2881,
+     "predictive_coverage_pit": 0.9434
+    },
+    "5": {
+     "rmse_pulled": 0.1323,
+     "squared_error_cut": 0.1903,
+     "predictive_coverage_pit": 0.9463
+    }
+   }
+  },
+  "lang_size_both": {
+   "priors": 61,
+   "by_sample_size": {
+    "10": {
+     "rmse_pulled": 0.1104,
+     "squared_error_cut": 0.0723,
+     "predictive_coverage_pit": 0.9448
+    },
+    "20": {
+     "rmse_pulled": 0.0916,
+     "squared_error_cut": 0.0289,
+     "predictive_coverage_pit": 0.9467
+    },
+    "3": {
+     "rmse_pulled": 0.1545,
+     "squared_error_cut": 0.2686,
+     "predictive_coverage_pit": 0.9393
+    },
+    "5": {
+     "rmse_pulled": 0.1338,
+     "squared_error_cut": 0.1713,
+     "predictive_coverage_pit": 0.9427
+    }
+   }
+  }
+ }
+}

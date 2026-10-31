@@ -1,0 +1,63 @@
+{
+ "by_sample_size": {
+  "10": {
+   "draws": 24860,
+   "mae_pulled": 0.0776,
+   "mae_raw": 0.073,
+   "predictive_coverage": 0.9798,
+   "predictive_coverage_pit": 0.9477,
+   "rate_range_coverage": 0.8342,
+   "repos": 1243,
+   "rmse_pulled": 0.1097,
+   "rmse_raw": 0.1146,
+   "squared_error_cut": 0.0828
+  },
+  "20": {
+   "draws": 12020,
+   "mae_pulled": 0.063,
+   "mae_raw": 0.0591,
+   "predictive_coverage": 0.9812,
+   "predictive_coverage_pit": 0.949,
+   "rate_range_coverage": 0.7672,
+   "repos": 601,
+   "rmse_pulled": 0.0914,
+   "rmse_raw": 0.093,
+   "squared_error_cut": 0.0332
+  },
+  "3": {
+   "draws": 38460,
+   "mae_pulled": 0.11,
+   "mae_raw": 0.113,
+   "predictive_coverage": 0.9812,
+   "predictive_coverage_pit": 0.9463,
+   "rate_range_coverage": 0.8969,
+   "repos": 1923,
+   "rmse_pulled": 0.1519,
+   "rmse_raw": 0.1806,
+   "squared_error_cut": 0.2929
+  },
+  "5": {
+   "draws": 34900,
+   "mae_pulled": 0.0951,
+   "mae_raw": 0.0932,
+   "predictive_coverage": 0.9806,
+   "predictive_coverage_pit": 0.9475,
+   "rate_range_coverage": 0.8799,
+   "repos": 1745,
+   "rmse_pulled": 0.1319,
+   "rmse_raw": 0.147,
+   "squared_error_cut": 0.1953
+  }
+ },
+ "fit_repos": 3311,
+ "generated": "2026-10-24T08:02:17Z",
+ "group": "lang_size",
+ "prior_all": [
+  1.263,
+  0.304
+ ],
+ "priors": 31,
+ "repos": 6623,
+ "seed": 13,
+ "tested_repos": 1923
+}

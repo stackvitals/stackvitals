@@ -1,0 +1,9 @@
+name = "stackvitals-alerts"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Secrets (wrangler secret put NAME): GITHUB_WEBHOOK_SECRET, and one or more of SLACK_WEBHOOK_URL, DISCORD_WEBHOOK_URL,
+# TEAMS_WEBHOOK_URL, JSON_WEBHOOK_URL; GITHUB_TOKEN (read-only) only for private repos' usual pickup time.
+[vars]
+NAME_PEOPLE = "false"
+READ_DELIVERY = "true"

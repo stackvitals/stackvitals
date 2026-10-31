@@ -1,0 +1,34 @@
+# StackVitals
+
+> A free, GitHub-native engineering health suite: one GitHub Action keeps CI, pull request, delivery (DORA), community and dependency history on a data branch in your own repo, with a static app, a CLI and an MCP server over it. No server of ours, no Docker.
+
+## Docs
+
+- [How accurate StackVitals is](docs/accuracy.md): The rules behind StackVitals' verdicts and headline numbers were each checked against public data and, where a judgement was needed, against labelled examples.
+- [The StackVitals app](docs/app.md): Every run publishes one app over all the modules that ran: https://OWNER.github.io/REPO/ once GitHub Pages serves the stackvitals-data branch.
+- [How StackVitals works](docs/architecture.md): StackVitals has no hosted backend.
+- [What StackVitals reads, and from where](docs/connectors.md): Live means run against the real service; recorded means tested against saved answers in the shape the service's documentation gives, with no account of ours; experimental means built but not yet checked either way.
+- [Coverage and peer groups](docs/coverage.md): When StackVitals compares your repo with "similar public repos", the peers come from the MergeScout crawler, which reads public GitHub repos daily on GitHub Actions.
+- [Using delivery numbers without fooling yourself](docs/dora-guide.md): DORA's numbers describe a team's delivery system, not a person's work.
+- [Questions people ask](docs/faq.md): It is licensed under Apache 2.0 and runs in your own GitHub Actions minutes, which are free for public repos and included in every plan for private ones.
+- [StackVitals for an open-source maintainer](docs/guides/maintainer.md): You want red CI to stop eating contributors' time, newcomers answered, and fewer surprise dependency breaks.
+- [StackVitals for an engineering manager](docs/guides/manager.md): You want to know where your team's time goes and whether changes help, without rating people.
+- [StackVitals for a platform team](docs/guides/platform.md): You run GitHub for an org and want one view of every repo, owners that are real, standards people can see coming, and a security review you can sign off.
+- [Install](docs/install.md): StackVitals is a GitHub Action, uses: stackvitals/stackvitals@v0, run by one workflow file in your repo.
+- [Known limitations](docs/limitations.md): What each part of StackVitals can't see or do, where its measured accuracy is weak, and what it needs from your repo.
+- [Methods: the exact settings behind every number](docs/methods.md): Every headline number in StackVitals carries its sample size and a 95% range.
+- [Modules](docs/modules.md): What each StackVitals module does, how to try it on any public repo from your machine, and how to set it up in your own repo.
+- [What leaves your repo](docs/privacy.md): StackVitals runs in your own workflow and keeps its history in your repo.
+- [Quick start: your monitor in about five minutes](docs/quickstart.md): A GitHub repo is all you need; CI on GitHub Actions makes the CI part useful.
+- [Rule reference](docs/rules.md): Every rule a StackVitals verdict or number rests on, from bench/accuracy/registry.json: what it does, the data it was tuned on and checked on, the bar it had to meet (set before the check where a date says so), its...
+- [How StackVitals grows with you](docs/scaling.md): StackVitals keeps each repo's history in that repo's own stackvitals-data branch.
+- [StackVitals settings](docs/settings.md): Put these in .github/stackvitals.toml on your default branch.
+- [Model triage: setup](docs/triage.md): When StackVitals' history and the log's signs can't decide whether a pull request's failure came from the change, a model can read the failing step's error lines and the changed file names and give its view.
+
+## Optional
+
+- [StackVitals and CHAOSS](docs/chaoss.md): CHAOSS defines open source community health metrics.
+- [Enterprise controls](docs/enterprise.md): StackVitals has no server and no account: it runs in your GitHub Actions with your tokens and keeps everything in your repos.
+- [Release checklist](docs/release-checklist.md): Run this before tagging a release.
+- [Roadmap](docs/roadmap.md): What comes next, in rough order.
+- [Threat model](docs/threat-model.md): StackVitals runs inside your own GitHub Actions with your repo's tokens, reads text that strangers write (pull request titles, test names, logs, issues, comments) and writes back to GitHub (comments, labels, issues,...

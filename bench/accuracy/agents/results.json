@@ -1,0 +1,115 @@
+{
+ "arms": {
+  "a": {
+   "by_sample": {
+    "flagged:right": 9,
+    "known_flaky_failure:right": 5,
+    "unflagged_failure:right": 6
+   },
+   "flaky_jobs_found": 16,
+   "flaky_jobs_labelled": 16,
+   "github_calls": 214,
+   "github_calls_by_repo": {
+    "AikidoSec/firewall-dotnet": 40,
+    "GAM-team/GAM": 42,
+    "gmickel/gno": 46,
+    "munich-quantum-toolkit/core": 44,
+    "paritytech/revive": 42
+   },
+   "high": 1.0,
+   "items": 20,
+   "items_right": 20,
+   "jobs_named": 34,
+   "low": 0.8389,
+   "share": 1.0,
+   "unclear": 0,
+   "who": "general agent, live GitHub"
+  },
+  "b": {
+   "by_sample": {
+    "flagged:right": 9,
+    "known_flaky_failure:right": 5,
+    "unflagged_failure:right": 6
+   },
+   "flaky_jobs_found": 16,
+   "flaky_jobs_labelled": 16,
+   "github_calls": 259,
+   "github_calls_by_repo": {
+    "AikidoSec/firewall-dotnet": 32,
+    "GAM-team/GAM": 70,
+    "gmickel/gno": 52,
+    "munich-quantum-toolkit/core": 45,
+    "paritytech/revive": 60
+   },
+   "high": 1.0,
+   "items": 20,
+   "items_right": 20,
+   "jobs_named": 39,
+   "low": 0.8389,
+   "share": 1.0,
+   "unclear": 0,
+   "who": "the same agent with StackVitals' answers"
+  }
+ },
+ "generated": "2026-10-22T12:34:04Z",
+ "items": 20,
+ "paired_tests": {
+  "agent_vs_agent_with_stackvitals": {
+   "items": 20,
+   "only_a": 0,
+   "only_b": 0,
+   "p": null,
+   "significant": false,
+   "test": "McNemar exact"
+  },
+  "agent_vs_stackvitals_alone": {
+   "items": 20,
+   "only_a": 7,
+   "only_b": 0,
+   "p": 0.015625,
+   "significant": true,
+   "test": "McNemar exact"
+  }
+ },
+ "peers": {
+  "a": {
+   "github_calls": 198,
+   "own": 3,
+   "peer_repos_checked": [
+    23,
+    22,
+    15,
+    15,
+    14
+   ],
+   "percentile": 2,
+   "typical": 2,
+   "who": "general agent, live GitHub"
+  },
+  "b": {
+   "github_calls": 0,
+   "own": 5,
+   "peer_repos_checked": [
+    311,
+    144,
+    56,
+    111,
+    110
+   ],
+   "percentile": 5,
+   "typical": 5,
+   "who": "the same agent with StackVitals' answers"
+  },
+  "bars": "own share within 0.10, typical share within 0.05, percentile within 15",
+  "repos": 5
+ },
+ "repos": 5,
+ "stackvitals_alone": {
+  "github_calls": 0,
+  "items": 20,
+  "items_right": 13,
+  "maybe_flaky": 2,
+  "unclear": 4,
+  "wrong": 3
+ }
+}

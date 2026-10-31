@@ -1,0 +1,26 @@
+{
+ "same_error_as_past_flakes": {
+  "n": 41,
+  "caused": 4,
+  "not_caused": 18,
+  "unclear": 19,
+  "caused_low": 0.0731,
+  "caused_high": 0.3852
+ },
+ "different_error": {
+  "n": 60,
+  "caused": 9,
+  "not_caused": 45,
+  "unclear": 6,
+  "caused_low": 0.0902,
+  "caused_high": 0.2874
+ },
+ "no_log_to_compare": {
+  "n": 7,
+  "caused": 0,
+  "not_caused": 5,
+  "unclear": 2,
+  "caused_low": 0.0,
+  "caused_high": 0.4345
+ }
+}

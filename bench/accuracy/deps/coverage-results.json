@@ -1,0 +1,158 @@
+{
+ "repos": 100,
+ "read": 100,
+ "with_lockfiles": 65,
+ "by_language": {
+  "Python": {
+   "repos": 10,
+   "with_lockfiles": 8,
+   "with_findings": 7
+  },
+  "TypeScript": {
+   "repos": 10,
+   "with_lockfiles": 10,
+   "with_findings": 9
+  },
+  "JavaScript": {
+   "repos": 10,
+   "with_lockfiles": 6,
+   "with_findings": 5
+  },
+  "Go": {
+   "repos": 10,
+   "with_lockfiles": 10,
+   "with_findings": 7
+  },
+  "Rust": {
+   "repos": 10,
+   "with_lockfiles": 10,
+   "with_findings": 8
+  },
+  "Java": {
+   "repos": 10,
+   "with_lockfiles": 3,
+   "with_findings": 3
+  },
+  "Kotlin": {
+   "repos": 10,
+   "with_lockfiles": 4,
+   "with_findings": 4
+  },
+  "C#": {
+   "repos": 10,
+   "with_lockfiles": 3,
+   "with_findings": 2
+  },
+  "PHP": {
+   "repos": 10,
+   "with_lockfiles": 6,
+   "with_findings": 3
+  },
+  "Ruby": {
+   "repos": 10,
+   "with_lockfiles": 5,
+   "with_findings": 5
+  }
+ },
+ "by_format": {
+  "pom.xml": {
+   "files": 46,
+   "read": 20,
+   "packages": 359,
+   "vulnerable": 36
+  },
+  "requirements*.txt": {
+   "files": 36,
+   "read": 36,
+   "packages": 1006,
+   "vulnerable": 94
+  },
+  "Cargo.lock": {
+   "files": 23,
+   "read": 23,
+   "packages": 5571,
+   "vulnerable": 167
+  },
+  "package-lock.json": {
+   "files": 22,
+   "read": 22,
+   "packages": 9891,
+   "vulnerable": 314
+  },
+  "go.mod": {
+   "files": 17,
+   "read": 14,
+   "packages": 658,
+   "vulnerable": 31
+  },
+  "pnpm-lock.yaml": {
+   "files": 8,
+   "read": 8,
+   "packages": 3637,
+   "vulnerable": 55
+  },
+  "bun.lock": {
+   "files": 7,
+   "read": 7,
+   "packages": 4793,
+   "vulnerable": 131
+  },
+  "Gemfile.lock": {
+   "files": 6,
+   "read": 6,
+   "packages": 854,
+   "vulnerable": 35
+  },
+  "composer.lock": {
+   "files": 6,
+   "read": 6,
+   "packages": 423,
+   "vulnerable": 23
+  },
+  "uv.lock": {
+   "files": 5,
+   "read": 5,
+   "packages": 380,
+   "vulnerable": 20
+  },
+  "yarn.lock": {
+   "files": 4,
+   "read": 4,
+   "packages": 1709,
+   "vulnerable": 12
+  },
+  "Package.resolved": {
+   "files": 3,
+   "read": 1,
+   "packages": 5,
+   "vulnerable": 0
+  },
+  "packages.lock.json": {
+   "files": 1,
+   "read": 1,
+   "packages": 29,
+   "vulnerable": 0
+  }
+ },
+ "packages": {
+  "total": 24003,
+  "by_ecosystem": {
+   "npm": 16431,
+   "crates.io": 4645,
+   "RubyGems": 827,
+   "PyPI": 794,
+   "Go": 630,
+   "Packagist": 423,
+   "Maven": 218,
+   "NuGet": 29,
+   "SwiftURL": 5,
+   "GIT": 1
+  },
+  "deep_evidence_before": 8127,
+  "share_with_deep_evidence_before": 0.3386
+ },
+ "findings": 3114,
+ "malware": 0,
+ "repos_with_critical_or_high": 45,
+ "scan_errors": []
+}

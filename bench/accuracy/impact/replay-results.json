@@ -1,0 +1,62 @@
+{
+ "99designs__gqlgen": {
+  "runs": 297,
+  "reports": 20,
+  "tests_seen": 4,
+  "prs_with_files": 102,
+  "impact": null,
+  "flaky_ours": 0,
+  "flaky_trunk_rule": 0,
+  "both": 0,
+  "only_ours": [],
+  "only_trunk": []
+ },
+ "frankarobotics__franka_ros2": {
+  "runs": 7,
+  "reports": 3,
+  "tests_seen": 39,
+  "prs_with_files": 3,
+  "impact": null,
+  "flaky_ours": 0,
+  "flaky_trunk_rule": 0,
+  "both": 0,
+  "only_ours": [],
+  "only_trunk": []
+ },
+ "langchain4j__langchain4j-spring": {
+  "runs": 171,
+  "reports": 243,
+  "tests_seen": 4,
+  "prs_with_files": 33,
+  "impact": null,
+  "flaky_ours": 0,
+  "flaky_trunk_rule": 0,
+  "both": 0,
+  "only_ours": [],
+  "only_trunk": []
+ },
+ "shap__shap": {
+  "runs": 290,
+  "reports": 37,
+  "tests_seen": 0,
+  "prs_with_files": 109,
+  "impact": null,
+  "flaky_ours": 0,
+  "flaky_trunk_rule": 0,
+  "both": 0,
+  "only_ours": [],
+  "only_trunk": []
+ },
+ "tomkerkhove__promitor": {
+  "runs": 599,
+  "reports": 69,
+  "tests_seen": 1,
+  "prs_with_files": 33,
+  "impact": null,
+  "flaky_ours": 0,
+  "flaky_trunk_rule": 0,
+  "both": 0,
+  "only_ours": [],
+  "only_trunk": []
+ }
+}

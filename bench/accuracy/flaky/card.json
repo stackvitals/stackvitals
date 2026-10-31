@@ -1,0 +1,227 @@
+{
+ "agreement": {
+  "items": 53,
+  "kappa_caused_by_change": 0.8795,
+  "same": 0.9434
+ },
+ "by_language": {
+  "c": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.7008,
+    "n": 9,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.495,
+    "low": 0.1018,
+    "n": 16,
+    "share": 0.25
+   }
+  },
+  "go": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.8064,
+    "n": 16,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.6124,
+    "low": 0.1634,
+    "n": 14,
+    "share": 0.3571
+   }
+  },
+  "js": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.8064,
+    "n": 16,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.2775,
+    "low": 0.0,
+    "n": 10,
+    "share": 0.0
+   }
+  },
+  "jvm": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.8389,
+    "n": 20,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.5907,
+    "low": 0.0715,
+    "n": 8,
+    "share": 0.25
+   }
+  },
+  "other": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.8064,
+    "n": 16,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.2833,
+    "low": 0.0111,
+    "n": 16,
+    "share": 0.0625
+   }
+  },
+  "python": {
+   "event_precision": {
+    "high": 1.0,
+    "low": 0.8064,
+    "n": 16,
+    "share": 1.0
+   },
+   "miss_rate": {
+    "high": 0.2982,
+    "low": 0.0119,
+    "n": 15,
+    "share": 0.0667
+   }
+  },
+  "rust": {
+   "event_precision": {
+    "high": 0.9295,
+    "low": 0.5481,
+    "n": 15,
+    "share": 0.8
+   },
+   "miss_rate": {
+    "high": 0.4333,
+    "low": 0.0851,
+    "n": 19,
+    "share": 0.2105
+   }
+  }
+ },
+ "by_signal": {
+  "flip": {
+   "high": 0.9182,
+   "low": 0.4974,
+   "n": 13,
+   "share": 0.7692
+  },
+  "retry": {
+   "high": 1.0,
+   "low": 0.9611,
+   "n": 95,
+   "share": 1.0
+  }
+ },
+ "cause_mix_all": {
+  "code_change": 62,
+  "dependency": 18,
+  "infrastructure": 15,
+  "network": 56,
+  "product_race": 1,
+  "test": 36,
+  "timeout": 3,
+  "unclear": 54,
+  "workflow": 18
+ },
+ "cause_mix_flagged": {
+  "code_change": 1,
+  "dependency": 7,
+  "infrastructure": 10,
+  "network": 35,
+  "product_race": 1,
+  "test": 30,
+  "unclear": 21,
+  "workflow": 7
+ },
+ "event_precision": {
+  "by_repo": {
+   "biggest": {
+    "items": 5,
+    "repo": "polyaxon/haupt",
+    "share": 0.0463
+   },
+   "boot_high": 1.0,
+   "boot_low": 0.9298,
+   "k": 105,
+   "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+   "n": 108,
+   "repo_wilson_high": 0.9947,
+   "repo_wilson_low": 0.867,
+   "repos": 40,
+   "without_biggest": {
+    "high": 0.99,
+    "k": 100,
+    "low": 0.9178,
+    "n": 103
+   }
+  },
+  "high": 0.9905,
+  "low": 0.9215,
+  "n": 108,
+  "real_bugs_among_flakes": {
+   "high": 0.0506,
+   "low": 0.0016,
+   "n": 108,
+   "share": 0.0093
+  },
+  "share": 0.9722,
+  "unclear": 4
+ },
+ "items": 263,
+ "labeller": "Claude and Gemini 3.5 Flash-Lite; disagreements adjudicated blind by Claude; no person audited",
+ "masking_rate": {
+  "high": 0.6534,
+  "low": 0.2692,
+  "n": 22,
+  "share": 0.4545,
+  "unclear": 0
+ },
+ "miss_rate": {
+  "high": 0.2604,
+  "low": 0.1112,
+  "n": 98,
+  "share": 0.1735,
+  "unclear": 18
+ },
+ "plain_retry_rule": {
+  "events_flagged_by_ours": 237,
+  "events_only_it_flags": 15,
+  "left_out_events_right": {
+   "high": 0.7679,
+   "low": 0.2914,
+   "n": 13,
+   "share": 0.5385
+  },
+  "left_out_vs_ours": {
+   "difference": 0.4338,
+   "p": 3.2e-05,
+   "significant": true,
+   "test": "Fisher's exact"
+  },
+  "ours_minus_it": {
+   "high": 0.0395,
+   "low": -0.0401,
+   "significant": false,
+   "value": 0.0034
+  },
+  "precision": 0.9689,
+  "precision_range": {
+   "high": 0.9828,
+   "low": 0.9396,
+   "method": "Jeffreys draws, seed 7"
+  },
+  "retry_events_right": {
+   "high": 1.0,
+   "low": 0.9611,
+   "n": 95,
+   "share": 1.0
+  }
+ },
+ "repos": 51
+}

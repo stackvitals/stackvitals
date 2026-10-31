@@ -1,0 +1,84 @@
+/* Delivery: this week's changes, the in-depth tabs and the footer notes */
+.stats + .card { margin-top: 12px; }
+.card > .sub-h:first-child { margin-top: 0; margin-bottom: 8px; }
+.dl-tabs { display: flex; min-width: 0; margin-bottom: 12px; }
+.dl-tabs .seg { max-width: 100%; }
+.dl-panel { display: flex; flex-direction: column; gap: 12px; animation: pageIn var(--dur-2) var(--spring) backwards; min-width: 0; }
+.dl-sources { display: grid; gap: 14px; min-width: 0; }
+.dl-sources .code pre { max-height: 420px; }
+.dl-deps { align-items: start; }
+.dl-chk { margin-top: 14px; }
+.dl-after { margin-top: 8px; }
+.stats + .blk-tbl { margin-top: 14px; }
+
+/* Instrument: scoped to the sheet and this page */
+[data-design="sheet"][data-page="delivery"] .sub-h .muted.small { font: 400 14px/1.4 var(--font); color: var(--ink-2); }
+[data-design="sheet"][data-page="delivery"] .dl-dim { margin-bottom: 14px; }
+
+/* Figures as framed tiles: the name on a grey strip, a state edge when the tile carries a tier; rows line up through a subgrid */
+[data-design="sheet"][data-page="delivery"] .stats { gap: 12px; background: none; border: 0; overflow: visible; }
+[data-design="sheet"][data-page="delivery"] .stat { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; align-content: start;
+  margin: 0; padding: 0 0 14px; background: var(--surface); border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="delivery"] .stat-label { align-items: flex-start; justify-content: space-between; min-height: 42px; padding: 9px 14px;
+  background: var(--strip); border-bottom: 1px solid var(--line-strong); font: 700 15px/1.35 var(--font); color: var(--ink); }
+[data-design="sheet"][data-page="delivery"] .stat-value { margin: 0; padding: 12px 14px 4px; }
+[data-design="sheet"][data-page="delivery"] .stat-note { padding: 0 14px; line-height: 1.5; }
+/* In a row where any tile has a state edge, the others get a grey one so the strips line up */
+[data-design="sheet"][data-page="delivery"] .stats:has(.stat-note > :is(.pill-good, .pill-watch, .pill-bad):first-child) .stat { border-top: 5px solid var(--line-strong); }
+[data-design="sheet"][data-page="delivery"] .stats .stat:has(.stat-note > .pill-good:first-child) { border-top: 5px solid var(--sv-mint); }
+[data-design="sheet"][data-page="delivery"] .stats .stat:has(.stat-note > .pill-watch:first-child) { border-top: 5px solid var(--sv-amber); }
+[data-design="sheet"][data-page="delivery"] .stats .stat:has(.stat-note > .pill-bad:first-child) { border-top: 5px solid var(--sv-coral); }
+[data-design="sheet"][data-page="delivery"] .stats:has(.dl-gate-good, .dl-gate-bad) .stat { border-top: 5px solid var(--line-strong); }
+[data-design="sheet"][data-page="delivery"] .stats .stat:has(.dl-gate-good) { border-top-color: var(--sv-mint); }
+[data-design="sheet"][data-page="delivery"] .stats .stat:has(.dl-gate-bad) { border-top-color: var(--sv-coral); }
+[data-design="sheet"][data-page="delivery"] .stat-note .btn { margin-top: 6px; max-width: 100%; white-space: normal; text-align: left; }
+
+/* Cards that open with a heading carry it on a grey strip */
+[data-design="sheet"][data-page="delivery"] .card { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="delivery"] .card > .table-wrap.card { border: 0; }
+[data-design="sheet"][data-page="delivery"] .card-pad > .sub-h:first-child { margin: -18px -18px 14px; padding: 9px 18px; min-height: 42px; align-items: baseline;
+  background: var(--strip); border-bottom: 1px solid var(--line-strong); font-size: 16px; }
+
+/* Cycle-time phases laid end to end: a framed panel, yellow boxes on their tracks, a dimension line for the whole */
+[data-design="sheet"][data-page="delivery"] .dl-strip { display: grid; gap: 10px; margin: 0 0 14px; padding: 0 0 14px; background: var(--surface); border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="delivery"] .dl-strip figcaption { margin: 0 0 4px; padding: 9px 14px; background: var(--strip); border-bottom: 1px solid var(--line-strong);
+  font: 700 15px/1.35 var(--font); color: var(--ink); }
+[data-design="sheet"][data-page="delivery"] .dl-strip-row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) 5.5rem; align-items: center; gap: 14px; padding: 0 14px; font-size: 15px; }
+[data-design="sheet"][data-page="delivery"] .dl-strip-k { font-weight: 600; color: var(--ink); }
+[data-design="sheet"][data-page="delivery"] .dl-strip-t { position: relative; height: 20px; border-inline: 1px solid var(--line-strong); background: var(--surface-2); }
+[data-design="sheet"][data-page="delivery"] .dl-strip-t i { position: absolute; top: 0; bottom: 0; left: var(--a); width: max(var(--w), 3px); background: var(--sv-yellow); border: 1px solid var(--ink); transform-origin: left; }
+[data-design="sheet"][data-page="delivery"] .dl-strip-v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+[data-design="sheet"][data-page="delivery"] .dl-strip-sum .dl-dim { grid-column: 2; margin: 4px 0 0; }
+@media (prefers-reduced-motion: no-preference) {
+  [data-design="sheet"][data-page="delivery"] .dl-strip-t i { animation: dlGrow .6s var(--sv-ease) calc(var(--i) * .15s) backwards; }
+}
+@keyframes dlGrow { from { transform: scaleX(0); } }
+@media (max-width: 640px) {
+  [data-design="sheet"][data-page="delivery"] .dl-strip-row { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
+  [data-design="sheet"][data-page="delivery"] .dl-strip-t { grid-column: 1 / -1; grid-row: 2; }
+  [data-design="sheet"][data-page="delivery"] .dl-strip-sum .dl-dim { grid-column: 1 / -1; height: auto; white-space: normal; }
+  [data-design="sheet"][data-page="delivery"] .dl-strip-sum .dl-dim > span { text-align: center; line-height: 1.4; }
+}
+
+/* In depth: bars with sans figures, framed date fields, numbered circles for what changed, the gate as a mark and a word */
+[data-design="sheet"][data-page="delivery"] :is(.dl-panel, .section) .bar-track { max-width: 32px; }
+[data-design="sheet"][data-page="delivery"] .bar-value { font: 700 14px/1.2 var(--font); color: var(--ink); font-variant-numeric: tabular-nums; }
+[data-design="sheet"][data-page="delivery"] .bar-label { font: 600 14px/1.2 var(--font); color: var(--ink-2); }
+[data-design="sheet"][data-page="delivery"] .dl-panel > .muted.small { font-size: 15px; }
+[data-design="sheet"][data-page="delivery"] .range-pick { display: flex; flex-wrap: wrap; gap: 10px 20px; }
+[data-design="sheet"][data-page="delivery"] .range-pick label { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+[data-design="sheet"][data-page="delivery"] .range-pick input { height: 40px; padding: 0 10px; border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--ink);
+  font: 400 15px var(--font); font-variant-numeric: tabular-nums; color-scheme: inherit; }
+[data-design="sheet"][data-page="delivery"] .range-pick input:focus-visible { border-color: var(--focus); outline: 2px solid var(--focus); outline-offset: 2px; }
+[data-design="sheet"][data-page="delivery"] .changed { list-style: none; margin: 12px 0 0; padding: 0; counter-reset: ch; display: grid; gap: 10px; font-size: 15px; }
+[data-design="sheet"][data-page="delivery"] .changed > li { counter-increment: ch; position: relative; padding-left: 36px; }
+[data-design="sheet"][data-page="delivery"] .changed > li::before { content: counter(ch); position: absolute; left: 0; top: 0; width: 24px; height: 24px; display: grid; place-items: center;
+  border: 1.5px solid var(--ink); border-radius: 50% !important; font: 700 14px/1 var(--font); font-variant-numeric: tabular-nums; }
+[data-design="sheet"][data-page="delivery"] .changed .pill { font-size: 15px; }
+[data-design="sheet"][data-page="delivery"] .dl-gate { display: inline-flex; align-items: center; gap: 10px; }
+[data-design="sheet"][data-page="delivery"] :is(.dl-gate-good, .dl-gate-bad)::before { content: ""; width: 22px; height: 22px; flex: none; background: center / contain no-repeat; }
+[data-design="sheet"][data-page="delivery"] .dl-gate-good::before { background-image: var(--mark-good); }
+[data-design="sheet"][data-page="delivery"] .dl-gate-bad::before { background-image: var(--mark-bad); }
+[data-design="sheet"][data-page="delivery"] .dl-gate-bad { color: var(--bad); }
+/* Six figures read as two rows of three, not five and an orphan */
+@media (min-width: 821px) { [data-design="sheet"][data-page="delivery"] .stats:has(> .stat:nth-child(6):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

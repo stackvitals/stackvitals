@@ -1,0 +1,28 @@
+/* Community: the side figures beside the answer chart, figure strips, the promise panel's state edge */
+.blk-facts.cm-side { align-self: start; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); grid-template-columns: minmax(0, 1fr); }
+.section-body > .cm-figs { border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); margin-bottom: 18px; }
+.section-body > .blk-tbl, .section-body > .columns + .blk-tbl { margin-top: 18px; }
+.section-body > .blk-tbl:first-child { margin-top: 0; }
+.blk-panel.is-good { border-top: 3px solid var(--good); }
+.blk-panel.is-bad { border-top: 3px solid var(--bad); }
+.cm-left small { display: block; font-size: 13px; color: var(--ink-2); }
+.blk-facts.is-figures .cm-left { font-size: 16px; font-weight: 700; letter-spacing: 0; }
+
+/* Instrument (sheet design): past quarters as outlined bars beside this quarter in blue; the answer figure as a framed panel
+   under a header strip; the promise panel's top edge says whether the promise holds */
+[data-design="sheet"][data-page="community"] .bar-fill.tone-neutral { background: transparent; border: 1px solid var(--ink); border-bottom: 0; }
+[data-design="sheet"][data-page="community"] .bar:has(.tone-bad) .bar-label::before { content: ""; display: inline-block; width: 11px; height: 11px; margin-right: 5px;
+  vertical-align: -1px; background: var(--mark-bad) center / contain no-repeat; }
+[data-design="sheet"][data-page="community"] .bar-label { font-size: 14px; font-weight: 600; color: var(--ink); }
+[data-design="sheet"][data-page="community"] .bar-value { font-size: 14px; }
+[data-design="sheet"][data-page="community"] .card:has(> .hero) { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="community"] .hero-name { margin: -18px -18px 14px; padding: 9px 18px; min-height: 42px; background: var(--strip); border-bottom: 1px solid var(--line-strong); color: var(--ink); }
+[data-design="sheet"][data-page="community"] :is(.cm-side, .section-body > .cm-figs) { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="community"] .section-body > .blk-tbl { margin-top: 24px; }
+[data-design="sheet"][data-page="community"] .section-body > .blk-tbl:first-child { margin-top: 0; }
+[data-design="sheet"][data-page="community"] .blk-panel.is-good { border-top: 5px solid var(--sv-mint); }
+[data-design="sheet"][data-page="community"] .blk-panel.is-bad { border-top: 5px solid var(--sv-coral); }
+[data-design="sheet"][data-page="community"] .blk-facts.is-figures .cm-left { font-family: var(--font); font-size: 16px; font-weight: 700; }
+[data-design="sheet"][data-page="community"] .cm-left small { font-size: 14px; font-weight: 400; }
+/* On a phone the mark sits above its word so the word keeps its room */
+@media (max-width: 480px) { [data-design="sheet"][data-page="community"] .bar-label { flex: none; } [data-design="sheet"][data-page="community"] .bar-label::before { display: block; margin: 0 auto 3px; } }

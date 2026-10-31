@@ -1,0 +1,249 @@
+{
+ "by_min_length": {
+  "5": {
+   "npm": {
+    "legit": 1114,
+    "legit_flagged": 12,
+    "legit_flagged_names": [
+     [
+      "bach",
+      "batch"
+     ],
+     [
+      "cookies",
+      "cookie"
+     ],
+     [
+      "extend",
+      "xtend"
+     ],
+     [
+      "get-value",
+      "set-value"
+     ],
+     [
+      "is-regex",
+      "ip-regex"
+     ],
+     [
+      "router",
+      "wouter"
+     ],
+     [
+      "safe-buffer",
+      "safer-buffer"
+     ],
+     [
+      "simple-get",
+      "simple-git"
+     ],
+     [
+      "socks",
+      "sockjs"
+     ],
+     [
+      "through",
+      "through2"
+     ],
+     [
+      "util",
+      "utila"
+     ],
+     [
+      "yazl",
+      "yauzl"
+     ]
+    ],
+    "malicious": 20000,
+    "malicious_examples": [
+     "baes64-js",
+     "deepemrge",
+     "exprses",
+     "elfctron",
+     "deug",
+     "electronb",
+     "electrno",
+     "grok-sdk",
+     "electromn",
+     "electreon"
+    ],
+    "malicious_flagged": 49
+   },
+   "pypi": {
+    "legit": 81,
+    "legit_flagged": 0,
+    "legit_flagged_names": [],
+    "malicious": 11898,
+    "malicious_examples": [
+     "0requests",
+     "aaiohttp",
+     "aanthropic",
+     "adurl",
+     "aihottp",
+     "aiihttp",
+     "aiogrem",
+     "aiohappyeyeball",
+     "aiohhttp",
+     "aiohtpt"
+    ],
+    "malicious_flagged": 873
+   }
+  },
+  "6": {
+   "npm": {
+    "legit": 1114,
+    "legit_flagged": 8,
+    "legit_flagged_names": [
+     [
+      "cookies",
+      "cookie"
+     ],
+     [
+      "get-value",
+      "set-value"
+     ],
+     [
+      "is-regex",
+      "ip-regex"
+     ],
+     [
+      "router",
+      "wouter"
+     ],
+     [
+      "safe-buffer",
+      "safer-buffer"
+     ],
+     [
+      "simple-get",
+      "simple-git"
+     ],
+     [
+      "socks",
+      "sockjs"
+     ],
+     [
+      "through",
+      "through2"
+     ]
+    ],
+    "malicious": 20000,
+    "malicious_examples": [
+     "baes64-js",
+     "deepemrge",
+     "exprses",
+     "elfctron",
+     "electronb",
+     "electrno",
+     "grok-sdk",
+     "electromn",
+     "electreon",
+     "fodash"
+    ],
+    "malicious_flagged": 38
+   },
+   "pypi": {
+    "legit": 81,
+    "legit_flagged": 0,
+    "legit_flagged_names": [],
+    "malicious": 11898,
+    "malicious_examples": [
+     "0requests",
+     "aaiohttp",
+     "aanthropic",
+     "aihottp",
+     "aiihttp",
+     "aiogrem",
+     "aiohappyeyeball",
+     "aiohhttp",
+     "aiohtpt",
+     "aiohtt"
+    ],
+    "malicious_flagged": 838
+   }
+  },
+  "7": {
+   "npm": {
+    "legit": 1114,
+    "legit_flagged": 5,
+    "legit_flagged_names": [
+     [
+      "get-value",
+      "set-value"
+     ],
+     [
+      "is-regex",
+      "ip-regex"
+     ],
+     [
+      "safe-buffer",
+      "safer-buffer"
+     ],
+     [
+      "simple-get",
+      "simple-git"
+     ],
+     [
+      "through",
+      "through2"
+     ]
+    ],
+    "malicious": 20000,
+    "malicious_examples": [
+     "baes64-js",
+     "deepemrge",
+     "exprses",
+     "elfctron",
+     "electronb",
+     "electrno",
+     "grok-sdk",
+     "electromn",
+     "electreon",
+     "electr0n"
+    ],
+    "malicious_flagged": 36
+   },
+   "pypi": {
+    "legit": 81,
+    "legit_flagged": 0,
+    "legit_flagged_names": [],
+    "malicious": 11898,
+    "malicious_examples": [
+     "0requests",
+     "aaiohttp",
+     "aanthropic",
+     "aihottp",
+     "aiihttp",
+     "aiogrem",
+     "aiohappyeyeball",
+     "aiohhttp",
+     "aiohtpt",
+     "aiohtt"
+    ],
+    "malicious_flagged": 726
+   }
+  }
+ },
+ "popular": {
+  "npm": 2270,
+  "pypi": 1763
+ },
+ "with_downloads": {
+  "npm": {
+   "legit_downloads_min": 823598,
+   "legit_flagged": 12,
+   "legit_still_flagged": 0,
+   "malicious_checked": 40,
+   "malicious_downloads_max": 75,
+   "malicious_still_flagged": 40
+  },
+  "pypi": {
+   "legit_downloads_min": null,
+   "legit_flagged": 0,
+   "legit_still_flagged": 0,
+   "malicious_checked": 40,
+   "malicious_downloads_max": null,
+   "malicious_still_flagged": 40
+  }
+ }
+}

@@ -1,0 +1,2 @@
+# The build backend for releases, pinned so a new upload to PyPI can never change what gets signed.
+hatchling==1.32.4

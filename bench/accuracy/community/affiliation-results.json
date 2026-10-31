@@ -1,0 +1,199 @@
+{
+ "factor_claimed": 9,
+ "median_unknown_share": 0.814,
+ "repos": 24,
+ "rows": [
+  {
+   "factor": 1,
+   "merged": 24,
+   "people": 14,
+   "repo": "nextcloud/notify_push",
+   "top": "nextcloud",
+   "unknown_share": 0.25
+  },
+  {
+   "factor": null,
+   "merged": 206,
+   "people": 2,
+   "repo": "javinizer/javinizer-go",
+   "top": null,
+   "unknown_share": 1.0
+  },
+  {
+   "factor": null,
+   "merged": 98,
+   "people": 19,
+   "repo": "dmellok/tesserae",
+   "top": "organisations of one person",
+   "unknown_share": 0.8776
+  },
+  {
+   "factor": 1,
+   "merged": 135,
+   "people": 70,
+   "repo": "github/awesome-copilot",
+   "top": "microsoft",
+   "unknown_share": 0.2815
+  },
+  {
+   "factor": 1,
+   "merged": 24,
+   "people": 3,
+   "repo": "databricks/containers",
+   "top": "organisations of one person",
+   "unknown_share": 0.4167
+  },
+  {
+   "factor": null,
+   "merged": 161,
+   "people": 30,
+   "repo": "Vita3K/Vita3K",
+   "top": "organisations of one person",
+   "unknown_share": 0.6832
+  },
+  {
+   "factor": null,
+   "merged": 224,
+   "people": 3,
+   "repo": "umamoorg/umamo",
+   "top": null,
+   "unknown_share": 1.0
+  },
+  {
+   "factor": null,
+   "merged": 51,
+   "people": 8,
+   "repo": "ucb-bar/ucie",
+   "top": null,
+   "unknown_share": 1.0
+  },
+  {
+   "factor": null,
+   "merged": 24,
+   "people": 13,
+   "repo": "open-acpica/acpica",
+   "top": "intel",
+   "unknown_share": 0.625
+  },
+  {
+   "factor": null,
+   "merged": 100,
+   "people": 35,
+   "repo": "stashapp/CommunityScrapers",
+   "top": "organisations of one person",
+   "unknown_share": 0.99
+  },
+  {
+   "factor": null,
+   "merged": 31,
+   "people": 8,
+   "repo": "conversejs/converse.js",
+   "top": "organisations of one person",
+   "unknown_share": 0.8065
+  },
+  {
+   "factor": 1,
+   "merged": 213,
+   "people": 13,
+   "repo": "NVIDIA/NemoClaw",
+   "top": "nvidia",
+   "unknown_share": 0.1925
+  },
+  {
+   "factor": 1,
+   "merged": 181,
+   "people": 15,
+   "repo": "BuilderIO/agent-native",
+   "top": "builder.io",
+   "unknown_share": 0.1326
+  },
+  {
+   "factor": null,
+   "merged": 86,
+   "people": 29,
+   "repo": "bytecodealliance/wit-bindgen",
+   "top": "cosmonic",
+   "unknown_share": 0.814
+  },
+  {
+   "factor": null,
+   "merged": 20,
+   "people": 2,
+   "repo": "harrylettering/claude-trace-replay",
+   "top": null,
+   "unknown_share": 1.0
+  },
+  {
+   "factor": 1,
+   "merged": 23,
+   "people": 2,
+   "repo": "zivl/sentry-testkit",
+   "top": "organisations of one person",
+   "unknown_share": 0.0435
+  },
+  {
+   "factor": null,
+   "merged": 241,
+   "people": 2,
+   "repo": "jm2/tributary",
+   "top": "organisations of one person",
+   "unknown_share": 0.9917
+  },
+  {
+   "factor": 1,
+   "merged": 51,
+   "people": 4,
+   "repo": "cap-js/mcp-server",
+   "top": "sap",
+   "unknown_share": 0.3529
+  },
+  {
+   "factor": null,
+   "merged": 93,
+   "people": 5,
+   "repo": "modoojunko/awesome-novel-agent",
+   "top": "organisations of one person",
+   "unknown_share": 0.9892
+  },
+  {
+   "factor": null,
+   "merged": 27,
+   "people": 1,
+   "repo": "shepsci/kaggle-skill",
+   "top": null,
+   "unknown_share": 1.0
+  },
+  {
+   "factor": null,
+   "merged": 158,
+   "people": 21,
+   "repo": "teslamate-org/teslamate",
+   "top": "organisations of one person",
+   "unknown_share": 0.8228
+  },
+  {
+   "factor": 1,
+   "merged": 149,
+   "people": 5,
+   "repo": "warp-drive-data/warp-drive",
+   "top": "organisations of one person",
+   "unknown_share": 0.2483
+  },
+  {
+   "factor": 1,
+   "merged": 152,
+   "people": 36,
+   "repo": "iina/iina",
+   "top": "organisations of one person",
+   "unknown_share": 0.4737
+  },
+  {
+   "factor": null,
+   "merged": 55,
+   "people": 11,
+   "repo": "Quantinuum/tket",
+   "top": "quantinuum",
+   "unknown_share": 0.8909
+  }
+ ]
+}

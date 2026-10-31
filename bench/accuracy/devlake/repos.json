@@ -1,0 +1,5737 @@
+{
+ "picked_at": "2026-10-28T11:10:56Z",
+ "pool": 90682,
+ "checked": 953,
+ "drawn": [
+  "truffle-ai/dexto",
+  "nodejs/nodejs.org",
+  "lissy93/bug-bounties",
+  "getsentry/dotagents",
+  "vercel-labs/run"
+ ],
+ "spares": [
+  "mytonwallet-org/mytonwallet",
+  "rimzzlabs/lanjut",
+  "unbrowse-ai/unbrowse"
+ ],
+ "rows": [
+  {
+   "repo": "HarbourMasters/SpaghettiKart",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "panpf/sketch",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "python-zk/kazoo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "syncfusion/winforms-demos",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FolkertVanVerseveld/aoe",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sailor-sh/CK-X",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Jericho/StrongGrid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ajeetdsouza/clidle",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Konsl/spicetify-visualizer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "PaperMC/Waterfall",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zhuzhaoyun/Molio",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "seongkyu-lim/TechBlogs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jsoftware/jsource",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "temporalio/samples-java",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aws/ec2-macos-init",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "edgexfoundry/edgex-compose",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sourcegraph/src-cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rcieri/glab-tui",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TheNetworkGuy/netbox-zabbix-sync",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Stability-AI/stable-audio-3",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "project-zot/zot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kafka4beam/brod",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hashicorp/vault-helm",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "agent-sh/agentsys",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gastownhall/gastown",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ipfs/go-ds-crdt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Slion/Fulguris",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "heavyai/heavyai-charting",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "scallop/scallop",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "flancian/agora",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JuliaStrings/utf8proc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "getmeridian/meridian",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dcostenco/prism-coder",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Nomi-CEu/Nomi-CEu",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "saturneric/GpgFrontend",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "IncredibleDevHQ/dev-video-creator",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nocobase/nocobase",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "inclusionAI/Realtime-Venus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "uhub/awesome-objective-c",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "springernature/boomcatch",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "readyready15728/awesome-programming-games",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ParAlg/gbbs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lobehub/lobe-charts",
+   "production_deployments_90d": 22,
+   "merged_prs_90d": 9,
+   "eligible": false
+  },
+  {
+   "repo": "hlorus/CAD_Sketcher",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "UniversalMediaServer/UniversalMediaServer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rescript-lang/rescript",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RichardLitt/awesome-fantasy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RcppCore/RcppEigen",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "libMesh/libmesh",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kiwanami/emacs-calfw",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Sheepolution/how-to-love",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openxrlab/xrmocap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "truffle-ai/dexto",
+   "production_deployments_90d": 28,
+   "merged_prs_90d": 63,
+   "eligible": true
+  },
+  {
+   "repo": "Replica0110/Lyrico-Plugins",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dotpas/dext",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nums-ai/causilo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ZacharyL2/KeyEcho",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gglucass/headroom-desktop",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apenella/go-ansible",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openjournals/joss-papers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Auxilor/EcoSkills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "egoroof/browser-id3-writer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/CAIRA",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hugeicons/hugeicons",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Azure/k8s-set-context",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tarsius/moody",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "carlos-alberto-silva/rGEDI",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pharo-project/pharo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "petgraph/petgraph",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cfgnunes/nautilus-scripts",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mdn/content",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "backstage/community-plugins",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Fruchtzwerg94/PlantUmlViewer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Dygmalab/Bazecor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "KruxAI/ragbuilder",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NG-ZORRO/ng-zorro-antd",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hassio-addons/app-ssh",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pig-mesh/pig",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Bogdanp/awesome-advent-of-code",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "safe-global/safe-deployments",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aws/tools-for-devops-agent",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rushisangani/BiometricAuthentication",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "x554960766/wechat-mp-tools",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "esphome/devices.esphome.io",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Homebrew/brew",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Stremio/stremio-web",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "N1nEmAn/openzep",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "boykopovar/AnyPS5",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cobanov/teslamate-mcp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "robjtede/actix-web-lab",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "txpipe/pallas",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zoejane/awesome-music-programming",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "IllusionMods/HSPlugins",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "manchenkoff/nuxt-auth-sanctum",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gonglei007/GameDevMind",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JosefNemec/Playnite",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "espruino/EspruinoWebIDE",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Rule-34/App",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Divine-Star-Software/DivineVoxelEngine",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "googleapis/gapic-generator-go",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zachowj/hass-node-red",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "1038lab/ComfyUI-RMBG",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "datafusion-contrib/datafusion-table-providers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rails/globalid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "urre/wordpress-nginx-docker-compose",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jacklandrin/OnlySwitch",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "coolstartnow/isms-builder",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jgarzik/hk",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mehatab/fettle",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "palemoky/fight-the-landlord",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "algorithmsbooks/decisionmaking",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dsheeler/CoverflowAltTab",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openfootball/football.json",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gaul/modernizer-maven-plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "illuminate/support",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nix-community/nixt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "biliup/biliup",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "weapp-tailwindcss/weapp-tailwindcss",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "exercism/csharp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "K-Dense-AI/claude-scientific-writer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "anysearch-team/anysearch-dsh",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "python-jsonschema/jsonschema",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tableau/extensions-api",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "YusukeIwaki/playwright-ruby-client",
+   "production_deployments_90d": 5,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "topfreegames/pitaya",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "keepandroidopen/keepandroidopen.github.io",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sam247/openredaction",
+   "production_deployments_90d": 22,
+   "merged_prs_90d": 16,
+   "eligible": false
+  },
+  {
+   "repo": "syunnPC/qemu-system-ia64",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kamaaina/macropad_tool",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samber/mo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jsdsg666/AutoWWTP-ASM-Demo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "csskit/csskit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OpenWonderLabs/SwitchBotAPI",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "alibaba/pipcook",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ResetXPDR/MSFS_AutoFPS",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kedro-org/kedro-viz",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "opendatacube/odc-stac",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "chayotic/Open-Source-Music-Streaming-Apps",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tr7zw/FirstPersonModel",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wmcbrine/PDCurses",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Neamar/KISS",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BrickSchema/Brick",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "libvips/ruby-vips",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aibasel/downward",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CesiumGS/cesium-unreal",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MobileFirstLLC/irregular-expressions",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Xe/site",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ngocdaobao/A-Survey-on-Looped-Transformers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "f4exb/sdrangel-docker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HelloGitHub-Team/geese",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tubecreate/tubecli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "angristan/openvpn-install",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nushell/nushell",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zmap/zmap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NVIDIA-NeMo/Curator",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "llm-ring/lmring",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "amd/IRON",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bloomberg/comdb2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Rimagination/good-question",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OCR-D/core",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ShyVortex/dlss-unlocked",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "janmasarik/resolvers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "okraits/rofi-tools",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "myssal/Brown-Dust-2-Asset",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TrenchBroom/TrenchBroom",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kilian-ai/linuxontab",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "win4r/MuseAI-Skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bazel-contrib/rules_scala",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "google/go-github",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "espebra/filebin2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NetApp/trident",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "daviddavo/jgmd",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "toby-bridges/api-relay-audit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zinnia-os/zinnia",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "smhanov/auth",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "undefined-ui/second-brain-os",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cathrynlavery/codex-skill",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "arcships/rutis",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "totalhack/zillion",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "falcosecurity/falcoctl",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NVIDIA/numba-cuda",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "figranium/figranium",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "turbot/tailpipe",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ctag-fh-kiel/ctag-tbd",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RapierXbox/ShellyElevate",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "KiwiCanopy/KiwiDesk",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "huggingface/huggingface.js",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fushengqian/fuint",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "robertdebock/ansible-role-bootstrap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wheels-dev/wheels",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fastify/fastify-caching",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "1iry/multi-agent-architecture-advisor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kagisearch/bangs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sulab999/AppMessenger",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "react-component/slider",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "timbray/quamina",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "omandryk/wc-api-java",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "danielblnc/DLSS-NR-on-AMD",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dotnet/Nerdbank.GitVersioning",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Valthrun/valthrun-cs2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "winkerVSbecks/sketchbook",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CESNET/libyang",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vzakharchenko/keycloak-radius-plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "DelSkayn/rquickjs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jeremybmerrill/flyover",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/vscode-cosmosdb",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ClevelandMuseumArt/openaccess",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tristinbaker/IdleFantasy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "linuxserver/docker-ddclient",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/unomi",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "stephrobert/containers-training",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "isa-group/RESTest",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aerynOS/recipes",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/vscode-eslint",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "radiance-project/ear-web",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pyozig/PyOZ",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "charmbracelet/soft-serve",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GreatAuk/plugin-web-update-notification",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "eclipse-ee4j/eclipselink",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AshishA26/Orion-Quadruped",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zerodha/gokiteconnect",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/thrift",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "isomorphic-git/isomorphic-git",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "luohy15/y-agent",
+   "production_deployments_90d": 99,
+   "merged_prs_90d": 0,
+   "eligible": false
+  },
+  {
+   "repo": "10play/10tap-editor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "thehanimo/pr-title-checker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "netdata/netdata",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Stan-breaks/ytsurf",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "synfig/synfig",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "murray17/rovai-ai",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SigProfilerSuite/SigProfilerExtractor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mlogclub/bbs-go",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "themix-project/themix-gui",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Muuuun/luxas",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "makifbaysal/tasktrooper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "envoyproxy/java-control-plane",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sveltejs/vite-plugin-svelte",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "formio/formio",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fusion-energy/neutronics-workshop",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kozalosev/DickGrowerBot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "searchmysite/searchmysite.net",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sokrypton/ColabDesign",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gtsteffaniak/filebrowser",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "babarot/afx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nodejs/nodejs.org",
+   "production_deployments_90d": 14,
+   "merged_prs_90d": 145,
+   "eligible": true
+  },
+  {
+   "repo": "honojs/hono",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dickwu/apple-design-skill",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sds/haml-lint",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tavicu/homebridge-samsung-tizen",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CRED-CLUB/propeller",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "romainrbr/immich-face-to-album",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pur1fying/blue_archive_auto_script",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kubevela/terraform-controller",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vaadin/vaadin-core",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gohugo-ananke/ananke",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "oxidecomputer/helios",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "free5gc/free5gc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ballerina-platform/module-ballerina-soap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Mange/roadie-rails",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sr99622/libonvif",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ericdrowell/brometal",
+   "production_deployments_90d": 19,
+   "merged_prs_90d": 0,
+   "eligible": false
+  },
+  {
+   "repo": "salesforce/tough-cookie",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "appleboy/easyssh-proxy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "molefrog/wouter",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "doorkeeper-gem/doorkeeper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "php-webdriver/php-webdriver",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "prankstr/vibepanel",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SpinalHDL/VexiiRiscv",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "generateme/fastmath",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "prometheus/OpenMetrics",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "saasbook/courseware",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dgutov/diff-hl",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "for-the-zero/Free-LLM-Collection",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "stripe-samples/accept-a-payment",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lettucecfd/lettuce",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "theRealPadster/spicetify-hide-podcasts",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RosettaCommons/PyRosetta.notebooks",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "efcore/EFCore.NamingConventions",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wenxig/free-nodes-sub",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "intellij-solidity/intellij-solidity",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "astrofrog/fast-histogram",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "UiPath/coder_eval",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "shamil-t/ehr-blockchain",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Agent-Field/agentfield",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SAP/terraform-provider-btp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AllThingsSmitty/typescript-tips-everyone-should-know",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "google/turbinia",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apocas/dockerode",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "geek-fun/sqlkit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nesnes/teleplot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ebertolazzi/Clothoids",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "chipsalliance/sv-tests",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wanadev/yoga",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Unity-Technologies/ml-agents",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zargarkhan1/quorum-alpha-dash",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "everget/tradingview-pinescript-indicators",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dwarning/VA-Models",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SigProfilerSuite/SigProfilerMatrixGenerator",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "P403n1x87/austin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "web-platform-dx/developer-signals",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cheeriojs/dom-serializer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FunnyGuilds/FunnyGuilds",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jekyll/jekyll-feed",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rizinorg/rizin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Spikemumotor/kfebskpv",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FeatureNAB/mmWave-Sensor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "digitalocean/go-libvirt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xPaw/SteamWebAPIDocumentation",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "alihaskar/pycharting",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CommonHuman-Lab/nyxstrike",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "PlasmaPy/PlasmaPy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "buildout/buildout",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HoshinaAkarin/exposure-x7-manifest",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "archguard/archguard",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "frankiejun/wxpushSkin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/datafusion",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "plantree/ruanyf-weekly",
+   "production_deployments_90d": 27,
+   "merged_prs_90d": 0,
+   "eligible": false
+  },
+  {
+   "repo": "JackismyShephard/ultimate-rvc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pinterest/knox",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ForzaETH/race_stack",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sbroenne/mcp-windows",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ABTSoftware/SciChart.Android.Examples",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "EndeavourOS-Community-Editions/Community-wallpapers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "imputnet/helium",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "XimilalaXiang/DeLive",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "simpeg/discretize",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nasa/delta",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "es-tooling/module-replacements-codemods",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "coreyhaines31/marketingskills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Xisrr1/Revancify-Xisr",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "prometheus-community/ipmi_exporter",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "linuxdeepin/dde-file-manager",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "oxynote/oxynote",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ZTMYO/XiaoShiLiu",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "streamlink/streamlink",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Correia-jpv/fucking-awesome-nextjs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "XMLTV/xmltv",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TannerMidd/pi-pocket",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AnswerDotAI/ghapi",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/snmalloc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Intellindust-AI-Lab/GTR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/pulsar-client-node",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "madereddy/noisy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bighadj22/codflow",
+   "production_deployments_90d": 4,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "DerekStride/tree-sitter-sql",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gadenbuie/cleanrmd",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Relacibo/typst-as-lib",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "arkworks-rs/algebra",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Ozark-Connect/NetworkOptimizer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "antvis/G2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "henrique-coder/perplexity-webui-scraper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OfficeDev/O365-EDU-Tools",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openai/openai-cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Arindam200/awesome-ai-apps",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "afnanenayet/diffsitter",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CiscoTestAutomation/pyats",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yj-liuzepeng/dsh-project-brain",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hassio-addons/app-nut",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "J-x-Z/cocoa-way",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HorizonRobotics/RoboOrchardLab",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ezyang/ghstack",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "joelhooks/agent-secrets",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nicedreamzapp/claude-code-local",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "textbrowser/dooble",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ansible/event-driven-ansible",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sksalahuddin2828/sksalahuddin2828",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "writer/writer-framework",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pictaria-ai/pictaria-server",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "devlooped/nugetizer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "844704781/ximalaya_downloader",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ibsgss/TcpQuality",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Takalahiro/my-second-brain1",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jedisct1/libsodium",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Novage/wt-tracker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "go-pkgz/routegroup",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Chalarangelo/30-seconds-of-code",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "XDGFX/PPP",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BlackArch/blackarch-site",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "laputa-systems/srv",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bigsk1/voice-chat-ai",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RLinf/RLinf",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MrKraken/StarStrings",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cncf/presentations",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cubxxw/awesome-cs-course",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yandex/YaFSDP",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "burtonageo/cargo-bundle",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mlinfra-io/mlinfra",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mkturkcan/DART",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "docker-library/repo-info",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pgEdge/spock",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vbotka/ansible-examples",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Crosstalk-Solutions/project-nomad",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "savannahostrowski/debugwand",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "StellarDust-AI/stockquant-suite-tutorial-qmt-PTrade",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "0xGG/crossnote-app",
+   "production_deployments_90d": 2,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "iflytek/astron-rpa",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "markissimplier/translation-hub-stringsets",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SanPen/VeraGrid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mimimaster/piwin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "johnpbloch/wordpress-core",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "schrodinger/pymol-open-source",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "WikiEducationFoundation/WikiEduDashboard",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "matrix-construct/tuwunel",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "usnistgov/NFIQ2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TrigenSoftware/masonry-grid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "stravalib/stravalib",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ltex-plus/vscode-ltex-plus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yessGlory17/argus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "julianlam/nodebb-plugin-sso-oauth",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "WolframResearch/Chatbook",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "physical-superintelligence-lab/Psi0",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "2GT-Media-Group-LLC/mikrotik-manager",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "usenocturne/nocturne",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SFTtech/nyan",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NoneGiven/MphRead",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TheMaxMur/RS-Key",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "arm/metis",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RustCrypto/crypto-bigint",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "plan4better/goat",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "imfeh2/fora",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pando85/kaniop",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pirovc/ganon",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "element-hq/element-web",
+   "production_deployments_90d": 1,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "VeryGoodOpenSource/vgv-ai-flutter-plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wireapp/wire-server",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "base/withdrawer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rmcauley/rainwave",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aws/aws-sdk-kotlin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "anovruzov/NeuralGraph",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pact-foundation/pact-php",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kac89/vulnrepo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sebastienros/yessql",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "plutoplus/plutoplus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "majestrate/llarp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "actions/toolkit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "isuttell/sine-waves",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "blackducksoftware/detect",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "WyriHaximus/github-action-get-previous-tag",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GD4AI/obsidian-llm-wiki",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Hypfer/Valetudo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "retrospect-addon/plugin.video.retrospect",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nette/di",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fluxcd/flagger",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tech-leads-club/agent-skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "prometheus-community/prom-label-proxy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "maksimzayats/diwire",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CachyOS/copr-linux-cachyos",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/azure-pipelines-vscode",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "golang/sys",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gaphor/gaphor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "DOSAYGO-STUDIO/rain",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lige47/lige_icon",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/cordova-node-xcode",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "beiciliang/intro2musictech",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TheSecuredAnalyst/security-suite",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "velero-io/velero-plugin-for-microsoft-azure",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cert-manager/aws-privateca-issuer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bvlinsky/home-assistant-passive-income",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "feuerdev/keep-mcp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sindresorhus/clean-stack",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nctu6/nightmare-eclipse",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vinteo/hass-opensprinkler",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bootmortis/iran-hosted-domains",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Tencent/tdesign-react",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cryptomator/cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yandexdataschool/nlp_course",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "het2333/OrgMesh",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "5yutan5/PyQtDarkTheme",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Simply-Static/simply-static",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bookfere/Ebook-Translator-Calibre-Plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cktan/tomlc17",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rpcpool/yellowstone-grpc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FredyH/MySQLOO",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "misode/misode.github.io",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "qlabs-eng/dust",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "raulpetruta/ha-wa-bridge",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Esperanto/kurso-zagreba-metodo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "deminimis/minimalimageviewer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kmalakoff/knockback",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "madnight/nano",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "isofit/isofit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sevcator/zapret-pocket",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "galaxyproject/training-material",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Boom5426/Nature-Paper-Skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "daledesilva/obsidian_ink",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "spacetelescope/jwst",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apple/app-store-server-library-swift",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Together-Java/TJ-Bot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Sitecore/docker-images",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "domdoss/Warden",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "appwrite/sdk-for-php",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nthack/Shadowrocket-ADBlock-Rules-Easy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "coreos/coreos-installer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aurorascharff/next15-filterlist",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "chrisant996/clink",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "snazzybean/roommind",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kubespray-offline/kubespray-offline",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/nuttx-apps",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "star7th/link-ai",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "isce-framework/isce3",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Arch1eSUN/Arcgentic",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "feiskyer/claude-code-settings",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "scy/levitation",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jasontaylordev/RapidConsole",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "flier268/ConvertZZ",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "spieglt/Cloaker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "amabnl/amadeus-ws-client",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/FluidFramework",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "codersauce/red",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zerowand01/markplane",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aizhimou/pigeon-pod",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "magicblack/maccms10",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "outfox/fennecs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "IvanLi-CN/tavily-hikari",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cachethq/core",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ezyang/htmlpurifier",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jruere/multiprocessing-logging",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lissy93/bug-bounties",
+   "production_deployments_90d": 40,
+   "merged_prs_90d": 66,
+   "eligible": true
+  },
+  {
+   "repo": "dashjoin/platform",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dyc3/steamguard-cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wso2/carbon-identity-framework",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "laravel/ui",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gtbluesky/fusion",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "loonghao/photoshop-python-api-mcp-server",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MxIris-Reverse-Engineering/MachOSwiftSection",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Swival/swival",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bykka/dynamoit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "snowplow/iglu-central",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ZJU-Turing/TuringCourses",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wgsl-analyzer/wgsl-analyzer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Hubs-Foundation/hubs-blender-exporter",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "IBM/IBM-Z-zOS",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rsasaki0109/gnssplusplus-library",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BoboTiG/python-mss",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AndrewAltimit/template-repo",
+   "production_deployments_90d": 8,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jxzhangjhu/Awesome-LLM-Uncertainty-Reliability-Robustness",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "foambubble/foam",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "twbs/examples",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ayushh0110/ScreenMind",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Skardyy/mcat",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "waterdisappear/ATRNet-STAR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jaspervdj/hakyll",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kohler/hotcrp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ehrlinger/ggRandomForests",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "saintedlama/passport-local-mongoose",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "awesome-spectral-indices/awesome-spectral-indices",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ai-genie/chatgpt-vscode",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "purescript-contrib/purescript-react",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ccfddl/ccf-deadlines",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "getsentry/dotagents",
+   "production_deployments_90d": 44,
+   "merged_prs_90d": 39,
+   "eligible": true
+  },
+  {
+   "repo": "redis/docker-library-redis",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "projectdiscovery/naabu",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JakeWharton/dalvik-dx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AOSC-Dev/aosc-os-abbs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "stanuwu/Sunrise",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "artefactory/choice-learn",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vercel/ai",
+   "production_deployments_90d": 35,
+   "merged_prs_90d": 2566,
+   "eligible": false
+  },
+  {
+   "repo": "Betterment/delayed",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "career-ops-hq/career-ops",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "msk1039/nagomi",
+   "production_deployments_90d": 23,
+   "merged_prs_90d": 5,
+   "eligible": false
+  },
+  {
+   "repo": "dayflow-js/calendar",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xafn/affa.nz",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SantanderAI/gen-fraud-graph",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Eloise1988/CRYPTOBALANCE",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ceph/ceph-nvmeof",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "protobom/protobom",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "flamehaven01/AI-SLOP-Detector",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "oleiade/motus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NoobCity99/CTRoadmap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Thriftpy/thriftpy2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sogonov/anubis",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Open-Wine-Components/umu-launcher",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ahopkins/mayim",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rburkholder/trade-frame",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tych0/xcffib",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GavinTan/openvpn",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aykutkorkut/badge-odyssey-voyage",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "izderadicka/audioserve",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MuhammadAshouri/marzban-templates",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "DisnakeDev/disnake",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cookiy-ai/user-research-skill",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/maven-dependency-plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Lularible/ptp-book",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BlackMATov/evolved.lua",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bloomberg/crane",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mattn/algia",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "waza-ari/fastapi-keycloak-middleware",
+   "production_deployments_90d": 2,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fastly/Viceroy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AI4Wireless/LAM4PHY_6G",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "trbflxr/kino",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "digital-grease/fauxx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vjousse/pomodorolm",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sbezverk/gobmp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RooCodeInc/Roomote",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "firehol/iprange",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wix/react-native-calendars",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FQrabbit/SSTap-Rule",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cando-developers/cando",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "team-mirai/mirai-gikai",
+   "production_deployments_90d": 9,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Kelsidavis/System7",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lackeyjb/playwright-skill",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kndhjk/mixport-customs-vision-android",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zzzprojects/Eval-Expression.NET",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "swrobel/meta-surf-forecast",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "qemus/qemu",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FreeOpcUa/opcua-asyncio",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BabylonJS/Babylon.js",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "arendst/Tasmota",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "15r10nk/inline-snapshot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mirzaaghazadeh/iphone-duo-skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "s2underground/GhostMaps",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ldmud/ldmud",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Adyen/adyen-node-api-library",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ViewTouch/viewtouch",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "LaWebcapsule/d9",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hibbitts-design/docsify-this",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sourcemeta/jsonbinpack",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dakra/dmacs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Kimi450/ubuntu-server",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "adar2378/pin_code_fields",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cloudfoundry/bosh-deployment",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "clearml/clearml-agent",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "duneanalytics/dune-client",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "materialsproject/api",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "DavidXanatos/TaskExplorer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mishka-group/mishka_chelekom",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nextcloud/external",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Carapacik/wordly-plus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "B-UMMI/chewBBACA",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MaibornWolff/codecharta",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "phplrt/phplrt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rehlds/ReAPI",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Xinrea/bili-shadowreplay",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GTekSD/SUASS",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Grazulex/laravel-devtoolbox",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "etianl/Trouser-Streak",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/msagljs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Koenkk/zigbee-OTA",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "beyond-all-reason/RecoilEngine",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dangkhoasdc/awesome-vector-database",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "achiya-automation/safari-mcp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ivan-pinatti-labs/docker-torrent-box-with-vpn",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "truenas/scale-build",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sdetweil/MagicMirror_scripts",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ever-co/ever-teams",
+   "production_deployments_90d": 61,
+   "merged_prs_90d": 333,
+   "eligible": false
+  },
+  {
+   "repo": "mjmlio/email-templates",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dromara/dongle",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "versiaever/Pharos-Testnet-Bot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "swiftlang/vscode-swift",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Bunn/PiStats",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ExHammer/hammer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "heymi/aldus-palace",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pipecat-ai/voice-ui-kit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "epsylon/ufonet",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aspect-build/rules_lint",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nextcloud/notify_push",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jpenilla/squaremap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "quantumlib/tesseract-decoder",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "PC2005-cloud/dsh-pet",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jezweb/claude-skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "schemahero/schemahero",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "freelawproject/juriscraper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mukul975/cve-mcp-server",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dpt/The-Great-Escape-in-C",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wiremock/WireMock.Net",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GoogleContainerTools/skaffold",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "agent-network-protocol/anp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "oooldtoy/SSTAP_ip_crawl_tool",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sungeer/sorceress",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "EasyNetQ/EasyNetQ",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "illegalstudio/elephc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OWASP/DockSec",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aquaproj/aqua",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GetStream/stream-video-android",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tink-crypto/tink-java",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RetroAchievements/RALibretro",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "psf/requests",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "clintmoyer/oregon-trail",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "cailab-tamu/scTenifoldKnk",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wine-mono/wine-mono",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ultralytics/notebooks",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "renancaraujo/watchsteroids",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JuliaMath/Polynomials.jl",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "capacitor-community/admob",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "unicode-org/cldr-json",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xiaofang142/hivemtk",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "uccl-project/uccl",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wp-net/WordPressPCL",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "libretro/retroarch-joypad-autoconfig",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vercel-labs/run",
+   "production_deployments_90d": 33,
+   "merged_prs_90d": 79,
+   "eligible": true
+  },
+  {
+   "repo": "buzzer-re/Rikugan",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hvoss-tech/AutoForge",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Bush2021/chrome_installer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "varandrew/moor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aaryansamanta/ai-ethos",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "udoprog/relative-path",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "FossifyOrg/Calendar",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Youmiel/FloatingIslands-Datapack",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CopperlineHQ/Copperline",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "newo-ether/Agora",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samestep/npc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OpenSQZ/MiniCPM-V-CookBook",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "TensorSpeech/TensorFlowASR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JimLiu/baoyu-design",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "schwabe/ics-openvpn",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xibosignage/xibo-docker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "joshspeagle/dynesty",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samdauwe/webgpu-native-examples",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "XieZhiFa/IdCardOCR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "eclipse-openvsx/openvsx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lttng/lttng-modules",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jigjoy-ai/mozaik",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yangheng95/ABSADatasets",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mytonwallet-org/mytonwallet",
+   "production_deployments_90d": 100,
+   "merged_prs_90d": 31,
+   "eligible": true
+  },
+  {
+   "repo": "ggml-org/llama.vim",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fivetaku/cc101",
+   "production_deployments_90d": 2,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "pengrad/java-telegram-bot-api",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "qr243vbi/nekobox",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "4evy/nixcord",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "1Password/solutions",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Particular/NServiceBus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gurrenm3/BTD-Mod-Helper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dxhklck/comfyui_envtools",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "enthought/mayavi",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "khvzak/script-bench-rs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "evo-design/proto-tools",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yumata/lampa",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AnishDe12020/portfolio",
+   "production_deployments_90d": 3,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GoogleChromeLabs/comlink",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vkurko/calendar",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft/edit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ClawBio/ClawBio",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "821869798/carton",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AmanPriyanshu/Awesome-AI-For-Security",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "w3stling/rssreader",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "googlecolab/google-colab-cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zazuko/trifid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "python-babel/babel",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jQAssistant/jqassistant",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "blackfyre/wga",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CBServers/cb-launcher",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "payloadcms/website",
+   "production_deployments_90d": 27,
+   "merged_prs_90d": 27,
+   "eligible": false
+  },
+  {
+   "repo": "f0e/blur",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fmtlib/fmt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "discord-tickets/bot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hipstersmoothie/storybook-dark-mode",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "amitshekhariitbhu/ai-system-design",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xiaomabenten/scpm_engineer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tipsy/j2html",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dj-stripe/dj-stripe",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aloneguid/bt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "CMU-MultiComp-Lab/mmml-course",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "huff-language/huffmate",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "blues-sechseck/Mitsubishi-WF-RAC-Integration",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rime/librime",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "novosga/novosga",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Project-HAMi/HAMi-core",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NodeSecure/js-x-ray",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MewoLab/AquaDX",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fmagent-project/FM-Agent",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "v0lta/PyTorch-Wavelet-Toolbox",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "minad/jinx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nasa/icarous",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Wargus/stargus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "azooKey/azooKey-Desktop",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ArcadeData/arcadedb",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gofiber/boilerplate",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "noxelisdev/LoL_DDragon",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "carrot2/carrot2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AlphaGPU/leetgpu-challenges",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rudi-q/glucose_media_player",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nuxt/awesome",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/httpcomponents-client",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vaguesyntax/ii-vynx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "d8349565/GridFlow",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dagger/dagger",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "LudovicRousseau/PCSC",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Open-Source-Legal/OpenContracts",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "roshanlam/iFetch",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hacf-fr/renault-api",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "apache/skywalking-python",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "krojew/springtime",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "uvwt/agentdock",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rimzzlabs/lanjut",
+   "production_deployments_90d": 32,
+   "merged_prs_90d": 97,
+   "eligible": true
+  },
+  {
+   "repo": "pmndrs/postprocessing",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bgreenwell/xleak",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "k1ngmang/lazurite",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hatchet-dev/hatchet",
+   "production_deployments_90d": 22,
+   "merged_prs_90d": 485,
+   "eligible": false
+  },
+  {
+   "repo": "pelias/openstreetmap",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openshift-examples/web",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ansible-collections/ansible.windows",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "unjs/ipx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mmastrac/nanojson",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kennethshackleton/SKPokerEval",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "elementary/photos",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "libpd/pd-for-android",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "metallb/metallb",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jodit/jodit-react",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "GubernievS/AntiZapret-VPN",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "soedinglab/spacedust",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Const-me/Whisper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "EmbodiedSWE/EmbodiedSWE",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "wxWidgets/Phoenix",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RioNoir/GitCharm",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AI4Finance-Foundation/FinRobot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "raandree/NTFSSecurity",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sillsdev/docu-notion",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "exeldro/obs-transition-table",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ros2/message_filters",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "soufianekhiat/DearWidgets",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aox/aox",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ParisNeo/lollms",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Echosong/ES",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "essentialdevelopercom/essential-feed-case-study",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "riatelab/maptiles",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samanhappy/mcphub",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "toptensoftware/RichTextKit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tauri-apps/tauri-docs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hello-robot/stretch_ros2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "indielayer/ui",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ballerina-platform/module-ballerinax-kafka",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "getkern/kern",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mate-desktop/atril",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gugarosa/opytimizer",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RouteWorks/RouterArena",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Flow-IPC/ipc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "derek-larson14/obsidian-claude-sidebar",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "awss1i/assay",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "confluentinc/confluent-kafka-javascript",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "meta-pytorch/torchx",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "minht11/local-music-pwa",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "williamlzw/ExDUIR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "microsoft-search/pnp-modern-search",
+   "production_deployments_90d": 6,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Gaurav-Gosain/tuios",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "elParaguayo/qtile-extras",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "liuyangme/SOTA-3DHPE-HMR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "WasmEdge/WasmEdge",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MatinDehghanian/Ourenus",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "jmhodges/howsmyssl",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dbt-labs/dbt-mcp",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Art-of-WiFi/UniFi-API-client",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "acidb/mobiscroll",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "NationalSecurityAgency/ghidra",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "chipfighter/context-attachment-manager",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HaveIBeenPwned/EmailAddressExtractor",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "thymikee/jest-preset-angular",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "clusterpedia-io/clusterpedia",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Iridium-Development/IridiumSkyblock",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sindresorhus/p-map",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mkaz/libro",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Sev7eEn7/dsh-sieve",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "trailheadapps/lwc-recipes",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "mitchelloharawild/distributional",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aleksul/repid",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Zxilly/UA2F",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HybridShivam/Pokemon",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "bashly-framework/completely",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "not-a-bank/open-banking-tracker-data",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "trafalmejo/OSCAR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "qiye45/wechatVideoDownload",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "leontrolski/leontrolski.github.io",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "blaylockbk/Herbie",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rust-lang/rustc-dev-guide",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openclaw/lobster",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "interledger/rfcs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "alufers/mitmproxy2swagger",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Project-MONAI/monai-deploy-app-sdk",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "litestar-org/polyfactory",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "j-hc/zygisk-detach",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fumeapp/modeltyper",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "aiptimizer/TurboOCR",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "neurodata/hyppo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samyycX/awesome-cs2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vortex-data/vortex",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "avbiswas/text-albumentations",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "YimMenu/YimMenuV2",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "tomankirilov/VPainter",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "WecomTeam/wecom-unified",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "yoavbls/pretty-ts-errors",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "moby/swarmkit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "braziljs/eloquente-javascript",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "kubernetes-sigs/kernel-module-management",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Tillerino/Tillerinobot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "MicrosoftDocs/sql-docs",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "chromatone/chromatone.center",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "geerlingguy/raspberry-pi-pcie-devices",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "holoviz/holoviews",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Q7DF1/XrayFA",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JackJuly/linkook",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Mikeli7666/DuoBar",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Bawnorton/MixinSquared",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "fastai/fastai",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vesoft-inc/nebula-java",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nerdyslacker/desktop-web-browsers",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lastbattle/Harepacker-resurrected",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hengyoush/kyanos",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SaraGamal998/manga-stream-vault",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "princeton-nlp/HELMET",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "rughh/on_ruby",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "naruya/gaussian-vrm",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "n8n-io/self-hosted-ai-starter-kit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "sindresorhus/run-node",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "terrestris/react-geo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "awslabs/mountpoint-s3",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gristlabs/grist-widget",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ghostunnel/ghostunnel",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "thunderbird/import-export-tools-ng",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "HumeAI/hume-api-examples",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ReactiveX/RxJava",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "KHwang9883/MobileModels",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nunobrum/spicelib",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "lueluelue2006/ChatGPT_Compendium_of_Usage_and_Juice",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "AaronZ345/Athena-personal-academic-page",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Protocentral/healthypi-move-fw",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ash-project/ash",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "dohooo/react-native-reanimated-carousel",
+   "production_deployments_90d": 17,
+   "merged_prs_90d": 17,
+   "eligible": false
+  },
+  {
+   "repo": "hstr0100/GDownloader",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "greggman/unzipit",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Sayrix/Ticket-Bot",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "zotero/web-library",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "OpenByteInc/QuantDinger-Mobile",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "weaviate/weaviate-python-client",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "alexsmedile/hormozi-skills",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "nashaudio/klang",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ParrotSec/anonsurf",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "buildkite-plugins/docker-buildkite-plugin",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "Privado-Inc/privado",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "vellum-dev/vellum",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "hw-native-sys/pypto",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "SAIL-Research-Lab/cheetahclaws",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "westpoint-io/mimik",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "samhocevar/emoji.wpf",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "maglnet/ComposerRequireChecker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "astashov/liftosaur",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "openxpki/openxpki",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "RedByte1337/CredSpy",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "4ch1m/mozext",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "koharu-rs/koharu",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "complexlogic/rsgain",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "BQ-Wang0511/TalkLikeYou-Streaming-RealTime-Demo",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "domainaware/checkdmarc",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "xiaotianfotos/homerail",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "basecamp/kamal-skiff",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "odoo/docker",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "UweTrottmann/SeriesGuide",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "uhub/awesome-llm",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "JonasKruckenberg/tauri-plugin-graphql",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "howdeploy/choirboy-prompt",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "gitkraken/gk-cli",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "toomuchdesign/react-minimal-pie-chart",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "ShunCai/QZoneExport",
+   "production_deployments_90d": 0,
+   "merged_prs_90d": null,
+   "eligible": false
+  },
+  {
+   "repo": "unbrowse-ai/unbrowse",
+   "production_deployments_90d": 51,
+   "merged_prs_90d": 43,
+   "eligible": true
+  }
+ ]
+}

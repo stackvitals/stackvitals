@@ -1,0 +1,11 @@
+{
+ "alone:right": 13,
+ "alone:unclear": 4,
+ "alone:wrong": 3,
+ "model:right": 11,
+ "model:wrong": 2,
+ "model_on_alone_not_right:not_right": 1,
+ "model_on_alone_not_right:right": 5,
+ "model_on_alone_right:not_right": 1,
+ "model_on_alone_right:right": 6
+}

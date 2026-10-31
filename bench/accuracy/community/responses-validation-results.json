@@ -1,0 +1,29 @@
+{
+ "both_defined": 843,
+ "generated": "2026-10-21T22:26:47Z",
+ "im_answered": 39431,
+ "im_first_from_non_maintainer": 20283,
+ "im_first_from_non_maintainer_share": 0.5144,
+ "im_first_from_regular": 3419,
+ "issues": 86733,
+ "median_ratio_km_to_answered_only": 5.15,
+ "median_ratio_roles_only_to_with_regulars": 1.0,
+ "most_waiting_but_answered_median_shown": 1447,
+ "od_first_bot": 6939,
+ "od_first_close": 292,
+ "pool": {
+  "other": 14679,
+  "regular": 2597
+ },
+ "regular_rule": {
+  "days": 360,
+  "issues_commented": 10,
+  "prs_first_reviewed": 2
+ },
+ "repos": 2370,
+ "repos_with_regulars": 1695,
+ "roles_only_median_defined": 844,
+ "seed": 14,
+ "understated_2x": 583,
+ "with_regulars_median_defined": 957
+}

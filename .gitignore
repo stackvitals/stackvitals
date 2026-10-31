@@ -1,0 +1,50 @@
+# Private planning docs (never public)
+CLAUDE.md
+architecture_plan.md
+updates.md
+plans/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Local data
+data/
+!web/src/data/
+*.parquet
+*.duckdb
+*.duckdb.wal
+
+# Plan execution scratch
+.superpowers/
+
+
+# Browser test logs from the Playwright tools
+.playwright-mcp/
+
+# Local labelling work folders (evidence caches, never published)
+bench/accuracy/.work/
+bench/accuracy/impact/work/
+
+# Web app build tools (installed with npm ci in web/)
+web/node_modules/
+
+# Browser end-to-end test output (web/e2e)
+web/e2e/results.json
+web/e2e/test-results/
+web/e2e/playwright-report/
+web/test-results/
+web/playwright-report/
+
+# Pre-launch readiness report and logs (scripts/prelaunch.py)
+prelaunch-report.md
+prelaunch-report.json
+.prelaunch/

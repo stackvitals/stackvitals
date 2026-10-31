@@ -1,0 +1,108 @@
+{
+ "rows": [
+  {
+   "feature": "Dependency evidence",
+   "phase": "P16",
+   "metric": "packages covered; source repo known (verified link); licence known; OSV checked",
+   "value": "4,033 packages; repo 95.5% (38% verified); licence 98.6%; OSV complete, 784 with advisories, 26 malware flags",
+   "n": 4033,
+   "how": "the crawler's daily files built 2026-10-21"
+  },
+  {
+   "feature": "Test reports in run artifacts",
+   "phase": "P15",
+   "metric": "sampled crawl repos keeping test reports StackVitals can read; files parsed",
+   "value": "16 of 190 keep report-named artifacts; 4 of the 16 opened held report files (junit 3, trx 1); 5 of 5 files parsed. Two more repos ship JUnit inside coverage-named artifacts, which are read too; most teams upload no test reports, so job-level history carries CI Health",
+   "n": 190,
+   "how": "a seeded sample of crawl repos: artifact lists, the newest report-like artifact opened"
+  },
+  {
+   "feature": "Portal: catalog-info.yaml",
+   "phase": "P17",
+   "metric": "real files read with no problems; entities naming an owner",
+   "value": "186 of 198 clean (94%); 208 of 218 entities name an owner; every flagged file checked by hand had a real fault",
+   "n": 198,
+   "how": "GitHub code search for root catalog-info.yaml, parsed by Portal's parser"
+  },
+  {
+   "feature": "API use per run",
+   "phase": "P18",
+   "metric": "GitHub requests per CI run read (the Action's steady cost)",
+   "value": "2.0-2.2 per run on 2 repos; a busy repo's day (297+ runs) needs over 600 requests cold",
+   "n": 318,
+   "how": "the CI reader's own request counter, cold read of one day"
+  },
+  {
+   "feature": "Data branch size",
+   "phase": "P18",
+   "metric": "git history and files for a very busy repo",
+   "value": "after 400 days: history 146.64 MB, files 40.88 MB without squash (2,929 records a day, 24 runs a day); with squash every 1000 commits: history 48.03 MB",
+   "n": 9600,
+   "how": "simulated: one real busy day replayed with the Action's write path"
+  },
+  {
+   "feature": "Deployment settings (auto against configured)",
+   "phase": "P16",
+   "metric": "repos whose deployment source is right with no setup",
+   "value": "see the DORA card (30 of 35 held out; 53 of 60 with an earlier 25)",
+   "n": 60,
+   "how": "bench/accuracy/dora"
+  },
+  {
+   "feature": "Regular responders",
+   "phase": "P17",
+   "metric": "project answers caught on held-out repos",
+   "value": "see the community card",
+   "n": null,
+   "how": "bench/accuracy/community"
+  },
+  {
+   "feature": "MCP answers for agents",
+   "phase": "P15",
+   "metric": "failures right and GitHub calls, with and without StackVitals",
+   "value": "91 failures in 44 repos: Sonnet 88 with, 86 without (2.2 and 2.1 calls each); Haiku 43 of 48 with, 44 without (2.2 and 2.8 calls); no significant difference on single failures inside log retention",
+   "n": 91,
+   "how": "bench/accuracy/agents (results2.json)"
+  },
+  {
+   "feature": "In-browser SQL (Explore)",
+   "phase": "P18",
+   "metric": "query time on a busy repo's summaries",
+   "value": "measured 2026-10-21 on 20,648 pull requests (docs/scaling.md); re-check pending",
+   "n": 20648,
+   "how": "DuckDB-WASM in the browser"
+  },
+  {
+   "feature": "Comment commands",
+   "phase": "P18",
+   "metric": "who may decide from a GitHub comment",
+   "value": "repository permission checked on every command (tests); no live check with an outside account yet",
+   "n": null,
+   "how": "unit tests"
+  },
+  {
+   "feature": "Chat alerts",
+   "phase": "P16",
+   "metric": "Slack, Discord and Teams payloads accepted",
+   "value": "formats tested offline; live delivery not measured (needs a webhook)",
+   "n": null,
+   "how": "unit tests"
+  },
+  {
+   "feature": "Test reports from other CI",
+   "phase": "P15",
+   "metric": "JUnit and CTRF uploads joining the history",
+   "value": "GitLab CI read live (read-only): gitlab-org/cli, 78 pipelines in 7 days with 80 requests; uploads from other CI (JUnit, CTRF, Jest/Vitest, Go, TRX) tested offline; a live Jenkins or CircleCI upload needs an outside account and waits for launch",
+   "n": 78,
+   "how": "stackvitals ci gitlab; unit tests"
+  },
+  {
+   "feature": "Test-level quarantine",
+   "phase": "P14 M5",
+   "metric": "failures let through that the change caused",
+   "value": "not measurable on public data yet: 4 of 190 sampled repos keep readable test reports. It takes the job rule's 3-flake bar, whose held-out check found 13 of 81 known-flaky calls were the change's, so quarantine stays opt-in and the verdict check never passes on a known flake",
+   "n": null,
+   "how": "bench/accuracy/features/reports.py; flaky card held-out check"
+  }
+ ]
+}

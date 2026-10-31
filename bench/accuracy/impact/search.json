@@ -1,0 +1,15 @@
+{
+ "sampled": 500,
+ "errors": 9,
+ "with_test_artifacts": 17,
+ "parsed": [
+  "99designs/gqlgen",
+  "frankarobotics/franka_ros2",
+  "langchain4j/langchain4j-spring",
+  "nzbfast/nzbfast",
+  "shap/shap",
+  "space-syndicate/space-station-14",
+  "tomkerkhove/promitor",
+  "walt-app/walt-passes-android"
+ ]
+}

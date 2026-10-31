@@ -1,0 +1,5 @@
+{"workflow":".github/workflows/integration.yml","job":"postgres-15","state":"flaky","flake_events":9,"failures":9,"runs":120,"flake_rate":0.075,"prs_affected":6,"retry_minutes":672}
+{"workflow":".github/workflows/e2e.yml","job":"checkout-smoke","state":"suspect","flake_events":4,"failures":4,"runs":88,"flake_rate":0.0455,"prs_affected":4,"retry_minutes":264}
+{"workflow":".github/workflows/build.yml","job":"docker","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/unit.yml","job":"go-test","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/lint.yml","job":"golangci","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}

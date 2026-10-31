@@ -1,0 +1,11 @@
+/* Where you stand: each area's measures as a table; here bold, typical quieter, the place on a soft tint so it reads first */
+[data-page="standing"] td[data-label="Here"] { font-weight: 700; }
+[data-page="standing"] td[data-label="Typical"] { color: var(--ink-2); }
+
+/* Instrument (sheet design): ink-framed tables and stats, the place cell on the accent tint */
+[data-design="sheet"][data-page="standing"] td[data-label="Measure"] { font-size: 15px; font-weight: 600; color: var(--ink); }
+[data-design="sheet"][data-page="standing"] td[data-label="Here"] { color: var(--ink); font-weight: 700; }
+[data-design="sheet"][data-page="standing"] td[data-label="Place"] { font-weight: 600; background: var(--accent-soft); }
+[data-design="sheet"][data-page="standing"] td[data-label="What it needs"] { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+[data-design="sheet"][data-page="standing"] .table-wrap.card, [data-design="sheet"][data-page="standing"] .stats.card { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="standing"] .pn .table-wrap.card { border: 0; }

@@ -1,0 +1,238 @@
+id,field,first,second,final,winner,reason
+1,cause,infrastructure,timeout,infrastructure,first,"Exit code 137 from 'dotnet paket restore' means the process was killed, typically out of memory on the macOS runner."
+10,cause,unclear,infrastructure,unclear,first,Connection refused to a local node API; the log never shows why the node was down.
+10,caused_by_change,unclear,yes,unclear,first,"Touched prepare and btc core files, but the failure is a local service refusing connections; nothing ties them."
+100,caused_by_change,no,yes,unclear,neither,Nostr relay retry count assert (2 == 3) with bsx_network.py touched on the nostr branch; no re-run to tell timing from a real bug.
+102,cause,timeout,test,test,second,'wait_for_offer timed out' is the test's own polling wait expiring; the job itself did not run out of time.
+103,cause,timeout,test,test,second,'wait_for_bid timed out' is the test's own polling wait expiring; the job itself did not run out of time.
+105,cause,timeout,test,test,second,'wait_for_bid timed out' is the test's own polling wait expiring; the job itself did not run out of time.
+105,caused_by_change,unclear,no,unclear,first,"Touches basicswap.py and daemon code the swap test exercises, but the bid wait timeout does not show a link."
+107,cause,unclear,test,unclear,first,Only an assertion 'Script coin locked' == 'Completed' with no error message giving a cause.
+108,cause,unclear,test,unclear,first,Only an assertion 'Script coin locked' == 'Completed' with no error message giving a cause.
+109,cause,test,infrastructure,test,first,'Text file busy' extracting monerod into a shared test dir: a leftover process from another test holds the binary.
+11,cause,unclear,network,unclear,first,"Connection refused is to a local port, not an external service; the log does not say why the node was down."
+11,caused_by_change,unclear,no,unclear,first,"basicswap.py is the app under test, but nothing in the log ties the refused local connection to the edit."
+110,cause,timeout,test,timeout,first,'Timed out waiting for test_persistent' after 15 BTC RPC retries; the step ran out of time with no deeper cause shown.
+110,caused_by_change,unclear,no,unclear,first,"btc.py is touched and the log shows BTC RPC refusing connections, so a tie cannot be ruled out."
+111,cause,unclear,test,unclear,first,Only an assertion 'Script coin locked' == 'Completed' with no error message giving a cause.
+111,caused_by_change,unclear,no,unclear,first,"basicswap.py is touched and the swap stalled at 'Script coin locked', so a link cannot be ruled out."
+112,cause,unclear,test,unclear,first,'waitForServer failed' after connection refused; the log doesn't say why the node did not start.
+113,cause,timeout,test,test,second,'wait_for_bid timed out' is the test's own polling wait expiring; the job itself did not run out of time.
+113,caused_by_change,unclear,no,unclear,first,"xmr.py is touched and the failing test is an XMR swap, so a tie cannot be ruled out."
+114,cause,unclear,test,unclear,first,'setUpClass() failed' hides the inner exception; no message names a cause.
+114,caused_by_change,unclear,yes,unclear,first,"basicswap.py and xmr.py are touched and setUpClass fails without a visible error, so a tie cannot be ruled out."
+115,cause,test,infrastructure,test,first,'Text file busy' extracting monerod into a shared test dir: a leftover process from another test holds the binary.
+115,caused_by_change,no,yes,no,first,Failure is a busy monerod binary during extraction; base.py and util/network.py edits don't touch that path.
+116,cause,unclear,code_change,unclear,first,"Delphi 'Internal Error' (F2084) in castlescenecore.pas, a file the change did not touch; a compiler crash, not a code error."
+116,caused_by_change,no,yes,no,first,Change only moves deprecated_library files; the compiler internal error is in untouched castlescenecore.pas.
+120,cause,dependency,code_change,code_change,second,ClassNotFound for the app's own BrowserAccelerationFlags after build.gradle.kts changed; not a dependency version.
+124,caused_by_change,yes,no,yes,first,The PR bumps rollup to ~4.64.0 in deno.json and Deno's minimum dependency age policy blocks that version.
+125,caused_by_change,yes,no,yes,first,The PR bumps rollup to ~4.64.0 in deno.json and Deno's minimum dependency age policy blocks that version.
+127,cause,unclear,test,unclear,first,mspec 'did not reset the current example' on Fiber#raise gives no non-determinism evidence.
+13,caused_by_change,no,yes,no,first,Balance assert 0.0 > 0.0 fails with 'XMR blocks: 1' before wallet encryption; the pycryptodome bump isn't involved.
+131,cause,dependency,network,dependency,first,'Could not find artifact maven-clean-plugin in central' with no network error; ci-retry says not a network failure.
+132,cause,dependency,network,dependency,first,'Could not find artifact maven-clean-plugin in central' with no network error; ci-retry says not a network failure.
+133,cause,test,code_change,unclear,neither,Only a TestOpen3#test_pipeline assertion '<true> expected but was <false>'; touched file is an unrelated yml.
+133,caused_by_change,no,yes,no,first,Only tool/jit_compile_check.known.yml changed; the failing MRI test_open3 is unrelated to it.
+137,cause,unclear,test,unclear,first,Single isatty alias spec failure with no message about timing or order; the cause is not shown.
+14,caused_by_change,unclear,no,unclear,first,"Render utils are touched and the game test hung to the 10m timeout, so a tie cannot be ruled out."
+141,cause,dependency,code_change,dependency,first,'Could not find artifact jnr-unixsocket:0.39.6 in central' with no network error; a resolution failure.
+142,cause,dependency,code_change,dependency,first,'Could not find artifact jnr-unixsocket:0.39.6 in central' with no network error; a resolution failure.
+143,cause,dependency,code_change,dependency,first,'Could not find artifact jnr-unixsocket:0.39.6 in central' with no network error; a resolution failure.
+144,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+145,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+146,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+147,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+148,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+149,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+15,caused_by_change,unclear,no,unclear,first,"Game test hit its 10m timeout with no error; only shader files touched, nothing in the log ties the hang to them."
+150,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+151,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+152,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+153,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+154,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+155,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+156,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+157,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+158,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+159,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+160,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+161,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+162,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+163,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+164,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+165,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+166,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+167,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+168,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+169,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+17,caused_by_change,no,yes,yes,second,"The job fails until the pull request carries a changelog/* label: the pull request decided it (its labels, not its code); one ruling for the three identical items."
+170,cause,dependency,network,code_change,neither,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+171,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+172,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+173,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+174,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+175,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+176,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+177,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+178,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+179,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+18,caused_by_change,no,yes,yes,second,"The job fails until the pull request carries a changelog/* label: the pull request decided it (its labels, not its code); one ruling for the three identical items."
+180,cause,dependency,code_change,code_change,second,"Change edited the poms; Maven cannot find jnr-unixsocket:0.39.6 in central (no network error), a deterministic failure from the change."
+181,cause,code_change,workflow,code_change,first,"Separation check worked as designed: the PR touches API-layer and unified-storage files without the exception label, a deterministic failure from the change."
+182,cause,unclear,code_change,unclear,first,TypeError isinstance() in tests/test_bootstrap.py is far from the esphome files touched and no re-run is shown; the cause is not decided.
+182,caused_by_change,no,yes,no,first,Same bootstrap isinstance TypeError appears in another PR; nothing ties it to the esphome files touched and no re-run exists.
+183,cause,unclear,code_change,unclear,first,"Bootstrap isinstance TypeError matches other unrelated PRs; the message does not tie it to data_entry_flow.py, so the cause is undecided."
+183,caused_by_change,no,yes,no,first,The failing bootstrap TypeError is shared with unrelated PRs; nothing in the log ties it to data_entry_flow.py.
+184,cause,unclear,test,unclear,first,"Only 'assert 1 == 0' in recorder test_commit_future_covers_startup_batch, no message showing non-determinism; unrelated to the input_* files."
+188,cause,timeout,test,test,second,"'Timeout waiting for response to createChat (30000ms)' in one e2e test: a test-level wait expired, not the job; only workflow files changed."
+19,caused_by_change,no,yes,yes,second,"The job fails until the pull request carries a changelog/* label: the pull request decided it (its labels, not its code); one ruling for the three identical items."
+190,cause,unclear,test,unclear,first,"Changeset test 'has not reported seed.txt' gives no sign whether test or product is at fault, and no re-run is shown."
+190,caused_by_change,unclear,no,no,second,"Failing changeset conformance test is unrelated to the package.json, lockfile and schema snapshot files touched; nothing ties it to the change."
+191,caused_by_change,no,unclear,no,first,Browser integration test hit remote-connection socket timeouts on localhost; the one UI file touched is not tied to the failure.
+196,cause,unclear,workflow,unclear,first,"The log is unavailable (HTTP 404) and the failing step is unknown, so nothing decides the cause."
+196,own_failure,unclear,yes,yes,second,"A non-gate test job recorded as failed; no evidence it failed only because of another job, so its own steps are the default."
+2,cause,infrastructure,timeout,infrastructure,first,"paket restore exited with code 137 (SIGKILL, out of memory) on the macOS runner."
+20,cause,timeout,test,test,second,Mocha test-level 'TimeoutError: signal timed out' in one WebRTC compliance test; the job itself did not run out of time.
+20,caused_by_change,no,yes,no,first,"Only floodsub/package.json touched; the failure is a WebRTC transport test timeout, nothing ties it and no re-run is shown."
+201,cause,unclear,test,unclear,first,"Windows suite reports ""fail 1"" with no error message or test name; change is docs only"
+202,cause,network,unclear,unclear,second,"apt install of clang stops mid-download with no error line, only exit code 1"
+202,caused_by_change,no,unclear,no,first,"Only CHANGELOG and a spec file touched; apt download of clang failed, nothing ties it to the change"
+203,caused_by_change,unclear,no,no,second,"Playwright strict-mode violation in file_browser_test, which the change (kernel_context, reconnect tests) did not touch"
+205,cause,timeout,test,timeout,first,"Mocha ""Timeout of 60000ms exceeded"" in one gossipsub test, no other cause visible"
+206,cause,unclear,dependency,unclear,first,Gradle BUILD FAILED with no root exception visible; the Develocity scan warning is not the failure
+206,caused_by_change,unclear,no,unclear,first,"Root error hidden; only test files for the traffic light changed, so no tie can be seen either way"
+207,own_failure,unclear,yes,unclear,first,"Log unavailable (HTTP 404), step unknown, so own failure cannot be judged"
+21,cause,timeout,test,test,second,"One WebRTC interface test aborted with a TimeoutError, a timing-based test wait, not a job or step timeout."
+210,cause,unclear,test,unclear,first,"Node test run shows ""cancelled 1"", fail 0, and no error message"
+211,cause,unclear,test,unclear,first,"Playwright wait for ""Mounted in starlette"" timed out; message does not say whether test or product"
+211,caused_by_change,unclear,no,unclear,first,"Change touches widget-manager and frontend chunks, which could affect the page that failed to mount"
+212,cause,unclear,code_change,unclear,first,Gradle BUILD FAILED with a truncated stack trace and no visible root error message
+212,caused_by_change,unclear,yes,unclear,first,"No visible root error; only an expected ruling JSON changed, so the link is unknown"
+213,cause,test,code_change,test,first,"Windows ENOENT on chmod of a temp .p12 in an MCP container test, a temp-file race in test code"
+213,caused_by_change,unclear,yes,no,neither,"ENOENT in mcp-container-command test; the change touched auth, state and keychain code, not the MCP helper"
+215,own_failure,unclear,yes,unclear,first,"Log unavailable (HTTP 404), step unknown, so own failure cannot be judged"
+216,cause,dependency,network,dependency,first,"bun install: ""Fail extracting tarball for lightningcss-linux-x64-gnu"" with no network error shown"
+217,cause,infrastructure,test,infrastructure,first,"""Failed to register ICE UDP mux listener"" in a WebRTC test on a Windows runner; changed queue code is unrelated"
+218,caused_by_change,unclear,no,unclear,first,Navigation interrupted in create_markdown; change touches starlette.py and the HTML template
+220,cause,test,code_change,test,first,"""Previous reloader still had a on_change attached, no cleanup?"" across 64 tests, shared test state leaking"
+220,caused_by_change,unclear,yes,unclear,first,Only unit test files changed; cascading reloader cleanup error cannot be tied to them or ruled out
+221,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+222,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+223,cause,unclear,workflow,unclear,first,"Only setup-python output shown, no error message from the failing test step"
+224,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+226,cause,test,code_change,unclear,neither,"Assertion ""toggleWorkspace not called"" says nothing on flaky versus regression; no re-run"
+226,caused_by_change,unclear,yes,unclear,first,Cannot tie the sidebar click assertion to the changed files from the log
+227,caused_by_change,unclear,no,no,second,Workflow e2e timeout in tests the change did not touch; nothing ties it to the change
+229,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+23,cause,timeout,test,test,second,"One WebRTC interface test aborted with a TimeoutError, a timing-based test wait, not a job or step timeout."
+230,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+232,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+234,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+235,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+236,cause,infrastructure,network,infrastructure,first,"MetalLB webhook call failed inside the KinD cluster (""failed calling webhook""), a cluster setup issue"
+237,cause,unclear,dependency,unclear,first,"Gradle ""FAILURE: Build failed with an exception"" with the reason cut from the log"
+237,caused_by_change,unclear,no,unclear,first,"settings.gradle.kts changed and the Gradle configure step failed, but the reason is not visible"
+238,cause,dependency,infrastructure,infrastructure,second,"apt ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"": runner kernel package missing from mirror"
+24,cause,timeout,test,test,second,"Mocha 'Timeout of 60000ms exceeded' on one async floodsub test is a test-level wait, not the job timing out."
+240,cause,test,code_change,test,first,"""Previous reloader still had a on_change attached, no cleanup?"" across 64 tests, shared test state leaking"
+240,caused_by_change,unclear,yes,unclear,first,Cascading reloader cleanup error; redis state files changed but no clear tie in the log
+241,cause,unclear,code_change,unclear,first,"Gradle ""FAILURE: Build failed with an exception"" with the reason cut from the log"
+241,caused_by_change,unclear,yes,unclear,first,"settings.gradle.kts changed and the Gradle configure step failed, but the reason is not visible"
+242,cause,unclear,code_change,unclear,first,"test_dns KeyError ""results"" from a live DNS lookup via 8.8.8.8; message does not name a cause"
+242,caused_by_change,no,yes,no,first,Only the onyphe module changed; failing test is the unrelated test_dns expansion test
+244,cause,unclear,code_change,unclear,first,"XCTest summary says ""1 failure"" with no failing test message"
+244,caused_by_change,unclear,yes,unclear,first,"No failure message visible, so the link to the paused-bot change cannot be judged"
+245,cause,test,code_change,test,first,"Playwright ""expect(locator).toBeVisible() ... Timeout: 5000ms"" in message-rerun e2e, a timing-based wait"
+245,caused_by_change,no,yes,no,first,"Changed files are docs, protocol types and a type test; failing e2e is a message-rerun UI wait"
+246,cause,unclear,code_change,unclear,first,"Gradle ""FAILURE: Build failed with an exception"" with the reason cut from the log"
+246,caused_by_change,unclear,yes,unclear,first,"settings.gradle.kts changed and the Gradle configure step failed, but the reason is not visible"
+247,cause,infrastructure,test,infrastructure,first,"MetalLB webhook call failed inside the KinD cluster (""failed calling webhook""), a cluster setup issue"
+247,caused_by_change,no,yes,no,first,"Failure in KinD prerequisite setup, while the change only touched a dotnet SDK test and README"
+248,cause,workflow,code_change,unclear,neither,"curl to localhost:6666 refused after sleep 10, but error.log is not shown so cause is unknown"
+248,caused_by_change,unclear,yes,unclear,first,"Server did not come up, but with no error.log the link to the ipgeolocation module is unknown"
+250,cause,unclear,code_change,unclear,first,"Node suite reports ""fail 1"" with no error message or test name visible"
+250,caused_by_change,unclear,yes,unclear,first,"No failure message visible, so the link to the changed files cannot be judged"
+251,cause,infrastructure,network,network,second,"""sha256sum: kind-linux-amd64: FAILED"" checksum mismatch on a downloaded kind binary"
+252,own_failure,unclear,yes,unclear,first,"Log unavailable (HTTP 404), step unknown, so own failure cannot be judged"
+254,cause,timeout,test,timeout,first,"Many tests fail with ""Page.goto: Timeout 30000ms exceeded"" for localhost, no other cause shown"
+254,caused_by_change,unclear,no,unclear,first,"Failing test_from_thread_two_users is in server_test.py, a file the change touched"
+3,cause,unclear,test,unclear,first,"Log shows 'Test Run Successful', 394 passed, 0 failed, yet exit 1; no error message names a cause."
+3,caused_by_change,unclear,yes,unclear,first,No failing test or error is visible and nothing ties the exit 1 to the touched Math files.
+31,cause,dependency,network,dependency,first,apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was only a warning that was ignored.
+35,cause,dependency,network,dependency,first,apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was only a warning that was ignored.
+39,cause,dependency,network,dependency,first,"apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure' failed the install, no network error behind it."
+4,cause,unclear,product_race,unclear,first,Only the summary 'ValueError: Expect blind_balance 8.0' is shown; it does not say whether test or product caused it.
+4,caused_by_change,no,yes,no,first,Only basicswap/__init__.py touched; nothing ties it to a blind-balance mismatch in an integration test.
+40,cause,dependency,network,dependency,first,apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was only a warning that was ignored.
+41,cause,dependency,network,dependency,first,"apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure' failed the install, no network error behind it."
+42,cause,dependency,network,dependency,first,"apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure' failed the install, no network error behind it."
+43,cause,dependency,network,dependency,first,"apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure' failed the install, no network error behind it."
+44,cause,dependency,network,dependency,first,apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was only a warning that was ignored.
+47,cause,dependency,network,dependency,first,apt: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was only a warning that was ignored.
+48,cause,timeout,test,test,second,"'sleep 10s' then curl to localhost:6666 refused: a sleep-based readiness wait, which the codebook files under test timing."
+48,caused_by_change,unclear,yes,unclear,first,"Server not reachable after a fixed 10s sleep; no error.log shown, so nothing ties it to the touched url_dns module."
+49,cause,workflow,network,workflow,first,"Release-pin gate 'pinned release is not publicly reachable ... returned 404' is the script's own check, not a connectivity failure."
+5,cause,unclear,product_race,unclear,first,Only 'ValueError: Expect balance 13.0' in a BTC/XMR test is shown; it does not say what caused the mismatch.
+5,caused_by_change,no,yes,no,first,"Only basicswap/interface/wow/wow.py touched; the failing test is the BTC secret-hash plan, with nothing tying them."
+50,cause,workflow,network,workflow,first,"Release-pin gate 'pinned release is not publicly reachable ... returned 404' is the script's own check, not a connectivity failure."
+51,cause,workflow,network,workflow,first,"Release-pin gate 'pinned release is not publicly reachable ... returned 404' is the script's own check, not a connectivity failure."
+52,caused_by_change,no,unclear,no,first,"Only extensions/codemode-display/render.ts touched; the failing e2e is the message-rerun toast, with no re-run or tie to the file."
+53,caused_by_change,no,unclear,no,first,Docs-only change (docs/research); the Playwright web e2e failures cannot be tied to it.
+54,caused_by_change,no,unclear,no,first,Docs-only change (WEB_SESSION_USAGE.md); the 9 failed web e2e tests cannot be tied to it.
+55,cause,unclear,test,unclear,first,One test failed in the Windows Node suite but no error message or failing test name is visible in the log.
+56,caused_by_change,no,unclear,no,first,Only web/runtime/pi-runtime.ts touched; the failing session-sidebar drag/click spec is unrelated and no re-run is shown.
+57,caused_by_change,no,unclear,no,first,Only package.json touched; the failing provider-settings spec ('expected 6 to be 9') is not tied to it.
+58,cause,unclear,infrastructure,unclear,first,One failure among 2209 tests with no test name or message; the E5RT VM note is not shown to be the failing test.
+58,caused_by_change,unclear,no,unclear,first,"Touched Noodle sources could relate to the failing test, but none is named, so nothing decides it."
+59,cause,unclear,test,unclear,first,Only failing test names (HubChatsTests.reconnecting...) are listed with no assertion message.
+6,caused_by_change,no,yes,no,first,"Only basicswap/basicswap.py touched; the failure is a sleep-polled nostr relay test, 'assert 2 == 3', in separate client code."
+60,cause,unclear,test,unclear,first,"Only failing test names (AttachmentGalleryTests, BotWidgetsTests) are listed with no assertion message."
+60,caused_by_change,no,unclear,no,first,"Browser/Computer/LocalMac files touched; the failing tests are Mobile AttachmentGallery and BotWidgets, with no tie."
+61,cause,unclear,code_change,unclear,first,"Only AttachmentGalleryTests.stackLeavesANoodletUncovered is named, with no message, so a code_change cause is unsupported."
+61,caused_by_change,unclear,yes,unclear,first,Only a failing test name (AttachmentGalleryTests) with no message; nothing ties it to the Chats.swift change.
+62,cause,product_race,code_change,product_race,first,"Atomic counters lost 7 increments in the GC counter_loss check: a product race, not a test flake."
+62,caused_by_change,no,yes,no,first,"Only a spec file was touched; the lost-increment race is in code the change did not touch, so not caused by it."
+64,cause,infrastructure,code_change,infrastructure,first,"Log shows 0 spec failures, then a Windows 'process cannot access the file' delete error in the compiler cache: runner-side."
+64,caused_by_change,no,yes,no,first,"Only CHANGELOG, ROADMAP and HARDENING docs were touched; nothing ties the Windows file-lock error to them."
+65,cause,unclear,code_change,unclear,first,"Gradle log is only a stack trace and BUILD FAILED, no error message, so the cause is unclear."
+65,caused_by_change,unclear,yes,unclear,first,No error message in the log; the lockfile changes are not tied to a visible failure.
+69,own_failure,unclear,no,unclear,first,Log unavailable (HTTP 404); a reporting job's own failure cannot be decided from nothing.
+70,own_failure,unclear,no,unclear,first,Log unavailable (HTTP 404); nothing shows whether the report job failed itself or because tests failed.
+71,cause,unclear,workflow,unclear,first,"Gradle output has only a stack trace and BUILD FAILED, with no message naming a workflow problem."
+71,caused_by_change,unclear,no,unclear,first,"Renovate bump in libs.versions.toml could plausibly affect Gradle, but the log has no message tying it."
+72,caused_by_change,no,unclear,no,first,Only a review-guidance markdown file was touched; nothing ties the failure to it.
+72,own_failure,unclear,no,unclear,first,"Log unavailable (HTTP 404), so whether the report job itself failed cannot be decided."
+73,cause,unclear,workflow,unclear,first,"Gradle log is only a stack trace and BUILD FAILED, no message, so no workflow cause is shown."
+73,caused_by_change,unclear,no,unclear,first,"Change reworks the CI workflows and scripts and the Gradle log has no message, so neither link nor absence is shown."
+74,cause,unclear,workflow,unclear,first,"Gradle log has no error message, only a stack trace and BUILD FAILED."
+74,caused_by_change,unclear,no,unclear,first,"Only a test file was touched but the Gradle log has no message or failing test, so the link is unclear."
+75,cause,unclear,network,unclear,first,"sca-scanner exited with code 1 with the real reason hidden; downloads succeeded, so no network error is shown."
+78,cause,unclear,network,unclear,first,"sca-scanner exited with code 1 with the real reason hidden; downloads succeeded, so no network error is shown."
+80,caused_by_change,unclear,yes,unclear,first,"Auth login test expects 2 validate requests, got 1; could be http-client change or a Windows timing flake, log doesn't decide."
+82,cause,unclear,code_change,unclear,first,Go log ends with a bare FAIL and no error message or failing test name.
+82,caused_by_change,unclear,yes,unclear,first,Only test files were touched and the log shows no failing test or message to tie to them.
+84,caused_by_change,unclear,no,no,second,Only conftest.py (stack dumps on timeout) was touched; the KeyError is in a reconnect test it doesn't affect.
+85,cause,timeout,test,test,second,'Server at localhost:18866 does not seem to be running after waiting 30.0 s' is a test fixture's fixed wait.
+85,caused_by_change,unclear,no,no,second,Only a debug-dump change in conftest.py; the server-start failures are not tied to it.
+86,cause,unclear,test,unclear,first,"Only a failing test name (test_from_thread_two_users) with no message, so the cause is unclear."
+86,caused_by_change,unclear,no,no,second,Only a conftest.py stack-dump change touched; the failing server test is unrelated to it.
+88,cause,unclear,code_change,unclear,first,One of 771 tests failed with no test name or message in the log.
+88,caused_by_change,unclear,yes,unclear,first,"Only ExecuteResult.cs changed and the failing test and message are not shown, so the link is unclear."
+89,cause,unclear,code_change,unclear,first,One of 772 tests failed with no test name or message in the log.
+89,caused_by_change,unclear,yes,unclear,first,"Pool code was touched but the single failing test and message are not shown, so the link is unclear."
+9,cause,test,product_race,test,first,"Particl withdraw hit 'Insufficient funds', giving KeyError 'txid': test wallet state, in a test unrelated to the dcr/core.py change."
+9,caused_by_change,no,yes,no,first,"Only dcr/core.py was touched; the failure is a particl withdraw in another test, so not caused by the change."
+90,cause,unclear,code_change,unclear,first,One of 783 tests failed with no test name or message in the log.
+90,caused_by_change,unclear,yes,unclear,first,"Pool code was touched but the single failing test and message are not shown, so the link is unclear."
+91,caused_by_change,no,unclear,no,first,"'Test Run Successful' with the same 401/394/7 totals as other PRs, so the exit 1 is not tied to the gzip change."
+92,caused_by_change,no,unclear,no,first,"'Test Run Successful' with the same 401/394/7 totals as other PRs, so the exit 1 is not tied to this change."
+93,caused_by_change,no,unclear,no,first,"'Test Run Successful' with the same 401/394/7 totals as other PRs, so the exit 1 is not tied to this change."
+96,cause,unclear,test,unclear,first,Only 'ValueError: Expect balance 12.0' in test_27; the message does not say what made the balance wrong.
+96,caused_by_change,no,yes,no,first,Only basicswap/__init__.py was touched; nothing ties the balance assertion in test_27 to it.
+97,cause,unclear,test,unclear,first,Only 'ValueError: Expect blind_balance 8.0'; the message does not say why the balance was wrong.
+97,caused_by_change,no,yes,no,first,Only basicswap/__init__.py was touched; nothing ties the blind_balance assertion to it.
+98,cause,unclear,network,unclear,first,"Connection refused on the test's own local JSON API port, not an external network; the reason the node was down is not shown."
+98,caused_by_change,unclear,yes,unclear,first,Local node refusal with no log of why; btc.py/firo.py were touched but nothing in the log ties them to it.
+99,cause,unclear,test,unclear,first,Only 'ValueError: Expect blind_balance 8.0'; the message does not say why the balance was wrong.
+99,caused_by_change,no,yes,no,first,Only basicswap/__init__.py was touched; nothing ties the blind_balance assertion to it.

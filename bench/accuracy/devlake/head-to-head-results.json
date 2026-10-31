@@ -1,0 +1,284 @@
+{
+ "run_at": "2026-10-28T13:25:34Z",
+ "devlake": {
+  "stages": {
+   "pull_s": 102,
+   "start_s": 51,
+   "configure_s": 1,
+   "collect_s": 7771
+  },
+  "manual_steps": 6,
+  "pipeline": {
+   "status": "TASK_COMPLETED",
+   "message": ""
+  },
+  "footprint": {
+   "containers": [
+    "devlake-config-ui-1\t6.473MiB / 7.747GiB",
+    "devlake-devlake-1\t443.5MiB / 7.747GiB",
+    "devlake-grafana-1\t538.6MiB / 7.747GiB",
+    "devlake-mysql-1\t701.7MiB / 7.747GiB"
+   ],
+   "images": [
+    "mysql:8\t810MB",
+    "ghcr.io/github/gh-aw-firewall/agent:latest\t1.01GB",
+    "ghcr.io/github/gh-aw-firewall/api-proxy:latest\t374MB",
+    "ghcr.io/github/gh-aw-mcpg:latest\t183MB",
+    "ghcr.io/github/github-mcp-server:latest\t50.1MB",
+    "ghcr.io/github/gh-aw-firewall/squid:latest\t57.5MB",
+    "ghcr.io/dependabot/dependabot-updater-core:latest\t830MB",
+    "devlake.docker.scarf.sh/apache/devlake:v1.0.3-beta18\t5.92GB",
+    "devlake.docker.scarf.sh/apache/devlake-config-ui:v1.0.3-beta18\t197MB",
+    "devlake.docker.scarf.sh/apache/devlake-dashboard:v1.0.3-beta18\t2.3GB"
+   ],
+   "disk": [
+    "Images\t11.72GB",
+    "Containers\t9.517MB",
+    "Local Volumes\t1.73GB",
+    "Build Cache\t0B"
+   ]
+  },
+  "tables": {
+   "project_mapping": 15,
+   "pull_requests": 1744,
+   "project_pr_metrics": 380,
+   "cicd_deployment_commits": 1492,
+   "incidents": 0,
+   "project_incident_deployment_relationships": 0
+  }
+ },
+ "devlake_error": null,
+ "stackvitals_total_s": 584,
+ "repos": [
+  {
+   "repo": "truffle-ai/dexto",
+   "stackvitals_source": "deployments api",
+   "stackvitals_seconds": 223,
+   "deployment_frequency": {
+    "devlake": "1 deployment days per week(high)",
+    "devlake_tier": "high",
+    "stackvitals": 0,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "lead_time": {
+    "devlake": "0.6(elite)",
+    "devlake_tier": "elite",
+    "stackvitals": 0.42,
+    "stackvitals_tier": "elite",
+    "same_tier": true
+   },
+   "change_failure_rate": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "recovery": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "devlake_error": null
+  },
+  {
+   "repo": "nodejs/nodejs.org",
+   "stackvitals_source": "deployments api",
+   "stackvitals_seconds": 341,
+   "deployment_frequency": {
+    "devlake": "3 deployment days per week(high)",
+    "devlake_tier": "high",
+    "stackvitals": 0,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "lead_time": {
+    "devlake": "53.9(high)",
+    "devlake_tier": "high",
+    "stackvitals": 13.92,
+    "stackvitals_tier": "elite",
+    "same_tier": false
+   },
+   "change_failure_rate": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "recovery": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "devlake_error": null
+  },
+  {
+   "repo": "lissy93/bug-bounties",
+   "stackvitals_source": "deployments api",
+   "stackvitals_seconds": 23,
+   "deployment_frequency": {
+    "devlake": "N/A. Please check if you have collected deployments.",
+    "devlake_tier": null,
+    "stackvitals": 0,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "lead_time": {
+    "devlake": "1.5(elite)",
+    "devlake_tier": "elite",
+    "stackvitals": 1.58,
+    "stackvitals_tier": "elite",
+    "same_tier": true
+   },
+   "change_failure_rate": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "recovery": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "devlake_error": null
+  },
+  {
+   "repo": "getsentry/dotagents",
+   "stackvitals_source": "deployments api",
+   "stackvitals_seconds": 26,
+   "deployment_frequency": {
+    "devlake": "1 deployment days per week(high)",
+    "devlake_tier": "high",
+    "stackvitals": 1,
+    "stackvitals_tier": "high",
+    "same_tier": true
+   },
+   "lead_time": {
+    "devlake": "1.8(elite)",
+    "devlake_tier": "elite",
+    "stackvitals": 1.55,
+    "stackvitals_tier": "elite",
+    "same_tier": true
+   },
+   "change_failure_rate": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "recovery": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "devlake_error": null
+  },
+  {
+   "repo": "vercel-labs/run",
+   "stackvitals_source": "deployments api",
+   "stackvitals_seconds": 2,
+   "deployment_frequency": {
+    "devlake": "1 deployment days per week(high)",
+    "devlake_tier": "high",
+    "stackvitals": 1,
+    "stackvitals_tier": "high",
+    "same_tier": true
+   },
+   "lead_time": {
+    "devlake": "1.5(elite)",
+    "devlake_tier": "elite",
+    "stackvitals": 1.42,
+    "stackvitals_tier": "elite",
+    "same_tier": true
+   },
+   "change_failure_rate": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "recovery": {
+    "devlake": "N/A. Please check if you have collected incidents.",
+    "devlake_tier": null,
+    "stackvitals": null,
+    "stackvitals_tier": null,
+    "same_tier": false
+   },
+   "devlake_error": null
+  }
+ ],
+ "same_tier": {
+  "deployment_frequency": 2,
+  "lead_time": 4,
+  "change_failure_rate": 0,
+  "recovery": 0
+ },
+ "rerun_after_fix": {
+  "run_at": "2026-10-29",
+  "why": "first run kept only the newest 100 deployments of any environment",
+  "window": "same 90 days as run_at 2026-10-28",
+  "stackvitals": {
+   "getsentry/dotagents": {
+    "deployments": 48,
+    "deployment_days_per_week": 1,
+    "frequency_tier": "high",
+    "lead_time_hours": 1.6,
+    "lead_time_tier": "elite"
+   },
+   "vercel-labs/run": {
+    "deployments": 55,
+    "deployment_days_per_week": 1,
+    "frequency_tier": "high",
+    "lead_time_hours": 0.83,
+    "lead_time_tier": "elite"
+   },
+   "truffle-ai/dexto": {
+    "deployments": 61,
+    "deployment_days_per_week": 1,
+    "frequency_tier": "high",
+    "lead_time_hours": 0.55,
+    "lead_time_tier": "elite"
+   },
+   "lissy93/bug-bounties": {
+    "deployments": 40,
+    "deployment_days_per_week": 0,
+    "frequency_tier": null,
+    "lead_time_hours": 1.58,
+    "lead_time_tier": "elite"
+   },
+   "nodejs/nodejs.org": {
+    "deployments": 111,
+    "deployment_days_per_week": 3,
+    "frequency_tier": "high",
+    "lead_time_hours": 61.38,
+    "lead_time_tier": "high"
+   }
+  },
+  "devlake_production_deployments": {
+   "getsentry/dotagents": 48,
+   "vercel-labs/run": 55,
+   "truffle-ai/dexto": 61,
+   "lissy93/bug-bounties": 40,
+   "nodejs/nodejs.org": 114
+  },
+  "devlake_deployment_source": "all rows from _raw_github_graphql_deployment (Deployments API); the job-name rule matched none",
+  "same_tier": {
+   "deployment_frequency": "5 of 5 (no tier in both for bug-bounties)",
+   "lead_time": "5 of 5"
+  }
+ }
+}

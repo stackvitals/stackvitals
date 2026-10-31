@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>StackVitals: your repo's vital signs, free</title>
+<meta name="description" content="A free GitHub Action that watches flaky tests, pull-request flow, DORA, dependencies and community health, keeps the history in your own repo, and shows what needs a decision.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232160C4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="site/site.css">
+</head>
+<body>
+<header class="site-top"><nav class="wrap" aria-label="StackVitals">
+  <a class="mark" href="./"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--logo-tile)"/><path d="M6.5 20.5 16 25.3l9.5-4.8M6.5 15.6 16 20.4l9.5-4.8" fill="none" stroke="var(--logo-fg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5.8 25.5 10.6 16 15.4 6.5 10.6Z" fill="var(--logo-acc)"/></svg>StackVitals</a>
+  <span class="links"><a href="#watch">What it watches</a><a href="#how">How it works</a><a href="#compare">Compare</a><a href="#questions">Questions</a></span>
+  <a class="btn" href="app.html?demo=1">Live demo</a>
+  <a class="btn primary" href="app.html#/setup">Set it up</a>
+</nav></header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Flaky tests, stuck reviews, slow releases and risky updates, in one place.</h1>
+    <p class="lede">StackVitals is a free GitHub Action. Every few hours it reads your CI runs, pull requests and releases, keeps the
+      history in a branch of your own repo, and shows what needs a decision. No hosted backend, no account, nothing to host.</p>
+    <div class="cta-row"><a class="btn primary big" href="app.html#/setup">Set it up in five minutes</a><a class="btn big" href="app.html?demo=1">See the live demo</a><!--REAL-DEMO--></div>
+  </section>
+
+  <section id="watch" class="band" aria-labelledby="watch-title">
+    <h2 id="watch-title">Six modules, one app</h2>
+    <p class="lede">Each module keeps its own history and raises its own alerts. Turn on the ones you need.</p>
+    <div class="grid">
+      <article class="card"><h3>CI health</h3><p>Flaky and failing tests and jobs from every run, failure groups, the minutes they cost; quarantine, one re-run of known flakes, one issue per flaky test, and a verdict check you can require.</p><p class="covers">Covers the core workflows of Trunk Flaky Tests, BuildPulse.</p></article>
+      <article class="card"><h3>Pull requests</h3><p>Who holds the next move on each pull request, reviews that never started, working agreements your team sets, and a weekly digest.</p><p class="covers">Covers the core workflows of Swarmia, LinearB.</p></article>
+      <article class="card"><h3>Delivery</h3><p>DORA's five delivery metrics, the first four counted the way Apache DevLake's dashboards count them, and cycle time in LinearB's phases from first commit to production.</p><p class="covers">Covers the core workflows of Apache DevLake, Sleuth.</p></article>
+      <article class="card"><h3>Dependencies</h3><p>Update pull requests by age, security updates past 48 hours, how fast updates merge, and a verdict on each package from public evidence.</p><p class="covers">Covers the core workflows of Renovate's dashboard, Socket.</p></article>
+      <article class="card"><h3>Community</h3><p>Newcomers waiting for a first answer, how fast maintainers answer, stars, and traffic kept past GitHub's 14 days with your own GitHub App.</p><p class="covers">Covers the core workflows of LFX Insights and the CHAOSS tools.</p></article>
+      <article class="card"><h3>Portal</h3><p>Every repo in an org with its owners checked, bronze, silver and gold scorecards against peer repos, and campaigns with reminders.</p><p class="covers">Covers the core workflows of Cortex, OpsLevel, Port.</p></article>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="receipts-title">
+    <h2 id="receipts-title">Receipts, not claims</h2>
+    <div class="grid">
+      <div class="card receipt"><b>90,000</b><span>active public repos with 100+ stars sampled for peer comparisons</span><span class="source">the daily crawl, each repo read every 4 weeks</span></div>
+      <div class="card receipt"><b>1,000</b><span>most-used npm and PyPI packages each, watched for update verdicts</span><span class="source">ranked by repos that depend on them</span></div>
+      <div class="card receipt"><b>1 year</b><span>of pull-request history in the first run; 90 days of CI</span><span class="source">GitHub's own API, read by your workflow</span></div>
+      <div class="card receipt"><b>0</b><span>servers to run, accounts to make or bills to pay</span><span class="source">everything lives in your repo's stackvitals-data branch</span></div>
+    </div>
+  </section>
+
+  <section id="how" class="band" aria-labelledby="how-title">
+    <h2 id="how-title">From GitHub to your app</h2>
+    <div class="grid">
+      <div class="card"><h3>GitHub</h3><p>Your CI runs, pull requests, issues and deployments.</p></div>
+      <div class="card"><h3>Your workflow</h3><p>After every CI run and every 3 hours, it reads with the workflow's own token, about a minute a run.</p></div>
+      <div class="card"><h3>stackvitals-data</h3><p>A branch in your repo: every number with its history, every decision with who and why.</p></div>
+      <div class="card"><h3>Your app</h3><p>A static page on your GitHub Pages, or on your machine for private repos.</p></div>
+    </div>
+    <p class="lede after">Decisions happen where you already work: type <code>/stackvitals quarantine</code> in any issue or pull
+      request, or press Decide in the app. Every decision is logged with who made it, why and until when.</p>
+  </section>
+
+  <section class="band" aria-labelledby="setup-title">
+    <h2 id="setup-title">Five minutes, five steps</h2>
+    <ol class="steps">
+      <li><span class="n">1</span><b>Find your repo</b><span class="time">10 s</span></li>
+      <li><span class="n">2</span><b>Add the workflow</b><span class="time">1 min</span></li>
+      <li><span class="n">3</span><b>The first run</b><span class="time">2 to 5 min</span></li>
+      <li><span class="n">4</span><b>Turn on the page</b><span class="time">1 min</span></li>
+      <li><span class="n">5</span><b>Open your app</b><span class="time">now</span></li>
+    </ol>
+    <p><a class="btn primary big" href="app.html#/setup">Start the setup</a></p>
+  </section>
+
+  <section id="compare" class="band" aria-labelledby="compare-title">
+    <h2 id="compare-title">What one free install covers</h2>
+    <div class="tbl" tabindex="0" role="region" aria-label="Comparison"><table>
+      <thead><tr><th>What you get</th><th>Usually bought from</th><th>Their list price</th></tr></thead>
+      <tbody>
+        <tr><td>Flaky tests: detection, quarantine, re-runs, a required check</td><td>Trunk Flaky Tests, BuildPulse</td><td class="mute">Trunk free up to 5 committers; BuildPulse from $99 a month</td></tr>
+        <tr><td>Pull-request flow, review waits, working agreements, weekly digest</td><td>Swarmia, LinearB</td><td class="mute">Swarmia $45 to $55 per developer a month (free under 10); LinearB $29 to $59 per contributor a month, 50-seat minimum</td></tr>
+        <tr><td>DORA metrics and cycle-time phases</td><td>Apache DevLake</td><td class="mute">Free, on servers you run (Docker)</td></tr>
+        <tr><td>Org catalog, owners, scorecards, campaigns</td><td>Cortex, OpsLevel, Port</td><td class="mute">Port from $30 a seat a month (free up to 15); Cortex and OpsLevel by quote</td></tr>
+        <tr><td>Update-bot hygiene and package verdicts</td><td>Renovate's dashboard, Socket</td><td class="mute">Socket from $25 a seat a month</td></tr>
+        <tr><td>Open-source community health</td><td>LFX Insights, CHAOSS tools</td><td class="mute">LFX for Linux Foundation projects; CHAOSS tools self-hosted</td></tr>
+      </tbody>
+    </table></div>
+    <p class="mute small">Public list prices as of October 2026. StackVitals covers the core workflows of these tools for GitHub-first teams.</p>
+  </section>
+
+  <section id="questions" class="band faq" aria-labelledby="questions-title">
+    <h2 id="questions-title">Questions</h2>
+    <details><summary>Is it really free?</summary><p>Yes. It runs in your own GitHub Actions minutes (about a minute a run) and keeps everything in your repo. There is no StackVitals service to pay for or sign up to.</p></details>
+    <details><summary>Does it work for private repos?</summary><p>Yes. The workflow is the same. GitHub Pages sites are public, so a private repo's app opens on your machine with <code>stackvitals ui owner/repo</code>, or in the app here with a token that can read the repo.</p></details>
+    <details><summary>Where does my data go?</summary><p>Into a branch called stackvitals-data in your own repo, and nowhere else, unless you add a chat webhook yourself.</p></details>
+    <details><summary>What can it change in my repo?</summary><p>Only what someone with access asks for: a /stackvitals command or a request from the app is checked against that person's GitHub access before anything is recorded or changed.</p></details>
+    <details><summary>Does it replace the paid tools?</summary><p>It covers the core workflows of the tools in the table for GitHub-first teams. It doesn't do investment allocation, surveys, hosted runners or on-call.</p></details>
+    <details><summary>How do I remove it?</summary><p>Delete the workflow file, delete the stackvitals-data branch and turn GitHub Pages off. Nothing is left anywhere else.</p></details>
+  </section>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <span class="mark">StackVitals</span>
+  <span class="mute">Free and open source (MIT). It runs in your repo's GitHub Actions and keeps everything in your repo.</span>
+  <span class="links"><a href="app.html#/setup">Set it up</a><a href="app.html?demo=1#/connections">Connections</a><a href="app.html?demo=1">Live demo</a><a href="#questions">Questions</a></span>
+</div></footer>
+</body>
+</html>

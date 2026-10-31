@@ -1,0 +1,45 @@
+{
+ "flakes": 181,
+ "flakes_with_a_kind": 51,
+ "kinds": {
+  "concurrency": {
+   "high": 1.0,
+   "labels": {},
+   "low": 0.0,
+   "matches_label": 0,
+   "n": 0,
+   "on_changes_that_caused_it": 0
+  },
+  "infrastructure": {
+   "high": 1.0,
+   "labels": {
+    "infrastructure": 17
+   },
+   "low": 0.8157,
+   "matches_label": 17,
+   "n": 17,
+   "on_changes_that_caused_it": 1
+  },
+  "network": {
+   "high": 0.9932,
+   "labels": {
+    "infrastructure": 1,
+    "network": 25
+   },
+   "low": 0.8111,
+   "matches_label": 25,
+   "n": 26,
+   "on_changes_that_caused_it": 0
+  },
+  "timing": {
+   "high": 1.0,
+   "labels": {
+    "test": 8
+   },
+   "low": 0.6756,
+   "matches_label": 8,
+   "n": 8,
+   "on_changes_that_caused_it": 0
+  }
+ }
+}

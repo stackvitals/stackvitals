@@ -1,0 +1,28 @@
+name: Tests
+# The committed workflow tests on every pull request, with a read-only token and no secrets.
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      # The web app's build tools, so the suite can rebuild the app and check the committed build is current.
+      - name: Install the web app's build tools
+        working-directory: web
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run the tests
+        run: uv run --locked --extra dev pytest -q

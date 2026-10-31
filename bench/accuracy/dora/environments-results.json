@@ -1,0 +1,177 @@
+{
+ "names": {
+  "AnyayayPlus/Chemistry-Note": [
+   "copilot",
+   "Preview",
+   "Production"
+  ],
+  "Lingyan000/fluxdo": [
+   "copilot",
+   "github-pages"
+  ],
+  "Naptie/nearcade": [
+   "copilot",
+   "Preview",
+   "Production"
+  ],
+  "SlimPlanet/SlimFaas": [
+   "copilot",
+   "docker",
+   "github-pages",
+   "MLOpsPython",
+   "npm",
+   "release",
+   "release-bot"
+  ],
+  "WFCD/genesis": [
+   "github-pages",
+   "production"
+  ],
+  "Yakifo/amqtt": [
+   "pypi",
+   "testpypi"
+  ],
+  "aeonfun/aeon": [
+   "copilot"
+  ],
+  "aserto-dev/topaz": [
+   "copilot",
+   "github-pages"
+  ],
+  "auth0/auth0-java": [
+   "external",
+   "internal",
+   "release",
+   "security"
+  ],
+  "baggepinnen/LowLevelParticleFilters.jl": [
+   "github-pages"
+  ],
+  "bytecodealliance/jco": [
+   "github-pages"
+  ],
+  "chipsec/chipsec": [
+   "copilot",
+   "github-pages",
+   "pullrequests"
+  ],
+  "convox/convox": [
+   "UpgradeDowngradeTests"
+  ],
+  "databricks/terraform-provider-databricks": [
+   "release-is",
+   "sign",
+   "test-trigger-is"
+  ],
+  "dataelement/bisheng": [
+   "copilot"
+  ],
+  "e2nIEE/pandapower": [
+   "github-pages",
+   "pypi"
+  ],
+  "edwardgushchin/SDL3-CS": [
+   "production"
+  ],
+  "electron/forge": [
+   "github-pages",
+   "npm-trusted-publisher"
+  ],
+  "emoss08/Trenova": [
+   "copilot"
+  ],
+  "enjoy-digital/litedram": [
+   "github-pages"
+  ],
+  "envoyproxy/gateway": [
+   "copilot",
+   "github-pages",
+   "pull request"
+  ],
+  "firedancer-io/firedancer": [
+   "copilot",
+   "coverage-report",
+   "doxygen",
+   "github-pages"
+  ],
+  "google-deepmind/mujoco_warp": [
+   "github-pages"
+  ],
+  "hvoss-tech/AutoForge": [
+   "pypi"
+  ],
+  "knadh/listmonk": [
+   "copilot",
+   "github-pages"
+  ],
+  "lnbits/lnbits": [
+   "github-pages"
+  ],
+  "magpylib/magpylib": [
+   "pypi"
+  ],
+  "moralmunky/Home-Assistant-Mail-And-Packages": [
+   "github-pages"
+  ],
+  "openhab/openhab-core": [
+   "copilot"
+  ],
+  "openhpc/ohpc": [
+   "copilot",
+   "github-pages"
+  ],
+  "oxidecomputer/console": [
+   "github-pages",
+   "Preview",
+   "Preview \u2013 console",
+   "Preview VM",
+   "Production",
+   "Production \u2013 console",
+   "Production \u2013 console-ui-storybook"
+  ],
+  "petarzarkov/dunx": [
+   "github-pages",
+   "preview",
+   "production"
+  ],
+  "preloopdev/preloop": [
+   "release",
+   "staging - docs"
+  ],
+  "python-websockets/websockets": [
+   "copilot"
+  ],
+  "scverse/gget": [
+   "github-pages",
+   "pypi"
+  ],
+  "tracel-ai/burn-onnx": [
+   "copilot"
+  ],
+  "ubccpsc/310": [
+   "github-pages"
+  ],
+  "weaviate/weaviate-python-client": [
+   "copilot"
+  ],
+  "yellow-hammer/vscode-1c-platform-tools": [
+   "github-pages"
+  ],
+  "yomorun/yomo": [
+   "copilot",
+   "github-pages",
+   "Preview",
+   "Production",
+   "staging - docs"
+  ]
+ },
+ "product_today": "production names (production, prod, live, first word) shown; all others hidden",
+ "read": 59,
+ "repos": 60,
+ "with_environments": 40,
+ "with_production": 7,
+ "with_publish": 29,
+ "with_staging": 7,
+ "with_staging_and_production": 5,
+ "with_staging_only": 2
+}

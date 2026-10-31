@@ -1,0 +1,58 @@
+{
+ "label": "after",
+ "orgs": {
+  "pallets": {
+   "cold": {
+    "checked": 10,
+    "complete": true,
+    "counted": 40,
+    "errors": 0,
+    "graphql_points": 12,
+    "repos": 16,
+    "rest": 40,
+    "rest_per_repo": 4.0,
+    "seconds": 14.3,
+    "unchanged": 0
+   },
+   "warm": {
+    "checked": 10,
+    "complete": true,
+    "counted": 28,
+    "errors": 0,
+    "graphql_points": 12,
+    "repos": 16,
+    "rest": 40,
+    "rest_per_repo": 4.0,
+    "seconds": 11.4,
+    "unchanged": 12
+   }
+  },
+  "psf": {
+   "cold": {
+    "checked": 38,
+    "complete": true,
+    "counted": 149,
+    "errors": 0,
+    "graphql_points": 42,
+    "repos": 44,
+    "rest": 149,
+    "rest_per_repo": 3.92,
+    "seconds": 49.1,
+    "unchanged": 0
+   },
+   "warm": {
+    "checked": 38,
+    "complete": true,
+    "counted": 104,
+    "errors": 0,
+    "graphql_points": 42,
+    "repos": 44,
+    "rest": 149,
+    "rest_per_repo": 3.92,
+    "seconds": 47.3,
+    "unchanged": 45
+   }
+  }
+ },
+ "read": "2026-10-23"
+}

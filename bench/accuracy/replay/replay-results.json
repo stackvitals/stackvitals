@@ -1,0 +1,439 @@
+{
+ "attempts": 1351,
+ "attempts_rerun_flaky_would_rerun": 303,
+ "blamed_green_caused": {
+  "adjudicated_by_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 13,
+     "repo": "lxc/incus",
+     "share": 0.197
+    },
+    "boot_high": 0.1525,
+    "boot_low": 0.0,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 66,
+    "repo_wilson_high": 0.2722,
+    "repo_wilson_low": 0.011,
+    "repos": 17,
+    "without_biggest": {
+     "high": 0.1786,
+     "k": 4,
+     "low": 0.0297,
+     "n": 53
+    }
+   },
+   "high": 0.1457,
+   "k": 4,
+   "low": 0.0238,
+   "n": 66,
+   "share": 0.0606,
+   "unclear": 24
+  },
+  "adjudicated_by_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 13,
+     "repo": "lxc/incus",
+     "share": 0.1625
+    },
+    "boot_high": 0.4375,
+    "boot_low": 0.1585,
+    "k": 22,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 80,
+    "repo_wilson_high": 0.4998,
+    "repo_wilson_low": 0.1259,
+    "repos": 19,
+    "without_biggest": {
+     "high": 0.4474,
+     "k": 22,
+     "low": 0.2279,
+     "n": 67
+    }
+   },
+   "high": 0.3814,
+   "k": 22,
+   "low": 0.1892,
+   "n": 80,
+   "share": 0.275,
+   "unclear": 10
+  },
+  "first_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 13,
+     "repo": "lxc/incus",
+     "share": 0.2031
+    },
+    "boot_high": 0.1569,
+    "boot_low": 0.0,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 64,
+    "repo_wilson_high": 0.2747,
+    "repo_wilson_low": 0.0116,
+    "repos": 17,
+    "without_biggest": {
+     "high": 0.185,
+     "k": 4,
+     "low": 0.0309,
+     "n": 51
+    }
+   },
+   "high": 0.15,
+   "k": 4,
+   "low": 0.0246,
+   "n": 64,
+   "share": 0.0625,
+   "unclear": 26
+  },
+  "second_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 13,
+     "repo": "lxc/incus",
+     "share": 0.1625
+    },
+    "boot_high": 0.4182,
+    "boot_low": 0.165,
+    "k": 22,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 80,
+    "repo_wilson_high": 0.4998,
+    "repo_wilson_low": 0.1259,
+    "repos": 19,
+    "without_biggest": {
+     "high": 0.4474,
+     "k": 22,
+     "low": 0.2279,
+     "n": 67
+    }
+   },
+   "high": 0.3814,
+   "k": 22,
+   "low": 0.1892,
+   "n": 80,
+   "share": 0.275,
+   "unclear": 10
+  }
+ },
+ "blamed_on_change_rerun_passed": {
+  "high": 0.6951,
+  "k": 351,
+  "low": 0.6148,
+  "n": 535,
+  "share": 0.6561
+ },
+ "blamed_sample": {
+  "drawn": 90,
+  "labelled": 90,
+  "per_run": 3,
+  "seed": 19
+ },
+ "by_verdict": {
+  "already failing": {
+   "failed again": 23,
+   "not run again": 108,
+   "passed on re-run": 18
+  },
+  "flaked before": {
+   "failed again": 97,
+   "not run again": 676,
+   "passed on re-run": 141
+  },
+  "known flaky": {
+   "failed again": 80,
+   "not run again": 343,
+   "passed on re-run": 127
+  },
+  "new": {
+   "failed again": 87,
+   "not run again": 964,
+   "passed on re-run": 210
+  }
+ },
+ "check_passed_red": 0,
+ "check_passes_red_ci": false,
+ "failed_jobs": 2874,
+ "known_flaky_failed_again_caused": {
+  "adjudicated_by_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 15,
+     "repo": "lxc/incus",
+     "share": 0.5769
+    },
+    "boot_high": 0.0,
+    "boot_low": 0.0,
+    "k": 0,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 26,
+    "repo_wilson_high": 0.3543,
+    "repo_wilson_low": 0.0,
+    "repos": 7,
+    "without_biggest": {
+     "high": 0.2588,
+     "k": 0,
+     "low": 0.0,
+     "n": 11
+    }
+   },
+   "high": 0.1287,
+   "k": 0,
+   "low": 0.0,
+   "n": 26,
+   "share": 0.0,
+   "unclear": 7
+  },
+  "adjudicated_by_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 15,
+     "repo": "lxc/incus",
+     "share": 0.4839
+    },
+    "boot_high": 0.1364,
+    "boot_low": 0.0,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 31,
+    "repo_wilson_high": 0.3218,
+    "repo_wilson_low": 0.0023,
+    "repos": 10,
+    "without_biggest": {
+     "high": 0.2833,
+     "k": 1,
+     "low": 0.0111,
+     "n": 16
+    }
+   },
+   "high": 0.1619,
+   "k": 1,
+   "low": 0.0057,
+   "n": 31,
+   "share": 0.0323,
+   "unclear": 2
+  },
+  "first_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 15,
+     "repo": "lxc/incus",
+     "share": 0.5769
+    },
+    "boot_high": 0.0,
+    "boot_low": 0.0,
+    "k": 0,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 26,
+    "repo_wilson_high": 0.3543,
+    "repo_wilson_low": 0.0,
+    "repos": 7,
+    "without_biggest": {
+     "high": 0.2588,
+     "k": 0,
+     "low": 0.0,
+     "n": 11
+    }
+   },
+   "high": 0.1287,
+   "k": 0,
+   "low": 0.0,
+   "n": 26,
+   "share": 0.0,
+   "unclear": 7
+  },
+  "second_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 15,
+     "repo": "lxc/incus",
+     "share": 0.4839
+    },
+    "boot_high": 0.4444,
+    "boot_low": 0.0169,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 31,
+    "repo_wilson_high": 0.4364,
+    "repo_wilson_low": 0.0276,
+    "repos": 10,
+    "without_biggest": {
+     "high": 0.495,
+     "k": 4,
+     "low": 0.1018,
+     "n": 16
+    }
+   },
+   "high": 0.2885,
+   "k": 4,
+   "low": 0.0513,
+   "n": 31,
+   "share": 0.129,
+   "unclear": 2
+  }
+ },
+ "known_flaky_green_but_caused": {
+  "adjudicated_by_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 8,
+     "repo": "lxc/incus",
+     "share": 0.1778
+    },
+    "boot_high": 0.2308,
+    "boot_low": 0.0,
+    "k": 3,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 45,
+    "repo_wilson_high": 0.2887,
+    "repo_wilson_low": 0.0124,
+    "repos": 16,
+    "without_biggest": {
+     "high": 0.213,
+     "k": 3,
+     "low": 0.028,
+     "n": 37
+    }
+   },
+   "high": 0.1786,
+   "k": 3,
+   "low": 0.0229,
+   "n": 45,
+   "share": 0.0667,
+   "unclear": 15
+  },
+  "adjudicated_by_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 8,
+     "repo": "lxc/incus",
+     "share": 0.1538
+    },
+    "boot_high": 0.4889,
+    "boot_low": 0.1071,
+    "k": 15,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 52,
+    "repo_wilson_high": 0.5132,
+    "repo_wilson_low": 0.1349,
+    "repos": 19,
+    "without_biggest": {
+     "high": 0.4886,
+     "k": 15,
+     "low": 0.2188,
+     "n": 44
+    }
+   },
+   "high": 0.4227,
+   "k": 15,
+   "low": 0.1833,
+   "n": 52,
+   "share": 0.2885,
+   "unclear": 8
+  },
+  "first_claude": {
+   "by_repo": {
+    "biggest": {
+     "items": 8,
+     "repo": "lxc/incus",
+     "share": 0.1951
+    },
+    "boot_high": 0.0,
+    "boot_low": 0.0,
+    "k": 0,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 41,
+    "repo_wilson_high": 0.2153,
+    "repo_wilson_low": 0.0,
+    "repos": 14,
+    "without_biggest": {
+     "high": 0.1043,
+     "k": 0,
+     "low": 0.0,
+     "n": 33
+    }
+   },
+   "high": 0.0857,
+   "k": 0,
+   "low": 0.0,
+   "n": 41,
+   "share": 0.0,
+   "unclear": 19
+  },
+  "second_gemini": {
+   "by_repo": {
+    "biggest": {
+     "items": 8,
+     "repo": "lxc/incus",
+     "share": 0.16
+    },
+    "boot_high": 0.5319,
+    "boot_low": 0.1636,
+    "k": 17,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 50,
+    "repo_wilson_high": 0.5688,
+    "repo_wilson_low": 0.1675,
+    "repos": 18,
+    "without_biggest": {
+     "high": 0.5551,
+     "k": 17,
+     "low": 0.2704,
+     "n": 42
+    }
+   },
+   "high": 0.4785,
+   "k": 17,
+   "low": 0.2244,
+   "n": 50,
+   "share": 0.34,
+   "unclear": 10
+  }
+ },
+ "known_flaky_rerun_passed": {
+  "high": 0.6772,
+  "k": 127,
+  "low": 0.5457,
+  "n": 207,
+  "share": 0.6135
+ },
+ "known_flaky_rerun_passed_by_repo": {
+  "biggest": {
+   "items": 55,
+   "repo": "SonarSource/sonarqube-cli",
+   "share": 0.2657
+  },
+  "boot_high": 0.8394,
+  "boot_low": 0.4187,
+  "k": 127,
+  "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+  "n": 207,
+  "repo_wilson_high": 0.7916,
+  "repo_wilson_low": 0.3989,
+  "repos": 20,
+  "without_biggest": {
+   "high": 0.8004,
+   "k": 112,
+   "low": 0.6616,
+   "n": 152
+  }
+ },
+ "labelled": {
+  "items": 254,
+  "labellers": "Claude, then Gemini 3.5 Flash-Lite, blind; disagreements adjudicated blind by Claude and, separately, by Gemini; no person audited"
+ },
+ "repos": 35,
+ "wait_to_rerun_that_passed": {
+  "all": {
+   "median_minutes": 13,
+   "n": 496
+  },
+  "known_flaky": {
+   "median_minutes": 3,
+   "n": 127
+  }
+ }
+}

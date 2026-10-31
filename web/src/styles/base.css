@@ -1,0 +1,42 @@
+/* Reset, type, focus and small utilities */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: var(--bg); }
+@media (min-width: 821px) { html { scrollbar-gutter: stable; } }
+html.is-locked { overflow: hidden; }
+html.is-theming *, html.is-theming *::before, html.is-theming *::after { transition: background-color var(--dur-3) var(--ease-out), border-color var(--dur-3) var(--ease-out), color var(--dur-2) var(--ease-out) !important; }
+body {
+  margin: 0; min-height: 100vh; min-height: 100dvh; font-family: var(--font); font-size: 15px; line-height: 1.5; color: var(--ink); background: var(--bg);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden;
+}
+h1, h2, h3, h4, p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; }
+a { -webkit-tap-highlight-color: transparent; }
+input, select, textarea { font: inherit; color: inherit; }
+code, pre { font-family: var(--mono); }
+img, svg { display: block; }
+.ic { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; display: inline-block; }
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+:focus { outline: none; }
+:focus-visible { outline: 2.5px solid var(--focus); outline-offset: 2px; border-radius: 10px; }
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.muted { color: var(--ink-2); }
+.small { font-size: 13px; }
+.mono-soft { font-family: var(--mono); font-size: .9em; overflow-wrap: anywhere; }
+code { font-size: .88em; background: var(--neutral-soft); color: var(--ink); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+.code-inline { display: inline-block; max-width: 100%; white-space: pre-wrap; }
+
+.press { transition: transform var(--dur-1) var(--ease-out), background-color var(--dur-1), color var(--dur-1), box-shadow var(--dur-1), border-color var(--dur-1), opacity var(--dur-1); }
+.press:active:not(:disabled) { transform: scale(.965); }
+
+.skip { position: fixed; left: 12px; top: -60px; z-index: 200; padding: 10px 16px; border-radius: 12px; background: var(--ink); color: var(--bg); font-weight: 700; text-decoration: none; transition: top var(--dur-1); }
+.skip:focus { top: 12px; }
+
+/* Splash: the chosen mark, until the app has painted */
+.splash { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; background: var(--bg); transition: opacity var(--dur-3) var(--ease-out), visibility 0s var(--dur-3); }
+.splash.is-gone { opacity: 0; visibility: hidden; }
+.splash-mark { width: 64px; height: 64px; display: block; animation: splash 1.4s var(--ease-out) infinite alternate; }
+.splash-mark svg { width: 100%; height: 100%; }
+@keyframes splash { from { transform: scale(.92); opacity: .75; } to { transform: scale(1); opacity: 1; } }

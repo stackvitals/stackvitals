@@ -1,0 +1,221 @@
+/* The Instrument design's Welcome (loads only in that design): the framed sheet, the self-drawing schematic, framed panels. */
+.svw { min-height: 100vh; min-height: 100dvh; background: var(--bg); color: var(--ink); font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+.svw p { margin: 0; }
+.svw b { font-weight: 600; }
+.svw main { padding: 0; outline: none; }
+
+/* The sheet's frame: four hairlines that draw in turn, with centre ticks */
+.svw-frame { position: relative; max-width: 1240px; margin: 24px auto; padding: clamp(20px, 4vw, 56px); }
+.svw-edge, .svw-tick { position: absolute; background: var(--ink); pointer-events: none; }
+.svw-edge.e-t, .svw-edge.e-b { left: 0; right: 0; height: 1px; }
+.svw-edge.e-t { top: 0; transform-origin: left; } .svw-edge.e-b { bottom: 0; transform-origin: right; }
+.svw-edge.e-l, .svw-edge.e-r { top: 0; bottom: 0; width: 1px; }
+.svw-edge.e-r { right: 0; transform-origin: top; } .svw-edge.e-l { left: 0; transform-origin: bottom; }
+.svw-tick.k-t, .svw-tick.k-b { left: 50%; width: 1px; height: 10px; } .svw-tick.k-t { top: 0; } .svw-tick.k-b { bottom: 0; }
+.svw-tick.k-l, .svw-tick.k-r { top: 50%; height: 1px; width: 10px; } .svw-tick.k-l { left: 0; } .svw-tick.k-r { right: 0; }
+
+/* Headline: the padding keeps descenders (the g in doing) inside the reveal clip; the negative margin keeps the spacing */
+.svw-h1 { margin: 0 0 -.18em; padding: 0 0 .18em; font-family: var(--display); font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1; letter-spacing: -.01em; max-width: 17ch; }
+
+/* Schematic */
+.svw-flow { margin: clamp(32px, 5vw, 56px) 0 clamp(28px, 4vw, 44px); }
+.svw-schem { display: block; width: 100%; height: auto; overflow: visible; }
+.svw-schem.is-tall { display: none; }
+.svw-schem text { fill: var(--ink); }
+.svw-schem .s-bx { fill: none; stroke: var(--ink); stroke-width: 1.2; }
+.svw-schem .s-hl { fill: none; stroke: var(--ink); stroke-width: .8; }
+.svw-schem .s-live { fill: none; stroke: var(--sv-blue); stroke-width: 1.6; }
+.svw-schem .s-ah { fill: var(--sv-blue); }
+.svw-schem .s-dt { fill: var(--ink); }
+.svw-schem .s-lbl { font: 600 16.5px var(--font); }
+.svw-schem .s-mono { font-family: var(--mono); font-weight: 400; font-size: 13px; }
+.svw-schem .s-mono-sm { font-size: 13.5px; }
+.svw-schem .s-dim { font: 600 15px var(--font); fill: var(--ink-2); }
+.svw-schem .s-cn { font: 700 15px var(--font); }
+.svw-schem .s-sl { font: 700 15px var(--font); }
+.svw-schem .s-sl.s-bad { fill: var(--bad); } .svw-schem .s-sl.s-warn { fill: var(--watch); } .svw-schem .s-sl.s-ok { fill: var(--good); }
+.svw-schem .s-mk { stroke: var(--dot-edge, #000); stroke-width: 1; stroke-linejoin: round; }
+.svw-schem .s-mk-bad, .svw-schem .s-bar-bad { fill: var(--sv-coral); }
+.svw-schem .s-mk-warn, .svw-schem .s-bar-warn { fill: var(--sv-amber); }
+.svw-schem .s-mk-ok, .svw-schem .s-bar-ok { fill: var(--sv-mint); }
+.svw-schem .s-mk-g { fill: none; stroke: #000; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.svw-schem .s-rm-only { display: none; }
+/* A connected token marks this app healthy: the box fills mint, like the Healthy key */
+.svw-schem .s-appfill { fill: var(--sv-mint); transform-box: fill-box; transform-origin: center bottom; transform: scaleY(0); transition: transform .6s .35s var(--sv-ease); }
+.svw-schem .s-applbl { transition: fill .2s .5s; }
+.svw.is-ok .svw-schem .s-appfill { transform: scaleY(1); }
+.svw.is-ok .svw-schem .s-applbl { fill: #000; }
+
+/* Three points, the brand block and the colour key */
+.svw-notes-row { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: end; }
+.svw-notes { list-style: none; margin: 0; padding: 0; counter-reset: n; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.svw-notes li { counter-increment: n; display: grid; grid-template-columns: 40px minmax(0, 1fr); padding-top: 14px; border-top: 2px solid var(--ink); font-size: 17px; line-height: 1.45; }
+.svw-notes li::before { content: counter(n); width: 28px; height: 28px; border: 1.5px solid var(--ink); border-radius: 50% !important; display: grid; place-items: center; font: 700 15px/1 var(--font); margin-top: -1px; }
+.svw-tb { font-size: 15px; background: var(--surface); border: 1.5px solid var(--frame); }
+.svw-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 24px; letter-spacing: -.01em; background: var(--strip); border-bottom: 1px solid var(--line-strong); padding: 12px 16px; }
+.svw-brand .logo-mark { flex: none; display: inline-block; }
+.svw-brand .logo-mark svg { width: 100%; height: 100%; display: block; }
+.svw-key { display: grid; gap: 8px; padding: 14px 16px 16px; }
+.svw-key p { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); }
+.svw-key .sv-mark { width: 14px; height: 14px; vertical-align: 0; }
+.svw-key b { color: var(--ink); font-weight: 700; }
+.svw-signing { display: flex; align-items: center; gap: 10px; margin-top: 28px; font-weight: 600; }
+
+/* Panels: framed like Instrument's panels; the heading sits on a rule in the colour of the stage it acts on (Actions blue, data mint, app yellow) */
+.svw-panels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: clamp(56px, 8vw, 96px); }
+.svw-panel { --sec: var(--ink); --sec-t: var(--ink); position: relative; min-width: 0; padding: clamp(20px, 3vw, 36px); background: var(--surface); }
+.svw-panel.svw-act { --sec: var(--sv-blue); --sec-t: var(--sv-blue-ink); }
+.svw-panel.svw-data { --sec: var(--sv-mint); --sec-t: var(--good); }
+.svw-panel.svw-app { --sec: var(--sv-yellow); --sec-t: var(--sv-yellow-ink); }
+.svw-panel::before { content: ""; position: absolute; inset: 0; border: 1.5px solid var(--frame); pointer-events: none; transition: clip-path .9s var(--sv-ease); }
+.svw-panel.is-wide { grid-column: 1 / -1; }
+.svw-dh { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; font-weight: 700; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.15; letter-spacing: -.01em; }
+.svw-t { border-bottom: 4px solid var(--sec); padding-bottom: 4px; transition: clip-path .7s .25s var(--sv-ease); }
+.svw-lede { color: var(--ink-2); max-width: 46ch; }
+.svw h3 { margin: 0 0 6px; font-weight: 700; font-size: 20px; line-height: 1.25; }
+.svw-sub { color: var(--ink-2); }
+.svw-panel .svw-act { margin-top: 18px; }
+
+/* Steps: numbered in the section's colour, side by side with a rule between */
+.svw-steps { list-style: none; margin: 28px 0 0; padding: 0; counter-reset: n; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.svw-steps > li { counter-increment: n; display: grid; grid-template-columns: 42px minmax(0, 1fr); min-width: 0; }
+.svw-steps > li > div { min-width: 0; }
+.svw-steps > li + li { border-left: 1px solid var(--line-strong); padding-left: 40px; }
+.svw-steps > li::before { content: counter(n); width: 30px; height: 30px; border: 1.5px solid var(--sec); color: var(--sec-t); border-radius: 50% !important; display: grid; place-items: center; font: 700 15px/1 var(--font); }
+.svw-panel.svw-act .svw-steps > li::before { background: var(--sv-blue); color: #FFF; }
+.svw-steps.is-done > li { grid-template-columns: minmax(0, 1fr); }
+.svw-steps.is-done > li::before { content: none; }
+.svw-signin { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 24px; }
+.svw-or { font-size: 15px; font-weight: 600; color: var(--ink-2); }
+
+/* Buttons: plain rectangles at touch size; the demo in yellow, open-by-name outlined in the data branch's mint */
+.svw .btn { min-height: 44px; font-size: 16px; }
+.svw .btn-sm { min-height: 36px; font-size: 14px; }
+.svw .btn.svw-yel { background: var(--sv-yellow); border-color: var(--ink); color: #000; }
+.svw .btn.svw-yel:hover { background: transparent; color: var(--ink); }
+.svw .btn.svw-mint { border-color: var(--good); color: var(--good); }
+.svw .btn.svw-mint:hover { background: var(--sv-mint); border-color: var(--good); color: #000; }
+
+/* GitHub's page, sketched on a grey card with its own header strip */
+.svw-mock { margin: 24px 0 0; background: var(--surface-2); border: 1px solid var(--line-strong); }
+.svw-mock-title { font-weight: 600; font-size: 15px; color: var(--ink-2); background: var(--strip); border-bottom: 1px solid var(--line-strong); padding: 8px 16px; margin: 0 !important; }
+.svw-mock > div { padding: 14px 16px 0; }
+.svw-mock-k { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.svw-radio { display: flex; align-items: center; gap: 10px; font-size: 15px; margin: 5px 0; }
+.svw-radio i { width: 14px; height: 14px; border: 1.5px solid var(--ink); background: var(--surface); display: inline-grid; place-items: center; flex: none; }
+.svw-radio.is-on i::after { content: ""; width: 6px; height: 6px; border-radius: 50% !important; background: var(--ink); }
+.svw-repo { display: inline-block; margin: 8px 0 0 24px; border: 1px solid var(--line-strong); background: var(--surface); padding: 2px 8px; font: 400 14px var(--mono); }
+.svw-mock figcaption { padding: 12px 16px 14px; font-size: 15px; color: var(--ink-2); }
+
+/* Fields */
+.svw-field { display: block; font-size: 15px; font-weight: 600; margin: 18px 0 6px; }
+.svw-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.svw-input { flex: 1 1 220px; min-width: 0; height: 44px; border: 1.5px solid var(--ink); background: var(--field); color: var(--ink); font: 400 15px var(--mono); padding: 0 12px; }
+.svw-input::placeholder { color: var(--ink-3); }
+.svw-input:focus { outline: 2px solid var(--focus); outline-offset: 2px; }
+.svw-input[aria-invalid="true"] { border: 2px solid var(--bad); padding: 0 11.5px; }
+.svw-help { font-size: 15px; color: var(--ink-2); margin-top: 10px !important; }
+.svw-check { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 16px; cursor: pointer; }
+.svw-check input { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border: 1.5px solid var(--ink); margin: 0; display: grid; place-items: center; cursor: pointer; background: var(--surface); }
+.svw-check input:checked::after { content: ""; width: 12px; height: 6px; border-left: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: translateY(-2px) rotate(-45deg); }
+
+/* The token's route: this browser to api.github.com, dashed while waiting, drawn in blue once it checks out */
+.svw-link { display: block; width: 100%; max-width: 420px; height: auto; margin-top: 22px; overflow: visible; }
+.svw-link text { font: 600 15px var(--font); fill: var(--ink-2); }
+.svw-link .l-end { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.svw-link .l-wait { stroke: var(--line-strong); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.svw-link .l-fill { stroke: var(--sv-blue); stroke-width: 5; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.svw-link.is-ok .l-fill { animation: svwDraw .7s var(--sv-ease) forwards; }
+.svw:not(.is-still) .svw-link.is-busy .l-wait { stroke: var(--sv-blue); animation: svwMarch .6s linear infinite; }
+.svw-verdict { display: flex; align-items: center; gap: 14px; min-height: 52px; margin-top: 10px; }
+/* Success: a mint block with a black check, the same mark as Healthy in the key and the filled app box */
+.svw-okmark { flex: none; display: block; width: 28px; height: 28px; background: var(--sv-mint); outline: 1px solid var(--dot-edge, #000); outline-offset: -1px; animation: svwBlock .35s .55s var(--sv-ease) both; }
+.svw-okmark path { fill: none; stroke: #000; stroke-width: 2.6; stroke-linecap: square; stroke-dasharray: 1; stroke-dashoffset: 1; animation: svwDraw .3s .85s var(--sv-ease) forwards; }
+.svw-status { min-height: 1.5em; margin-top: 10px !important; font-size: 16px; font-weight: 600; }
+.svw-verdict .svw-status { margin-top: 0 !important; }
+.svw-verdict .svw-status b { font-weight: 700; }
+.svw-verdict .svw-sub { font-weight: 400; }
+.svw-status.is-bad { color: var(--bad); display: flex; gap: 8px; align-items: baseline; }
+.svw-status .sv-mark { vertical-align: -1px; }
+.svw-acct { margin-top: 14px; border-top: 1px solid var(--line-strong); padding-top: 14px; }
+.svw-abil { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.svw-picker { margin-top: 16px; }
+.svw-note { display: flex; gap: 10px; align-items: flex-start; background: var(--surface-2); border: 1px solid var(--line-strong); padding: 12px 14px; font-size: 15px; margin-top: 4px; }
+.svw-note .sv-mark { margin-top: 5px; }
+.svw-note-act { display: block; margin-top: 8px; }
+
+/* Recently opened and settings */
+.svw-recent { display: flex; flex-wrap: wrap; gap: 10px; }
+.svw-recent-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; border: 1.5px solid var(--ink); background: var(--surface); color: var(--ink); font: 400 15px var(--mono); cursor: pointer; }
+.svw-recent-btn:hover { border-color: var(--sv-blue); color: var(--sv-blue-ink); }
+.svw-settings .appearance { display: flex; flex-wrap: wrap; gap: 28px 56px; padding: 0; margin-top: 6px; }
+.svw-settings .pref-row { flex-direction: column; align-items: flex-start; gap: 8px; padding: 0; font-size: 15px; font-weight: 600; }
+.svw-settings .seg-opt { min-height: 40px; min-width: 76px; font-size: 15px; justify-content: center; }
+.svw-settings .pref-row .switch { margin: 8px 0; }
+
+/* Motion: frame, then schematic, then the three points; the two run states cycle after. Once drawn (.is-drawn) it stays drawn on resize */
+@keyframes svwDraw { to { stroke-dashoffset: 0; } }
+@keyframes svwMarch { to { stroke-dashoffset: -8; } }
+@keyframes svwBlock { from { transform: scale(0); } }
+@keyframes svwEdgeX { from { transform: scaleX(0); } }
+@keyframes svwEdgeY { from { transform: scaleY(0); } }
+@keyframes svwInk { from { opacity: 0; } }
+@keyframes svwLetter { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes svwGrow { from { transform: scaleX(0); } }
+@keyframes svwCycA { 0% { opacity: 0; } 5%, 45% { opacity: 1; } 51%, 100% { opacity: 0; } }
+@keyframes svwCycB { 0%, 50% { opacity: 0; } 56%, 95% { opacity: 1; } 100% { opacity: 0; } }
+.svw-schem .s-cyc-a, .svw-schem .s-cyc-b { opacity: 0; }
+.svw:not(.is-still) .s-cyc-a { animation: svwCycA 8s 3.6s infinite both; }
+.svw:not(.is-still) .s-cyc-b { animation: svwCycB 8s 3.6s infinite both; }
+.svw:not(.is-still):not(.is-drawn) .s-grow { transform-box: fill-box; transform-origin: left; animation: svwGrow .7s var(--t, 0s) var(--sv-ease) both; }
+.svw:not(.is-still):not(.is-drawn) .svw-schem .s-d { stroke-dasharray: 1; stroke-dashoffset: 1; animation: svwDraw .55s var(--t, 0s) var(--sv-ease) forwards; }
+.svw:not(.is-still):not(.is-drawn) .svw-schem .s-f { animation: svwInk .35s var(--t, 0s) both; }
+.svw:not(.is-still):not(.is-drawn) .e-t, .svw:not(.is-still):not(.is-drawn) .e-b { animation: svwEdgeX .5s var(--sv-ease) both; }
+.svw:not(.is-still):not(.is-drawn) .e-r, .svw:not(.is-still):not(.is-drawn) .e-l { animation: svwEdgeY .5s var(--sv-ease) both; }
+.svw:not(.is-still):not(.is-drawn) .e-r { animation-delay: .35s; } .svw:not(.is-still):not(.is-drawn) .e-b { animation-delay: .7s; } .svw:not(.is-still):not(.is-drawn) .e-l { animation-delay: 1.05s; }
+.svw:not(.is-still):not(.is-drawn) .svw-tick { animation: svwInk .3s 1.3s both; }
+.svw:not(.is-still):not(.is-drawn) .svw-h1 { animation: svwLetter .9s .25s var(--sv-ease) both; }
+.svw:not(.is-still):not(.is-drawn) .svw-notes li { animation: svwLetter .6s var(--t, 2.6s) var(--sv-ease) both; }
+.svw:not(.is-still):not(.is-drawn) .svw-tb { animation: svwInk .5s 2.9s both; }
+.svw:not(.is-still):not(.is-drawn) .svw-key { animation: svwInk .5s 3.4s both; }
+.svw:not(.is-still) .svw-panel:not(.is-in)::before { clip-path: inset(0 100% 100% 0); }
+.svw:not(.is-still) .svw-panel:not(.is-in) .svw-t { clip-path: inset(0 100% 0 0); }
+.svw:not(.is-still) .svw-panel .svw-t, .svw:not(.is-still) .svw-panel::before { clip-path: inset(0 0 0 0); }
+/* Reduced motion: everything in place at once, both run states side by side */
+.svw.is-still *, .svw.is-still *::before, .svw.is-still *::after { animation: none !important; transition: none !important; }
+.svw.is-still .s-cyc-a, .svw.is-still .s-cyc-b { opacity: 1; }
+.svw.is-still .s-rm-hide { display: none; }
+.svw.is-still .s-rm-only { display: inline; }
+.svw.is-still .s-sh-a { transform: translateY(-9px); }
+.svw.is-still .s-sh-b { transform: translateY(11px); }
+.svw.is-still .svw-link .l-fill { stroke-dashoffset: 1; }
+.svw.is-still .svw-link.is-ok .l-fill, .svw.is-still .svw-okmark path { stroke-dashoffset: 0; }
+
+/* Between these widths the route sits in a half-width step and scales down, so its labels get bigger units */
+@media (min-width: 901px) and (max-width: 1100px) { .svw-link text { font-size: 19px; } }
+@media (min-width: 1101px) and (max-width: 1260px) { .svw-link text { font-size: 16.5px; } }
+@media (max-width: 900px) {
+  .svw-notes-row { grid-template-columns: 1fr; }
+  .svw-tb { max-width: 400px; justify-self: end; width: 100%; }
+  .svw-notes { grid-template-columns: 1fr; gap: 14px; }
+  .svw-panels { grid-template-columns: 1fr; }
+  .svw-steps { grid-template-columns: 1fr; gap: 32px; }
+  .svw-steps > li + li { border-left: 0; padding-left: 0; border-top: 1px solid var(--line-strong); padding-top: 28px; }
+}
+/* Below this width the wide schematic would shrink its labels under 14px, so the stacked one takes over */
+@media (max-width: 1100px) {
+  .svw-schem.is-wide { display: none; }
+  .svw-schem.is-tall { display: block; max-width: 380px; margin: 0 auto; }
+  .svw-schem.is-tall .s-dim, .svw-schem.is-tall .s-sl { font-size: 16px; }
+  .svw-schem.is-tall .s-cn { font-size: 15px; }
+  .svw-schem.is-tall .s-lbl { font-size: 16.5px; }
+}
+@media (max-width: 640px) {
+  .svw-frame { margin: 12px; padding: 16px; }
+  .svw-panel { padding: 18px 16px 20px; }
+  .svw-tb { justify-self: stretch; max-width: none; }
+  .svw-steps > li { grid-template-columns: 40px minmax(0, 1fr); }
+  .svw-settings .seg-opt { min-width: 64px; }
+  /* The route drawing scales down here, so its two end labels get bigger units to stay readable */
+  .svw-link text { font-size: 24px; }
+}

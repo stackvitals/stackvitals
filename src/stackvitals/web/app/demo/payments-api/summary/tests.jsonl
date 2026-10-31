@@ -1,0 +1,3 @@
+{"test_id":"TestSettlement/concurrent_refunds","state":"flaky","failures":14,"flake_events":14,"runs":96,"message":"context deadline exceeded"}
+{"test_id":"TestWebhookRetry/timeout","state":"flaky","failures":6,"flake_events":6,"runs":96,"message":"expected 3 retries, got 2"}
+{"test_id":"TestLedger/rounding_eur","state":"broken","failures":96,"flake_events":0,"runs":96,"message":"want 10.05, got 10.04"}

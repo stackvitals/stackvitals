@@ -1,0 +1,68 @@
+{
+ "candidates": 1497,
+ "chosen": 638,
+ "jobs_read": 633,
+ "matched": 36,
+ "matched_with_rerun": {
+  "passed": 21,
+  "failed_again": 9
+ },
+ "passed_among_matched_with_rerun": {
+  "k": 21,
+  "n": 30,
+  "share": 0.7,
+  "low": 0.5212,
+  "high": 0.8334
+ },
+ "flakes_caught": {
+  "k": 21,
+  "n": 255,
+  "share": 0.0824,
+  "low": 0.0545,
+  "high": 0.1226
+ },
+ "repeats_caught": {
+  "k": 9,
+  "n": 229,
+  "share": 0.0393,
+  "low": 0.0208,
+  "high": 0.073
+ },
+ "flakes_vs_repeats": {
+  "difference": 0.0431,
+  "p": 0.059099,
+  "significant": false,
+  "test": "Fisher's exact"
+ },
+ "match_rate_not_rerun": {
+  "k": 6,
+  "n": 149,
+  "share": 0.0403,
+  "low": 0.0186,
+  "high": 0.0851
+ },
+ "signatures": {
+  "toomanyrequests": 12,
+  "502 Bad Gateway": 6,
+  "ServerBusy": 5,
+  "Failed to fetch": 5,
+  "Connection refused": 3,
+  "failed to download": 1,
+  "Too Many Requests": 1,
+  "Unable to make request": 1,
+  "ECONNRESET": 1,
+  "Connection timed out": 1
+ },
+ "matched_by_history": {
+  "not caused": 5,
+  "caused": 3,
+  "undetermined": 28,
+  "not_caused_among_decided": {
+   "k": 5,
+   "n": 8,
+   "share": 0.625,
+   "low": 0.3057,
+   "high": 0.8632
+  }
+ }
+}

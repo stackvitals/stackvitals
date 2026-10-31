@@ -1,0 +1,2 @@
+{"test_id":"checkout.spec.ts > applies coupon","state":"flaky","failures":5,"flake_events":5,"runs":140,"message":"Timed out 5000ms waiting for expect(locator).toBeVisible()"}
+{"test_id":"search.test.tsx > debounces input","state":"suspect","failures":2,"flake_events":2,"runs":140,"message":null}

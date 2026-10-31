@@ -1,0 +1,328 @@
+{
+ "main": {
+  "added": {
+   "items": 5,
+   "kinds": {
+    "drive_by": 1,
+    "peer_help": 0,
+    "project_answer": 4,
+    "unclear": 0
+   }
+  },
+  "both": {
+   "counted": 88,
+   "drive_by_among_counted": {
+    "high": 0.1409,
+    "low": 0.0316,
+    "n": 88,
+    "share": 0.0682
+   },
+   "project_answers_caught": {
+    "high": 0.8095,
+    "low": 0.6167,
+    "n": 81,
+    "share": 0.716
+   },
+   "real_answer_among_counted": {
+    "high": 0.9684,
+    "low": 0.8591,
+    "n": 88,
+    "share": 0.9318
+   }
+  },
+  "by_claude": {
+   "both": {
+    "counted": 86,
+    "drive_by_among_counted": {
+     "high": 0.129,
+     "low": 0.0251,
+     "n": 86,
+     "share": 0.0581
+    },
+    "project_answers_caught": {
+     "high": 0.8052,
+     "low": 0.6145,
+     "n": 84,
+     "share": 0.7143
+    },
+    "real_answer_among_counted": {
+     "high": 0.9749,
+     "low": 0.871,
+     "n": 86,
+     "share": 0.9419
+    }
+   },
+   "regulars": {
+    "counted": 81,
+    "drive_by_among_counted": {
+     "high": 0.1202,
+     "low": 0.0194,
+     "n": 81,
+     "share": 0.0494
+    },
+    "project_answers_caught": {
+     "high": 0.7674,
+     "low": 0.5625,
+     "n": 84,
+     "share": 0.6667
+    },
+    "real_answer_among_counted": {
+     "high": 0.9806,
+     "low": 0.8798,
+     "n": 81,
+     "share": 0.9506
+    }
+   }
+  },
+  "by_gemini": {
+   "both": {
+    "counted": 89,
+    "drive_by_among_counted": {
+     "high": 0.2079,
+     "low": 0.0704,
+     "n": 89,
+     "share": 0.1236
+    },
+    "project_answers_caught": {
+     "high": 0.6912,
+     "low": 0.4894,
+     "n": 91,
+     "share": 0.5934
+    },
+    "real_answer_among_counted": {
+     "high": 0.9296,
+     "low": 0.7921,
+     "n": 89,
+     "share": 0.8764
+    }
+   },
+   "regulars": {
+    "counted": 84,
+    "drive_by_among_counted": {
+     "high": 0.2055,
+     "low": 0.066,
+     "n": 84,
+     "share": 0.119
+    },
+    "project_answers_caught": {
+     "high": 0.6517,
+     "low": 0.4457,
+     "n": 91,
+     "share": 0.5495
+    },
+    "real_answer_among_counted": {
+     "high": 0.934,
+     "low": 0.7945,
+     "n": 84,
+     "share": 0.881
+    }
+   }
+  },
+  "regulars": {
+   "counted": 83,
+   "drive_by_among_counted": {
+    "high": 0.1334,
+    "low": 0.026,
+    "n": 83,
+    "share": 0.0602
+   },
+   "project_answers_caught": {
+    "high": 0.7662,
+    "low": 0.5606,
+    "n": 81,
+    "share": 0.6667
+   },
+   "real_answer_among_counted": {
+    "high": 0.974,
+    "low": 0.8666,
+    "n": 83,
+    "share": 0.9398
+   }
+  },
+  "triage": {
+   "counted": 50,
+   "drive_by_among_counted": {
+    "high": 0.1346,
+    "low": 0.011,
+    "n": 50,
+    "share": 0.04
+   },
+   "project_answers_caught": {
+    "high": 0.5949,
+    "low": 0.375,
+    "n": 81,
+    "share": 0.4815
+   },
+   "real_answer_among_counted": {
+    "high": 0.989,
+    "low": 0.8654,
+    "n": 50,
+    "share": 0.96
+   }
+  }
+ },
+ "repos_read": 167,
+ "repos_with_triagers": 164,
+ "validation": {
+  "added": {
+   "items": 6,
+   "kinds": {
+    "drive_by": 0,
+    "peer_help": 1,
+    "project_answer": 4,
+    "unclear": 1
+   }
+  },
+  "both": {
+   "counted": 203,
+   "drive_by_among_counted": {
+    "high": 0.2195,
+    "low": 0.1182,
+    "n": 203,
+    "share": 0.1626
+   },
+   "project_answers_caught": {
+    "high": 0.6949,
+    "low": 0.4559,
+    "n": 140,
+    "share": 0.5652
+   },
+   "real_answer_among_counted": {
+    "high": 0.8818,
+    "low": 0.7805,
+    "n": 203,
+    "share": 0.8374
+   }
+  },
+  "by_claude": {
+   "both": {
+    "counted": 195,
+    "drive_by_among_counted": {
+     "high": 0.159,
+     "low": 0.0715,
+     "n": 195,
+     "share": 0.1077
+    },
+    "project_answers_caught": {
+     "high": 0.653,
+     "low": 0.4369,
+     "n": 153,
+     "share": 0.5334
+    },
+    "real_answer_among_counted": {
+     "high": 0.9285,
+     "low": 0.841,
+     "n": 195,
+     "share": 0.8923
+    }
+   },
+   "regulars": {
+    "counted": 190,
+    "drive_by_among_counted": {
+     "high": 0.1631,
+     "low": 0.0734,
+     "n": 190,
+     "share": 0.1105
+    },
+    "project_answers_caught": {
+     "high": 0.5552,
+     "low": 0.3744,
+     "n": 153,
+     "share": 0.4522
+    },
+    "real_answer_among_counted": {
+     "high": 0.9266,
+     "low": 0.8369,
+     "n": 190,
+     "share": 0.8895
+    }
+   }
+  },
+  "by_gemini": {
+   "both": {
+    "counted": 206,
+    "drive_by_among_counted": {
+     "high": 0.2797,
+     "low": 0.1675,
+     "n": 206,
+     "share": 0.2184
+    },
+    "project_answers_caught": {
+     "high": 0.4788,
+     "low": 0.2949,
+     "n": 133,
+     "share": 0.3792
+    },
+    "real_answer_among_counted": {
+     "high": 0.8325,
+     "low": 0.7203,
+     "n": 206,
+     "share": 0.7816
+    }
+   },
+   "regulars": {
+    "counted": 200,
+    "drive_by_among_counted": {
+     "high": 0.277,
+     "low": 0.1637,
+     "n": 200,
+     "share": 0.215
+    },
+    "project_answers_caught": {
+     "high": 0.4045,
+     "low": 0.2592,
+     "n": 133,
+     "share": 0.3228
+    },
+    "real_answer_among_counted": {
+     "high": 0.8363,
+     "low": 0.723,
+     "n": 200,
+     "share": 0.785
+    }
+   }
+  },
+  "regulars": {
+   "counted": 198,
+   "drive_by_among_counted": {
+    "high": 0.2248,
+    "low": 0.1212,
+    "n": 198,
+    "share": 0.1667
+   },
+   "project_answers_caught": {
+    "high": 0.588,
+    "low": 0.3845,
+    "n": 140,
+    "share": 0.4737
+   },
+   "real_answer_among_counted": {
+    "high": 0.8788,
+    "low": 0.7752,
+    "n": 198,
+    "share": 0.8333
+   }
+  },
+  "triage": {
+   "counted": 69,
+   "drive_by_among_counted": {
+    "high": 0.2633,
+    "low": 0.0914,
+    "n": 69,
+    "share": 0.1594
+   },
+   "project_answers_caught": {
+    "high": 0.3951,
+    "low": 0.2051,
+    "n": 140,
+    "share": 0.294
+   },
+   "real_answer_among_counted": {
+    "high": 0.9086,
+    "low": 0.7367,
+    "n": 69,
+    "share": 0.8406
+   }
+  }
+ }
+}

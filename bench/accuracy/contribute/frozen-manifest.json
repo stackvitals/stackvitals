@@ -1,0 +1,10 @@
+{
+ "frozen_at": "2026-10-23T10:09:06Z",
+ "items": 13496,
+ "repos": 3878,
+ "snapshot": {
+  "built_at": "2026-10-20T05:05:35Z"
+ },
+ "sha256": "191b51740910dd4dd54db45a66a7adaf0c1f3bef22935747e45e66e792bb29ab",
+ "preregistration_sha256": "251e75e28ac3e68e07417aabfbba1bc503a0c46d5df65c75ff7afab6797eeabe"
+}

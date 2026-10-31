@@ -1,0 +1,15 @@
+{
+ "app_json_packed_gzip_mb": 0.35,
+ "app_json_packed_mb": 8.48,
+ "catalog_json_compact_mb": 17.51,
+ "catalog_json_mb": 24.31,
+ "entities_mb": 2.64,
+ "entities_s": 6.24,
+ "html_mb": 1.33,
+ "html_s": 0.07,
+ "json_s": 2.19,
+ "readme_mb": 0.82,
+ "readme_s": 0.21,
+ "repos": 10000,
+ "score_s": 0.34
+}

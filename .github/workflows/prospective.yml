@@ -1,0 +1,79 @@
+name: Prospective tests
+
+# The pre-registered reads, scored on their dates whatever they show: reviewer suggestions (from 2027-01-15), the
+# finder's ranking (from 2027-03-20) and the adoption study (from 2027-07-01, then every three months). Each scorer
+# refuses to run early or on a changed frozen file, and a finished read is not scored again; results come back as a PR.
+on:
+  schedule:
+    - cron: "0 7 16 1 *"
+    - cron: "0 7 21 3 *"
+    - cron: "0 7 2 1,4,7,10 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: prospective
+  cancel-in-progress: false
+
+jobs:
+  score:
+    # Runs only in the private repo that holds the crawl data; elsewhere the job is skipped.
+    if: github.repository == 'kaushik-yadav/merge-scout'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      MS_DATA_DIR: ${{ github.workspace }}/data
+      # Code search (finding adopters) needs a person's token; the built-in one reads everything else.
+      GH_TOKEN: ${{ secrets.PROSPECTIVE_TOKEN || github.token }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: pip install ".[pipeline]"
+      - name: Download the crawl
+        env:
+          MS_RELEASE_TOKEN: ${{ github.token }}
+        run: |
+          python -c "
+          import os; from pathlib import Path
+          from mergescout.github.releases import Releases
+          from mergescout.store.sync import fetch_bronze
+          fetch_bronze(Releases(os.environ['MS_RELEASE_TOKEN'], os.environ['GITHUB_REPOSITORY']), Path(os.environ['MS_DATA_DIR']))"
+      - name: Score every test that is due
+        run: |
+          set +e
+          {
+            # A read that already has its results stands; it is not scored again.
+            echo "## Reviewer suggestions"
+            if [ -f bench/accuracy/team/prospective-results.json ]; then echo "Already scored; the read stands."
+            else python bench/accuracy/team/prospective.py score; echo "exit $?"; fi
+            echo "## Finder's ranking"
+            if [ -f bench/accuracy/contribute/prospective-results.json ]; then echo "Already scored; the read stands."
+            else python bench/accuracy/contribute/prospective.py score --crawl data/bronze/crawl; echo "exit $?"; fi
+            # study.py refuses by itself (exit 4) once a read included 20+ adopters or after 2028-07-01.
+            echo "## Adoption study"
+            if [ "$(date -u +%F)" \> "2027-06-30" ]; then python bench/accuracy/adoption/study.py find; fi
+            python bench/accuracy/adoption/study.py score --crawl data/bronze/crawl; echo "exit $?"
+          } 2>&1 | tee scores.log
+      - name: Open a pull request with the results
+        run: |
+          for f in bench/accuracy/team/prospective-results.json bench/accuracy/contribute/prospective-results.json \
+            bench/accuracy/adoption/adopters.json bench/accuracy/adoption/results.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then echo "Nothing was due."; exit 0; fi
+          branch="test/prospective-$(date -u +%F)-${{ github.run_id }}"
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "test(measure): Score the pre-registered prospective tests due $(date -u +%F)"
+          git push -q origin "HEAD:refs/heads/$branch"
+          body="$(printf 'Scored by the Prospective tests workflow, published whatever the results show.\n\n```\n%s\n```\n' "$(tail -c 60000 scores.log)")"
+          # Repos that don't let Actions open pull requests get an issue pointing at the branch instead.
+          gh pr create --head "$branch" --title "Prospective test results $(date -u +%F)" --body "$body" ||
+            gh issue create --title "Prospective test results $(date -u +%F) (branch $branch)" --body "$body"

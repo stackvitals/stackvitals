@@ -1,0 +1,20 @@
+id,field,first,second,final,winner,reason
+Comcast/react-data-grid,sources,release_workflow releases,deployments release_workflow releases,release_workflow releases,first,"Tag-triggered npm publish plus non-prerelease releases; github-pages deployments are the library's demo site, not production."
+Comcast/react-data-grid|.github/workflows/ci.yml,ships,no,yes,no,first,Tests and deploys GitHub Pages demo/docs site of a library; Pages of a non-website project does not ship.
+Lingyan000/fluxdo,sources,release_workflow releases,deployments release_workflow releases,release_workflow releases,first,Tag-triggered app build/release and stable releases; github-pages deployments of an app are not a production environment.
+Lingyan000/fluxdo|.github/workflows/flatpak-wpe-layer.yaml,ships,no,yes,no,first,Builds a dependency layer and posts it as a prerelease with make_latest false; not a stable shipment of the app.
+The-OpenROAD-Project/OpenROAD-flow-scripts,sources,none,deploy_workflow,none,first,No releases or deployments; the only image-publish workflow is disabled and the quarterly job only tags.
+TryGhost/Ghost-CLI,sources,releases,deploy_workflow release_workflow releases,releases,first,"Publish runs on main pushes touching package.json, most not releases; not tag/release triggered. Releases track versions."
+Yakifo/amqtt|.github/workflows/release-drafter.yml,ships,no,yes,no,first,Only updates a draft release on tag push; draft releases do not ship (PyPI publish is a separate workflow).
+baggepinnen/LowLevelParticleFilters.jl,sources,releases,deployments release_workflow releases,releases,first,"TagBot only tags after registry registration; github-pages deployments are library docs, not production."
+baggepinnen/LowLevelParticleFilters.jl|.github/workflows/docs.yml,ships,no,yes,no,first,Builds and deploys Documenter docs of a library; docs sites of a library do not ship.
+edwardgushchin/SDL3-CS,sources,deployments releases,deployments release_workflow releases,deployments releases,first,"Production deployments and releases match; release workflow is dispatch-only with publish flags off by default, not tag-run."
+electron/forge,sources,deployments release_workflow releases,deploy_workflow deployments release_workflow releases,deployments releases,neither,"Publish runs on every main push, gated by bump commits, not tags; npm env deployments and releases track shipments."
+electron/forge|.github/workflows/gh-pages.yml,ships,no,yes,no,first,Deploys API documentation of a tool to Pages; docs sites of a library or tool do not ship.
+firedancer-io/firedancer,sources,releases,deployments every_merge release_workflow releases,releases,first,No publish workflow; Pages deploys are the docs book and coverage report; non-prerelease releases are what users get.
+firedancer-io/firedancer|.github/workflows/book.yml,ships,no,yes,no,first,"Deploys a VitePress docs book to Pages for a validator project, not a website product."
+firedancer-io/firedancer|.github/workflows/on_main_push.yml,ships,no,yes,no,first,Only calls the docs book workflow on main pushes; docs of a non-website project do not ship.
+go-delve/mcp-dap-server,sources,release_workflow releases,release_workflow,release_workflow releases,first,Tag-triggered GoReleaser creates GitHub releases and images; both count the same versions even with none in 90 days.
+oxidecomputer/console,sources,deploy_workflow deployments every_merge,deploy_workflow deployments,deploy_workflow deployments every_merge,first,Upload-assets ships on every push to main; codebook rule says a deploy on each default-branch push adds every_merge.
+preloopdev/preloop,sources,deploy_workflow release_workflow releases,release_workflow releases,release_workflow releases,second,Tag/release-event workflows publish versions; no active default-branch deploy; docs staging deploys are not production.
+preloopdev/preloop|.github/workflows/release-golden.yml,ships,yes,no,no,second,Manual emergency re-bake of auxiliary golden assets onto an existing release; versions ship via release.yml.

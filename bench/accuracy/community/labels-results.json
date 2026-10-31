@@ -1,0 +1,120 @@
+{
+ "generated": "2026-10-22T10:16:15Z",
+ "labeller": "Claude and Gemini 3.5 Flash-Lite; disagreements adjudicated blind by Claude; no person audited",
+ "main": {
+  "agreement": {
+   "items": 80,
+   "kappa": 0.843,
+   "same": 0.9
+  },
+  "drive_by_counted_by_issue_metrics": {
+   "high": 0.505,
+   "low": 0.4072,
+   "n": 395,
+   "share": 0.4557
+  },
+  "items": 400,
+  "kinds": {
+   "drive_by": 180,
+   "peer_help": 134,
+   "project_answer": 81,
+   "unclear": 5
+  },
+  "peer_help": {
+   "high": 0.3873,
+   "low": 0.2943,
+   "n": 395,
+   "share": 0.3392
+  },
+  "project_answers_missed_by_roles_only": {
+   "high": 0.2476,
+   "low": 0.1682,
+   "n": 395,
+   "share": 0.2051
+  },
+  "regular_responders": {
+   "counted": 83,
+   "drive_by_among_counted": {
+    "high": 0.1334,
+    "low": 0.026,
+    "n": 83,
+    "share": 0.0602
+   },
+   "project_answers_caught": {
+    "high": 0.7662,
+    "low": 0.5606,
+    "n": 81,
+    "share": 0.6667
+   },
+   "real_answer_among_counted": {
+    "high": 0.974,
+    "low": 0.8666,
+    "n": 83,
+    "share": 0.9398
+   }
+  }
+ },
+ "validation": {
+  "agreement": {
+   "items": 80,
+   "kappa": 0.792,
+   "same": 0.8625
+  },
+  "drive_by_counted_by_issue_metrics": {
+   "high": 0.521,
+   "low": 0.3973,
+   "n": 394,
+   "share": 0.4581
+  },
+  "items": 400,
+  "kinds": {
+   "drive_by": 133,
+   "peer_help": 121,
+   "project_answer": 140,
+   "unclear": 6
+  },
+  "peer_help": {
+   "high": 0.4128,
+   "low": 0.2937,
+   "n": 394,
+   "share": 0.3527
+  },
+  "project_answers_missed_by_roles_only": {
+   "high": 0.2301,
+   "low": 0.1515,
+   "n": 394,
+   "share": 0.1892
+  },
+  "regular_responders": {
+   "counted": 198,
+   "drive_by_among_counted": {
+    "high": 0.2248,
+    "low": 0.1212,
+    "n": 198,
+    "share": 0.1667
+   },
+   "project_answers_caught": {
+    "high": 0.588,
+    "low": 0.3845,
+    "n": 140,
+    "share": 0.4737
+   },
+   "real_answer_among_counted": {
+    "high": 0.8788,
+    "low": 0.7752,
+    "n": 198,
+    "share": 0.8333
+   }
+  },
+  "strata": {
+   "other": {
+    "drawn": 200,
+    "pool": 14679
+   },
+   "regular": {
+    "drawn": 200,
+    "pool": 2597
+   }
+  }
+ }
+}

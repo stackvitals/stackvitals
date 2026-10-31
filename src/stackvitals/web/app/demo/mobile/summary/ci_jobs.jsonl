@@ -1,0 +1,5 @@
+{"workflow":".github/workflows/connectedAndroidTest.yml","job":"api-30","state":"flaky","flake_events":7,"failures":7,"runs":60,"flake_rate":0.1167,"prs_affected":6,"retry_minutes":528}
+{"workflow":".github/workflows/ci.yml","job":"assembleRelease","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/ci.yml","job":"detekt","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/ci.yml","job":"unit","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/ci.yml","job":"ktlint","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}

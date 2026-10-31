@@ -1,0 +1,430 @@
+{
+ "decided": 395,
+ "labelled": 400,
+ "missed_evidence": {
+  "description_marker": 5,
+  "n": 23,
+  "older_commit_trailer": 6
+ },
+ "population": {
+  "account": 7376,
+  "branch": 54572,
+  "none": 933902,
+  "trailer": 1960
+ },
+ "rule": {
+  "all": {
+   "false_marks": [
+    101,
+    103,
+    398
+   ],
+   "kind_agrees": {
+    "high": 0.9396,
+    "k": 173,
+    "low": 0.856,
+    "n": 191,
+    "share": 0.9058
+   },
+   "missed": [
+    160,
+    161,
+    178,
+    218,
+    221,
+    234,
+    246,
+    256,
+    258,
+    282,
+    288,
+    316,
+    322,
+    328,
+    332,
+    386,
+    391
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "unredacted/freesocks-control-plane",
+      "share": 0.0103
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.9641,
+     "k": 191,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 194,
+     "repo_wilson_high": 0.9948,
+     "repo_wilson_low": 0.9549,
+     "repos": 188,
+     "without_biggest": {
+      "high": 0.9947,
+      "k": 189,
+      "low": 0.9551,
+      "n": 192
+     }
+    },
+    "high": 0.9947,
+    "k": 191,
+    "low": 0.9555,
+    "n": 194,
+    "share": 0.9845
+   },
+   "recall_raw": {
+    "high": 0.9483,
+    "k": 191,
+    "low": 0.873,
+    "n": 208,
+    "share": 0.9183
+   },
+   "recall_weighted": 0.7877
+  },
+  "held_out": {
+   "false_marks": [
+    398
+   ],
+   "kind_agrees": {
+    "high": 0.9562,
+    "k": 86,
+    "low": 0.841,
+    "n": 94,
+    "share": 0.9149
+   },
+   "missed": [
+    160,
+    178,
+    218,
+    234,
+    246,
+    256,
+    258,
+    282,
+    288,
+    316,
+    322,
+    328,
+    332,
+    386
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "kyegomez/swarms",
+      "share": 0.0211
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.9677,
+     "k": 94,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 95,
+     "repo_wilson_high": 0.9982,
+     "repo_wilson_low": 0.9419,
+     "repos": 93,
+     "without_biggest": {
+      "high": 0.9981,
+      "k": 92,
+      "low": 0.9416,
+      "n": 93
+     }
+    },
+    "high": 0.9981,
+    "k": 94,
+    "low": 0.9428,
+    "n": 95,
+    "share": 0.9895
+   },
+   "recall_raw": {
+    "high": 0.9212,
+    "k": 94,
+    "low": 0.7941,
+    "n": 108,
+    "share": 0.8704
+   },
+   "recall_weighted": 0.6631
+  },
+  "tune": {
+   "false_marks": [
+    101,
+    103
+   ],
+   "kind_agrees": {
+    "high": 0.943,
+    "k": 87,
+    "low": 0.8205,
+    "n": 97,
+    "share": 0.8969
+   },
+   "missed": [
+    161,
+    221,
+    391
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "LibrePhotos/librephotos",
+      "share": 0.0202
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.949,
+     "k": 97,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 99,
+     "repo_wilson_high": 0.9945,
+     "repo_wilson_low": 0.9289,
+     "repos": 98,
+     "without_biggest": {
+      "high": 0.9943,
+      "k": 95,
+      "low": 0.9279,
+      "n": 97
+     }
+    },
+    "high": 0.9944,
+    "k": 97,
+    "low": 0.9293,
+    "n": 99,
+    "share": 0.9798
+   },
+   "recall_raw": {
+    "high": 0.9897,
+    "k": 97,
+    "low": 0.9155,
+    "n": 100,
+    "share": 0.97
+   },
+   "recall_weighted": 0.9221
+  }
+ },
+ "rule_before": {
+  "all": {
+   "false_marks": [
+    101,
+    398
+   ],
+   "kind_agrees": {
+    "high": 0.9503,
+    "k": 170,
+    "low": 0.8705,
+    "n": 185,
+    "share": 0.9189
+   },
+   "missed": [
+    107,
+    123,
+    125,
+    160,
+    161,
+    178,
+    218,
+    221,
+    234,
+    246,
+    256,
+    258,
+    282,
+    288,
+    300,
+    316,
+    321,
+    322,
+    328,
+    332,
+    361,
+    386,
+    391
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "unredacted/freesocks-control-plane",
+      "share": 0.0107
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.973,
+     "k": 185,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 187,
+     "repo_wilson_high": 0.9971,
+     "repo_wilson_low": 0.9612,
+     "repos": 181,
+     "without_biggest": {
+      "high": 0.997,
+      "k": 183,
+      "low": 0.9614,
+      "n": 185
+     }
+    },
+    "high": 0.9971,
+    "k": 185,
+    "low": 0.9618,
+    "n": 187,
+    "share": 0.9893
+   },
+   "recall_raw": {
+    "high": 0.9252,
+    "k": 185,
+    "low": 0.8395,
+    "n": 208,
+    "share": 0.8894
+   },
+   "recall_weighted": 0.7499
+  },
+  "held_out": {
+   "false_marks": [
+    398
+   ],
+   "kind_agrees": {
+    "high": 0.9631,
+    "k": 86,
+    "low": 0.8527,
+    "n": 93,
+    "share": 0.9247
+   },
+   "missed": [
+    160,
+    178,
+    218,
+    234,
+    246,
+    256,
+    258,
+    282,
+    288,
+    300,
+    316,
+    322,
+    328,
+    332,
+    386
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "kyegomez/swarms",
+      "share": 0.0213
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.9674,
+     "k": 93,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 94,
+     "repo_wilson_high": 0.9981,
+     "repo_wilson_low": 0.9413,
+     "repos": 92,
+     "without_biggest": {
+      "high": 0.9981,
+      "k": 91,
+      "low": 0.941,
+      "n": 92
+     }
+    },
+    "high": 0.9981,
+    "k": 93,
+    "low": 0.9422,
+    "n": 94,
+    "share": 0.9894
+   },
+   "recall_raw": {
+    "high": 0.914,
+    "k": 93,
+    "low": 0.7834,
+    "n": 108,
+    "share": 0.8611
+   },
+   "recall_weighted": 0.639
+  },
+  "tune": {
+   "false_marks": [
+    101
+   ],
+   "kind_agrees": {
+    "high": 0.9553,
+    "k": 84,
+    "low": 0.8377,
+    "n": 92,
+    "share": 0.913
+   },
+   "missed": [
+    107,
+    123,
+    125,
+    161,
+    221,
+    321,
+    361,
+    391
+   ],
+   "precision": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "LibrePhotos/librephotos",
+      "share": 0.0215
+     },
+     "boot_high": 1.0,
+     "boot_low": 0.9674,
+     "k": 92,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 93,
+     "repo_wilson_high": 0.9981,
+     "repo_wilson_low": 0.9412,
+     "repos": 92,
+     "without_biggest": {
+      "high": 0.9981,
+      "k": 90,
+      "low": 0.9403,
+      "n": 91
+     }
+    },
+    "high": 0.9981,
+    "k": 92,
+    "low": 0.9416,
+    "n": 93,
+    "share": 0.9892
+   },
+   "recall_raw": {
+    "high": 0.9589,
+    "k": 92,
+    "low": 0.85,
+    "n": 100,
+    "share": 0.92
+   },
+   "recall_weighted": 0.8695
+  }
+ },
+ "truth_by_stratum": {
+  "account": {
+   "agent": 30,
+   "assisted": 0,
+   "n": 30,
+   "none": 0
+  },
+  "branch": {
+   "agent": 57,
+   "assisted": 3,
+   "n": 60,
+   "none": 0
+  },
+  "none": {
+   "agent": 13,
+   "assisted": 50,
+   "n": 247,
+   "none": 184
+  },
+  "trailer": {
+   "agent": 8,
+   "assisted": 47,
+   "n": 58,
+   "none": 3
+  }
+ },
+ "unclear": 5
+}

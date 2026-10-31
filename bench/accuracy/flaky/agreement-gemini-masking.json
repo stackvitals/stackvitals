@@ -1,0 +1,24 @@
+{
+ "first": "Claude",
+ "second": "gemini-3.5-flash-lite",
+ "fields": {
+  "caused_by_change": {
+   "n": 21,
+   "agree": 0.7143,
+   "kappa": 0.5116,
+   "confusion": {
+    "no|unclear": 1,
+    "no|yes": 3,
+    "unclear|yes": 2
+   },
+   "disagree": [
+    1001,
+    1013,
+    1015,
+    1016,
+    1017,
+    1018
+   ]
+  }
+ }
+}

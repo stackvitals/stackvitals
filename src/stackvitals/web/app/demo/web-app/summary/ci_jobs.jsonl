@@ -1,0 +1,5 @@
+{"workflow":".github/workflows/playwright.yml","job":"webkit","state":"flaky","flake_events":3,"failures":3,"runs":150,"flake_rate":0.02,"prs_affected":3,"retry_minutes":132}
+{"workflow":".github/workflows/playwright.yml","job":"chromium","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/build.yml","job":"next","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/unit.yml","job":"vitest","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}
+{"workflow":".github/workflows/lint.yml","job":"eslint","state":"ok","flake_events":0,"failures":0,"runs":120,"flake_rate":0,"prs_affected":0,"retry_minutes":0}

@@ -1,0 +1,18 @@
+name: Share benchmark figures
+description: Rounded CI figures from a repo that turned on [benchmarks] share, for peer groups (no names, no code).
+title: "Benchmark figures"
+labels: ["benchmark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        These figures came prefilled from a CI run's summary. They are public once filed; close this issue to withdraw them.
+        Peer groups are published once 10 or more repos of a kind have shared, one figure set per GitHub account.
+  - type: textarea
+    id: figures
+    attributes:
+      label: Figures
+      description: Leave as they are; the daily job reads them.
+      render: json
+    validations:
+      required: true

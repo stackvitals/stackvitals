@@ -1,0 +1,143 @@
+/* CI Health: the tab row, titled tables, framed panels with an action bar, label/value facts and the CI setup builder, base rules first, then Instrument */
+.tabs-row { display: flex; min-width: 0; }
+.tabs-row .seg { max-width: 100%; }
+.tab-panel { display: flex; flex-direction: column; gap: 20px; animation: pageIn var(--dur-2) var(--spring) backwards; min-width: 0; }
+[data-page="ci"] .section-body > .columns { row-gap: 20px; }
+[data-page="ci"] .section-body > .ci-tbl, [data-page="ci"] .section-body > .ci-panel { margin-top: 8px; }
+
+.ci-tbl { min-width: 0; }
+.ci-tbl-h { display: flex; gap: 4px 12px; align-items: baseline; flex-wrap: wrap; padding: 10px 14px; background: var(--surface); border: 1px solid var(--line); border-bottom: 0;
+  border-radius: var(--r-lg) var(--r-lg) 0 0; }
+.ci-tbl-h h3 { margin: 0; font-size: 15.5px; font-weight: 700; }
+.ci-tbl-note { font-size: 13.5px; color: var(--ink-2); }
+.ci-tbl-act { margin-left: auto; }
+.ci-tbl > .table-wrap, .ci-tbl > .card { border-top-left-radius: 0; border-top-right-radius: 0; }
+@media (min-width: 641px) { .ci-tbl .table :is(th, td) + :is(th, td) { border-left: 1px solid var(--line); } }
+
+.ci-panel { display: flex; flex-direction: column; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.ci-panel-h { display: flex; gap: 8px 14px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 16px; background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.ci-panel-h h3 { margin: 0; font-size: 15.5px; font-weight: 700; }
+.ci-panel-b { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 14px 16px; min-width: 0; }
+.ci-bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 10px 16px; border-top: 1px solid var(--line); background: var(--surface-2); }
+.ci-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+@media (max-width: 900px) { .ci-pair { grid-template-columns: minmax(0, 1fr); } }
+
+.ci-facts { display: grid; grid-template-columns: minmax(120px, max-content) minmax(0, 1fr); gap: 0; margin: 0; font-size: 14.5px; }
+.ci-fact { display: contents; }
+.ci-fact dt { padding: 7px 16px 7px 0; font-weight: 650; color: var(--ink-2); }
+.ci-fact dd { margin: 0; padding: 7px 0; min-width: 0; overflow-wrap: anywhere; }
+.ci-fact + .ci-fact > * { border-top: 1px solid var(--line); }
+@media (max-width: 520px) {
+  .ci-facts { grid-template-columns: minmax(0, 1fr); }
+  .ci-fact dt { padding: 8px 0 0; }
+  .ci-fact dd { padding: 2px 0 8px; }
+  .ci-fact + .ci-fact > dd { border-top: 0; }
+}
+
+.ci-say { display: flex; gap: 8px; align-items: baseline; margin: 0; font-size: 14.5px; color: var(--ink-2); }
+.ci-cap { display: inline-block; }
+.ci-cap::first-letter { text-transform: uppercase; }
+.ci-id { font-family: var(--mono); font-size: .9em; overflow-wrap: anywhere; }
+.ci-dec { display: flex; gap: 6px; align-items: baseline; margin-top: 3px; font-size: 13.5px; color: var(--ink-2); }
+.ci-cell-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.ci-landed { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.ci-cmds { display: flex; flex-direction: column; gap: 8px; }
+
+/* The CI setup builder: choices on the left, what you get and the one-click paths on the right */
+.ci-setup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.ci-setup-strip { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 12px 18px; border-bottom: 1px solid var(--line); font-weight: 700; }
+.ci-setup-strip span + span { font-weight: 600; color: var(--ink-2); font-size: 14px; overflow-wrap: anywhere; }
+.ci-setup-form { padding: 18px; min-width: 0; }
+.ci-setup-out { display: flex; flex-direction: column; gap: 16px; padding: 18px; min-width: 0; border-left: 1px solid var(--line); }
+.ci-setup-h { margin: 0; font-weight: 700; font-size: 15px; }
+.ci-feats { margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 0; min-width: 0; }
+.ci-feats legend { padding: 0; margin-bottom: 6px; }
+.ci-feat { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line); }
+.ci-feat-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ci-feat-text b { font-size: 15px; font-weight: 700; }
+.ci-feat-text span { font-size: 14px; color: var(--ink); }
+.ci-feat-text small { font-size: 13.5px; color: var(--ink-2); }
+.ci-step { margin: 6px 0 0; }
+.ci-steppers { display: flex; flex-wrap: wrap; gap: 14px 28px; }
+.ci-steppers .field { flex: 1 1 200px; }
+.ci-jobs-now ul { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.ci-jobs-now code { overflow-wrap: anywhere; }
+.ci-add { display: flex; flex-direction: column; gap: 12px; }
+.ci-add-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ci-add-path { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: var(--r-md); min-width: 0; }
+.ci-add-k { margin: 0; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.ci-add-note { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+.ci-add-more { display: flex; gap: 10px 14px; align-items: center; flex-wrap: wrap; }
+.ci-add-save { font-size: 13.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+.ci-token { padding: 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface-2); display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.ci-token p { margin: 0; }
+.ci-yaml summary, .ci-manual summary { cursor: pointer; font-weight: 650; font-size: 14.5px; padding: 6px 0; }
+.ci-yaml .code pre { max-height: 420px; overflow: auto; }
+.ci-todo { margin: 0; padding: 12px 16px 12px 32px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; border: 1px solid var(--line); border-top: 0;
+  border-radius: 0 0 var(--r-lg) var(--r-lg); background: var(--surface); }
+.ci-manual-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 8px; }
+.ci-manual-list h4 { margin: 0 0 4px; font-size: 14.5px; font-weight: 700; }
+.ci-manual .cmd code { overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+  .ci-setup { grid-template-columns: minmax(0, 1fr); }
+  .ci-setup-out { border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .ci-add-paths { grid-template-columns: minmax(0, 1fr); }
+  .ci-setup-form, .ci-setup-out { padding: 16px 14px; }
+}
+
+/* Instrument: tables and panels framed in ink with a grey heading strip, facts on ruled rows, sans labels at 14px, mono only for ids */
+[data-design="sheet"][data-page="ci"] .tab-panel { animation-name: svFade; animation-timing-function: var(--sv-ease); gap: 24px; }
+[data-design="sheet"][data-page="ci"] .ci-tbl-h { background: var(--strip); border: 1.5px solid var(--frame); border-bottom: 1px solid var(--line-strong); min-height: 42px; padding: 9px 14px; }
+[data-design="sheet"][data-page="ci"] .ci-tbl-h h3 { font-size: 16px; font-weight: 700; }
+[data-design="sheet"][data-page="ci"] .ci-tbl-note { font-size: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-tbl > :is(.table-wrap, .card) { border: 1.5px solid var(--frame); border-top: 0; }
+@media (min-width: 641px) {
+  [data-design="sheet"][data-page="ci"] .ci-tbl .table :is(th, td) + :is(th, td) { border-left: 1px solid var(--line-strong); }
+  [data-design="sheet"][data-page="ci"] .ci-tbl .table td { padding: 10px 12px; }
+  [data-design="sheet"][data-page="ci"] .ci-tbl .th-btn { padding: 9px 12px; }
+  /* Words stay whole (only ids break anywhere), and a button keeps its label on one line */
+  [data-design="sheet"][data-page="ci"] .ci-tbl .table td { overflow-wrap: break-word; }
+  [data-design="sheet"][data-page="ci"] .ci-tbl .table td .ci-id { overflow-wrap: anywhere; }
+  [data-design="sheet"][data-page="ci"] .ci-tbl .table td .btn { white-space: nowrap; }
+}
+[data-design="sheet"][data-page="ci"] .ci-panel { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="ci"] .ci-panel-h { min-height: 42px; padding: 9px 14px; background: var(--strip); border-bottom: 1px solid var(--line-strong); }
+[data-design="sheet"][data-page="ci"] .ci-panel-h h3 { font-size: 16px; }
+[data-design="sheet"][data-page="ci"] .ci-panel-b { padding: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-bar { padding: 10px 14px; background: var(--strip); border-top: 1px solid var(--line-strong); }
+[data-design="sheet"][data-page="ci"] .ci-facts { font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-fact dt { font-size: 14px; font-weight: 600; }
+[data-design="sheet"][data-page="ci"] .ci-fact + .ci-fact > * { border-top-color: var(--line-strong); }
+[data-design="sheet"][data-page="ci"] .ci-say { font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-id { font: 400 14px/1.45 var(--mono); color: var(--sv-blue-ink); }
+[data-design="sheet"][data-page="ci"] span.ci-id { color: var(--ink); }
+[data-design="sheet"][data-page="ci"] .ci-dec { font-size: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-cell-list { font-size: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-landed a { display: inline-block; background: var(--surface-2); border: 1px solid var(--line-strong); padding: 2px 8px; font: 400 14px var(--mono); text-decoration: none; color: var(--accent); }
+[data-design="sheet"][data-page="ci"] .ci-landed a:hover { border-color: var(--sv-blue); background: var(--accent-soft); }
+[data-design="sheet"][data-page="ci"] .page:has(.ci-glance) .large-title { font: 400 clamp(22px, 2.6vw, 32px)/1.25 var(--mono); letter-spacing: 0; overflow-wrap: anywhere; max-width: 100%; }
+[data-design="sheet"][data-page="ci"] .ci-glance .stat-value { font-size: 28px; overflow-wrap: anywhere; }
+[data-design="sheet"][data-page="ci"] .ci-glance .stat-value .pill { font-family: var(--font); font-size: 16px; }
+
+[data-design="sheet"][data-page="ci"] .ci-setup { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="ci"] .ci-setup-strip { min-height: 42px; padding: 9px 14px; background: var(--strip); border-bottom: 1px solid var(--line-strong); font-size: 15.5px; }
+[data-design="sheet"][data-page="ci"] .ci-setup-strip span + span { font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-setup-out { border-left: 1px solid var(--line-strong); }
+[data-design="sheet"][data-page="ci"] .ci-setup-h, [data-design="sheet"][data-page="ci"] .ci-add-k { font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); }
+[data-design="sheet"][data-page="ci"] .ci-feat { border-top-color: var(--line-strong); padding: 12px 0; }
+[data-design="sheet"][data-page="ci"] .ci-feat-text b { font-size: 15.5px; }
+[data-design="sheet"][data-page="ci"] .ci-feat-text span { font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-feat-text small { font-size: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-add-path { border: 1px solid var(--line-strong); }
+[data-design="sheet"][data-page="ci"] .ci-add-note, [data-design="sheet"][data-page="ci"] .ci-add-save { font-size: 14px; }
+[data-design="sheet"][data-page="ci"] .ci-token { border-color: var(--line-strong); font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-yaml summary, [data-design="sheet"][data-page="ci"] .ci-manual summary { font-weight: 600; font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-todo { border: 1.5px solid var(--frame); border-top: 0; font-size: 15px; }
+[data-design="sheet"][data-page="ci"] .ci-manual-list h4 { font-size: 15px; }
+@media (max-width: 1000px) { [data-design="sheet"][data-page="ci"] .ci-setup-out { border-left: 0; border-top: 1px solid var(--line-strong); } }
+.ci-add-path .btn { max-width: 100%; white-space: normal; text-align: left; }
+
+/* Help links and "Set up in your CI" land here: clear the sticky top bar */
+#ci-setup { scroll-margin-top: calc(var(--top-h, 56px) + 16px); }

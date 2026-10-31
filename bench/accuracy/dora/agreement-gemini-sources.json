@@ -1,0 +1,56 @@
+{
+ "first": "Claude",
+ "second": "gemini-3.5-flash-lite",
+ "codebook": 1,
+ "fields": {
+  "sources": {
+   "n": 25,
+   "agree": 0.56,
+   "kappa": 0.5018,
+   "confusion": {
+    "deploy_workflow release_workflow releases|release_workflow releases": 1,
+    "releases|deployments every_merge release_workflow releases": 1,
+    "releases|deploy_workflow release_workflow releases": 1,
+    "release_workflow releases|deployments release_workflow releases": 2,
+    "release_workflow releases|release_workflow": 1,
+    "deployments releases|deployments release_workflow releases": 1,
+    "deploy_workflow deployments every_merge|deploy_workflow deployments": 1,
+    "releases|deployments release_workflow releases": 1,
+    "none|deploy_workflow": 1,
+    "deployments release_workflow releases|deploy_workflow deployments release_workflow releases": 1
+   },
+   "disagree": [
+    "preloopdev/preloop",
+    "firedancer-io/firedancer",
+    "TryGhost/Ghost-CLI",
+    "Lingyan000/fluxdo",
+    "go-delve/mcp-dap-server",
+    "edwardgushchin/SDL3-CS",
+    "Comcast/react-data-grid",
+    "oxidecomputer/console",
+    "baggepinnen/LowLevelParticleFilters.jl",
+    "The-OpenROAD-Project/OpenROAD-flow-scripts",
+    "electron/forge"
+   ]
+  },
+  "ships": {
+   "n": 170,
+   "agree": 0.9529,
+   "kappa": 0.7917,
+   "confusion": {
+    "yes|no": 1,
+    "no|yes": 7
+   },
+   "disagree": [
+    "preloopdev/preloop|.github/workflows/release-golden.yml",
+    "firedancer-io/firedancer|.github/workflows/on_main_push.yml",
+    "firedancer-io/firedancer|.github/workflows/book.yml",
+    "Lingyan000/fluxdo|.github/workflows/flatpak-wpe-layer.yaml",
+    "Comcast/react-data-grid|.github/workflows/ci.yml",
+    "baggepinnen/LowLevelParticleFilters.jl|.github/workflows/docs.yml",
+    "Yakifo/amqtt|.github/workflows/release-drafter.yml",
+    "electron/forge|.github/workflows/gh-pages.yml"
+   ]
+  }
+ }
+}

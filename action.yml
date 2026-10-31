@@ -1,0 +1,221 @@
+name: StackVitals
+description: Free, open-source developer suite - CI health, team flow, delivery and DORA, insights and alerts, community and an org portal; the history stays in your own repo.
+author: StackVitals
+branding:
+  icon: activity
+  color: green
+inputs:
+  modules:
+    description: Modules to run, comma separated. Available now - ci (CI health), flow (Team Flow, on schedule and manual runs), deps (dependency check on pull requests that change a lockfile), community (newcomers, first answers, stars and traffic, on schedule and manual runs), portal (the org catalog, run from the org's private portal repo)
+    default: ci,flow,deps,community
+  token:
+    description: Token that can read Actions and write the stackvitals-data branch
+    default: ${{ github.token }}
+  portal-token:
+    description: Optional token from an org-owned read-only GitHub App, so Portal reads the org's private repos (without it, public repos only)
+    default: ""
+  portal-org:
+    description: The org Portal catalogs (default - the owner of the repo it runs in)
+    default: ""
+  traffic-token:
+    description: Optional token from your own GitHub App with Administration read, so Community keeps traffic past GitHub's 14 days (the built-in token can't read traffic)
+    default: ""
+  days:
+    description: Days of history to fill in on the first runs (GitHub keeps at most 90)
+    default: "90"
+  budget:
+    description: Most API requests per run (the built-in token allows 1,000 an hour)
+    default: "800"
+  tests:
+    description: Read test reports (JUnit XML or CTRF JSON) from your run artifacts to find single flaky tests
+    default: "true"
+  test-artifacts:
+    description: Regex for the artifact names that hold test reports (empty = names with junit, test-results, ctrf...)
+    default: ""
+  pr-comments:
+    description: One comment on failed PR runs saying which failures are known flakes (needs pull-requests write)
+    default: "true"
+  rerun-flaky:
+    description: Re-run failed jobs once when every failure is a known flake (needs actions write)
+    default: "false"
+  quarantine:
+    description: Keep a list of flaky tests for the stackvitals ci quarantine command
+    default: "false"
+  preflight-comments:
+    description: Team Flow - one note on new outside PRs that miss what merged PRs here usually include (needs pull-requests write)
+    default: "false"
+  deps-comments:
+    description: Dependency check - one comment on same-repo PRs listing changed packages and their verdicts (needs pull-requests write)
+    default: "false"
+  issues:
+    description: Keep one issue per flaky test or job, closed once fixed (needs issues write)
+    default: "false"
+  mention-owners:
+    description: "@-mention a flaky test's code owners in the issues StackVitals opens (off: owners are named without a notification)"
+    default: "false"
+  webhook:
+    description: Slack, Discord, Microsoft Teams (Workflows) or any JSON webhook URL (pass a secret) to hear when something newly turns flaky and when a delivery number crosses its threshold
+    default: ""
+  team-webhooks:
+    description: One "@org/team = https://..." line per team (pass a secret); a team's newly flaky tests go to its own chat, the rest to webhook
+    default: ""
+  jira-email:
+    description: The Jira Cloud account's email (pass a secret); with jira-token and [connectors.jira] url, issues, sprints and incidents are read
+    default: ""
+  jira-token:
+    description: A Jira Cloud API token for that account (pass a secret; it expires within a year, so set key_expires to be warned)
+    default: ""
+  linear-token:
+    description: A Linear personal API key (pass a secret); issues and cycles of the teams under [connectors.linear] are read
+    default: ""
+  pagerduty-token:
+    description: A PagerDuty REST API key, read-only (pass a secret); its incidents then count in DORA instead of labels, reverts and hotfixes
+    default: ""
+  incident-io-token:
+    description: An incident.io API key with read access (pass a secret); its incidents then count in DORA instead of labels, reverts and hotfixes
+    default: ""
+  sonar-token:
+    description: A SonarQube or SonarCloud token (pass a secret), only for a private project or your own server; public SonarCloud projects need none
+    default: ""
+  copilot-token:
+    description: A token that can read the org's Copilot usage reports (an org App with "Organization Copilot metrics" read, or a fine-grained token); kept day by day
+    default: ""
+  anthropic-admin-key:
+    description: An Anthropic Admin API key (sk-ant-admin..., pass a secret); the organisation's daily Claude API cost is set beside AI-involved pull requests
+    default: ""
+  openai-admin-key:
+    description: An OpenAI admin key (pass a secret); the organisation's daily API cost is set beside AI-involved pull requests
+    default: ""
+  cursor-admin-key:
+    description: A Cursor admin API key (pass a secret); the team's billing-cycle spend and daily agent use are set beside AI-involved pull requests
+    default: ""
+  slack-token:
+    description: A Slack bot token (channels:history) that reads the support channels under [connectors.slack]; only times and flags are kept
+    default: ""
+  discord-token:
+    description: A Discord bot token (View Channel, Read Message History) that reads the support channels under [connectors.discord]; only times and flags are kept
+    default: ""
+  imports-json:
+    description: Path to the list of packages your code imports (`stackvitals deps imports --out imports.json` in an earlier step, after checkout) for Python, JavaScript and Rust repos; known vulnerabilities then say whether your code imports the package (an import, not a call path)
+    default: ""
+  govulncheck-json:
+    description: Path to govulncheck's JSON output (`govulncheck -format json ./... > govulncheck.json` in an earlier step) for Go repos; the supply page then says which advisories the code really calls
+    default: ""
+  triage-key:
+    description: A model API key (pass a secret, e.g. a free Gemini key from Google AI Studio) for [ci.triage]; up to 3 undecided failures per run get a model's view beside the verdict
+    default: ""
+  label-stuck:
+    description: 'Label pull requests whose asked-for review has not started after 3 days ("stackvitals: waiting for review"), and take the label off once one has (needs pull-requests or issues write)'
+    default: "false"
+  retention-days:
+    description: Days of pull request, issue and Portal history kept in the data branch
+    default: "400"
+  ci-retention-days:
+    description: Days of CI run and test history kept in the data branch
+    default: "180"
+  size-cap-mb:
+    description: Most history kept in the data branch, in MB; the oldest days go first
+    default: "250"
+  squash-history:
+    description: Every 1,000 commits, rewrite the data branch to one commit (files unchanged; the branch is force-pushed)
+    default: "false"
+  pages:
+    description: '"branch" (default): GitHub Pages serves the stackvitals-data branch. "deploy": this job publishes the monitor itself (Pages source "GitHub Actions"; the job needs pages and id-token write and the github-pages environment), for busy repos past 10 Pages builds an hour. "artifact": no Pages; each run that changed the app uploads it as a workflow artifact (kept 7 days, or less if your org sets a shorter limit) to download and open locally, for private repos; anyone who can read the repo can download it'
+    default: "branch"
+  storage:
+    description: 'Where history is kept: "git" (default, the stackvitals-data branch) or an S3-compatible bucket as s3://bucket/prefix (AWS S3, Cloudflare R2, MinIO: the service must support replace-only-if-unchanged writes, If-Match), for very busy repos and big orgs. Switching starts a fresh history (the branch is not copied). With a bucket, publish the app with pages "deploy" or "artifact"; the tools that read the stackvitals-data branch (stackvitals ui and sql, Explore, the MCP server, the Portal org view, quarantine in your CI) do not read a bucket yet'
+    default: "git"
+  s3-endpoint:
+    description: The bucket service's endpoint, like https://s3.us-east-1.amazonaws.com or https://<account>.r2.cloudflarestorage.com
+    default: ""
+  s3-region:
+    description: The bucket's region ("auto" for R2)
+    default: "auto"
+  s3-key-id:
+    description: An access key id that can read, write, delete and list that prefix (pass a secret)
+    default: ""
+  s3-secret:
+    description: Its secret (pass a secret)
+    default: ""
+runs:
+  using: composite
+  steps:
+    # Pinned to a commit, not a tag: a moved tag cannot change what runs here.
+    - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+      with:
+        # The workflow needs no checkout of the user's code, so the folder is empty on purpose.
+        ignore-empty-workdir: true
+        # Nothing of the user's to key the cache on: an empty glob keeps the cache without a warning on every run.
+        cache-dependency-glob: ""
+    # The pinned vulnerability scanner (checked against its SHA-256 when downloaded), kept between runs.
+    - if: contains(inputs.modules, 'deps')
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      with:
+        path: ${{ runner.tool_cache }}/stackvitals/osv-scanner-2.7.0
+        key: stackvitals-osv-scanner-2.7.0-${{ runner.os }}-${{ runner.arch }}
+    - shell: bash
+      id: vitals
+      env:
+        STACKVITALS_PAGES_DIR: ${{ (inputs.pages == 'deploy' || inputs.pages == 'artifact') && format('{0}/stackvitals-pages', runner.temp) || '' }}
+        STACKVITALS_PAGES_MODE: ${{ inputs.pages }}
+        STACKVITALS_TOKEN: ${{ inputs.token }}
+        GITHUB_TOKEN: ${{ github.token }}
+        STACKVITALS_TRAFFIC_TOKEN: ${{ inputs.traffic-token }}
+        STACKVITALS_PORTAL_TOKEN: ${{ inputs.portal-token }}
+        STACKVITALS_PORTAL_ORG: ${{ inputs.portal-org }}
+        SV_MODULES: ${{ inputs.modules }}
+        SV_DAYS: ${{ inputs.days }}
+        SV_BUDGET: ${{ inputs.budget }}
+        SV_TESTS: ${{ inputs.tests }}
+        SV_TEST_ARTIFACTS: ${{ inputs.test-artifacts }}
+        SV_PR_COMMENTS: ${{ inputs.pr-comments }}
+        SV_RERUN: ${{ inputs.rerun-flaky }}
+        SV_QUARANTINE: ${{ inputs.quarantine }}
+        SV_ISSUES: ${{ inputs.issues }}
+        SV_PREFLIGHT: ${{ inputs.preflight-comments }}
+        SV_DEPS_COMMENTS: ${{ inputs.deps-comments }}
+        SV_MENTION_OWNERS: ${{ inputs.mention-owners }}
+        SV_LABEL_STUCK: ${{ inputs.label-stuck }}
+        STACKVITALS_WEBHOOK: ${{ inputs.webhook }}
+        STACKVITALS_TEAM_WEBHOOKS: ${{ inputs.team-webhooks }}
+        STACKVITALS_JIRA_EMAIL: ${{ inputs.jira-email }}
+        STACKVITALS_JIRA_TOKEN: ${{ inputs.jira-token }}
+        STACKVITALS_LINEAR_TOKEN: ${{ inputs.linear-token }}
+        STACKVITALS_PAGERDUTY_TOKEN: ${{ inputs.pagerduty-token }}
+        STACKVITALS_INCIDENT_IO_TOKEN: ${{ inputs.incident-io-token }}
+        STACKVITALS_SONAR_TOKEN: ${{ inputs.sonar-token }}
+        STACKVITALS_COPILOT_TOKEN: ${{ inputs.copilot-token }}
+        STACKVITALS_ANTHROPIC_ADMIN_KEY: ${{ inputs.anthropic-admin-key }}
+        STACKVITALS_OPENAI_ADMIN_KEY: ${{ inputs.openai-admin-key }}
+        STACKVITALS_CURSOR_ADMIN_KEY: ${{ inputs.cursor-admin-key }}
+        STACKVITALS_SLACK_TOKEN: ${{ inputs.slack-token }}
+        STACKVITALS_DISCORD_TOKEN: ${{ inputs.discord-token }}
+        STACKVITALS_TRIAGE_KEY: ${{ inputs.triage-key }}
+        STACKVITALS_GOVULNCHECK: ${{ inputs.govulncheck-json }}
+        STACKVITALS_IMPORTS: ${{ inputs.imports-json }}
+        STACKVITALS_RETENTION_DAYS: ${{ inputs.retention-days }}
+        STACKVITALS_CI_RETENTION_DAYS: ${{ inputs.ci-retention-days }}
+        STACKVITALS_SIZE_CAP_MB: ${{ inputs.size-cap-mb }}
+        STACKVITALS_SQUASH: ${{ inputs.squash-history }}
+        STACKVITALS_STORAGE: ${{ inputs.storage }}
+        STACKVITALS_S3_ENDPOINT: ${{ inputs.s3-endpoint }}
+        STACKVITALS_S3_REGION: ${{ inputs.s3-region }}
+        STACKVITALS_S3_KEY_ID: ${{ inputs.s3-key-id }}
+        STACKVITALS_S3_SECRET: ${{ inputs.s3-secret }}
+      # Only the Action's own packages (no MCP server), from its uv.lock: exact versions and hashes, never whatever
+      # PyPI has that day; the code runs from the Action's own folder.
+      run: PYTHONPATH="$GITHUB_ACTION_PATH/src" uv run --quiet --frozen --only-group action --project "$GITHUB_ACTION_PATH" python -m stackvitals action --modules "$SV_MODULES" --days "$SV_DAYS" --budget "$SV_BUDGET" --tests "$SV_TESTS" --test-artifacts "$SV_TEST_ARTIFACTS" --pr-comments "$SV_PR_COMMENTS" --rerun-flaky "$SV_RERUN" --quarantine "$SV_QUARANTINE" --issues "$SV_ISSUES" --preflight-comments "$SV_PREFLIGHT" --deps-comments "$SV_DEPS_COMMENTS" --mention-owners "$SV_MENTION_OWNERS" --label-stuck "$SV_LABEL_STUCK"
+    # The app as a download (opt-in, for private repos), only when this run changed it.
+    - if: inputs.pages == 'artifact' && steps.vitals.outputs.pages == 'true'
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+      with:
+        name: stackvitals-app-${{ github.job }}
+        path: ${{ runner.temp }}/stackvitals-pages
+        retention-days: 7
+    # Pages from this job (opt-in), only when it changed what the monitor shows.
+    - if: inputs.pages == 'deploy' && steps.vitals.outputs.pages == 'true'
+      uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+      with:
+        path: ${{ runner.temp }}/stackvitals-pages
+    - if: inputs.pages == 'deploy' && steps.vitals.outputs.pages == 'true'
+      uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

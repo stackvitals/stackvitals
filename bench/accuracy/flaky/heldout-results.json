@@ -1,0 +1,478 @@
+{
+ "adjudicated": {
+  "already_failing": {
+   "same_error": {
+    "caused": 1,
+    "caused_high": 0.5635,
+    "caused_low": 0.0301,
+    "n": 11,
+    "not_caused": 5,
+    "unclear": 5
+   },
+   "same_step": {
+    "caused": 5,
+    "caused_high": 0.2098,
+    "caused_low": 0.0426,
+    "n": 60,
+    "not_caused": 46,
+    "unclear": 9
+   }
+  },
+  "by_repo": {
+   "already_same_error": {
+    "biggest": {
+     "items": 3,
+     "repo": "lxc/incus",
+     "share": 0.5
+    },
+    "boot_high": 0.3,
+    "boot_low": 0.0,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 6,
+    "repo_wilson_high": 0.6377,
+    "repo_wilson_low": 0.0222,
+    "repos": 4,
+    "without_biggest": {
+     "high": 0.5615,
+     "k": 0,
+     "low": 0.0,
+     "n": 3
+    }
+   },
+   "masking": {
+    "biggest": {
+     "items": 43,
+     "repo": "lxc/incus",
+     "share": 0.5309
+    },
+    "boot_high": 0.4545,
+    "boot_low": 0.0452,
+    "k": 13,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 81,
+    "repo_wilson_high": 0.4548,
+    "repo_wilson_low": 0.042,
+    "repos": 11,
+    "without_biggest": {
+     "high": 0.5011,
+     "k": 13,
+     "low": 0.2121,
+     "n": 38
+    }
+   },
+   "maybe_flaky": {
+    "biggest": {
+     "items": 2,
+     "repo": "widgetti/solara",
+     "share": 1.0
+    },
+    "boot_high": 0.5,
+    "boot_low": 0.5,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 2,
+    "repo_wilson_high": 0.9454,
+    "repo_wilson_low": 0.0546,
+    "repos": 1,
+    "without_biggest": {
+     "high": 1.0,
+     "k": 0,
+     "low": 0.0,
+     "n": 0
+    }
+   },
+   "outside": {
+    "biggest": {
+     "items": 35,
+     "repo": "lxc/incus",
+     "share": 0.9211
+    },
+    "boot_high": 0.0,
+    "boot_low": 0.0,
+    "k": 0,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 38,
+    "repo_wilson_high": 0.5615,
+    "repo_wilson_low": 0.0,
+    "repos": 3,
+    "without_biggest": {
+     "high": 0.5615,
+     "k": 0,
+     "low": 0.0,
+     "n": 3
+    }
+   }
+  },
+  "flips": {
+   "elsewhere": {
+    "n": 23,
+    "real": 18
+   },
+   "in_pr_edit_workflows": {
+    "n": 17,
+    "real": 17
+   }
+  },
+  "kinds": {
+   "infrastructure": {
+    "infrastructure": 2
+   },
+   "network": {
+    "dependency": 32,
+    "network": 7,
+    "timeout": 1
+   },
+   "timing": {
+    "network": 1,
+    "test": 6,
+    "unclear": 2
+   }
+  },
+  "masking": {
+   "caused": 13,
+   "caused_high": 0.2555,
+   "caused_low": 0.0963,
+   "jobs": 48,
+   "n": 108,
+   "not_caused": 68,
+   "repos": 15,
+   "unclear": 27
+  },
+  "maybe_flaky": {
+   "caused": 1,
+   "caused_high": 0.9055,
+   "caused_low": 0.0945,
+   "n": 2,
+   "not_caused": 1,
+   "unclear": 0
+  },
+  "outside": {
+   "caused": 0,
+   "caused_high": 0.0918,
+   "caused_low": 0.0,
+   "n": 41,
+   "not_caused": 38,
+   "unclear": 3
+  },
+  "repos": 19
+ },
+ "claude": {
+  "already_failing": {
+   "same_error": {
+    "caused": 1,
+    "caused_high": 0.5635,
+    "caused_low": 0.0301,
+    "n": 11,
+    "not_caused": 5,
+    "unclear": 5
+   },
+   "same_step": {
+    "caused": 5,
+    "caused_high": 0.2098,
+    "caused_low": 0.0426,
+    "n": 60,
+    "not_caused": 46,
+    "unclear": 9
+   }
+  },
+  "by_repo": {
+   "already_same_error": {
+    "biggest": {
+     "items": 3,
+     "repo": "lxc/incus",
+     "share": 0.5
+    },
+    "boot_high": 0.3,
+    "boot_low": 0.0,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 6,
+    "repo_wilson_high": 0.6377,
+    "repo_wilson_low": 0.0222,
+    "repos": 4,
+    "without_biggest": {
+     "high": 0.5615,
+     "k": 0,
+     "low": 0.0,
+     "n": 3
+    }
+   },
+   "masking": {
+    "biggest": {
+     "items": 43,
+     "repo": "lxc/incus",
+     "share": 0.5513
+    },
+    "boot_high": 0.4565,
+    "boot_low": 0.0415,
+    "k": 12,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 78,
+    "repo_wilson_high": 0.4477,
+    "repo_wilson_low": 0.0392,
+    "repos": 11,
+    "without_biggest": {
+     "high": 0.5085,
+     "k": 12,
+     "low": 0.2083,
+     "n": 35
+    }
+   },
+   "maybe_flaky": {
+    "biggest": {
+     "items": 2,
+     "repo": "widgetti/solara",
+     "share": 1.0
+    },
+    "boot_high": 0.5,
+    "boot_low": 0.5,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 2,
+    "repo_wilson_high": 0.9454,
+    "repo_wilson_low": 0.0546,
+    "repos": 1,
+    "without_biggest": {
+     "high": 1.0,
+     "k": 0,
+     "low": 0.0,
+     "n": 0
+    }
+   },
+   "outside": {
+    "biggest": {
+     "items": 35,
+     "repo": "lxc/incus",
+     "share": 0.9211
+    },
+    "boot_high": 0.0,
+    "boot_low": 0.0,
+    "k": 0,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 38,
+    "repo_wilson_high": 0.5615,
+    "repo_wilson_low": 0.0,
+    "repos": 3,
+    "without_biggest": {
+     "high": 0.5615,
+     "k": 0,
+     "low": 0.0,
+     "n": 3
+    }
+   }
+  },
+  "flips": {
+   "elsewhere": {
+    "n": 23,
+    "real": 18
+   },
+   "in_pr_edit_workflows": {
+    "n": 17,
+    "real": 17
+   }
+  },
+  "kinds": {
+   "infrastructure": {
+    "infrastructure": 2
+   },
+   "network": {
+    "dependency": 32,
+    "network": 7,
+    "timeout": 1
+   },
+   "timing": {
+    "network": 1,
+    "test": 7,
+    "unclear": 1
+   }
+  },
+  "masking": {
+   "caused": 12,
+   "caused_high": 0.2499,
+   "caused_low": 0.0903,
+   "jobs": 48,
+   "n": 108,
+   "not_caused": 66,
+   "repos": 15,
+   "unclear": 30
+  },
+  "maybe_flaky": {
+   "caused": 1,
+   "caused_high": 0.9055,
+   "caused_low": 0.0945,
+   "n": 2,
+   "not_caused": 1,
+   "unclear": 0
+  },
+  "outside": {
+   "caused": 0,
+   "caused_high": 0.0918,
+   "caused_low": 0.0,
+   "n": 41,
+   "not_caused": 38,
+   "unclear": 3
+  },
+  "repos": 19
+ },
+ "gemini": {
+  "already_failing": {
+   "same_error": {
+    "caused": 4,
+    "caused_high": 0.8418,
+    "caused_low": 0.2505,
+    "n": 11,
+    "not_caused": 3,
+    "unclear": 4
+   },
+   "same_step": {
+    "caused": 11,
+    "caused_high": 0.329,
+    "caused_low": 0.1177,
+    "n": 60,
+    "not_caused": 43,
+    "unclear": 6
+   }
+  },
+  "by_repo": {
+   "already_same_error": {
+    "biggest": {
+     "items": 2,
+     "repo": "lxc/incus",
+     "share": 0.2857
+    },
+    "boot_high": 0.8571,
+    "boot_low": 0.25,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 7,
+    "repo_wilson_high": 0.854,
+    "repo_wilson_low": 0.2331,
+    "repos": 6,
+    "without_biggest": {
+     "high": 0.8824,
+     "k": 3,
+     "low": 0.2307,
+     "n": 5
+    }
+   },
+   "masking": {
+    "biggest": {
+     "items": 39,
+     "repo": "lxc/incus",
+     "share": 0.4062
+    },
+    "boot_high": 0.5652,
+    "boot_low": 0.0758,
+    "k": 23,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 96,
+    "repo_wilson_high": 0.5015,
+    "repo_wilson_low": 0.0898,
+    "repos": 14,
+    "without_biggest": {
+     "high": 0.533,
+     "k": 23,
+     "low": 0.2862,
+     "n": 57
+    }
+   },
+   "maybe_flaky": {
+    "biggest": {
+     "items": 2,
+     "repo": "widgetti/solara",
+     "share": 1.0
+    },
+    "boot_high": 0.5,
+    "boot_low": 0.5,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 2,
+    "repo_wilson_high": 0.9454,
+    "repo_wilson_low": 0.0546,
+    "repos": 1,
+    "without_biggest": {
+     "high": 1.0,
+     "k": 0,
+     "low": 0.0,
+     "n": 0
+    }
+   },
+   "outside": {
+    "biggest": {
+     "items": 35,
+     "repo": "lxc/incus",
+     "share": 0.8537
+    },
+    "boot_high": 0.4286,
+    "boot_low": 0.0,
+    "k": 1,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 41,
+    "repo_wilson_high": 0.4613,
+    "repo_wilson_low": 0.0007,
+    "repos": 5,
+    "without_biggest": {
+     "high": 0.5635,
+     "k": 1,
+     "low": 0.0301,
+     "n": 6
+    }
+   }
+  },
+  "flips": {
+   "elsewhere": {
+    "n": 23,
+    "real": 15
+   },
+   "in_pr_edit_workflows": {
+    "n": 17,
+    "real": 14
+   }
+  },
+  "kinds": {
+   "infrastructure": {
+    "infrastructure": 2,
+    "workflow": 2
+   },
+   "network": {
+    "dependency": 1,
+    "infrastructure": 6,
+    "network": 32,
+    "timeout": 1,
+    "workflow": 2
+   },
+   "timing": {
+    "network": 1,
+    "test": 4
+   }
+  },
+  "masking": {
+   "caused": 23,
+   "caused_high": 0.3339,
+   "caused_low": 0.1653,
+   "jobs": 48,
+   "n": 108,
+   "not_caused": 73,
+   "repos": 15,
+   "unclear": 12
+  },
+  "maybe_flaky": {
+   "caused": 1,
+   "caused_high": 0.9055,
+   "caused_low": 0.0945,
+   "n": 2,
+   "not_caused": 1,
+   "unclear": 0
+  },
+  "outside": {
+   "caused": 1,
+   "caused_high": 0.126,
+   "caused_low": 0.0043,
+   "n": 41,
+   "not_caused": 40,
+   "unclear": 0
+  },
+  "repos": 19
+ }
+}

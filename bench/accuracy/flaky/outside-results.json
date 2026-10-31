@@ -1,0 +1,54 @@
+{
+ "by_repo": {
+  "biggest": {
+   "items": 10,
+   "repo": "munich-quantum-toolkit/core",
+   "share": 0.2857
+  },
+  "boot_high": 0.0,
+  "boot_low": 0.0,
+  "k": 0,
+  "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+  "n": 35,
+  "repo_wilson_high": 0.2039,
+  "repo_wilson_low": 0.0,
+  "repos": 15,
+  "without_biggest": {
+   "high": 0.1332,
+   "k": 0,
+   "low": 0.0,
+   "n": 25
+  }
+ },
+ "caused_by_change": 0,
+ "detector_misses": 17,
+ "detector_misses_found": 6,
+ "generated": "2026-10-23T05:04:01Z",
+ "logs": 284,
+ "matched": 35,
+ "network_or_infrastructure": 78,
+ "network_or_infrastructure_found": 35,
+ "not_caused_by_change": {
+  "high": 1.0,
+  "low": 0.9011,
+  "n": 35,
+  "share": 1.0
+ },
+ "signatures": {
+  "connection reset": 1,
+  "connection timed out": 1,
+  "could not connect to": 1,
+  "curl: (28)": 1,
+  "curl: (56)": 1,
+  "failed to connect to the docker api": 2,
+  "failed to download": 1,
+  "failed to fetch": 2,
+  "http 503": 1,
+  "runner has received a shutdown signal": 1,
+  "serverbusy": 10,
+  "too many requests": 5,
+  "toomanyrequests": 5,
+  "unable to make request": 3
+ },
+ "unclear": 0
+}

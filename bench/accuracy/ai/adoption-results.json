@@ -1,0 +1,410 @@
+{
+ "cohorts": {
+  "2026-02": 203,
+  "2026-03": 232,
+  "2026-04": 239,
+  "2026-05": 252,
+  "2026-06": 236,
+  "2026-07": 320,
+  "2026-08": 282
+ },
+ "draws": 400,
+ "groups": {
+  "adopter": 1764,
+  "never": 16269,
+  "out": 3938
+ },
+ "outcomes": {
+  "merge_rate": {
+   "by_band": {
+    "0": {
+     "overall": -0.0034,
+     "overall_range": [
+      -0.0607,
+      0.038
+     ]
+    },
+    "1": {
+     "overall": -0.0255,
+     "overall_range": [
+      -0.1188,
+      0.0855
+     ]
+    },
+    "2": {
+     "overall": -0.0083,
+     "overall_range": [
+      -0.0271,
+      0.0101
+     ]
+    }
+   },
+   "events": {
+    "-4": {
+     "adopters": 292,
+     "effect": 0.0128,
+     "range": [
+      -0.0144,
+      0.0377
+     ]
+    },
+    "-3": {
+     "adopters": 393,
+     "effect": 0.012,
+     "range": [
+      -0.0097,
+      0.0333
+     ]
+    },
+    "-2": {
+     "adopters": 445,
+     "effect": 0.0013,
+     "range": [
+      -0.016,
+      0.0215
+     ]
+    },
+    "0": {
+     "adopters": 557,
+     "effect": -0.0031,
+     "range": [
+      -0.0217,
+      0.0154
+     ]
+    },
+    "1": {
+     "adopters": 436,
+     "effect": 0.0047,
+     "range": [
+      -0.0162,
+      0.0256
+     ]
+    },
+    "2": {
+     "adopters": 344,
+     "effect": -0.0274,
+     "range": [
+      -0.0544,
+      -0.0005
+     ]
+    },
+    "3": {
+     "adopters": 241,
+     "effect": -0.0087,
+     "range": [
+      -0.0385,
+      0.0196
+     ]
+    }
+   },
+   "leads_include_zero": true,
+   "negative_control": {
+    "overall": -0.0171,
+    "overall_range": [
+     -0.0362,
+     0.0014
+    ]
+   },
+   "overall": -0.0086,
+   "overall_range": [
+    -0.0267,
+    0.0069
+   ],
+   "reading": "no measurable change"
+  },
+  "merged": {
+   "by_band": {
+    "0": {
+     "overall": 0.8752,
+     "overall_range": [
+      0.8122,
+      0.949
+     ]
+    },
+    "1": {
+     "overall": 0.4857,
+     "overall_range": [
+      0.3683,
+      0.5977
+     ]
+    },
+    "2": {
+     "overall": 0.3017,
+     "overall_range": [
+      0.2249,
+      0.3688
+     ]
+    }
+   },
+   "events": {
+    "-4": {
+     "adopters": 1518,
+     "effect": -0.2291,
+     "range": [
+      -0.2682,
+      -0.1793
+     ]
+    },
+    "-3": {
+     "adopters": 1764,
+     "effect": -0.2017,
+     "range": [
+      -0.2411,
+      -0.1599
+     ]
+    },
+    "-2": {
+     "adopters": 1764,
+     "effect": -0.1667,
+     "range": [
+      -0.2042,
+      -0.1222
+     ]
+    },
+    "0": {
+     "adopters": 1764,
+     "effect": 0.9877,
+     "range": [
+      0.9336,
+      1.0412
+     ]
+    },
+    "1": {
+     "adopters": 1764,
+     "effect": 0.5694,
+     "range": [
+      0.509,
+      0.6298
+     ]
+    },
+    "2": {
+     "adopters": 1482,
+     "effect": 0.4089,
+     "range": [
+      0.3476,
+      0.4735
+     ]
+    },
+    "3": {
+     "adopters": 1162,
+     "effect": 0.3159,
+     "range": [
+      0.2439,
+      0.382
+     ]
+    }
+   },
+   "leads_include_zero": false,
+   "negative_control": {
+    "overall": 0.1068,
+    "overall_range": [
+     0.0751,
+     0.1326
+    ]
+   },
+   "overall": 0.5705,
+   "overall_range": [
+    0.5235,
+    0.6134
+   ],
+   "reading": "not credible: adopters were already changing"
+  },
+  "people_merged": {
+   "by_band": {
+    "0": {
+     "overall": 0.5737,
+     "overall_range": [
+      0.4972,
+      0.6413
+     ]
+    },
+    "1": {
+     "overall": 0.2436,
+     "overall_range": [
+      0.1279,
+      0.3525
+     ]
+    },
+    "2": {
+     "overall": 0.1508,
+     "overall_range": [
+      0.0778,
+      0.212
+     ]
+    }
+   },
+   "events": {
+    "-4": {
+     "adopters": 1518,
+     "effect": -0.2291,
+     "range": [
+      -0.2682,
+      -0.1793
+     ]
+    },
+    "-3": {
+     "adopters": 1764,
+     "effect": -0.2017,
+     "range": [
+      -0.2411,
+      -0.1599
+     ]
+    },
+    "-2": {
+     "adopters": 1764,
+     "effect": -0.1667,
+     "range": [
+      -0.2042,
+      -0.1222
+     ]
+    },
+    "0": {
+     "adopters": 1764,
+     "effect": 0.5231,
+     "range": [
+      0.4706,
+      0.5749
+     ]
+    },
+    "1": {
+     "adopters": 1764,
+     "effect": 0.37,
+     "range": [
+      0.3131,
+      0.4302
+     ]
+    },
+    "2": {
+     "adopters": 1482,
+     "effect": 0.2709,
+     "range": [
+      0.2126,
+      0.3317
+     ]
+    },
+    "3": {
+     "adopters": 1162,
+     "effect": 0.2107,
+     "range": [
+      0.1375,
+      0.281
+     ]
+    }
+   },
+   "leads_include_zero": false,
+   "negative_control": {
+    "overall": 0.1068,
+    "overall_range": [
+     0.0751,
+     0.1326
+    ]
+   },
+   "overall": 0.3437,
+   "overall_range": [
+    0.2956,
+    0.3865
+   ],
+   "reading": "not credible: adopters were already changing"
+  },
+  "review_wait": {
+   "by_band": {
+    "0": {
+     "overall": 0.7444,
+     "overall_range": [
+      -1.0487,
+      2.2049
+     ]
+    },
+    "1": {
+     "overall": -0.3594,
+     "overall_range": [
+      -4.9292,
+      1.1686
+     ]
+    },
+    "2": {
+     "overall": 0.0608,
+     "overall_range": [
+      -0.2008,
+      0.3591
+     ]
+    }
+   },
+   "events": {
+    "-4": {
+     "adopters": 113,
+     "effect": -0.0494,
+     "range": [
+      -0.4794,
+      0.343
+     ]
+    },
+    "-3": {
+     "adopters": 167,
+     "effect": -0.1778,
+     "range": [
+      -0.479,
+      0.1281
+     ]
+    },
+    "-2": {
+     "adopters": 177,
+     "effect": 0.3118,
+     "range": [
+      0.0386,
+      0.5978
+     ]
+    },
+    "0": {
+     "adopters": 202,
+     "effect": -0.0804,
+     "range": [
+      -0.3538,
+      0.2209
+     ]
+    },
+    "1": {
+     "adopters": 162,
+     "effect": -0.1654,
+     "range": [
+      -0.4893,
+      0.193
+     ]
+    },
+    "2": {
+     "adopters": 114,
+     "effect": 0.2346,
+     "range": [
+      -0.2106,
+      0.6739
+     ]
+    },
+    "3": {
+     "adopters": 77,
+     "effect": 0.2061,
+     "range": [
+      -0.465,
+      0.8156
+     ]
+    }
+   },
+   "leads_include_zero": false,
+   "negative_control": {
+    "overall": 0.0107,
+    "overall_range": [
+     -0.2983,
+     0.3341
+    ]
+   },
+   "overall": 0.0487,
+   "overall_range": [
+    -0.2523,
+    0.3881
+   ],
+   "reading": "not credible: adopters were already changing"
+  }
+ },
+ "preregistration_sha256": "9b0327c053f813a5e418229d51b4f7e7b77531b742f375a11b878cbf5d4aef1e",
+ "repos": 21971,
+ "seed": 23
+}

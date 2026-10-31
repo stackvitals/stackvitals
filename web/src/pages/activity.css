@@ -1,0 +1,22 @@
+/* Activity: the timeline of recent decisions */
+.timeline { list-style: none; margin: 0; padding: 6px 0; }
+.tl { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 12px; padding: 10px 16px; position: relative; animation: pageIn var(--dur-2) var(--spring) backwards; }
+.tl:not(:last-child)::after { content: ""; position: absolute; left: 23px; top: 28px; bottom: -10px; width: 2px; background: var(--line); }
+.tl-dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 4px; background: var(--ink-2); box-shadow: 0 0 0 3px var(--surface); position: relative; z-index: 1; }
+.tl-accent .tl-dot { background: var(--accent); } .tl-good .tl-dot { background: var(--good); }
+.tl-line { font-size: 15px; overflow-wrap: anywhere; }
+.tl-meta { color: var(--ink-2); font-size: 13px; margin-top: 2px; overflow-wrap: anywhere; }
+
+/* Instrument (sheet design): a spine with state marks (blue square in force, mint check undone, hollow square a setting); who in bold */
+[data-design="sheet"][data-page="activity"] .timeline { padding: 4px 0; }
+[data-design="sheet"][data-page="activity"] .tl { grid-template-columns: 14px minmax(0, 1fr); gap: 14px; padding: 13px 18px; animation: svFade var(--dur-3) var(--sv-ease) backwards; }
+[data-design="sheet"][data-page="activity"] .tl + .tl { border-top: 1px solid var(--line); }
+[data-design="sheet"][data-page="activity"] .tl:not(:last-child)::after { left: 24px; top: 32px; bottom: -14px; width: 1.5px; background: var(--line-strong); }
+[data-design="sheet"][data-page="activity"] .tl-dot { width: 13px; height: 13px; margin-top: 5px; background: var(--surface); border: 1.5px solid var(--ink-2); }
+[data-design="sheet"][data-page="activity"] .tl-accent .tl-dot { width: 11px; height: 11px; margin: 6px 1px 0; background: var(--sv-blue); border: 0; }
+[data-design="sheet"][data-page="activity"] .tl-good .tl-dot { border: 0; background: var(--surface) var(--mark-good) center / contain no-repeat; }
+[data-design="sheet"][data-page="activity"] .tl-line { font-size: 16px; line-height: 1.5; }
+[data-design="sheet"][data-page="activity"] .tl-line b { font-weight: 700; }
+[data-design="sheet"][data-page="activity"] .tl-line .mono-soft { font-family: var(--mono); font-size: 14px; color: var(--ink-2); }
+[data-design="sheet"][data-page="activity"] .tl-meta { font: 400 14.5px/1.45 var(--font); color: var(--ink-2); margin-top: 4px; }
+@media (prefers-reduced-motion: reduce) { [data-design="sheet"][data-page="activity"] .tl { animation: none; } }

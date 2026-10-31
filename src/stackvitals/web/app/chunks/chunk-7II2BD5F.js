@@ -1,0 +1,1 @@
+import{d as g,e as o}from"./chunk-S654BBEP.js";import{j as t}from"./chunk-GT4EAKAO.js";import{d as s}from"./chunk-G7NGB5UX.js";s();var u=n=>`settings-pending:${n}`,m=n=>t.get(u(n),null),f=(n,e)=>t.set(u(n),e);function P(n,e,l){return Object.entries(n.settings).every(([i,r])=>o(g(l,i),r===null?e.find(p=>p.key===i)?.default:r))}export{m as a,f as b,P as c};

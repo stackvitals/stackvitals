@@ -1,0 +1,21 @@
+{
+ "clear_starts": 5,
+ "jobs": [
+  "CatCatUncle/openworkbuddy / \u5168\u5957\uff08\u542b e2e\uff09",
+  "openpi-dev/openpi / UI windows-latest Node 22.19.0",
+  "pdparchitect/noodle / prepare-mobile / release",
+  "unxed/f4 / Test (windows/arm64)",
+  "zapier/zapier-platform / Test - core, schema, legacy-scripting-runner (22.x)"
+ ],
+ "named_commits": {
+  "touched_workflow_or_tests": 9,
+  "n": 12,
+  "low": 0.4677,
+  "high": 0.9111
+ },
+ "random_commits": {
+  "touched_workflow_or_tests": 8,
+  "n": 12
+ },
+ "fisher_p": 1.0
+}

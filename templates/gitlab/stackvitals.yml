@@ -1,0 +1,50 @@
+# StackVitals on GitLab CI (preview). In your .gitlab-ci.yml:
+#
+#   include:
+#     - remote: https://raw.githubusercontent.com/stackvitals/stackvitals/v0/templates/gitlab/stackvitals.yml
+#
+# and add a masked CI/CD variable GITLAB_TOKEN: a project access token with the api and write_repository scopes.
+# The job runs last in each merge request, default-branch and scheduled pipeline; history goes to the project's
+# stackvitals-data branch, the pages to GitLab Pages, and a failed merge request pipeline gets one note.
+# Merge request pipelines and branch pipelines with an open merge request both get the note.
+# For the strictest setup, pin the code too: set STACKVITALS_REF to a full commit SHA instead of v0, so a moved tag can't
+# change what runs (update it when you choose to upgrade).
+
+stackvitals:
+  stage: .post
+  image: python:3.12-slim
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: always
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: always
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: always
+  variables:
+    STACKVITALS_REF: v0
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq git > /dev/null
+    # The Action's own packages from its uv.lock: exact versions and hashes, like the GitHub Action.
+    - git clone -q --depth 1 --branch "$STACKVITALS_REF" https://github.com/stackvitals/stackvitals.git /tmp/stackvitals ||
+      (git clone -q https://github.com/stackvitals/stackvitals.git /tmp/stackvitals && git -C /tmp/stackvitals checkout -q "$STACKVITALS_REF")
+    # uv itself is pinned too, so a new uv release can't change how the locked packages install.
+    - pip install -q uv==0.10.2
+  script:
+    - PYTHONPATH=/tmp/stackvitals/src uv run --quiet --frozen --only-group action --project /tmp/stackvitals python -m stackvitals ci gitlab-action
+  artifacts:
+    paths: [public]
+    when: always
+    expire_in: 7 days
+
+pages:
+  stage: .post
+  needs: [stackvitals]
+  image: alpine:3.20
+  script: ["true"]
+  artifacts:
+    paths: [public]
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always

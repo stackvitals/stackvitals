@@ -1,0 +1,179 @@
+id,field,first,second,final,winner,reason
+10,caused_by_change,no,unclear,no,first,"The only touched file is a markdown rules doc (.gitar/rules/renovate-safety.md), which cannot break the build or tests."
+10,own_failure,no,yes,no,first,"A 'JUnit Test Report' job only reports other jobs' test results; with no log, it failed because tests elsewhere failed."
+101,cause,unclear,test,unclear,first,"Only failing test names are listed with no failure message; the codebook says a name alone is unclear, even though a re-run passed."
+102,cause,unclear,infrastructure,unclear,first,"Log shows '1 failure' but no failing test or message; the E5RT GPU lines are noise, so the cause is not visible."
+104,cause,unclear,infrastructure,unclear,first,"Log shows '1 failure (0 unexpected)' with no message; the E5RT GPU warnings did not fail the job, so cause is unclear."
+104,caused_by_change,unclear,no,unclear,first,"The failing test and its message are not shown, and the change touched runtime code and tests, so cause by change is unclear."
+105,cause,code_change,infrastructure,code_change,first,"Same spec failed identically on both attempts: 'in-stop sweep ... frozen pool taker' control arm, matching the PR's in-stop-sweep work; GC OOM lines are test output."
+105,caused_by_change,yes,no,yes,first,Deterministic spec failure tied to the PR's in-stop-sweep/frozen-pool work and its CI and Makefile changes.
+106,cause,code_change,infrastructure,code_change,first,"Identical deterministic failure of the in-stop-sweep frozen pool taker spec; the 'Out of Memory' GC lines are expected test output, not the runner."
+106,caused_by_change,yes,no,yes,first,"The deterministic spec failure matches the PR's in-stop-sweep/frozen-pool changes, so the change caused it."
+108,caused_by_change,unclear,no,unclear,first,"Cascade of 'Previous reloader still had a on_change attached' errors; the first failure isn't shown, so a link to cdn_helper.py is unknown."
+109,cause,unclear,code_change,unclear,first,"test_runtime_patch.py fails on an extra '0.30.0' version; neither it nor apply_patch.py was touched, so no category fits the evidence."
+109,caused_by_change,no,yes,no,first,The change touched only test_builders.py and test_config.py; the failing test and product version list are elsewhere.
+11,cause,unclear,network,unclear,first,"Gradle 'BUILD FAILED' with no root error visible; the Develocity rejection is the build-scan publish, not the failure."
+11,caused_by_change,unclear,no,unclear,first,"A major sonar-ws bump could break the ITs, but the actual error is not in the log, so it is unclear."
+111,cause,unclear,test,test,second,Playwright 'strict mode violation: locator resolved to 2 elements' in untouched file_browser_test is a test-code locator/assertion problem.
+116,cause,dependency,network,dependency,first,'Unable to locate package linux-modules-extra-7.0.0-1017-azure' failed install; the earlier PPA 503 was retried and fetched.
+118,cause,dependency,code_change,dependency,first,"Compile error in untouched MessageDeliveryClassifier.swift: FoundationModels SDK version mismatch ('samplingMode' label), a toolchain dependency issue."
+118,caused_by_change,no,yes,no,first,"The compile error is in MessageDeliveryClassifier.swift, which the change did not touch; it comes from the SDK version."
+12,cause,infrastructure,workflow,infrastructure,first,'The runner has received a shutdown signal' then 'The operation was canceled': the runner was lost mid-test.
+120,cause,test,code_change,test,first,"Untouched web test fails on focus (document.activeElement expected textarea, got button), a timing-sensitive test assertion."
+120,caused_by_change,no,yes,no,first,"The change touched only extensions/post-edit; the failure is in tests/web/composer-context.spec.ts, unrelated."
+121,cause,dependency,infrastructure,dependency,first,"apt-get install failed: 'Unable to locate package linux-modules-extra-7.0.0-1017-azure', with no network error."
+122,cause,unclear,test,unclear,first,'Test timeout of 30000ms exceeded' in an e2e session test while the change touched session loader code; the cause isn't shown.
+122,caused_by_change,unclear,no,unclear,first,The change edited session-loader.ts and session-catalog.ts and a session e2e test timed out; the log can't tell if they're linked.
+123,cause,code_change,test,code_change,first,"TestKillSkipsATargetTheSnapshotNoLongerLists fails in touched actions_selected_test.go, the same way on another commit."
+124,cause,code_change,test,code_change,first,"Failure in touched plugins/proclist actions_selected_test.go: 'Kill signalled a pid whose process is no longer the one selected', repeated across runs."
+126,cause,dependency,infrastructure,dependency,first,apt-get install failed on missing 'linux-modules-extra-7.0.0-1017-azure' package; package lists fetched fine.
+127,cause,dependency,infrastructure,dependency,first,"Package 'linux-modules-extra-7.0.0-1017-azure' could not be located, so dependency install failed; no network error."
+128,cause,dependency,infrastructure,dependency,first,The PPA 503 was ignored; the job failed because 'linux-modules-extra-7.0.0-1017-azure' could not be located.
+129,caused_by_change,no,unclear,no,first,"The change touched only flake.nix, which the Go test run on macOS does not use."
+13,cause,infrastructure,workflow,infrastructure,first,"'The runner has received a shutdown signal' and the operation was canceled: the runner was lost, not a CI setup error."
+130,cause,dependency,infrastructure,dependency,first,All indexes fetched; install failed with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'.
+135,cause,unclear,code_change,unclear,first,"A child spec failed with ""can't find file .../src/gcry"" in an untouched spec; the change was docs and ci.yml, so the link is unclear."
+135,caused_by_change,unclear,yes,unclear,first,Only docs and ci.yml were touched; without the ci.yml diff the path error can't be tied to the change.
+136,cause,unclear,test,unclear,first,"The spec failed with 'you've found a bug in the Crystal compiler'; there is no sign of test flakiness, so the cause is unclear."
+136,caused_by_change,unclear,yes,unclear,first,The failure is a compiler crash in untouched cached_bitmap_pool_race_spec; any link to the touched GC files is not shown.
+137,cause,dependency,network,dependency,first,"The PPA 503 was ignored; install failed on missing 'linux-modules-extra-7.0.0-1017-azure', a package availability problem."
+138,cause,unclear,test,unclear,first,"'3 failures' are reported but no failing test or message is shown, so the cause is unclear."
+138,caused_by_change,unclear,yes,unclear,first,"Failing tests and messages are not visible, so it can't be tied to the touched HubLinkService.swift."
+139,cause,unclear,code_change,unclear,first,"The log shows only a rake stack trace ending in 'Tasks: TOP => spec:ruby:fast:jit', with no failing spec or message visible."
+139,caused_by_change,unclear,yes,unclear,first,"No failure message is visible, so nothing ties the failure to RubyString.java or tr_spec.rb; there was no re-run."
+14,cause,unclear,code_change,unclear,first,"Only '754 tests completed, 2 failed' is shown, with no test names or messages, so the cause can't be named."
+14,caused_by_change,unclear,yes,unclear,first,"The failing tests aren't named, so they can't be tied to the touched test files; there was no re-run."
+140,cause,dependency,network,dependency,first,Fatal error is 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 was ignored and is not why install failed.
+141,cause,unclear,test,unclear,first,"Summary shows '# fail 1', but the failing test and its message aren't in the log excerpt."
+141,caused_by_change,unclear,no,unclear,first,"The failing test isn't visible and there was no re-run, so it can't be tied to or cleared of the test-runner script changes."
+146,cause,unclear,test,unclear,first,"Only the failing example name (reentrant_read_write_lock_spec.rb:245) is visible, with no failure message."
+147,cause,unclear,test,unclear,first,Log says only 'TEST DONE: backup volume export / Test result: failure' with no error message.
+151,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+152,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+155,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+157,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+158,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+159,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+160,caused_by_change,no,unclear,no,first,"The change touched only doc/reference/network_ovn.md, which can't affect the 'storage volume import' system test."
+161,cause,unclear,test,unclear,first,"Fiber#raise and IO#isatty specs fail with plain 'Expected false == true' messages that show no timing, order or race."
+164,cause,code_change,dependency,code_change,first,"The change is a Renovate major bump in gradle/libs.versions.toml only, and the integration test build then fails in 25s."
+165,cause,dependency,network,dependency,first,Install fails on 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; the PPA 503 index fetch was ignored.
+168,cause,code_change,test,code_change,first,The failing test is in the touched actions_selected_test.go: 'Kill signalled a pid whose process is no longer the one selected'; there was no re-run.
+168,caused_by_change,yes,unclear,yes,first,"The failure is in the touched plugins/proclist/actions_selected_test.go, which tests the changed proclist code."
+169,cause,unclear,test,unclear,first,"A re-run passed, but 'TestOpen3#test_pipeline <true> expected but was <false>' doesn't show whether the test or the product is flaky."
+17,cause,unclear,network,unclear,first,Only a Gradle stack trace and 'BUILD FAILED in 4m 22s' are visible; no network or test error is shown.
+17,caused_by_change,unclear,no,unclear,first,"The failing task and error aren't visible, so it can't be tied to or cleared of the touched test file; there was no re-run."
+171,caused_by_change,no,unclear,no,first,"A re-run passed, and the error 'Failed to register ICE UDP mux listener' is in transport-webrtc, not in the touched connection-monitor files."
+172,caused_by_change,no,unclear,no,first,"A re-run passed, and the timeout is in composer-context-navigation.spec.ts, which is unrelated to the touched setup-config files."
+18,cause,unclear,network,unclear,first,Only a Gradle stack trace and 'BUILD FAILED in 4m 22s' are visible; no network or test error is shown.
+18,caused_by_change,unclear,no,unclear,first,"The failing task and error aren't visible, so it can't be tied to or cleared of the touched test file; there was no re-run."
+182,cause,unclear,test,unclear,first,"A re-run passed, but the log shows only '# fail 1' with no failing test name or message."
+19,cause,unclear,network,unclear,first,Only a Gradle stack trace and 'BUILD FAILED in 4m 12s' are visible; no network error appears.
+19,caused_by_change,unclear,no,unclear,first,"The failing task and error aren't visible, so it can't be tied to or cleared of the touched test file; there was no re-run."
+190,cause,unclear,test,unclear,first,"A re-run passed, but 'EvalFailed (IOError) closed stream' doesn't show whether the test or the product is at fault."
+191,cause,unclear,infrastructure,unclear,first,"The log is unavailable ('ConnectError' when fetching it), so there is no evidence of a runner fault."
+194,own_failure,no,yes,no,first,"A 'JUnit Test Report' job only reports results; it fails because tests in other jobs failed (here, 2 failed in Test Windows)."
+195,own_failure,no,yes,no,first,"A 'JUnit Test Report' job only reports results from other jobs' tests, so it fails because they failed."
+196,cause,unclear,infrastructure,unclear,first,"The log is unavailable ('ConnectError' when fetching it), so a re-run pass alone doesn't show a runner fault."
+197,own_failure,no,yes,no,first,"A 'JUnit Test Report' job only reports results from other jobs' tests, so it fails because they failed."
+198,cause,unclear,infrastructure,unclear,first,"The log is unavailable ('ConnectError' when fetching it), so a re-run pass alone doesn't show a runner fault."
+2,cause,code_change,product_race,code_change,first,HoleFillerBudgetGameTest fails with NoSuchMethodException 'ModuleHoleFiller.collectHolesSmart' after the change touched ModuleHoleFiller.kt.
+20,caused_by_change,no,yes,no,first,"The failure is in auth.test.ts ('CLI exited before ""Select an organization""'), not in the import code or tests the change touched."
+201,cause,unclear,network,unclear,first,"No job log (the ConnectError is the log fetch, not the job) and the e2e step gives no reason; the evidence doesn't say."
+201,caused_by_change,no,unclear,no,first,"Another run on the same code passed this job, so the failure was not deterministic and nothing ties it to render.ts."
+202,cause,unclear,infrastructure,unclear,first,"Log unavailable (HTTP 404), step unknown and no re-run; nothing shows an infrastructure fault."
+202,caused_by_change,no,unclear,no,first,"The change only touched .gitar/rules/renovate-safety.md, a markdown rules file that cannot break JUnit tests."
+202,own_failure,no,yes,no,first,"""JUnit Test Report"" is a reporting job that fails when the test jobs it collects from fail, not for its own steps."
+203,cause,workflow,network,workflow,first,"The failing step is the PR-title gate amannn/action-semantic-pull-request; no network error is shown, and a gate rejection is workflow."
+203,caused_by_change,no,unclear,no,first,"A PR-title check does not depend on the touched test file, and another run on the same code passed."
+204,caused_by_change,no,yes,no,first,"Failed on ""Add 'changelog/*' label"", a missing PR label, not the code; the same code passed once labelled."
+205,cause,unclear,infrastructure,unclear,first,"Log unavailable (HTTP 404), step unknown and not run again; no evidence of an infrastructure fault."
+205,own_failure,no,yes,no,first,"""JUnit Test Report"" is a reporting job that fails because the test jobs it summarises failed."
+207,cause,workflow,code_change,workflow,first,"The title gate failed: ""No release type found in pull request title""; it is a CI gate on PR metadata, not a code failure."
+207,caused_by_change,no,yes,no,first,"The failure is the PR title lacking a prefix, unrelated to the touched files; the same code passed on another run."
+210,cause,code_change,test,code_change,first,"No re-run; the failing test is in the touched tests/unit/state_redis_client_test.py, exercising the touched solara/state/redis.py."
+23,cause,test,code_change,code_change,second,"No re-run; auth test asserting request counts on the fake server fails (""Expected: >= 2 Received: 1"") and the change edited that fake server harness."
+23,caused_by_change,unclear,yes,yes,second,The change touched tests/integration/harness/fake-sonarqube-server.ts and config constants that the failing auth test relies on.
+25,cause,unclear,test,unclear,first,"A hook test got empty stdout (""JSON Parse error: Unexpected EOF""); nothing shows test non-determinism or ties it to the change."
+25,caused_by_change,unclear,no,unclear,first,The touched project-discovery code may or may not feed the codex hook; the log does not tie the empty output to it.
+26,cause,unclear,test,unclear,first,"""Failed: 1"" but the failing test's name and message are not in the log, so no cause can be named."
+26,caused_by_change,unclear,no,unclear,first,"The change added tests to UnitTest/AsyncTest.cs and the failing test is not shown, so it may be the new test; no re-run."
+27,cause,unclear,test,unclear,first,The failing test's name and message are not in the log; a passing re-run alone does not show test non-determinism.
+27,caused_by_change,unclear,no,unclear,first,"Re-run passed, but the change edits Worker.cs and PowerThreadPool.cs concurrency code, so a race in touched code can't be ruled out."
+28,cause,unclear,test,unclear,first,"""Failed: 2"" but no failing test names or messages appear in the log."
+28,caused_by_change,unclear,no,unclear,first,The change only adds UnitTest/YieldDiagnosticTest.cs and the failing tests are not shown; they could be the new ones.
+29,cause,unclear,network,unclear,first,"Local nodes refused connections (""Timed out waiting for test_persistent""); that is localhost startup, not an external network."
+29,caused_by_change,unclear,no,unclear,first,"The change touched basicswap/bin/prepare.py, which sets up the nodes that failed to start; no re-run to separate it."
+31,cause,unclear,network,unclear,first,"read_json_api to a local node port got ""Connection refused""; a local server not up is not network, and the log gives no reason."
+31,caused_by_change,unclear,no,unclear,first,"The change touched basicswap/base.py, core server code; the local server not coming up could stem from it or not."
+32,cause,unclear,test,unclear,first,"""ValueError: Expect balance 13.0"" does not say whether timing, the test, or the product is at fault."
+32,caused_by_change,unclear,no,no,second,"The change only touched basicswap/ui/util.py, a UI helper unrelated to the BTC swap balance test that failed."
+33,cause,unclear,test,unclear,first,"""ValueError: Expect balance 13.0"" gives no sign of timing or test-order issues; the cause is not stated."
+33,caused_by_change,unclear,no,no,second,The change only touched the Wownero interface (wow.py) while the failing test is TestBTC in test_btc_xmr.py.
+34,cause,unclear,test,unclear,first,"""ValueError: Expect balance 13.0"" does not show test non-determinism; the cause is not stated."
+34,caused_by_change,unclear,no,unclear,first,"The change edited tests/basicswap/test_xmr.py, shared test code near the failing test_btc_xmr.py; no re-run to settle it."
+36,cause,unclear,test,unclear,first,"""ValueError: Expect blind_balance 8.0"" does not show timing or test-order non-determinism; cause not stated."
+36,caused_by_change,unclear,no,unclear,first,"The change touched basicswap/__init__.py, package-wide code; with no re-run the log can't rule it in or out."
+38,cause,unclear,test,unclear,first,"""StreamResetError: The stream has been reset"" in WebRTC writes does not show a test's own non-determinism."
+38,caused_by_change,unclear,no,unclear,first,The change bumps p-event across packages; no re-run and the stream reset could be the bump or flakiness.
+4,cause,workflow,code_change,workflow,first,"The changelog gate failed with ""Add 'changelog/*' label"", a missing PR label, not code."
+4,caused_by_change,no,yes,no,first,"The failure was a missing changelog label, not the touched files; another run on the same code passed."
+41,cause,dependency,infrastructure,dependency,first,"apt failed with ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"" with no network error: a package failed to install."
+43,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+44,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+45,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+46,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+49,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+5,cause,workflow,code_change,workflow,first,"A CI gate failed: '::error Add 'changelog/*' label'; a PR label check, not the code, and a later run passed."
+5,caused_by_change,no,yes,no,first,"Failed on a missing PR label ('Add 'changelog/*' label'), not on the changed files; same code passed later."
+50,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+51,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+52,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+53,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+55,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+56,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+57,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+58,caused_by_change,no,unclear,no,first,Failing step is 'Install dependencies' and the change only touched files that cannot affect package installation.
+59,caused_by_change,no,unclear,no,first,Failing step is 'Install dependencies' and the change only touched files that cannot affect package installation.
+6,cause,workflow,code_change,workflow,first,"A CI gate failed: '::error Add 'changelog/*' label'; a PR label check, not the code, and a later run passed."
+6,caused_by_change,no,yes,no,first,"Failed on a missing PR label ('Add 'changelog/*' label'), not on the changed files; same code passed later."
+60,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+61,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+62,caused_by_change,no,unclear,no,first,Failing step is 'Install dependencies' and the change only touched files that cannot affect package installation.
+63,caused_by_change,no,unclear,no,first,Failing step is 'Install dependencies' and the change only touched files that cannot affect package installation.
+64,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+65,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+66,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+67,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+69,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+7,cause,unclear,code_change,unclear,first,"Only 'Failed to connect to localhost port 6666' after a 10s sleep; error.log content not shown, so the reason is not visible."
+7,caused_by_change,unclear,yes,unclear,first,"Server not reachable after sleep, but no error output ties it to the touched spamcop module; no re-run."
+70,cause,dependency,infrastructure,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+71,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+72,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+73,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+75,cause,dependency,workflow,dependency,first,"apt install fails with 'Unable to locate package linux-modules-extra-7.0.0-1017-azure'; a package failed to install, not a network error."
+76,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+77,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+78,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+79,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+8,own_failure,no,yes,no,first,"A 'JUnit Test Report' job with no log; it reports other jobs' test results, so it fails because those failed."
+80,cause,dependency,network,dependency,first,"The PPA 503 was only a warning; the step died on 'Unable to locate package linux-modules-extra-...', a package install failure."
+82,cause,dependency,network,dependency,first,"The PPA 503 was ignored; the step failed on ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"", a package install failure."
+83,cause,dependency,network,dependency,first,"The PPA 503 was ignored; the step failed on ""Unable to locate package linux-modules-extra-7.0.0-1017-azure"", a package install failure."
+84,cause,workflow,network,workflow,first,"The release-pin gate script failed because the pinned release asset is missing (404, failed again on re-run); docs-only change, no network fault."
+85,cause,workflow,network,workflow,first,"The release-pin gate script failed because the pinned v0.10.0 asset is missing (404, failed again on re-run); a CI gate issue, not a network fault."
+86,cause,workflow,network,workflow,first,"The release-pin gate script reports ""pinned release is not publicly reachable ... returned 404"": a missing release, not a network error."
+9,own_failure,no,yes,no,first,"A ""JUnit Test Report"" job only reports other jobs' test results; with no log, it most likely failed because tests failed elsewhere."
+91,cause,unclear,code_change,unclear,first,"The log shows only ""# fail 1"" with no failing test name or message visible, so the cause cannot be named."
+91,caused_by_change,unclear,yes,unclear,first,"The failing test and its message are not in the log, so it cannot be tied to the touched runtime files."
+93,cause,test,code_change,test,first,"provider-settings-page.spec.ts ""Test timed out in 5000ms"" on Windows, unrelated to the touched workflow files: a test timing failure."
+93,caused_by_change,no,yes,no,first,"The timed-out test is a provider settings UI spec, unrelated to the touched extensions/workflows files."
+94,cause,unclear,code_change,unclear,first,"Assertion failures in provider-error.spec.ts are not about the only touched file, web/dist/app.js, and show no flakiness sign."
+94,caused_by_change,unclear,yes,unclear,first,Only the built bundle web/dist/app.js changed; the failing provider-error UI assertions cannot be tied to it from the log.
+96,cause,test,code_change,unclear,neither,"Seven unrelated e2e tests time out waiting for a workbar button; not about the web-search files, and too broad to call test flakiness."
+96,caused_by_change,no,yes,no,first,"The failing e2e tests (git review, document reading, workbar tabs) are unrelated to the touched web-search extension files."
+97,cause,unclear,code_change,unclear,first,"Eight e2e tests time out waiting for a workbar button; the change is docs-only, and the log does not show why."
+97,caused_by_change,no,yes,no,first,"The change touched only docs/research/WEB_CONFIGURATION_2026-10-13.md, which cannot break e2e tests."
+98,cause,unclear,code_change,unclear,first,"The log shows ""Executed 140 tests ... 1 failure"" but the failing applet test and its message are not visible."
+98,caused_by_change,unclear,yes,unclear,first,"The failing applet test is not shown, and the touched files are under Mobile/, so it cannot be tied to the change."

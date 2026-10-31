@@ -1,0 +1,11 @@
+{
+ "PR details": "1 of 24 labelled matches (in 4 repos) were the change's code",
+ "already failing": "same step and same error: 1 of 18 labelled were the change",
+ "flaked before": "jobs that had flaked before, but too rarely: the change caused 15 of 34 under the old rule",
+ "known flaky": "fresh held-out read: 0 of 4 calls the change's own (0-49%), too few to show it is safe (history alone: 13 of 81), so check the error, then re-run it",
+ "maybe flaky": "1 of 6 labelled matches were the change; still re-run once to tell",
+ "maybe yours": "the error named a file the pull request changed: the change's own 14 of 15 clear times on the data the rule was written from, 4 of 5 fresh",
+ "model": "asked about 13 undecided failures, right on 11; advice only",
+ "new": "never-flaked failures: the change caused 58 of 98 labelled ones",
+ "outside failure": "73 of 73 labelled matches in 18 repo samples were not the change"
+}

@@ -1,0 +1,33 @@
+{
+ "first": "Claude",
+ "second": "gemini-3.5-flash-lite",
+ "codebook": 2,
+ "fields": {
+  "kind": {
+   "n": 50,
+   "agree": 0.74,
+   "kappa": 0.5855,
+   "confusion": {
+    "peer_help|drive_by": 3,
+    "project_answer|peer_help": 5,
+    "unclear|drive_by": 2,
+    "drive_by|peer_help": 3
+   },
+   "disagree": [
+    102,
+    106,
+    175,
+    207,
+    212,
+    214,
+    23,
+    300,
+    304,
+    31,
+    32,
+    380,
+    61
+   ]
+  }
+ }
+}

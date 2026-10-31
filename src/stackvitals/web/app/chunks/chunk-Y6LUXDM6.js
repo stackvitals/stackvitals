@@ -1,0 +1,1 @@
+import{c as i}from"./chunk-6BDBXA6V.js";import{e as g}from"./chunk-MAPYGK3P.js";import{i as t,w as n}from"./chunk-GT4EAKAO.js";import{d as r}from"./chunk-G7NGB5UX.js";r();function a({def:m,size:o=30}){let s=t(i),e=m||s;return n("span",{class:"logo-mark",style:{width:`${o}px`,height:`${o}px`},"aria-hidden":"true",dangerouslySetInnerHTML:{__html:g(e)}},e.id)}export{a};

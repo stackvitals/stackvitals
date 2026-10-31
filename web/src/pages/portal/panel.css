@@ -1,0 +1,48 @@
+/* Panel: a framed card with a header strip, a body and an action bar; label/value facts; numbered steps, base rules first, then Instrument */
+.pn { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+.pn-strip { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; min-height: 42px; padding: 9px 16px;
+  background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.pn-title { margin: 0; font-size: 15.5px; font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pn-meta { font-size: 14px; font-weight: 600; color: var(--ink-2); display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pn-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.pn-body.is-flush { padding: 0; gap: 0; }
+.pn-body > p { margin: 0; font-size: 15px; line-height: 1.5; }
+.pn-foot { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; padding: 10px 16px; border-top: 1px solid var(--line); }
+.pn-foot .pn-hint { font-size: 14px; color: var(--ink-2); flex-basis: 100%; }
+.pn .table-wrap.card { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.pn-good { border-top: 4px solid var(--good); } .pn-watch { border-top: 4px solid var(--watch); } .pn-bad { border-top: 4px solid var(--bad); }
+
+.pn-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; margin: 0; }
+.pn-facts.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pn-fact { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.pn-fact dt { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.pn-fact dd { margin: 2px 0 0; font-size: 15.5px; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+
+.pn-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.pn-steps > li { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 4px 14px; align-items: start; padding: 14px 16px; border-top: 1px solid var(--line); }
+.pn-steps > li:first-child { border-top: 0; }
+.pn-step-n { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.pn-step-h { margin: 0; font-size: 15.5px; font-weight: 700; }
+.pn-step-p { margin-top: 3px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
+.pn-step-act { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: flex-end; }
+@media (max-width: 640px) {
+  .pn-steps > li { grid-template-columns: 28px minmax(0, 1fr); }
+  .pn-step-act { grid-column: 2; justify-content: flex-start; }
+  .pn-facts.cols-2 { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Instrument (sheet design): ink frame, grey strip, state as the top edge, step numbers as ink squares */
+[data-design="sheet"] .pn { border: 1.5px solid var(--frame); border-radius: 2px; }
+[data-design="sheet"] .pn-strip { background: var(--strip); border-bottom: 1px solid var(--line-strong); padding: 9px 14px; }
+[data-design="sheet"] .pn-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+[data-design="sheet"] .pn-meta { font-size: 14.5px; color: var(--ink-2); }
+[data-design="sheet"] .pn-body { padding: 14px; }
+[data-design="sheet"] .pn-body.is-flush { padding: 0; }
+[data-design="sheet"] .pn-foot { padding: 10px 14px; border-top: 1px solid var(--line-strong); }
+[data-design="sheet"] .pn-good { border-top: 5px solid var(--sv-mint); }
+[data-design="sheet"] .pn-watch { border-top: 5px solid var(--sv-amber); }
+[data-design="sheet"] .pn-bad { border-top: 5px solid var(--sv-coral); }
+[data-design="sheet"] .pn-fact dt { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+[data-design="sheet"] .pn-fact dd { font-size: 16px; font-weight: 600; }
+[data-design="sheet"] .pn-step-n { border-radius: 2px; background: var(--ink); color: var(--bg); font-family: var(--display); }
+[data-design="sheet"] .pn-steps > li.is-done .pn-step-n { background: var(--sv-mint); color: #000; }

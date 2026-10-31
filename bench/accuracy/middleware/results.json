@@ -1,0 +1,463 @@
+{
+ "run": {
+  "workflow_run": 40833570534,
+  "date": "2026-10-29",
+  "middleware_image": "sha256:9bf7c32e753ac5fc6c17270a248e29ce748f4fc2ed7de0b279b7a33a5a108602",
+  "middleware_image_bytes": 1360814101,
+  "middleware_start_s": 63,
+  "middleware_sync_s": 319,
+  "middleware_requests": 690,
+  "middleware_memory": "1.09GiB",
+  "window_from": "2026-07-31"
+ },
+ "repos": {
+  "bug-bounties": {
+   "deployments": {
+    "middleware": 19,
+    "stackvitals_merges": 68,
+    "stackvitals_default": 40,
+    "stackvitals_default_source": "deployments api"
+   },
+   "lead_time_hours": {
+    "middleware_mean": 1.92,
+    "stackvitals_merges_median": 0.68,
+    "stackvitals_merges_mean": 5.2,
+    "stackvitals_default_median": 1.58
+   },
+   "prs": {
+    "middleware": 19,
+    "stackvitals": 52,
+    "both": 11,
+    "within_10pct": 11,
+    "only_stackvitals": [
+     "150",
+     "151",
+     "153",
+     "155",
+     "158",
+     "159",
+     "160",
+     "161",
+     "166",
+     "171",
+     "174",
+     "175",
+     "176",
+     "177",
+     "178",
+     "179",
+     "180",
+     "182",
+     "183",
+     "184",
+     "185",
+     "188",
+     "191",
+     "192",
+     "193",
+     "194",
+     "195",
+     "196",
+     "197",
+     "200",
+     "201",
+     "202",
+     "203",
+     "204",
+     "205",
+     "206",
+     "207",
+     "208",
+     "209",
+     "210",
+     "215"
+    ],
+    "only_middleware": [
+     "223",
+     "225",
+     "227",
+     "229",
+     "233",
+     "241",
+     "243",
+     "245"
+    ],
+    "differ": [],
+    "middleware_negative_first_commit": []
+   },
+   "change_failure": {
+    "middleware": 0.0,
+    "middleware_failed": 0,
+    "stackvitals_merges": null,
+    "stackvitals_merges_failed": 0,
+    "stackvitals_default": null
+   },
+   "recovery_hours": {
+    "middleware_mean": null,
+    "middleware_incidents": 0,
+    "stackvitals_default": null,
+    "stackvitals_incidents": 0
+   },
+   "middleware_oldest_pr_created": "2026-09-28"
+  },
+  "dexto": {
+   "deployments": {
+    "middleware": 51,
+    "stackvitals_merges": 62,
+    "stackvitals_default": 61,
+    "stackvitals_default_source": "deployments api"
+   },
+   "lead_time_hours": {
+    "middleware_mean": 4.76,
+    "stackvitals_merges_median": 0.47,
+    "stackvitals_merges_mean": 54.31,
+    "stackvitals_default_median": 0.57
+   },
+   "prs": {
+    "middleware": 51,
+    "stackvitals": 48,
+    "both": 41,
+    "within_10pct": 40,
+    "only_stackvitals": [
+     "899",
+     "902",
+     "907",
+     "911",
+     "914",
+     "922",
+     "923"
+    ],
+    "only_middleware": [
+     "928",
+     "931",
+     "934",
+     "936",
+     "941",
+     "944",
+     "946",
+     "948",
+     "978",
+     "982"
+    ],
+    "differ": [
+     [
+      "926",
+      1642.05,
+      8.47
+     ]
+    ],
+    "middleware_negative_first_commit": [
+     "927",
+     "929",
+     "931",
+     "944",
+     "948",
+     "978"
+    ]
+   },
+   "change_failure": {
+    "middleware": 0.0,
+    "middleware_failed": 0,
+    "stackvitals_merges": null,
+    "stackvitals_merges_failed": 0,
+    "stackvitals_default": null
+   },
+   "recovery_hours": {
+    "middleware_mean": null,
+    "middleware_incidents": 0,
+    "stackvitals_default": null,
+    "stackvitals_incidents": 0
+   },
+   "middleware_oldest_pr_created": "2026-09-28"
+  },
+  "dotagents": {
+   "deployments": {
+    "middleware": 14,
+    "stackvitals_merges": 39,
+    "stackvitals_default": 48,
+    "stackvitals_default_source": "deployments api"
+   },
+   "lead_time_hours": {
+    "middleware_mean": 59.28,
+    "stackvitals_merges_median": 1.58,
+    "stackvitals_merges_mean": 85.76,
+    "stackvitals_default_median": 1.6
+   },
+   "prs": {
+    "middleware": 14,
+    "stackvitals": 34,
+    "both": 12,
+    "within_10pct": 12,
+    "only_stackvitals": [
+     "113",
+     "152",
+     "153",
+     "154",
+     "155",
+     "156",
+     "157",
+     "159",
+     "160",
+     "164",
+     "165",
+     "166",
+     "168",
+     "169",
+     "170",
+     "173",
+     "174",
+     "180",
+     "181",
+     "182",
+     "185",
+     "189"
+    ],
+    "only_middleware": [
+     "201",
+     "214"
+    ],
+    "differ": [],
+    "middleware_negative_first_commit": [
+     "191",
+     "202"
+    ]
+   },
+   "change_failure": {
+    "middleware": 0.0,
+    "middleware_failed": 0,
+    "stackvitals_merges": null,
+    "stackvitals_merges_failed": 0,
+    "stackvitals_default": null
+   },
+   "recovery_hours": {
+    "middleware_mean": null,
+    "middleware_incidents": 0,
+    "stackvitals_default": null,
+    "stackvitals_incidents": 0
+   },
+   "middleware_oldest_pr_created": "2026-09-23"
+  },
+  "nodejs.org": {
+   "deployments": {
+    "middleware": 55,
+    "stackvitals_merges": 137,
+    "stackvitals_default": 110,
+    "stackvitals_default_source": "deployments api"
+   },
+   "lead_time_hours": {
+    "middleware_mean": 142.43,
+    "stackvitals_merges_median": 62.08,
+    "stackvitals_merges_mean": 199.27,
+    "stackvitals_default_median": 62.1
+   },
+   "prs": {
+    "middleware": 55,
+    "stackvitals": 61,
+    "both": 26,
+    "within_10pct": 26,
+    "only_stackvitals": [
+     "8649",
+     "9048",
+     "9049",
+     "9050",
+     "9053",
+     "9054",
+     "9062",
+     "9082",
+     "9084",
+     "9091",
+     "9092",
+     "9093",
+     "9094",
+     "9095",
+     "9096",
+     "9097",
+     "9102",
+     "9103",
+     "9104",
+     "9105",
+     "9106",
+     "9110",
+     "9111",
+     "9112",
+     "9115",
+     "9120",
+     "9143",
+     "9146",
+     "9147",
+     "9148",
+     "9156",
+     "9158",
+     "9160",
+     "9165",
+     "9168"
+    ],
+    "only_middleware": [
+     "9133",
+     "9149",
+     "9181",
+     "9183",
+     "9184",
+     "9185",
+     "9186",
+     "9187",
+     "9188",
+     "9189",
+     "9190",
+     "9193",
+     "9194",
+     "9195",
+     "9196",
+     "9197",
+     "9198",
+     "9199",
+     "9206",
+     "9208",
+     "9213",
+     "9218",
+     "9219",
+     "9221",
+     "9227",
+     "9229",
+     "9230",
+     "9240",
+     "9241"
+    ],
+    "differ": [],
+    "middleware_negative_first_commit": [
+     "9026",
+     "9133",
+     "9149",
+     "9159",
+     "9177",
+     "9193",
+     "9197",
+     "9210",
+     "9212",
+     "9221",
+     "9222"
+    ]
+   },
+   "change_failure": {
+    "middleware": 0.0,
+    "middleware_failed": 0,
+    "stackvitals_merges": null,
+    "stackvitals_merges_failed": 0,
+    "stackvitals_default": null
+   },
+   "recovery_hours": {
+    "middleware_mean": null,
+    "middleware_incidents": 0,
+    "stackvitals_default": null,
+    "stackvitals_incidents": 0
+   },
+   "middleware_oldest_pr_created": "2026-07-28"
+  },
+  "run": {
+   "deployments": {
+    "middleware": 11,
+    "stackvitals_merges": 78,
+    "stackvitals_default": 55,
+    "stackvitals_default_source": "deployments api"
+   },
+   "lead_time_hours": {
+    "middleware_mean": 22.27,
+    "stackvitals_merges_median": 0.22,
+    "stackvitals_merges_mean": 4.54,
+    "stackvitals_default_median": 0.83
+   },
+   "prs": {
+    "middleware": 11,
+    "stackvitals": 64,
+    "both": 6,
+    "within_10pct": 6,
+    "only_stackvitals": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33",
+     "34",
+     "35",
+     "36",
+     "37",
+     "38",
+     "39",
+     "40",
+     "42",
+     "44",
+     "46",
+     "48",
+     "51",
+     "52",
+     "54",
+     "56",
+     "58",
+     "59",
+     "60",
+     "61",
+     "65",
+     "66",
+     "69",
+     "70",
+     "72",
+     "74"
+    ],
+    "only_middleware": [
+     "73",
+     "75",
+     "79",
+     "85",
+     "89"
+    ],
+    "differ": [],
+    "middleware_negative_first_commit": [
+     "73",
+     "85"
+    ]
+   },
+   "change_failure": {
+    "middleware": 0.0,
+    "middleware_failed": 0,
+    "stackvitals_merges": null,
+    "stackvitals_merges_failed": 0,
+    "stackvitals_default": null
+   },
+   "recovery_hours": {
+    "middleware_mean": null,
+    "middleware_incidents": 0,
+    "stackvitals_default": null,
+    "stackvitals_incidents": 0
+   },
+   "middleware_oldest_pr_created": "2026-09-23"
+  }
+ }
+}

@@ -1,0 +1,377 @@
+{
+ "fresh": {
+  "adjudicated": {
+   "calls_by_history": 44,
+   "flaked_before": {
+    "caused": 1,
+    "caused_high": 0.3331,
+    "caused_low": 0.0137,
+    "n": 33,
+    "not_caused": 12,
+    "unclear": 20
+   },
+   "history_rule": {
+    "caused": 5,
+    "caused_high": 0.4344,
+    "caused_low": 0.1012,
+    "n": 44,
+    "not_caused": 17,
+    "unclear": 22
+   },
+   "kept": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "quarto-dev/quarto",
+      "share": 0.5
+     },
+     "boot_high": 0.0,
+     "boot_low": 0.0,
+     "k": 0,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 4,
+     "repo_wilson_high": 0.6576,
+     "repo_wilson_low": 0.0,
+     "repos": 2,
+     "without_biggest": {
+      "high": 0.6576,
+      "k": 0,
+      "low": 0.0,
+      "n": 2
+     }
+    },
+    "caused": 0,
+    "caused_high": 0.4899,
+    "caused_low": 0.0,
+    "coverage": 0.0909,
+    "jobs": 3,
+    "n": 4,
+    "not_caused": 4,
+    "repos": 2,
+    "unclear": 0
+   },
+   "kept_by_repo_items": {
+    "pradosoft/prado": 2,
+    "quarto-dev/quarto": 2
+   },
+   "maybe_yours": {
+    "caused": 4,
+    "caused_high": 0.9638,
+    "caused_low": 0.3755,
+    "n": 7,
+    "not_caused": 1,
+    "unclear": 2
+   },
+   "repos": 9
+  },
+  "claude": {
+   "calls_by_history": 44,
+   "flaked_before": {
+    "caused": 1,
+    "caused_high": 0.3331,
+    "caused_low": 0.0137,
+    "n": 33,
+    "not_caused": 12,
+    "unclear": 20
+   },
+   "history_rule": {
+    "caused": 5,
+    "caused_high": 0.4344,
+    "caused_low": 0.1012,
+    "n": 44,
+    "not_caused": 17,
+    "unclear": 22
+   },
+   "kept": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "quarto-dev/quarto",
+      "share": 0.5
+     },
+     "boot_high": 0.0,
+     "boot_low": 0.0,
+     "k": 0,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 4,
+     "repo_wilson_high": 0.6576,
+     "repo_wilson_low": 0.0,
+     "repos": 2,
+     "without_biggest": {
+      "high": 0.6576,
+      "k": 0,
+      "low": 0.0,
+      "n": 2
+     }
+    },
+    "caused": 0,
+    "caused_high": 0.4899,
+    "caused_low": 0.0,
+    "coverage": 0.0909,
+    "jobs": 3,
+    "n": 4,
+    "not_caused": 4,
+    "repos": 2,
+    "unclear": 0
+   },
+   "kept_by_repo_items": {
+    "pradosoft/prado": 2,
+    "quarto-dev/quarto": 2
+   },
+   "maybe_yours": {
+    "caused": 4,
+    "caused_high": 0.9638,
+    "caused_low": 0.3755,
+    "n": 7,
+    "not_caused": 1,
+    "unclear": 2
+   },
+   "repos": 9
+  },
+  "gemini": {
+   "calls_by_history": 44,
+   "flaked_before": {
+    "caused": 3,
+    "caused_high": 0.3213,
+    "caused_low": 0.0454,
+    "n": 33,
+    "not_caused": 20,
+    "unclear": 10
+   },
+   "history_rule": {
+    "caused": 6,
+    "caused_high": 0.3439,
+    "caused_low": 0.0861,
+    "n": 44,
+    "not_caused": 27,
+    "unclear": 11
+   },
+   "kept": {
+    "by_repo": {
+     "biggest": {
+      "items": 2,
+      "repo": "quarto-dev/quarto",
+      "share": 0.5
+     },
+     "boot_high": 0.0,
+     "boot_low": 0.0,
+     "k": 0,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 4,
+     "repo_wilson_high": 0.6576,
+     "repo_wilson_low": 0.0,
+     "repos": 2,
+     "without_biggest": {
+      "high": 0.6576,
+      "k": 0,
+      "low": 0.0,
+      "n": 2
+     }
+    },
+    "caused": 0,
+    "caused_high": 0.4899,
+    "caused_low": 0.0,
+    "coverage": 0.0909,
+    "jobs": 3,
+    "n": 4,
+    "not_caused": 4,
+    "repos": 2,
+    "unclear": 0
+   },
+   "kept_by_repo_items": {
+    "pradosoft/prado": 2,
+    "quarto-dev/quarto": 2
+   },
+   "maybe_yours": {
+    "caused": 3,
+    "caused_high": 0.8124,
+    "caused_low": 0.1876,
+    "n": 7,
+    "not_caused": 3,
+    "unclear": 1
+   },
+   "repos": 9
+  }
+ },
+ "prereg": "2026-10-28",
+ "tuning": {
+  "heldout_read": {
+   "calls_by_history": 108,
+   "flaked_before": {
+    "caused": 5,
+    "caused_high": 0.25,
+    "caused_low": 0.0519,
+    "n": 64,
+    "not_caused": 37,
+    "unclear": 22
+   },
+   "history_rule": {
+    "caused": 13,
+    "caused_high": 0.2555,
+    "caused_low": 0.0963,
+    "n": 108,
+    "not_caused": 68,
+    "unclear": 27
+   },
+   "kept": {
+    "by_repo": {
+     "biggest": {
+      "items": 26,
+      "repo": "lxc/incus",
+      "share": 0.8387
+     },
+     "boot_high": 0.0,
+     "boot_low": 0.0,
+     "k": 0,
+     "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+     "n": 31,
+     "repo_wilson_high": 0.4345,
+     "repo_wilson_low": 0.0,
+     "repos": 5,
+     "without_biggest": {
+      "high": 0.4345,
+      "k": 0,
+      "low": 0.0,
+      "n": 5
+     }
+    },
+    "caused": 0,
+    "caused_high": 0.1103,
+    "caused_low": 0.0,
+    "coverage": 0.3148,
+    "jobs": 21,
+    "n": 34,
+    "not_caused": 31,
+    "repos": 6,
+    "unclear": 3
+   },
+   "kept_by_repo_items": {
+    "MISP/misp-modules": 1,
+    "SonarSource/sonarlint-intellij": 2,
+    "SonarSource/sonarqube-cli": 1,
+    "basicswap/basicswap": 3,
+    "lxc/incus": 26,
+    "openpi-dev/openpi": 1
+   },
+   "maybe_yours": {
+    "caused": 8,
+    "caused_high": 1.0,
+    "caused_low": 0.6756,
+    "n": 10,
+    "not_caused": 0,
+    "unclear": 2
+   },
+   "repos": 15
+  },
+  "masking_check": {
+   "any_earlier_flake": {
+    "calls_by_history": 36,
+    "flaked_before": {
+     "caused": 9,
+     "caused_high": 0.6829,
+     "caused_low": 0.2733,
+     "n": 21,
+     "not_caused": 10,
+     "unclear": 2
+    },
+    "history_rule": {
+     "caused": 15,
+     "caused_high": 0.6055,
+     "caused_low": 0.2888,
+     "n": 36,
+     "not_caused": 19,
+     "unclear": 2
+    },
+    "kept": {
+     "by_repo": {
+      "biggest": {
+       "items": 6,
+       "repo": "munich-quantum-toolkit/core",
+       "share": 0.75
+      },
+      "boot_high": 0.0,
+      "boot_low": 0.0,
+      "k": 0,
+      "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+      "n": 8,
+      "repo_wilson_high": 0.5615,
+      "repo_wilson_low": 0.0,
+      "repos": 3,
+      "without_biggest": {
+       "high": 0.6576,
+       "k": 0,
+       "low": 0.0,
+       "n": 2
+      }
+     },
+     "caused": 0,
+     "caused_high": 0.3244,
+     "caused_low": 0.0,
+     "coverage": 0.2222,
+     "jobs": 5,
+     "n": 8,
+     "not_caused": 8,
+     "repos": 3,
+     "unclear": 0
+    },
+    "kept_by_repo_items": {
+     "AikidoSec/firewall-dotnet": 1,
+     "cdklabs/cdk-ecr-deployment": 1,
+     "munich-quantum-toolkit/core": 6
+    },
+    "maybe_yours": {
+     "caused": 6,
+     "caused_high": 0.9743,
+     "caused_low": 0.4869,
+     "n": 7,
+     "not_caused": 1,
+     "unclear": 0
+    },
+    "repos": 9
+   },
+   "history_rule": {
+    "calls_by_history": 7,
+    "flaked_before": {
+     "caused": 0,
+     "caused_high": 0.4345,
+     "caused_low": 0.0,
+     "n": 7,
+     "not_caused": 5,
+     "unclear": 2
+    },
+    "history_rule": {
+     "caused": 0,
+     "caused_high": 0.4345,
+     "caused_low": 0.0,
+     "n": 7,
+     "not_caused": 5,
+     "unclear": 2
+    },
+    "kept": {
+     "by_repo": {
+      "repos": 0
+     },
+     "caused": 0,
+     "caused_high": 1.0,
+     "caused_low": 0.0,
+     "coverage": 0.0,
+     "jobs": 0,
+     "n": 0,
+     "not_caused": 0,
+     "repos": 0,
+     "unclear": 0
+    },
+    "kept_by_repo_items": {},
+    "maybe_yours": {
+     "caused": 0,
+     "caused_high": 1.0,
+     "caused_low": 0.0,
+     "n": 0,
+     "not_caused": 0,
+     "unclear": 0
+    },
+    "repos": 1
+   }
+  }
+ }
+}

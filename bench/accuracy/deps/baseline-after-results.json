@@ -1,0 +1,140 @@
+{
+ "built_at": "2026-10-23T06:02:57Z",
+ "ledger": {
+  "by_step": {
+   "major": {
+    "merged": 9074,
+    "reverted": 7,
+    "share": 0.0008
+   },
+   "minor": {
+    "merged": 14156,
+    "reverted": 2,
+    "share": 0.0001
+   },
+   "patch": {
+    "merged": 21404,
+    "reverted": 0,
+    "share": 0.0
+   }
+  },
+  "cells": 6930,
+  "cells_with_a_revert": 37,
+  "merged": 130694,
+  "most_reverted": [
+   {
+    "bump": "unknown",
+    "ecosystem": "npm",
+    "merged": 1792,
+    "package": "brace-expansion",
+    "repos": 1916,
+    "reverted": 2
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "pypi",
+    "merged": 1001,
+    "package": "cryptography",
+    "repos": 770,
+    "reverted": 2
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "pypi",
+    "merged": 5,
+    "package": "pydantic-core",
+    "repos": 14,
+    "reverted": 2
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "pypi",
+    "merged": 25,
+    "package": "ultralytics",
+    "repos": 4,
+    "reverted": 2
+   },
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 11,
+    "package": "astro",
+    "repos": 31,
+    "reverted": 1
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "npm",
+    "merged": 135,
+    "package": "dotenv",
+    "repos": 115,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 46,
+    "package": "esbuild",
+    "repos": 71,
+    "reverted": 1
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "npm",
+    "merged": 1232,
+    "package": "eslint",
+    "repos": 619,
+    "reverted": 1
+   },
+   {
+    "bump": "minor",
+    "ecosystem": "npm",
+    "merged": 16,
+    "package": "express",
+    "repos": 21,
+    "reverted": 1
+   },
+   {
+    "bump": "unknown",
+    "ecosystem": "npm",
+    "merged": 3173,
+    "package": "fast-uri",
+    "repos": 1696,
+    "reverted": 1
+   }
+  ],
+  "prs": 217635,
+  "reverted": 41,
+  "reverted_share": 0.0003,
+  "window_days": 180
+ },
+ "osv": {
+  "advisories": 5476,
+  "complete": false,
+  "epss_scored": 0,
+  "id_prefixes": {
+   "GHSA": 1167,
+   "MAL": 22,
+   "PYSEC": 901
+  },
+  "kev_checked": 0,
+  "malware_flags": 26,
+  "packages": 4073,
+  "records": 7951,
+  "records_with_a_cve": 7713,
+  "severity": {
+   "CRITICAL": 477,
+   "HIGH": 2071,
+   "LOW": 554,
+   "MODERATE": 2203
+  },
+  "unfixed": 8,
+  "with_advisories": 791
+ },
+ "product_today": {
+  "epss_kev": "not read",
+  "fixed_version_per_advisory": "counted as unfixed or not; the version that fixes each is not shown",
+  "policy": "licence deny list only (no minimum Scorecard or severity)",
+  "transitive_paths": "none: the SBOM lists every resolved package but not which direct one pulls it in"
+ }
+}

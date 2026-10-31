@@ -1,0 +1,437 @@
+{
+ "containment": {
+  "fix_chain": {
+   "right": 4,
+   "unknown": 1,
+   "wrong": 2
+  },
+  "never_shipped": {
+   "right": 10,
+   "unknown": 1,
+   "wrong": 0
+  },
+  "time_order": {
+   "right": 4,
+   "unknown": 2,
+   "wrong": 12
+  }
+ },
+ "deployments_between_median": 1,
+ "disagree": 5,
+ "disagree_share": {
+  "high": 0.9178,
+  "low": 0.3589,
+  "share": 0.7143
+ },
+ "fix_chain_found": 7,
+ "generated": "2026-10-22T04:44:43Z",
+ "links": [
+  {
+   "check": "wrong",
+   "fix_chain": "v3.14.0",
+   "last_before_revert": "v3.14.0",
+   "never_shipped": false,
+   "repo": "aio-libs/aiohttp",
+   "revert": 12809,
+   "time_order": "v3.14.0",
+   "time_order_check": "wrong",
+   "undid": 12739,
+   "undid_commit": "b3f2ff4e718a50a5636809c89059c045ce945a9b"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v3.14.0",
+   "never_shipped": true,
+   "repo": "aio-libs/aiohttp",
+   "revert": 12861,
+   "time_order": "v3.14.0",
+   "time_order_check": "wrong",
+   "undid": 12857,
+   "undid_commit": "69dff14d94b11c81bca6df3982c09a1176a1ca12"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "0.12.3",
+   "never_shipped": true,
+   "repo": "astral-sh/uv",
+   "revert": 21084,
+   "time_order": "0.12.3",
+   "time_order_check": "wrong",
+   "undid": 21055,
+   "undid_commit": "a2a02424dcba3c3f37cf6b8de5484497dd48651e"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "0.12.3",
+   "never_shipped": true,
+   "repo": "astral-sh/uv",
+   "revert": 21088,
+   "time_order": "0.12.3",
+   "time_order_check": "wrong",
+   "undid": 21087,
+   "undid_commit": "9f5808695af96f92daf680ded0ebe939869241ed"
+  },
+  {
+   "check": "right",
+   "fix_chain": "0.12.6",
+   "last_before_revert": "0.12.8",
+   "never_shipped": false,
+   "repo": "astral-sh/uv",
+   "revert": 21414,
+   "time_order": "0.12.8",
+   "time_order_check": "right",
+   "undid": 21291,
+   "undid_commit": "2e7d28b71dd2c96b2ec8ac3b6b4a86480c36facd"
+  },
+  {
+   "check": "right",
+   "fix_chain": "0.12.14",
+   "last_before_revert": "0.12.14",
+   "never_shipped": false,
+   "repo": "astral-sh/uv",
+   "revert": 21699,
+   "time_order": "0.12.14",
+   "time_order_check": "right",
+   "undid": 21569,
+   "undid_commit": "89c3b2c917f6b9b2f5c785747a31630a429904c4"
+  },
+  {
+   "check": "right",
+   "fix_chain": "0.12.15",
+   "last_before_revert": "0.12.19",
+   "never_shipped": false,
+   "repo": "astral-sh/uv",
+   "revert": 22051,
+   "time_order": "0.12.19",
+   "time_order_check": "right",
+   "undid": 21675,
+   "undid_commit": "000a665b745a5b4bdb176ec177dbc7ca8a486169"
+  },
+  {
+   "check": "right",
+   "fix_chain": "0.12.20",
+   "last_before_revert": "0.12.21",
+   "never_shipped": false,
+   "repo": "astral-sh/uv",
+   "revert": 22107,
+   "time_order": "0.12.21",
+   "time_order_check": "right",
+   "undid": 22054,
+   "undid_commit": "8ee7eeb9fc446ee20760a5cb22e123997244085c"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "0.12.23",
+   "never_shipped": true,
+   "repo": "astral-sh/uv",
+   "revert": 22349,
+   "time_order": "0.12.23",
+   "time_order_check": "wrong",
+   "undid": 22142,
+   "undid_commit": "8ad4e46226de94b472dc05ac9a8d9dcfcf733ab5"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v5.6.3",
+   "never_shipped": true,
+   "repo": "celery/celery",
+   "revert": 10289,
+   "time_order": "v5.6.3",
+   "time_order_check": "wrong",
+   "undid": 10287,
+   "undid_commit": "d9b39790d526085b83770ee4de15fb0da14ee2e6"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v5.6.3",
+   "never_shipped": true,
+   "repo": "celery/celery",
+   "revert": 10354,
+   "time_order": "v5.6.3",
+   "time_order_check": "wrong",
+   "undid": 10342,
+   "undid_commit": "74a7a63bb4844f4f8e426fa1f6b6a073a89ef01d"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v5.6.3",
+   "never_shipped": true,
+   "repo": "celery/celery",
+   "revert": 10564,
+   "time_order": "v5.6.3",
+   "time_order_check": "wrong",
+   "undid": 10527,
+   "undid_commit": "a7d9c79688d3b5dd527fe2b2228b3041a6a602ac"
+  },
+  {
+   "check": "unknown",
+   "fix_chain": null,
+   "last_before_revert": "v19.2.8",
+   "never_shipped": true,
+   "repo": "facebook/react",
+   "revert": 37363,
+   "time_order": "v19.2.8",
+   "time_order_check": "unknown",
+   "undid": 37232,
+   "undid_commit": null
+  },
+  {
+   "check": "wrong",
+   "fix_chain": "v3.0.6",
+   "last_before_revert": "v3.0.6",
+   "never_shipped": false,
+   "repo": "pandas-dev/pandas",
+   "revert": 68971,
+   "time_order": "v3.0.5",
+   "time_order_check": "wrong",
+   "undid": 68943,
+   "undid_commit": "152c59dfd069fa8beb9b2ad04452bd200682de8a"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v2.13.4",
+   "never_shipped": true,
+   "repo": "pydantic/pydantic",
+   "revert": 13536,
+   "time_order": "v2.13.4",
+   "time_order_check": "wrong",
+   "undid": 13503,
+   "undid_commit": "c18c773f9b48df16206c9f9c19c2bc1be77dd045"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v2.13.4",
+   "never_shipped": true,
+   "repo": "pydantic/pydantic",
+   "revert": 13547,
+   "time_order": "v2.13.4",
+   "time_order_check": "wrong",
+   "undid": 13539,
+   "undid_commit": "8e9b8282c5a3299d064fa9ae66bafac8a1ca9eaa"
+  },
+  {
+   "check": "right",
+   "fix_chain": null,
+   "last_before_revert": "v2.13.5",
+   "never_shipped": true,
+   "repo": "pydantic/pydantic",
+   "revert": 13951,
+   "time_order": "v2.13.5",
+   "time_order_check": "wrong",
+   "undid": 13890,
+   "undid_commit": "8fb804027c9bde3c96ec8bb14b7b22affdcb6ae4"
+  },
+  {
+   "check": "unknown",
+   "fix_chain": "Production",
+   "last_before_revert": "Production",
+   "never_shipped": false,
+   "repo": "vuejs/core",
+   "revert": 15362,
+   "time_order": "Production",
+   "time_order_check": "unknown",
+   "undid": 15347,
+   "undid_commit": "38577161c0cfcd4e1013eec0030b781a32fc3744"
+  }
+ ],
+ "never_shipped": 11,
+ "per_repo": {
+  "aio-libs__aiohttp": {
+   "cfr_fix_chain": 0.0,
+   "cfr_time_order": 0.0,
+   "deployments": 73,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 2
+  },
+  "ansible__ansible": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 46,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "astral-sh__uv": {
+   "cfr_fix_chain": 0.129,
+   "cfr_time_order": 0.1935,
+   "deployments": 100,
+   "deployments_from": "releases",
+   "disagree": 3,
+   "reverts": 7
+  },
+  "celery__celery": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 50,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 3
+  },
+  "encode__httpx": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 47,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "encode__starlette": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 100,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "facebook__react": {
+   "cfr_fix_chain": 0.0,
+   "cfr_time_order": 0.125,
+   "deployments": 98,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 1
+  },
+  "fastapi__fastapi": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 100,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "numpy__numpy": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 76,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "pallets__click": {
+   "cfr_fix_chain": 0.0,
+   "cfr_time_order": 0.0,
+   "deployments": 28,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "pallets__flask": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 36,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "pandas-dev__pandas": {
+   "cfr_fix_chain": 0.5,
+   "cfr_time_order": 0.5,
+   "deployments": 79,
+   "deployments_from": "releases",
+   "disagree": 1,
+   "reverts": 1
+  },
+  "prettier__prettier": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 92,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "prometheus__prometheus": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 59,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "psf__black": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 54,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "pydantic__pydantic": {
+   "cfr_fix_chain": 0.0,
+   "cfr_time_order": 0.3333,
+   "deployments": 80,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 3
+  },
+  "pytest-dev__pytest": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 81,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "python-poetry__poetry": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 73,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "scikit-learn__scikit-learn": {
+   "cfr_fix_chain": 0.0,
+   "cfr_time_order": 0.0,
+   "deployments": 51,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "tokio-rs__tokio": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 100,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "tox-dev__tox": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 100,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "vitejs__vite": {
+   "cfr_fix_chain": null,
+   "cfr_time_order": null,
+   "deployments": 72,
+   "deployments_from": "releases",
+   "disagree": 0,
+   "reverts": 0
+  },
+  "vuejs__core": {
+   "cfr_fix_chain": 0.013,
+   "cfr_time_order": 0.013,
+   "deployments": 77,
+   "deployments_from": "deployments api",
+   "disagree": 1,
+   "reverts": 1
+  }
+ },
+ "repos": 23,
+ "repos_with_reverts": 7,
+ "reverts": 18,
+ "tier_changed": 3
+}

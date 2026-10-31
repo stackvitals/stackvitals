@@ -1,0 +1,7 @@
+id,field,first,second,final,winner,reason
+1001,caused_by_change,no,unclear,no,first,"Same code passed on another run; failing test is in chroma-segment local_hnsw, which the change didn't touch, so nothing ties it to the diff"
+1013,caused_by_change,no,yes,no,first,"Only a cspell (spell checker) bump; failure is a postgres lease/stale-worker race in untouched backend code, no plausible link"
+1015,caused_by_change,unclear,yes,unclear,first,"Excerpt shows coverage table and exit 1 but no actual error; jsdom bump could affect dashboard tests, nothing confirms either way"
+1016,caused_by_change,unclear,yes,unclear,first,"Same PR as 1015, same log shape: exit 1 after coverage with no visible error message, so the cause can't be tied to the jsdom bump"
+1017,caused_by_change,no,yes,no,first,Only a squawk-cli (migration linter) bump; failure is an unhandled rejection in a postgres lease-transfer test in untouched code
+1018,caused_by_change,no,yes,no,first,"Dashboard-only tanstack bump; failure is a lease-transfer race in packages/openworkflow/postgres, which the change doesn't touch"

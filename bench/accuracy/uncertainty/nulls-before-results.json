@@ -1,0 +1,506 @@
+{
+ "caught_by_prs_merged": {
+  "10-19": {
+   "10x": 0.3176,
+   "2x": 0.0706,
+   "3x": 0.1059,
+   "5x": 0.1529,
+   "scans": 85
+  },
+  "20-39": {
+   "10x": 0.5098,
+   "2x": 0.1765,
+   "3x": 0.2549,
+   "5x": 0.3922,
+   "scans": 51
+  },
+  "40+": {
+   "10x": 0.8519,
+   "2x": 0.4074,
+   "3x": 0.5556,
+   "5x": 0.7037,
+   "scans": 27
+  },
+  "5-9": {
+   "10x": 0.0597,
+   "2x": 0.0448,
+   "3x": 0.0597,
+   "5x": 0.0597,
+   "scans": 67
+  },
+  "under 5": {
+   "10x": 0.0,
+   "2x": 0.0,
+   "3x": 0.0,
+   "5x": 0.0,
+   "scans": 29
+  }
+ },
+ "caught_when_slower": {
+  "10x": 0.3089,
+  "2x": 0.112,
+  "3x": 0.1583,
+  "5x": 0.2162
+ },
+ "caught_when_slower_by_rule": {
+  "10x": {
+   "any_difference": 0.9189,
+   "false_alarm_control": 0.3089,
+   "p_below_0.05": 0.2857,
+   "p_below_0.1": 0.3745
+  },
+  "2x": {
+   "any_difference": 0.7876,
+   "false_alarm_control": 0.112,
+   "p_below_0.05": 0.1042,
+   "p_below_0.1": 0.1737
+  },
+  "3x": {
+   "any_difference": 0.8417,
+   "false_alarm_control": 0.1583,
+   "p_below_0.05": 0.1583,
+   "p_below_0.1": 0.2394
+  },
+  "5x": {
+   "any_difference": 0.8919,
+   "false_alarm_control": 0.2162,
+   "p_below_0.05": 0.2046,
+   "p_below_0.1": 0.3784
+  }
+ },
+ "generated": "2026-10-24T13:42:16Z",
+ "null_flag_rate": {
+  "any_difference": 0.9346,
+  "false_alarm_control": 0.0737,
+  "p_below_0.05": 0.0645,
+  "p_below_0.1": 0.123
+ },
+ "null_scans": 5180,
+ "real_flag_rate": {
+  "any_difference": 0.9923,
+  "false_alarm_control": 0.1004,
+  "p_below_0.05": 0.0927,
+  "p_below_0.1": 0.1737
+ },
+ "repos": {
+  "aio-libs__aiohttp": {
+   "deployments": 73,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 13,
+    "p_below_0.05": 13,
+    "p_below_0.1": 22
+   },
+   "prs": 252,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "ansible__ansible": {
+   "deployments": 46,
+   "null_flags": {
+    "any_difference": 218,
+    "false_alarm_control": 23,
+    "p_below_0.05": 24,
+    "p_below_0.1": 42
+   },
+   "prs": 103,
+   "real_flags": {
+    "any_difference": 11,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 2
+   }
+  },
+  "astral-sh__uv": {
+   "deployments": 100,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 1,
+    "p_below_0.05": 4,
+    "p_below_0.1": 15
+   },
+   "prs": 613,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "celery__celery": {
+   "deployments": 50,
+   "null_flags": {
+    "any_difference": 200,
+    "false_alarm_control": 18,
+    "p_below_0.05": 14,
+    "p_below_0.1": 30
+   },
+   "prs": 295,
+   "real_flags": {
+    "any_difference": 10,
+    "false_alarm_control": 2,
+    "p_below_0.05": 2,
+    "p_below_0.1": 3
+   }
+  },
+  "django__django": {
+   "deployments": 0,
+   "null_flags": {
+    "any_difference": 212,
+    "false_alarm_control": 25,
+    "p_below_0.05": 25,
+    "p_below_0.1": 31
+   },
+   "prs": 190,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 2,
+    "p_below_0.05": 2,
+    "p_below_0.1": 2
+   }
+  },
+  "encode__starlette": {
+   "deployments": 100,
+   "null_flags": {
+    "any_difference": 193,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   },
+   "prs": 98,
+   "real_flags": {
+    "any_difference": 10,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   }
+  },
+  "facebook__react": {
+   "deployments": 98,
+   "null_flags": {
+    "any_difference": 214,
+    "false_alarm_control": 17,
+    "p_below_0.05": 12,
+    "p_below_0.1": 34
+   },
+   "prs": 143,
+   "real_flags": {
+    "any_difference": 11,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 3
+   }
+  },
+  "fastapi__fastapi": {
+   "deployments": 100,
+   "null_flags": {
+    "any_difference": 118,
+    "false_alarm_control": 11,
+    "p_below_0.05": 11,
+    "p_below_0.1": 11
+   },
+   "prs": 91,
+   "real_flags": {
+    "any_difference": 6,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 1
+   }
+  },
+  "numpy__numpy": {
+   "deployments": 76,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 33,
+    "p_below_0.05": 28,
+    "p_below_0.1": 49
+   },
+   "prs": 612,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 3
+   }
+  },
+  "pallets__click": {
+   "deployments": 28,
+   "null_flags": {
+    "any_difference": 68,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   },
+   "prs": 157,
+   "real_flags": {
+    "any_difference": 4,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   }
+  },
+  "pandas-dev__pandas": {
+   "deployments": 79,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 61,
+    "p_below_0.05": 50,
+    "p_below_0.1": 69
+   },
+   "prs": 1090,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 5,
+    "p_below_0.05": 4,
+    "p_below_0.1": 6
+   }
+  },
+  "prettier__prettier": {
+   "deployments": 92,
+   "null_flags": {
+    "any_difference": 180,
+    "false_alarm_control": 5,
+    "p_below_0.05": 3,
+    "p_below_0.1": 10
+   },
+   "prs": 163,
+   "real_flags": {
+    "any_difference": 9,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "prometheus__prometheus": {
+   "deployments": 59,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 4,
+    "p_below_0.05": 1,
+    "p_below_0.1": 44
+   },
+   "prs": 276,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 2
+   }
+  },
+  "psf__black": {
+   "deployments": 54,
+   "null_flags": {
+    "any_difference": 96,
+    "false_alarm_control": 7,
+    "p_below_0.05": 7,
+    "p_below_0.1": 12
+   },
+   "prs": 113,
+   "real_flags": {
+    "any_difference": 7,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 1
+   }
+  },
+  "pydantic__pydantic": {
+   "deployments": 80,
+   "null_flags": {
+    "any_difference": 206,
+    "false_alarm_control": 21,
+    "p_below_0.05": 9,
+    "p_below_0.1": 28
+   },
+   "prs": 202,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 1,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "pypa__pip": {
+   "deployments": 0,
+   "null_flags": {
+    "any_difference": 93,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 5
+   },
+   "prs": 78,
+   "real_flags": {
+    "any_difference": 6,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   }
+  },
+  "pytest-dev__pytest": {
+   "deployments": 81,
+   "null_flags": {
+    "any_difference": 157,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 8
+   },
+   "prs": 120,
+   "real_flags": {
+    "any_difference": 10,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   }
+  },
+  "python-poetry__poetry": {
+   "deployments": 73,
+   "null_flags": {
+    "any_difference": 108,
+    "false_alarm_control": 10,
+    "p_below_0.05": 2,
+    "p_below_0.1": 11
+   },
+   "prs": 315,
+   "real_flags": {
+    "any_difference": 6,
+    "false_alarm_control": 1,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "python__mypy": {
+   "deployments": 0,
+   "null_flags": {
+    "any_difference": 216,
+    "false_alarm_control": 8,
+    "p_below_0.05": 2,
+    "p_below_0.1": 17
+   },
+   "prs": 202,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 1
+   }
+  },
+  "rust-lang__cargo": {
+   "deployments": 0,
+   "null_flags": {
+    "any_difference": 222,
+    "false_alarm_control": 12,
+    "p_below_0.05": 12,
+    "p_below_0.1": 28
+   },
+   "prs": 196,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 1
+   }
+  },
+  "rust-lang__rust-clippy": {
+   "deployments": 0,
+   "null_flags": {
+    "any_difference": 223,
+    "false_alarm_control": 2,
+    "p_below_0.05": 2,
+    "p_below_0.1": 10
+   },
+   "prs": 189,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 0,
+    "p_below_0.05": 0,
+    "p_below_0.1": 0
+   }
+  },
+  "scikit-learn__scikit-learn": {
+   "deployments": 51,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 24,
+    "p_below_0.05": 24,
+    "p_below_0.1": 37
+   },
+   "prs": 657,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 2,
+    "p_below_0.05": 2,
+    "p_below_0.1": 2
+   }
+  },
+  "tokio-rs__tokio": {
+   "deployments": 100,
+   "null_flags": {
+    "any_difference": 169,
+    "false_alarm_control": 15,
+    "p_below_0.05": 12,
+    "p_below_0.1": 21
+   },
+   "prs": 195,
+   "real_flags": {
+    "any_difference": 9,
+    "false_alarm_control": 2,
+    "p_below_0.05": 1,
+    "p_below_0.1": 2
+   }
+  },
+  "tox-dev__tox": {
+   "deployments": 100,
+   "null_flags": {
+    "any_difference": 160,
+    "false_alarm_control": 16,
+    "p_below_0.05": 22,
+    "p_below_0.1": 27
+   },
+   "prs": 126,
+   "real_flags": {
+    "any_difference": 8,
+    "false_alarm_control": 1,
+    "p_below_0.05": 1,
+    "p_below_0.1": 3
+   }
+  },
+  "vitejs__vite": {
+   "deployments": 72,
+   "null_flags": {
+    "any_difference": 240,
+    "false_alarm_control": 45,
+    "p_below_0.05": 46,
+    "p_below_0.1": 62
+   },
+   "prs": 277,
+   "real_flags": {
+    "any_difference": 12,
+    "false_alarm_control": 2,
+    "p_below_0.05": 2,
+    "p_below_0.1": 4
+   }
+  },
+  "vuejs__core": {
+   "deployments": 77,
+   "null_flags": {
+    "any_difference": 108,
+    "false_alarm_control": 11,
+    "p_below_0.05": 11,
+    "p_below_0.1": 14
+   },
+   "prs": 76,
+   "real_flags": {
+    "any_difference": 6,
+    "false_alarm_control": 2,
+    "p_below_0.05": 4,
+    "p_below_0.1": 4
+   }
+  }
+ },
+ "scans": 259,
+ "seed": 13,
+ "slow_weeks": 1
+}

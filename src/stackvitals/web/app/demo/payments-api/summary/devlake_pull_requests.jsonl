@@ -1,0 +1,14 @@
+{"id":1849,"pull_request_key":1849,"title":"Refactor config loading","author_name":"someone","merged_date":"2026-10-18T12:00:00Z"}
+{"id":1846,"pull_request_key":1846,"title":"Add metrics for retries","author_name":"someone","merged_date":"2026-10-12T12:00:00Z"}
+{"id":1843,"pull_request_key":1843,"title":"Fix flaky timeout","author_name":"someone","merged_date":"2026-10-06T12:00:00Z"}
+{"id":1840,"pull_request_key":1840,"title":"Update docs","author_name":"someone","merged_date":"2026-09-30T12:00:00Z"}
+{"id":1837,"pull_request_key":1837,"title":"Speed up cold start","author_name":"someone","merged_date":"2026-09-24T12:00:00Z"}
+{"id":1834,"pull_request_key":1834,"title":"Tidy error messages","author_name":"someone","merged_date":"2026-09-18T12:00:00Z"}
+{"id":1831,"pull_request_key":1831,"title":"Split large handler","author_name":"someone","merged_date":"2026-09-12T12:00:00Z"}
+{"id":1828,"pull_request_key":1828,"title":"Refactor config loading","author_name":"someone","merged_date":"2026-09-06T12:00:00Z"}
+{"id":1825,"pull_request_key":1825,"title":"Add metrics for retries","author_name":"someone","merged_date":"2026-08-31T12:00:00Z"}
+{"id":1822,"pull_request_key":1822,"title":"Fix flaky timeout","author_name":"someone","merged_date":"2026-08-25T12:00:00Z"}
+{"id":1819,"pull_request_key":1819,"title":"Update docs","author_name":"someone","merged_date":"2026-08-19T12:00:00Z"}
+{"id":1816,"pull_request_key":1816,"title":"Speed up cold start","author_name":"someone","merged_date":"2026-08-13T12:00:00Z"}
+{"id":1813,"pull_request_key":1813,"title":"Tidy error messages","author_name":"someone","merged_date":"2026-08-07T12:00:00Z"}
+{"id":1810,"pull_request_key":1810,"title":"Split large handler","author_name":"someone","merged_date":"2026-08-01T12:00:00Z"}

@@ -1,0 +1,102 @@
+name: Release
+# A version tag (v0.1.0) builds the package with read-only rights, then a second job signs every file keylessly with
+# Sigstore, writes a software bill of materials and a build provenance attestation, and publishes them on the release.
+# A third job then uploads the same wheel and sdist to PyPI by trusted publishing (no stored token).
+on:
+  push:
+    # Version tags only: moving the floating `v0` tag must not make a release.
+    tags: ["v*.*.*"]
+permissions: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          enable-cache: false
+      - name: Build
+        # The build backend is pinned, so a new upload to PyPI can never change what gets signed.
+        run: uv build --build-constraint .github/build-constraints.txt --no-cache --out-dir dist
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Reviewers on this environment and a tag ruleset decide who can publish (repo settings).
+    environment: release
+    permissions:
+      contents: write      # the release and its files
+      id-token: write      # Sigstore's keyless signing and the provenance attestation
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist
+          path: dist
+      - name: Find the wheel
+        id: wheel
+        run: echo "path=$(ls dist/*.whl)" >> "$GITHUB_OUTPUT"
+      - name: Software bill of materials
+        # What the wheel installs, not the whole source tree with its test and bench tools.
+        uses: anchore/sbom-action@66cbf4bc1f1c0d2edc94016e65bc221b6bb0ad6c # v0.24.3
+        with:
+          file: ${{ steps.wheel.outputs.path }}
+          format: spdx-json
+          output-file: sbom.spdx.json
+          upload-artifact: false
+          upload-release-assets: false
+      - name: Keep the SBOM with the release files
+        run: mv sbom.spdx.json dist/stackvitals.spdx.json
+      - name: Sign with Sigstore
+        uses: sigstore/gh-action-sigstore-python@790bc6befb9d733738f18d8f895854b453640ec9 # v3.5.0
+        with:
+          inputs: ./dist/*.whl ./dist/*.tar.gz ./dist/stackvitals.spdx.json
+          upload-signing-artifacts: false
+          release-signing-artifacts: false
+      - name: Build provenance
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: dist/*
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+        run: gh release create "$TAG" dist/* --repo "$REPO" --title "$TAG" --generate-notes --verify-tag
+  pypi:
+    needs: [build, publish]
+    # The real home only (forks and copies skip it); update this name if the repo moves (launch step C1).
+    if: github.repository == 'stackvitals/stackvitals'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # PyPI's trusted publisher names this repo, release.yml and this environment; nothing else can upload.
+    environment: release
+    permissions:
+      id-token: write      # the short-lived PyPI upload token, by OIDC
+    steps:
+      # The files the build job made and the publish job signed, not a rebuild.
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist
+          path: dist
+      - name: Check the tag matches the package version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          ls dist
+          test -f "dist/stackvitals-${TAG#v}.tar.gz" && test "$(ls dist | wc -l)" -eq 2
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          packages-dir: dist/
+      # The MCP registry listing is a separate, manual step: docs/release-checklist.md, "Publishing".

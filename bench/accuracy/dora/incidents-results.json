@@ -1,0 +1,222 @@
+{
+ "all": {
+  "last_before": {
+   "by_repo": {
+    "biggest": {
+     "items": 2,
+     "repo": "sandboxie-plus/Sandboxie",
+     "share": 0.1333
+    },
+    "boot_high": 0.6667,
+    "boot_low": 0.1538,
+    "k": 6,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 15,
+    "repo_wilson_high": 0.6579,
+    "repo_wilson_low": 0.1877,
+    "repos": 13,
+    "without_biggest": {
+     "high": 0.6448,
+     "k": 5,
+     "low": 0.1771,
+     "n": 13
+    }
+   },
+   "high": 0.6425,
+   "low": 0.1982,
+   "picked": 15,
+   "right": 6,
+   "share": 0.4
+  },
+  "n": 15,
+  "named": {
+   "by_repo": {
+    "biggest": {
+     "items": 2,
+     "repo": "sandboxie-plus/Sandboxie",
+     "share": 0.1333
+    },
+    "boot_high": 0.8824,
+    "boot_low": 0.4286,
+    "k": 10,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 15,
+    "repo_wilson_high": 0.857,
+    "repo_wilson_low": 0.4003,
+    "repos": 13,
+    "without_biggest": {
+     "high": 0.8732,
+     "k": 9,
+     "low": 0.4237,
+     "n": 13
+    }
+   },
+   "high": 0.8482,
+   "low": 0.4171,
+   "picked": 15,
+   "right": 10,
+   "share": 0.6667
+  },
+  "named_else_last": {
+   "high": 0.8482,
+   "low": 0.4171,
+   "right": 10,
+   "share": 0.6667
+  },
+  "named_else_last_vs_last_before": {
+   "only_a": 4,
+   "only_b": 0,
+   "p": 0.125,
+   "significant": false,
+   "test": "McNemar exact"
+  }
+ },
+ "decided": 30,
+ "held_out": {
+  "last_before": {
+   "by_repo": {
+    "biggest": {
+     "items": 1,
+     "repo": "topjohnwu/Magisk",
+     "share": 0.1111
+    },
+    "boot_high": 0.5556,
+    "boot_low": 0.0,
+    "k": 2,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 9,
+    "repo_wilson_high": 0.5474,
+    "repo_wilson_low": 0.0632,
+    "repos": 9,
+    "without_biggest": {
+     "high": 0.5907,
+     "k": 2,
+     "low": 0.0715,
+     "n": 8
+    }
+   },
+   "high": 0.5474,
+   "low": 0.0632,
+   "picked": 9,
+   "right": 2,
+   "share": 0.2222
+  },
+  "n": 9,
+  "named": {
+   "by_repo": {
+    "biggest": {
+     "items": 1,
+     "repo": "topjohnwu/Magisk",
+     "share": 0.1111
+    },
+    "boot_high": 0.7778,
+    "boot_low": 0.1111,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 9,
+    "repo_wilson_high": 0.7334,
+    "repo_wilson_low": 0.1888,
+    "repos": 9,
+    "without_biggest": {
+     "high": 0.7848,
+     "k": 4,
+     "low": 0.2152,
+     "n": 8
+    }
+   },
+   "high": 0.7334,
+   "low": 0.1888,
+   "picked": 9,
+   "right": 4,
+   "share": 0.4444
+  },
+  "named_else_last": {
+   "high": 0.7334,
+   "low": 0.1888,
+   "right": 4,
+   "share": 0.4444
+  },
+  "named_else_last_vs_last_before": {
+   "only_a": 2,
+   "only_b": 0,
+   "p": 0.5,
+   "significant": false,
+   "test": "McNemar exact"
+  }
+ },
+ "labelled": 60,
+ "none": 15,
+ "repos": 24,
+ "tune": {
+  "last_before": {
+   "by_repo": {
+    "biggest": {
+     "items": 1,
+     "repo": "sandboxie-plus/Sandboxie",
+     "share": 0.1667
+    },
+    "boot_high": 1.0,
+    "boot_low": 0.3333,
+    "k": 4,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 6,
+    "repo_wilson_high": 0.9032,
+    "repo_wilson_low": 0.3,
+    "repos": 6,
+    "without_biggest": {
+     "high": 0.8824,
+     "k": 3,
+     "low": 0.2307,
+     "n": 5
+    }
+   },
+   "high": 0.9032,
+   "low": 0.3,
+   "picked": 6,
+   "right": 4,
+   "share": 0.6667
+  },
+  "n": 6,
+  "named": {
+   "by_repo": {
+    "biggest": {
+     "items": 1,
+     "repo": "sandboxie-plus/Sandboxie",
+     "share": 0.1667
+    },
+    "boot_high": 1.0,
+    "boot_low": 1.0,
+    "k": 6,
+    "method": "bootstrap over repos (2000 draws, seed 7); Wilson with each repo counted once",
+    "n": 6,
+    "repo_wilson_high": 1.0,
+    "repo_wilson_low": 0.6097,
+    "repos": 6,
+    "without_biggest": {
+     "high": 1.0,
+     "k": 5,
+     "low": 0.5655,
+     "n": 5
+    }
+   },
+   "high": 1.0,
+   "low": 0.6097,
+   "picked": 6,
+   "right": 6,
+   "share": 1.0
+  },
+  "named_else_last": {
+   "high": 1.0,
+   "low": 0.6097,
+   "right": 6,
+   "share": 1.0
+  },
+  "named_else_last_vs_last_before": {
+   "only_a": 2,
+   "only_b": 0,
+   "p": 0.5,
+   "significant": false,
+   "test": "McNemar exact"
+  }
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "repos": {
+  "99designs/gqlgen": {
+   "runs": 281,
+   "reports": 20,
+   "reports_on_pr_runs": 0,
+   "test_results": 46577,
+   "failed": 4,
+   "failed_on_pr_runs": 0,
+   "flaky_in_report": 0
+  },
+  "frankarobotics/franka_ros2": {
+   "runs": 7,
+   "reports": 3,
+   "reports_on_pr_runs": 0,
+   "test_results": 2564,
+   "failed": 64,
+   "failed_on_pr_runs": 0,
+   "flaky_in_report": 0
+  },
+  "langchain4j/langchain4j-spring": {
+   "runs": 164,
+   "reports": 243,
+   "reports_on_pr_runs": 62,
+   "test_results": 153293,
+   "failed": 8,
+   "failed_on_pr_runs": 0,
+   "flaky_in_report": 0
+  },
+  "shap/shap": {
+   "runs": 284,
+   "reports": 37,
+   "reports_on_pr_runs": 2,
+   "test_results": 18830,
+   "failed": 0,
+   "failed_on_pr_runs": 0,
+   "flaky_in_report": 0
+  },
+  "tomkerkhove/promitor": {
+   "runs": 591,
+   "reports": 69,
+   "reports_on_pr_runs": 33,
+   "test_results": 107913,
+   "failed": 1,
+   "failed_on_pr_runs": 1,
+   "flaky_in_report": 0
+  }
+ },
+ "total": {
+  "runs": 1327,
+  "reports": 372,
+  "reports_on_pr_runs": 97,
+  "test_results": 329177,
+  "failed": 77,
+  "failed_on_pr_runs": 1,
+  "flaky_in_report": 0
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "built_at": "2026-10-21T10:17:29Z",
+ "ledger": {
+  "by_step": {
+   "major": {
+    "merged": 8543,
+    "reverted": 6,
+    "share": 0.0007
+   },
+   "minor": {
+    "merged": 12956,
+    "reverted": 2,
+    "share": 0.0002
+   },
+   "patch": {
+    "merged": 19576,
+    "reverted": 0,
+    "share": 0.0
+   }
+  },
+  "cells": 6420,
+  "cells_with_a_revert": 8,
+  "merged": 125992,
+  "most_reverted": [
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 11,
+    "package": "astro",
+    "repos": 31,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 46,
+    "package": "esbuild",
+    "repos": 71,
+    "reverted": 1
+   },
+   {
+    "bump": "minor",
+    "ecosystem": "npm",
+    "merged": 12,
+    "package": "express",
+    "repos": 15,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "go",
+    "merged": 27,
+    "package": "github.com/getkin/kin-openapi",
+    "repos": 14,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "go",
+    "merged": 11,
+    "package": "golang.org/x/oauth2",
+    "repos": 13,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 1,
+    "package": "serialize-javascript",
+    "repos": 4,
+    "reverted": 1
+   },
+   {
+    "bump": "major",
+    "ecosystem": "npm",
+    "merged": 21,
+    "package": "uuid",
+    "repos": 29,
+    "reverted": 1
+   },
+   {
+    "bump": "minor",
+    "ecosystem": "npm",
+    "merged": 49,
+    "package": "webpack",
+    "repos": 33,
+    "reverted": 1
+   }
+  ],
+  "prs": 209204,
+  "reverted": 8,
+  "reverted_share": 0.0001,
+  "window_days": 180
+ },
+ "osv": {
+  "advisories": 5374,
+  "complete": true,
+  "epss_scored": 0,
+  "id_prefixes": {
+   "GHSA": 1131,
+   "MAL": 22,
+   "PYSEC": 915
+  },
+  "kev_checked": 0,
+  "malware_flags": 26,
+  "packages": 4033,
+  "records": 7865,
+  "records_with_a_cve": 7620,
+  "severity": {
+   "CRITICAL": 461,
+   "HIGH": 1934,
+   "LOW": 458,
+   "MODERATE": 1992
+  },
+  "unfixed": 8,
+  "with_advisories": 784
+ },
+ "product_today": {
+  "epss_kev": "not read",
+  "fixed_version_per_advisory": "counted as unfixed or not; the version that fixes each is not shown",
+  "policy": "licence deny list only (no minimum Scorecard or severity)",
+  "transitive_paths": "none: the SBOM lists every resolved package but not which direct one pulls it in"
+ }
+}

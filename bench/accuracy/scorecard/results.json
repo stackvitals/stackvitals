@@ -1,0 +1,1576 @@
+{
+ "seed": 20261029,
+ "repos": [
+  {
+   "repo": "agconti/cookiecutter-django-rest",
+   "language": "Python",
+   "scorecard_date": "2026-10-26",
+   "seconds": 6.2,
+   "requests": 16,
+   "our_score": 3.7,
+   "scorecard_score": 3.4,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v4",
+      "actions/setup-python@v5",
+      "pip install --upgrade pip"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "snower/forsun",
+   "language": "Python",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.3,
+   "requests": 15,
+   "our_score": 4.7,
+   "scorecard_score": 1.8,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": null,
+     "ours": "pass",
+     "score": -1,
+     "reason": "no workflows found",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": null,
+     "ours": "pass",
+     "score": -1,
+     "reason": "No tokens found",
+     "our_findings": []
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "FROM ubuntu:20.04"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no SAST tool detected",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "cloudfoundry/stratos",
+   "language": "TypeScript",
+   "scorecard_date": "2026-10-26",
+   "seconds": 10.6,
+   "requests": 27,
+   "our_score": 7.0,
+   "scorecard_score": 7.8,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "GitHub workflow tokens follow principle of least privilege",
+     "our_findings": []
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 3,
+     "reason": "dependency not pinned by hash detected -- score normalized to 3",
+     "our_findings": [
+      "FROM node:24-bookworm",
+      "FROM splatform/stratos-bk-build-base:leap15_2",
+      "FROM splatform/stratos-bk-base:leap15_2"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "security policy file detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "SAST tool is run on all commits",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 5,
+     "reason": "badge detected: Passing",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "packaging workflow detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "fullstack-build/tslog",
+   "language": "TypeScript",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.8,
+   "requests": 16,
+   "our_score": 3.7,
+   "scorecard_score": 4.6,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "top-level permissions: {'contents': 'read', 'pages': 'write', 'id-token': 'write'}"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 5,
+     "reason": "dependency not pinned by hash detected -- score normalized to 5",
+     "our_findings": [
+      "actions/checkout@v5",
+      "actions/setup-node@v5",
+      "codecov/codecov-action@v5"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "bitshares/bitshares-ui",
+   "language": "JavaScript",
+   "scorecard_date": "2026-10-26",
+   "seconds": 6.4,
+   "requests": 17,
+   "our_score": 3.7,
+   "scorecard_score": 4.3,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "top-level permissions: {'contents': 'write'}",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v2",
+      "actions/setup-node@v1",
+      "bitshares/generate_release_notes@v1"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "openseadragon/openseadragon",
+   "language": "JavaScript",
+   "scorecard_date": "2026-10-26",
+   "seconds": 6.0,
+   "requests": 16,
+   "our_score": 3.7,
+   "scorecard_score": 4.1,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 3,
+     "reason": "dependency not pinned by hash detected -- score normalized to 3",
+     "our_findings": [
+      "actions/checkout@v7",
+      "actions/setup-node@v7",
+      "actions/github-script@v9"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "oasisprotocol/oasis-core",
+   "language": "Go",
+   "scorecard_date": "2026-10-19",
+   "seconds": 7.2,
+   "requests": 19,
+   "our_score": 6.1,
+   "scorecard_score": 6.3,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v7",
+      "actions/setup-python@v7",
+      "actions/setup-node@v7"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 5,
+     "reason": "branch protection is not maximal on development and all release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "security policy file detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "project is fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "packaging workflow detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "charmbracelet/harmonica",
+   "language": "Go",
+   "scorecard_date": "2026-10-26",
+   "seconds": 6.3,
+   "requests": 17,
+   "our_score": 4.3,
+   "scorecard_score": 3.7,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/setup-go@v2",
+      "actions/checkout@v2",
+      "actions/checkout@v2"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "security policy file detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "SOF3/include-flate",
+   "language": "Rust",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.3,
+   "requests": 15,
+   "our_score": 3.7,
+   "scorecard_score": 3.6,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v2",
+      "actions-rs/toolchain@v1",
+      "actions/checkout@v2"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "avencera/rustywind",
+   "language": "Rust",
+   "scorecard_date": "2026-10-26",
+   "seconds": 7.7,
+   "requests": 21,
+   "our_score": 3.9,
+   "scorecard_score": 3.8,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v7",
+      "actions-rust-lang/setup-rust-toolchain@v1",
+      "clechasseur/rs-clippy-check@v6.1.0"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "fail",
+     "ours": "pass",
+     "score": 9,
+     "reason": "binaries present in source code",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "packaging workflow detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "amirisback/automated-build-android-app-with-github-action",
+   "language": "Kotlin",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.8,
+   "requests": 16,
+   "our_score": 3.3,
+   "scorecard_score": 2.8,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "c-hive/gha-remove-artifacts@v4",
+      "actions/checkout@v4",
+      "actions/setup-java@v4"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 4,
+     "reason": "security policy file detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 8,
+     "reason": "binaries present in source code",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "exceptionless/Exceptionless.Net",
+   "language": "C#",
+   "scorecard_date": "2026-10-26",
+   "seconds": 7.1,
+   "requests": 17,
+   "our_score": 3.9,
+   "scorecard_score": 4.2,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "top-level permissions: {'contents': 'read', 'packages': 'write'}"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v7",
+      "actions/setup-dotnet@v6",
+      "actions/checkout@v7"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "pass",
+     "ours": "fail",
+     "score": 6,
+     "reason": "branch protection is not maximal on development and all release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "packaging workflow detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "SubnauticaNitrox/Nitrox",
+   "language": "C#",
+   "scorecard_date": "2026-10-26",
+   "seconds": 6.0,
+   "requests": 13,
+   "our_score": 4.0,
+   "scorecard_score": 6,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)",
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "all dependencies are pinned",
+     "our_findings": []
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "security policy file detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "Project has not signed or included provenance with any releases.",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 8,
+     "reason": "binaries present in source code",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "fail",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "openjournals/joss",
+   "language": "Ruby",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.6,
+   "requests": 15,
+   "our_score": 4.4,
+   "scorecard_score": 4.6,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v6",
+      "ruby/setup-ruby@v1",
+      "ankane/setup-elasticsearch@v1"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "internal error: error during branchesHandler.setup: internal error: some github tokens can't read classic branch protection rules: https://github.com/ossf/scorecard-action/blob/main/docs/authentication/fine-grained-auth-token.md",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "ankane/the-ultimate-guide-to-ruby-timeouts",
+   "language": "Ruby",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.2,
+   "requests": 15,
+   "our_score": 4.4,
+   "scorecard_score": 3.8,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "detected GitHub workflow tokens with excessive permissions",
+     "our_findings": [
+      "no top-level permissions (the token gets the repo's default)"
+     ]
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v7",
+      "ruby/setup-ruby@v1",
+      "ankane/setup-postgres@v1"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no SAST tool detected",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  },
+  {
+   "repo": "alexreisner/geocoder",
+   "language": "Ruby",
+   "scorecard_date": "2026-10-26",
+   "seconds": 5.5,
+   "requests": 15,
+   "our_score": 5.6,
+   "scorecard_score": 4.4,
+   "checks": {
+    "Dangerous-Workflow": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no dangerous workflow patterns detected",
+     "our_findings": []
+    },
+    "Token-Permissions": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "GitHub workflow tokens follow principle of least privilege",
+     "our_findings": []
+    },
+    "Pinned-Dependencies": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "dependency not pinned by hash detected -- score normalized to 0",
+     "our_findings": [
+      "actions/checkout@v6",
+      "ruby/setup-ruby@v1"
+     ]
+    },
+    "Branch-Protection": {
+     "scorecard": "fail",
+     "ours": "unknown",
+     "score": 0,
+     "reason": "branch protection not enabled on development/release branches",
+     "our_findings": []
+    },
+    "Security-Policy": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "security policy file not detected",
+     "our_findings": []
+    },
+    "Signed-Releases": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "no releases found",
+     "our_findings": []
+    },
+    "SAST": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "SAST tool is not run on all commits -- score normalized to 0",
+     "our_findings": []
+    },
+    "Binary-Artifacts": {
+     "scorecard": "pass",
+     "ours": "pass",
+     "score": 10,
+     "reason": "no binaries found in the repo",
+     "our_findings": []
+    },
+    "Fuzzing": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "project is not fuzzed",
+     "our_findings": []
+    },
+    "CII-Best-Practices": {
+     "scorecard": "fail",
+     "ours": "fail",
+     "score": 0,
+     "reason": "no effort to earn an OpenSSF best practices badge detected",
+     "our_findings": []
+    },
+    "Packaging": {
+     "scorecard": null,
+     "ours": "unknown",
+     "score": -1,
+     "reason": "packaging workflow not detected",
+     "our_findings": []
+    }
+   }
+  }
+ ],
+ "summary": {
+  "Dangerous-Workflow": {
+   "compared": 15,
+   "agree": 15,
+   "scorecard_inconclusive": 1,
+   "ours_unknown": 0
+  },
+  "Token-Permissions": {
+   "compared": 15,
+   "agree": 15,
+   "scorecard_inconclusive": 1,
+   "ours_unknown": 0
+  },
+  "Pinned-Dependencies": {
+   "compared": 16,
+   "agree": 16,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "Branch-Protection": {
+   "compared": 3,
+   "agree": 2,
+   "scorecard_inconclusive": 6,
+   "ours_unknown": 13
+  },
+  "Security-Policy": {
+   "compared": 16,
+   "agree": 16,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "Signed-Releases": {
+   "compared": 6,
+   "agree": 6,
+   "scorecard_inconclusive": 10,
+   "ours_unknown": 3
+  },
+  "SAST": {
+   "compared": 16,
+   "agree": 16,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "Binary-Artifacts": {
+   "compared": 16,
+   "agree": 15,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "Fuzzing": {
+   "compared": 16,
+   "agree": 16,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "CII-Best-Practices": {
+   "compared": 16,
+   "agree": 16,
+   "scorecard_inconclusive": 0,
+   "ours_unknown": 0
+  },
+  "Packaging": {
+   "compared": 4,
+   "agree": 4,
+   "scorecard_inconclusive": 12,
+   "ours_unknown": 3
+  }
+ }
+}

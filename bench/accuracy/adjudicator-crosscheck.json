@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "seed": 21,
+ "packets": 40,
+ "answered": 40,
+ "same_ruling": 15,
+ "claude_adjudicator_sided_with_claude": 33,
+ "gemini_adjudicator_sided_with_claude": 13,
+ "gemini_adjudicator_sided_with_gemini": 23
+}

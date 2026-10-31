@@ -1,0 +1,37 @@
+/* Dependencies: gaps between blocks, the score facts, the package form's button */
+.dp-gap { margin-top: 18px; }
+.section-body > .blk-facts { border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); margin-bottom: 18px; }
+.sec-trend { display: flex; flex-direction: column; gap: 4px; }
+.sec-trend .spark { max-width: 160px; }
+.dp-form-go { display: flex; padding-top: 27px; }
+.blk-form.dp-check-form { grid-template-columns: minmax(0, 440px) auto; justify-content: start; }
+@media (max-width: 480px) { .blk-form.dp-check-form { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .dp-form-go { padding-top: 0; } }
+.section-body > .note { margin-bottom: 14px; }
+
+/* Instrument (sheet design): severity and licence bars in the palette with their marks; the vulnerability figure as a framed
+   panel under a header strip, its top edge the worst open severity; failing rows on a soft coral tint */
+[data-design="sheet"][data-page="deps"] .bar-fill.tone-neutral { background: transparent; border: 1px solid var(--ink); border-bottom: 0; }
+[data-design="sheet"][data-page="deps"] .bar-label::before { content: ""; display: inline-block; width: 11px; height: 11px; margin-right: 5px; vertical-align: -1px; background: center / contain no-repeat; }
+[data-design="sheet"][data-page="deps"] .bar:has(.tone-bad) .bar-label::before { background-image: var(--mark-bad); }
+[data-design="sheet"][data-page="deps"] .bar:has(.tone-watch) .bar-label::before { background-image: var(--mark-watch); }
+[data-design="sheet"][data-page="deps"] .bar:has(.tone-good) .bar-label::before { background-image: var(--mark-good); }
+[data-design="sheet"][data-page="deps"] .bar:has(.tone-neutral) .bar-label::before { width: 9px; height: 9px; border: 1px solid currentColor; }
+[data-design="sheet"][data-page="deps"] .bar:has(.tone-accent) .bar-label::before { display: none; }
+[data-design="sheet"][data-page="deps"] .bar-label { font-size: 14px; font-weight: 600; color: var(--ink); }
+[data-design="sheet"][data-page="deps"] .bar-value { font-size: 14px; }
+[data-design="sheet"][data-page="deps"] .card:has(> .hero), [data-design="sheet"][data-page="deps"] .columns > .stats.card,
+[data-design="sheet"][data-page="deps"] .card:has(> .stats.card) { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="deps"] .hero-name { margin: -18px -18px 14px; padding: 9px 18px; min-height: 42px; background: var(--strip); border-bottom: 1px solid var(--line-strong); color: var(--ink); }
+[data-design="sheet"][data-page="deps"] .section:has(table .pill-watch) .card:has(> .hero) { border-top: 5px solid var(--sv-amber); }
+[data-design="sheet"][data-page="deps"] .section:has(table .pill-bad) .card:has(> .hero) { border-top: 5px solid var(--sv-coral); }
+[data-design="sheet"][data-page="deps"] .table tbody tr:has(> td .pill-bad) { background: var(--bad-soft); }
+/* Short single words (risk, effort, severity) never split mid-word */
+[data-design="sheet"][data-page="deps"] .table td:is([data-label="Risk"], [data-label="Effort to fix"], [data-label="Severity"], [data-label="Result"], [data-label="Your code"], [data-label="Scope"]) { overflow-wrap: normal; }
+/* A figure set inside a framed panel loses its own frame */
+[data-design="sheet"][data-page="deps"] .card > .stats.card { border: 0; }
+[data-design="sheet"][data-page="deps"] .card > .stats.card .stat { border: 0; margin: 0; padding: 0 0 8px; }
+[data-design="sheet"][data-page="deps"] .section-body > .blk-facts { border: 1.5px solid var(--frame); }
+[data-design="sheet"][data-page="deps"] .dp-gap { margin-top: 24px; }
+/* On a phone the mark sits above its word so the word keeps its room */
+@media (max-width: 480px) { [data-design="sheet"][data-page="deps"] .bar-label { flex: none; } [data-design="sheet"][data-page="deps"] .bar-label::before { display: block; margin: 0 auto 3px; } }

@@ -1,0 +1,206 @@
+{
+ "pattern": "(?i)(deploy|release|publish|push-image)",
+ "repos": 25,
+ "read": "2026-10-22",
+ "devlake_configured": {
+  "right": 9,
+  "share": 0.36,
+  "low": 0.2025,
+  "high": 0.5548
+ },
+ "against_stackvitals": {
+  "only_a": 14,
+  "only_b": 0,
+  "p": 0.000122,
+  "significant": true,
+  "test": "McNemar exact"
+ },
+ "repos_detail": [
+  {
+   "repo": "AnyayayPlus/Chemistry-Note",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/deploy.yml"
+   ]
+  },
+  {
+   "repo": "Comcast/react-data-grid",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "Lingyan000/fluxdo",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/build.yaml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "Naptie/nearcade",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish.yml"
+   ]
+  },
+  {
+   "repo": "The-OpenROAD-Project/OpenROAD-flow-scripts",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/github-actions-quarterly-tag.yml"
+   ]
+  },
+  {
+   "repo": "TryGhost/Ghost-CLI",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish.yml",
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "Yakifo/amqtt",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish-pypi.yml",
+    ".github/workflows/release-drafter.yml"
+   ]
+  },
+  {
+   "repo": "aegis-aead/libaegis",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "aeonfun/aeon",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "baggepinnen/LowLevelParticleFilters.jl",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "bartfeenstra/betty",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-build-setuptools.yml"
+   ]
+  },
+  {
+   "repo": "chipsec/chipsec",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "convox/convox",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml"
+   ]
+  },
+  {
+   "repo": "cwida/duckpgq-extension",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "edwardgushchin/SDL3-CS",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-native-packages.yml"
+   ]
+  },
+  {
+   "repo": "electron/forge",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release.yml",
+    "dynamic/pages/pages-build-deployment"
+   ]
+  },
+  {
+   "repo": "enjoy-digital/litedram",
+   "devlake_configured_right": false,
+   "stackvitals_right": false,
+   "counted": []
+  },
+  {
+   "repo": "firedancer-io/firedancer",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "go-delve/mcp-dap-server",
+   "devlake_configured_right": false,
+   "stackvitals_right": false,
+   "counted": []
+  },
+  {
+   "repo": "google/jetpack-camera-app",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "leanprover-community/quote4",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "openstyles/stylus",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "oxidecomputer/console",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": []
+  },
+  {
+   "repo": "preloopdev/preloop",
+   "devlake_configured_right": false,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/release-golden.yml",
+    ".github/workflows/release-runner.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/smolvm-release-verify.yml"
+   ]
+  },
+  {
+   "repo": "tracel-ai/burn-onnx",
+   "devlake_configured_right": true,
+   "stackvitals_right": true,
+   "counted": [
+    ".github/workflows/publish.yml"
+   ]
+  }
+ ]
+}

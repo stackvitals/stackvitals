@@ -1,0 +1,136 @@
+{
+ "releases": 296,
+ "skipped": 4,
+ "by_ecosystem": {
+  "npm": {
+   "releases": 147,
+   "any_sign": 8,
+   "install script": 0,
+   "new dependencies": 8,
+   "provenance dropped": 0,
+   "examples": [
+    {
+     "package": "@backstage/plugin-techdocs-backend",
+     "from": "2.2.5",
+     "to": "2.4.0",
+     "signs": [
+      "New dependencies since 2.2.5: @backstage/plugin-techdocs-common."
+     ]
+    },
+    {
+     "package": "camel-case",
+     "from": "4.1.2",
+     "to": "5.0.0",
+     "signs": [
+      "New dependencies since 4.1.2: no-case."
+     ]
+    },
+    {
+     "package": "http-proxy-middleware",
+     "from": "2.0.10",
+     "to": "4.2.0",
+     "signs": [
+      "New dependencies since 2.0.10: debug, httpxy."
+     ]
+    },
+    {
+     "package": "linkedom",
+     "from": "0.18.13",
+     "to": "0.18.14",
+     "signs": [
+      "New dependencies since 0.18.13: @acemir/cssom."
+     ]
+    },
+    {
+     "package": "mongoose",
+     "from": "8.24.6",
+     "to": "9.11.3",
+     "signs": [
+      "New dependencies since 8.24.6: @standard-schema/spec."
+     ]
+    },
+    {
+     "package": "object.entries",
+     "from": "1.1.8",
+     "to": "1.1.9",
+     "signs": [
+      "New dependencies since 1.1.8: call-bound."
+     ]
+    },
+    {
+     "package": "ts-loader",
+     "from": "9.6.1",
+     "to": "9.6.2",
+     "signs": [
+      "New dependencies since 9.6.1: picomatch."
+     ]
+    },
+    {
+     "package": "tsup",
+     "from": "8.5.1",
+     "to": "9.0.0",
+     "signs": [
+      "New dependencies since 8.5.1: obug, source-map-js."
+     ]
+    }
+   ]
+  },
+  "pypi": {
+   "releases": 149,
+   "any_sign": 6,
+   "install script": 0,
+   "new dependencies": 6,
+   "provenance dropped": 0,
+   "examples": [
+    {
+     "package": "conan",
+     "from": "2.32.0",
+     "to": "2.33.0",
+     "signs": [
+      "New dependencies since 2.32.0: truststore."
+     ]
+    },
+    {
+     "package": "google-adk",
+     "from": "2.11.0",
+     "to": "2.12.0",
+     "signs": [
+      "New dependencies since 2.11.0: cryptography."
+     ]
+    },
+    {
+     "package": "litellm",
+     "from": "1.105.3",
+     "to": "1.106.2",
+     "signs": [
+      "New dependencies since 1.105.3: async-timeout, typing-extensions."
+     ]
+    },
+    {
+     "package": "prefect",
+     "from": "3.8.8",
+     "to": "3.9.0",
+     "signs": [
+      "New dependencies since 3.8.8: certifi."
+     ]
+    },
+    {
+     "package": "pyedb",
+     "from": "0.84.3",
+     "to": "0.85.0",
+     "signs": [
+      "New dependencies since 0.84.3: ansys-tools-common."
+     ]
+    },
+    {
+     "package": "python-subunit",
+     "from": "1.4.5",
+     "to": "1.4.6",
+     "signs": [
+      "New dependencies since 1.4.5: pyyaml."
+     ]
+    }
+   ]
+  }
+ }
+}

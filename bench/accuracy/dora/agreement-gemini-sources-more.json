@@ -1,0 +1,76 @@
+{
+ "first": "Claude",
+ "second": "gemini-3.5-flash-lite",
+ "codebook": 1,
+ "fields": {
+  "sources": {
+   "n": 35,
+   "agree": 0.4857,
+   "kappa": 0.3787,
+   "confusion": {
+    "release_workflow releases|release_workflow": 1,
+    "deploy_workflow release_workflow releases|release_workflow releases": 2,
+    "deploy_workflow release_workflow releases|deployments release_workflow releases": 2,
+    "releases|deployments releases": 3,
+    "deploy_workflow releases|deploy_workflow release_workflow releases": 1,
+    "release_workflow releases|deployments release_workflow releases": 2,
+    "releases|deploy_workflow deployments releases": 1,
+    "deploy_workflow deployments every_merge|deployments every_merge": 1,
+    "release_workflow releases|releases": 1,
+    "deploy_workflow every_merge releases|release_workflow releases": 1,
+    "releases|deployments every_merge release_workflow releases": 1,
+    "releases|release_workflow releases": 1,
+    "deploy_workflow release_workflow|deploy_workflow every_merge": 1
+   },
+   "disagree": [
+    "danyadev/vk-desktop",
+    "lnbits/lnbits",
+    "envoyproxy/gateway",
+    "petarzarkov/dunx",
+    "sergiotapia/magnetissimo",
+    "scverse/gget",
+    "openhpc/ohpc",
+    "ubccpsc/310",
+    "emoss08/Trenova",
+    "weaviate/weaviate-python-client",
+    "databricks/terraform-provider-databricks",
+    "SlimPlanet/SlimFaas",
+    "WFCD/genesis",
+    "e2nIEE/pandapower",
+    "knadh/listmonk",
+    "patchzyy/Wiicompiled",
+    "bytecodealliance/jco",
+    "TykTechnologies/tyk-identity-broker"
+   ]
+  },
+  "ships": {
+   "n": 206,
+   "agree": 0.9126,
+   "kappa": 0.7447,
+   "confusion": {
+    "no|yes": 13,
+    "yes|no": 5
+   },
+   "disagree": [
+    "lnbits/lnbits|.github/workflows/release-rc.yml",
+    "envoyproxy/gateway|.github/workflows/docs.yaml",
+    "petarzarkov/dunx|.github/workflows/ci.yml",
+    "scverse/gget|.github/workflows/deploy.yml",
+    "openhpc/ohpc|.github/workflows/build-ohpc-analysis-container.yml",
+    "openhpc/ohpc|.github/workflows/build-ohpc-lint-container.yml",
+    "openhpc/ohpc|.github/workflows/build-ohpc-validate-container.yml",
+    "openhpc/ohpc|.github/workflows/explorer-pages.yml",
+    "emoss08/Trenova|.github/workflows/native-capture.yml",
+    "weaviate/weaviate-python-client|.github/workflows/main.yaml",
+    "yellow-hammer/vscode-1c-platform-tools|.github/workflows/docs.yml",
+    "SlimPlanet/SlimFaas|.github/workflows/Docker.yml",
+    "SlimPlanet/SlimFaas|.github/workflows/main.yml",
+    "knadh/listmonk|.github/workflows/github-pages.yml",
+    "patchzyy/Wiicompiled|.github/workflows/package.yml",
+    "bytecodealliance/jco|.github/workflows/docs.yml",
+    "dataelement/bisheng|.github/workflows/base_ci.yml",
+    "dataelement/bisheng|.github/workflows/ci.yml"
+   ]
+  }
+ }
+}

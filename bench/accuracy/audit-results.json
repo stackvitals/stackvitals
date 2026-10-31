@@ -1,0 +1,58 @@
+{
+ "answers": 570,
+ "kinds": {
+  "ci": {
+   "items": 80,
+   "kappa_between_panel": 0.76,
+   "majority_matches_label": {
+    "high": 0.896,
+    "k": 50,
+    "low": 0.705,
+    "n": 61
+   }
+  },
+  "comment": {
+   "items": 70,
+   "kappa_between_panel": 0.704,
+   "majority_matches_label": {
+    "high": 0.801,
+    "k": 33,
+    "low": 0.547,
+    "n": 48
+   }
+  },
+  "deploy": {
+   "items": 15,
+   "kappa_between_panel": 0.665,
+   "majority_matches_label": {
+    "high": 0.72,
+    "k": 5,
+    "low": 0.213,
+    "n": 11
+   },
+   "sources_agree": {
+    "k": 64,
+    "n": 75
+   }
+  },
+  "incident": {
+   "items": 25,
+   "kappa_between_panel": 0.791,
+   "majority_matches_label": {
+    "high": 0.972,
+    "k": 18,
+    "low": 0.699,
+    "n": 20
+   }
+  }
+ },
+ "panel": "a five-agent model panel (Claude Sonnet, each answering alone)",
+ "people": 5,
+ "replay_disputed": {
+  "can't tell": 5,
+  "neither": 8,
+  "no majority": 14,
+  "with Claude's adjudication": 16,
+  "with Gemini's adjudication": 7
+ }
+}

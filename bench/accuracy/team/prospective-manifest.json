@@ -1,0 +1,10 @@
+{
+ "frozen_at": "2026-10-24T11:02:47Z",
+ "items": 877,
+ "repos": 26,
+ "not_before": "2027-01-15",
+ "sha256": "d228bfd7840c9f985edc37dac395525454740122c87543a7a88a2f595483a04e",
+ "rule": "hit when the first review by an owner, member or collaborator (not the author) after frozen_at came from one of the 3 names; pull requests closed or still unreviewed by a maintainer on the scoring day are counted apart, never as misses. Reviews between read_at and frozen_at existed before the freeze, so they are scored apart as a second, weaker read",
+ "test": "primary: the suggestions' hit share with its Wilson 95% range; against the 3 busiest reviewers, McNemar's test on the pull requests where exactly one of the two lists held the reviewer",
+ "bar": "met when the suggestions' lower bound is at least 65% and McNemar doesn't show the busiest reviewers doing better (p < 0.05); repo ranges (bootstrap, each repo once) reported beside it"
+}

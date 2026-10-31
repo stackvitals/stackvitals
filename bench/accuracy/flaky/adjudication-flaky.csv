@@ -1,0 +1,202 @@
+id,field,first,second,final,winner,reason
+1,cause,infrastructure,network,infrastructure,first,"sccache's Actions cache store returned 503 ServerBusy (egress limit); a failing cache store is infrastructure, and a re-run passed."
+101,cause,unclear,test,unclear,first,VS Code test host went unresponsive and exited 1 with no test failure message; re-run passed but nothing says why.
+102,cause,unclear,test,unclear,first,Only 'one test suite failed' is visible; the failing suite and its message are not in the log.
+103,cause,unclear,test,unclear,first,Only 'one test suite failed' is visible; the failing suite and its message are not in the log.
+105,cause,unclear,test,unclear,first,Only 'one test suite failed' is visible; the failing suite and its message are not in the log.
+106,cause,dependency,network,network,second,"Prepare script could not fetch the language-server jar from the artifact host, no HTTP status; a failed download is network."
+106,caused_by_change,unclear,no,no,second,"A download error from the artifact host, not tied to the package.json edit; network failures are not the change."
+107,cause,unclear,test,unclear,first,"An xdist worker crashed during one test; no assertion or message says why, and a re-run passed."
+109,cause,dependency,code_change,code_change,second,"Dependabot bump pinned bincode 3.0.0, a compile_error crate; deterministic build break from the touched Cargo files."
+11,cause,infrastructure,network,infrastructure,first,sccache cache storage read failed with 503 ServerBusy from the Actions cache; a failing cache store is infrastructure.
+110,cause,unclear,code_change,unclear,first,License check failed because a report tool printed empty output (JSONDecodeError); the log does not say why.
+110,caused_by_change,no,yes,no,first,"The failing license check has nothing to do with the touched mobject.py, updater test or changelog."
+111,cause,dependency,code_change,code_change,second,Dependabot bump pulled in bincode 3.0.0 whose lib is a compile_error; deterministic failure from the touched Cargo files.
+113,caused_by_change,no,unclear,no,first,"Process-liveness timing test failed in an area the change did not touch, and a re-run of the same run passed."
+114,cause,unclear,code_change,unclear,first,Dataframe height assertion 1 == 2 in a test unrelated to the version-bump files; nothing explains it.
+114,caused_by_change,unclear,yes,unclear,first,"Release bump touched pyproject and uv.lock, but nothing ties them to the failing test; no re-run."
+115,cause,workflow,code_change,workflow,first,22 scheduler tests fail because .venv/bin/python is missing on the runner; a CI environment setup problem.
+115,caused_by_change,no,yes,no,first,"The commit only touched CHANGELOG.md, which cannot cause a missing .venv interpreter."
+116,cause,unclear,code_change,unclear,first,"Deterministic Windows path-separator mismatch, but the commit only touched CHANGELOG.md, so code_change does not fit."
+116,caused_by_change,no,yes,no,first,Only CHANGELOG.md changed; the backslash path bug was already in the code before this commit.
+117,caused_by_change,no,unclear,no,first,"PermissionError on a shared sample data file, unrelated to the touched writing code; a re-run passed."
+118,cause,unclear,workflow,unclear,first,Gate failed only because 'build' failed; the gate did not crash and the upstream cause is not in this log.
+119,cause,dependency,network,dependency,first,"Installing rootfilespec from git failed on Windows 'Filename too long' in a submodule; install failure, no network error."
+12,cause,unclear,code_change,unclear,first,"MSVC compile error is in DDFunctionality.cpp, which this commit did not touch; no re-run to tell more."
+12,caused_by_change,unclear,yes,unclear,first,"Error is in an untouched file; it may come from the toolchain or earlier commits, so attribution is unclear."
+120,cause,unclear,code_change,unclear,first,Deterministic test failure (30 == 420) after a workflow-only change; the log does not show why.
+120,caused_by_change,unclear,yes,unclear,first,"Failed again on re-run, but only the workflow file changed and nothing ties it to the failing test."
+121,cause,code_change,test,code_change,first,36 dask tests fail with 'no Client active' after the change edited _dask.py and dask tests; no re-run.
+121,caused_by_change,yes,no,yes,first,"Failures are all on dask paths the change touched (_dask.py, graphed code and tests), so the change caused them."
+123,cause,unclear,test,unclear,first,"Only the backtrace of the failing segment test is shown, no panic message; the re-run passing does not name a cause."
+124,cause,code_change,workflow,code_change,first,PR title check failed because the title lacks a required tag; the change under review caused it.
+124,caused_by_change,yes,no,yes,first,"The PR's own title failed the regex; the later pass followed a title edit, so the change caused it."
+125,cause,unclear,test,unclear,first,"Failing test shown only by name and backtrace, with no panic message; the codebook says unclear."
+126,cause,unclear,test,unclear,first,"Failing test shown only by name and backtrace, with no panic message; the codebook says unclear."
+127,cause,unclear,test,unclear,first,"Failing test shown only by name and backtrace, with no panic message; the codebook says unclear."
+128,cause,code_change,infrastructure,code_change,first,"The Tilt start step, defined by the touched tilt action and Tiltfile, failed; nothing points to the runner."
+128,caused_by_change,yes,no,yes,first,"The PR rewrote the Tilt action, Tiltfile and Dockerfiles that the failing step runs; no re-run."
+130,cause,code_change,infrastructure,code_change,first,"The Tilt start step, defined by the touched tilt action and Tiltfile, failed; nothing points to the runner."
+130,caused_by_change,yes,no,yes,first,"The PR rewrote the Tilt action, Tiltfile and Dockerfiles that the failing step runs; no re-run."
+131,cause,unclear,test,unclear,first,The e2e harness says 'fixtures failed' after 3 attempts with no failure detail shown.
+131,caused_by_change,unclear,no,unclear,first,"The commit only touched an MSVC test file, but this is a PR run and the e2e failure detail is missing."
+133,cause,code_change,test,code_change,first,The probe script in the touched workflow throws a Win32 error; a deterministic failure in the change's own code.
+133,caused_by_change,yes,no,yes,first,The failing PowerShell probe lives in the only file the change touched.
+136,cause,code_change,test,code_change,first,OpenBSD device tests fail on 'unknown device name'; the change touched builder.rs and a re-run failed again.
+136,caused_by_change,yes,no,yes,first,Deterministic failure (re-run failed too) in device-builder tests about the touched src/builder.rs.
+138,cause,dependency,workflow,dependency,first,"No release existed for llvm-23.1.3, so the LLVM dependency could not be fetched; a later run on the same code passed."
+138,caused_by_change,yes,no,yes,first,The change set the LLVM version to one with no release yet; that request is what failed.
+142,cause,dependency,code_change,dependency,first,"Same missing llvm-23.1.3 release; a later run on the same code passed, so not a deterministic code error."
+144,cause,dependency,code_change,dependency,first,"No LLVM release matching llvm-23.1.3 existed; a dependency that could not be fetched, like the sibling jobs."
+148,cause,dependency,code_change,dependency,first,"No LLVM release matching llvm-23.1.3 existed; a dependency that could not be fetched, like the sibling jobs."
+149,cause,unclear,test,unclear,first,Log unavailable (HTTP 410) and only docs changed; nothing tells the cause.
+15,cause,unclear,test,unclear,first,"Log shows 'One or more tests failed' with the failed-test list cut off; no message, so no cause can be named."
+150,own_failure,no,yes,no,first,"No runner, no step and no log; the job never ran its own steps, so it did not fail for a reason of its own."
+151,own_failure,no,yes,no,first,"No runner, no step and no log; the job never ran its own steps, so it did not fail for a reason of its own."
+154,cause,workflow,code_change,code_change,second,"ClangCL link fails on duplicate symbols after a commit that edited ci.yml; deterministic, and set up by the change."
+155,cause,workflow,code_change,code_change,second,"ClangCL link fails on duplicate symbols after a commit that edited ci.yml; deterministic, and set up by the change."
+156,cause,infrastructure,network,infrastructure,first,"Artifact upload finalize hit ETIMEDOUT; a failing artifact store is infrastructure, and a re-run passed."
+16,cause,unclear,test,unclear,first,JfrTests.parseMultiModeRecording failed with no message shown; the re-run passing does not name a cause.
+162,cause,network,infrastructure,network,first,The connectivity test got HTTP 500 'Service unavailable' from an external dev API; a re-run passed.
+166,cause,infrastructure,timeout,timeout,second,An e2e request was 'aborted due to timeout' against the deployed service; no other cause is visible.
+166,caused_by_change,unclear,no,unclear,first,"The deployed build includes the change's DB and cache code; the timeout could be that or the environment, no re-run."
+167,cause,infrastructure,timeout,timeout,second,The step ran out of its 300s wait while the service reported unavailable; no root cause is shown.
+167,caused_by_change,unclear,no,unclear,first,"The deployed build includes the touched eth parser, so the unavailable service may or may not come from the change."
+168,caused_by_change,unclear,no,unclear,first,"Sync wait timed out with indexing lagging; the change touched shared bchain code, so attribution is unclear."
+173,cause,workflow,network,workflow,first,The PyPI upload was rejected with 403 invalid authentication; a credentials setup problem in the release job.
+175,cause,code_change,dependency,code_change,first,The touched greatws.go fails to build: missing go.sum entry for its import; deterministic error in touched files.
+177,cause,infrastructure,network,infrastructure,first,"cosign could not read the runner's OIDC token (bad response); a runner service failing, and a re-run passed."
+179,caused_by_change,unclear,no,unclear,first,Integration tests report FAIL with no failing test shown; the change edited the Makefile test target and test script.
+180,cause,unclear,code_change,unclear,first,"The gosec finding is in azure.go, which this commit (release notes only) did not touch; no category fits better."
+180,caused_by_change,no,yes,no,first,The commit only changed misc/release/notes.md; the lint finding is in code from elsewhere.
+181,cause,dependency,code_change,dependency,first,Tests fail because a dependency at 0.1.7-rc.2 imports 'diff' that is not installed; a broken dependency.
+181,caused_by_change,unclear,yes,unclear,first,"Only package.json changed, not the lockfile; the item does not show whether this commit brought in the broken version."
+182,cause,dependency,code_change,code_change,second,"The change rewrote package.json and pnpm-lock.yaml; the installed rc.2 dep lacks 'zustand', failing 47 test files."
+182,caused_by_change,unclear,yes,yes,second,The failure comes from the dependency set this change wrote into the lockfile; a deterministic import error.
+183,caused_by_change,no,yes,no,first,Timing wait 'did not succeed in time' in the crossWindow test; a re-run of the same run passed.
+184,caused_by_change,no,yes,no,first,Timing wait 'did not succeed in time' in the crossWindow test; a re-run of the same run passed.
+185,caused_by_change,no,yes,no,first,"The test file was touched, but the failure is a timing wait and the same code passed on re-run."
+186,caused_by_change,no,yes,no,first,Timing wait 'did not succeed in time' in the crossWindow test; a re-run of the same run passed.
+187,caused_by_change,no,yes,no,first,Timing wait 'did not succeed in time' in the crossWindow test; a re-run of the same run passed.
+190,cause,unclear,code_change,unclear,first,The build cannot resolve './services/intl.js' in code the workflow-only change did not touch; no re-run.
+190,caused_by_change,unclear,yes,unclear,first,"Only the CI workflow file changed; app build fails to resolve './services/intl.js'. No re-run, and nothing ties the error to the workflow edit."
+191,cause,network,workflow,network,first,"release-please died with an empty error in the middle of paging GitHub API commits; a re-run passed, so this was a transient API failure."
+195,caused_by_change,unclear,yes,unclear,first,"flr-core:1.6.3 not found and the version catalog was touched, but a re-run of the same commit passed (likely not yet published). Blame is ambiguous."
+198,caused_by_change,unclear,yes,unclear,first,"No sophisticatedbackpacks version in the range; gradle.properties was touched, but the same commit passed on re-run. Blame is ambiguous."
+199,cause,network,dependency,network,first,Several long-published artifacts 'Failed to read artifact descriptor' from the registry and a re-run passed: a transient download failure.
+2,cause,infrastructure,network,infrastructure,first,"sccache could not read the GitHub Actions cache store (503 ServerBusy, egress over limit). A failing cache store is infrastructure. Re-run passed."
+20,cause,unclear,test,unclear,first,"tst_crypto hit an assertion in third-party cryptopp code. No re-run, and nothing shows test non-determinism. Change touched an unrelated test."
+200,caused_by_change,yes,no,yes,first,"The change edited only the CodeQL workflow, and that job fails on a config error ('Has the init action been called?'). No re-run."
+201,cause,unclear,test,test,second,GUI test error that dumps a Swing component hierarchy (a component lookup failed) and passes on re-run: a timing flake in the GUI test.
+204,cause,unclear,test,test,second,"Same GUI-test error with a Swing component hierarchy dump; the change only edited a langpack, and a re-run passed. GUI test timing flake."
+205,cause,unclear,test,test,second,"GUI test error with a Swing hierarchy dump, passed on re-run, and the change only touched poms and the workflow. Flaky GUI test."
+207,cause,workflow,test,workflow,first,The changeset gate script hit 'Not a valid object name origin/dependabot/...' and another run on the same code passed. The CI script failed.
+209,cause,code_change,dependency,code_change,first,A Dependabot PR bumped docs/package.json and Storybook then can't resolve '@storybook/manager-api'. Deterministic and caused by the bump.
+21,cause,unclear,code_change,unclear,first,"Only 'tst_string (Failed)' is shown, with no message, and there was no re-run. A test name alone is unclear."
+21,caused_by_change,no,yes,no,first,"The failing tst_string has nothing to do with the touched nativeloader files, and tst_nativeloader passed. Nothing points at the change."
+211,caused_by_change,no,unclear,no,first,"yarn install got an HTTP ResponseError while building docs; the change only touched sbt build files, and a re-run passed."
+212,cause,unclear,test,unclear,first,All shown tests passed; a thread threw 'newPosition > limit' in MappedByteBuffer. That is not clearly a test flake. Re-run passed.
+212,caused_by_change,no,yes,no,first,"A re-run of the same commit passed, and the buffer exception has no tie to the touched formatter files."
+213,cause,code_change,test,code_change,first,"The suite asserts an exact count of states visited; the change edits the formatter search (FormatOps, Splits), so the count shifts every time."
+214,cause,code_change,test,code_change,first,Same exact states-visited assertion fails after the change edited FormatOps and Splits. A deterministic result of the formatter change.
+215,cause,code_change,test,code_change,first,"The states-visited count differs after the change to Splits.scala. A deterministic count mismatch, not a flaky assertion."
+219,cause,infrastructure,workflow,workflow,second,download-artifact reports 'Artifact not found for name' with no store error. The expected artifact was never uploaded: a misconfigured CI step.
+22,cause,unclear,code_change,unclear,first,"Only 'tst_string (Failed)' is shown, with no message, and there was no re-run. A test name alone is unclear."
+22,caused_by_change,unclear,yes,unclear,first,"The change touched tests/CMakeLists.txt, which could affect tst_string, but there is no message or re-run to decide either way."
+221,cause,code_change,network,code_change,first,"Bumping sbt to 2.0.11 makes resolution look for sbt-typelevel_sbt2_3:0.8.7, which is 'Not found' on Central. Deterministic and caused by the bump."
+221,caused_by_change,yes,no,yes,first,"The only touched file, build.properties (the sbt version), directly causes the plugin resolution failure. It is a 404, not a network error."
+222,cause,unclear,code_change,unclear,first,Validate json prints a plugin list then exits 1 with no error message. A re-run passed. The evidence doesn't say why.
+222,caused_by_change,no,yes,no,first,"A re-run of the same commit passed and the log shows no error tied to pl.x64.json, so the change didn't cause it."
+223,cause,unclear,code_change,unclear,first,"Validate json exits 1 after printing names, with no error message, and there was no re-run. The log never shows a problem in the touched JSON."
+223,caused_by_change,unclear,yes,unclear,first,"The PR edits pl.x64.json, but the log has no validation error naming it and there was no re-run. The evidence doesn't decide."
+224,cause,test,code_change,test,first,The test asserts updated_at.second != 0 and fails when the clock hits :00 ('assert 0 != 0'). A time-dependent test flake. Re-run passed.
+224,caused_by_change,no,yes,no,first,"A clock-based test flake unrelated to the touched pkg.py and requirements, and the same commit passed on re-run."
+225,cause,dependency,code_change,dependency,first,207 tests fail on a library schema ('run.container.name Field required') yet the same commit passed on re-run. A dependency version flip.
+225,caused_by_change,no,yes,no,first,"A re-run of the same commit passed, so the failure wasn't deterministic, and the schema error comes from a library."
+226,cause,unclear,code_change,unclear,first,The log shows only failing test names (207 failed) with no messages. A re-run passed. Test names alone are unclear.
+226,caused_by_change,no,yes,no,first,"The same commit passed on re-run, and with 207 failures across many unrelated tests the log doesn't tie them to the touched files."
+227,cause,unclear,code_change,unclear,first,"Only failing test names are visible (207 failed), with no error messages. A re-run passed. The cause can't be named."
+227,caused_by_change,no,yes,no,first,"A re-run of the same commit passed, and the failures span many tests that the change didn't touch."
+228,cause,dependency,code_change,dependency,first,"Pydantic 'run.container.name Field required' from library schemas across 207 tests, and the same commit passed on re-run. A dependency changed."
+228,caused_by_change,no,yes,no,first,"A re-run of the same commit passed, and the error comes from a library schema, not the touched files."
+229,cause,test,code_change,test,first,test_serialize_many hit 'UNIQUE constraint failed' on artifact name/state: a collision in the test's own data. The change touched another test.
+229,caused_by_change,no,yes,no,first,The only touched file is an unrelated test (shortcut polyaxonfile views). The failure is a data collision in the artifacts serializer test.
+230,cause,test,network,test,first,The live test's wait for a new mailbox ran out ('Retries 20 exhausted') while the API kept answering normally. A timing-based wait. Re-run passed.
+231,cause,test,network,test,first,Same mailbox wait ran out ('Retries 20 exhausted') and the API showed no network error. A timing-based test wait that passed on re-run.
+232,cause,test,network,test,first,One bulk user's mailbox wasn't ready within the test's 20-retry wait. The API gave no error. A timing flake in the test; re-run passed.
+233,cause,test,network,test,first,"The test's waitformailbox retry budget ran out for one user, with no network error. A timing-based wait that passed on re-run."
+234,cause,test,network,test,first,Mailbox setup wait 'Retries 20 exhausted' for one user while the API worked normally. A timing flake in the live test; re-run passed.
+237,caused_by_change,yes,no,yes,first,"pyproject.toml (touched) requires modern-httplib2, which has no release before the 2-week cutoff. It failed again on the same code: deterministic."
+238,caused_by_change,yes,no,yes,first,"The touched pyproject.toml requires modern-httplib2, which was published after the cutoff, so resolution fails every time. Failed again on re-run."
+241,cause,unclear,test,unclear,first,"AttributeError 'datasite_owner_syncer' recurs on re-run (deterministic, so not a test flake), and the change only touched syft-restrict."
+242,cause,code_change,test,code_change,first,"The change edits syft_rds/client.py, and tests fail with 'SyftRDSClient' object has no attribute 'datasite_owner_syncer'. Failed again on re-run."
+242,caused_by_change,yes,no,yes,first,"A deterministic AttributeError on SyftRDSClient, a class in a file this change touched (syft_rds/client.py)."
+247,cause,unclear,infrastructure,unclear,first,"Log unavailable (HTTP 404) and the failing step is unknown. Re-run passed, but nothing shows which cause it was."
+25,cause,dependency,code_change,dependency,first,"govulncheck flags newly listed vulns in golang.org/x/net v0.57.0 and the stdlib, traced through untouched files. A dependency issue, not the change."
+25,caused_by_change,no,yes,no,first,"The vuln traces run through doh.go and cmd.go, not the touched parallel.go. New advisories against existing dependencies caused it."
+251,caused_by_change,no,yes,no,first,"The check fails on an unticked box in the PR description, not on the code. Another run on the same commit passed."
+252,cause,unclear,workflow,unclear,first,"The gate script worked as designed ('Build failed, not ready to merge'); the real cause is in the linux build job, which isn't shown."
+252,own_failure,no,yes,no,first,A 'ready' gate failing only because LINUX_BUILD_RESULT was failure. It failed because another job failed.
+253,caused_by_change,no,unclear,no,first,"No log, but a re-run of the same commit passed, so the failure wasn't deterministic. Nothing ties it to the touched Cargo.toml."
+26,cause,dependency,code_change,dependency,first,"govulncheck flags GO-2026-6809 in the go1.27.2 stdlib crypto/x509 via untouched dot.go. A new advisory on the toolchain, not the change."
+26,caused_by_change,no,yes,no,first,"The vuln trace goes through upstream/dot.go, not the touched parallel.go. It is a new stdlib advisory, so the change didn't cause it."
+27,cause,unclear,test,unclear,first,"The upstream package reports FAIL, but the excerpt shows only passing tests and no failure message, and there was no re-run."
+27,caused_by_change,no,yes,no,first,"The change touched only a test file in the proxy package; the failing package is upstream, which that file can't affect."
+29,cause,unclear,test,unclear,first,The video check failed with 'No video files found'; why recording produced nothing isn't shown. Re-run passed; test or product can't be told apart.
+33,cause,infrastructure,test,infrastructure,first,"The emulator service container never became ready ('Appium Settings app is not running after 30000ms'). The environment, not the test or change."
+34,cause,workflow,code_change,workflow,first,"The Trivy gate fails on findings in untouched files (k8s yaml, certs/tls.key) and failed again on re-run. A gate misfiring, not the Dockerfile edit."
+34,caused_by_change,no,yes,no,first,"The findings shown are in files the change didn't touch (kubernetes yaml, charts certs); the change only edited .ffmpeg/Dockerfile."
+35,cause,workflow,code_change,workflow,first,"The same Trivy gate fails on existing misconfigs and a key file outside the touched Dockerfiles. A CI gate issue, not the change."
+35,caused_by_change,no,yes,no,first,"The reported findings are in untouched k8s manifests and a chart cert, not in the touched Dockerfiles."
+41,cause,network,code_change,network,first,"linode-cli got 'Request failed: 401 Invalid Token' from the external API, and a re-run passed. An external API failure, not code."
+41,caused_by_change,no,yes,no,first,"An auth rejection from the Linode API in a firewall setup step, and the same commit passed on re-run."
+42,cause,network,code_change,network,first,"External Linode API returned '401 Invalid Token' to linode-cli, and a re-run passed. The change only bumped go.mod."
+42,caused_by_change,no,yes,no,first,"An API token rejection in a CLI setup step, unrelated to go.mod/go.sum, and the same commit passed on re-run."
+43,cause,network,code_change,network,first,The user tests fail on the Linode API answering '[401] Invalid Token'. An external API/auth failure; the change only touched VPC tests.
+43,caused_by_change,no,yes,no,first,The 401 token errors in the user/users tests have nothing to do with the touched VPC test files.
+44,cause,network,code_change,network,first,"The Linode API rejects requests with '[401] Invalid Token' in the user tests. An external API failure, not the go.mod bump."
+44,caused_by_change,no,yes,no,first,"An auth rejection from the external API, unrelated to the touched go.mod/go.sum."
+45,cause,network,code_change,network,first,The external Linode API returns '[401] Invalid Token' for the user tests. Not a code failure; the change only bumped go.mod.
+45,caused_by_change,no,yes,no,first,The 401 Invalid Token from the API isn't tied to the touched go.mod/go.sum.
+49,caused_by_change,no,unclear,no,first,"npm 'No matching version found for ra-core@^5.15.5' (not yet published); the change only touched yarn.lock, and a re-run passed."
+5,cause,infrastructure,network,infrastructure,first,"sccache could not read the Actions cache store (503 ServerBusy, egress over limit); a failing cache store is infrastructure; re-run passed."
+57,cause,code_change,dependency,code_change,first,PR bumps jsdom in the touched package.json/lockfile and vitest then cannot find package 'jsdom'; deterministic result of the change itself.
+59,caused_by_change,no,yes,no,first,"Only CHANGELOG, README and package.json changed; a sleep-based watcher test got 2 calls instead of 3 and the re-run passed."
+6,caused_by_change,no,yes,no,first,"Gate job failed because build-wheel failed; the re-run passed, and nothing in the log links it to the touched files."
+6,own_failure,no,yes,no,first,"alls-green gate: build-wheel was 'failure', so it fails because another job failed; the KeyError crash does not change that."
+60,caused_by_change,no,yes,no,first,Failing test is in watch-service after a 350ms sleep; the change touched job-manager/reindex-paths and another run passed.
+62,cause,product_race,code_change,product_race,first,"CLI exited 2 in a concurrent profile/collection write test and passed on re-run; change touched only .flow json, so not code_change."
+62,caused_by_change,no,yes,no,first,"Change only touched .flow spec/task json files, nothing the failing CLI test runs; the re-run passed."
+64,cause,unclear,code_change,unclear,first,"CI result gate only reports 'test-windows: expected success, got failure'; the real cause is not in this log."
+64,caused_by_change,no,yes,no,first,Change touched only .flow json files and the re-run passed; the gate failed because test-windows failed.
+69,cause,unclear,code_change,unclear,first,"graph-query test got success false with no reason; change touched only .flow/memory markdown, so code_change does not fit."
+69,caused_by_change,no,yes,no,first,Scheduled run whose commit touched only .flow/memory markdown notes; such files cannot break the graph-query test.
+7,cause,unclear,workflow,unclear,first,Gate ran normally and only reports build-wheel failure; no crash of its own and no cause for build-wheel shown.
+7,caused_by_change,no,yes,no,first,"Gate failed on build-wheel, which passed on re-run; nothing ties it to the touched OpenQASM/DD files."
+73,cause,workflow,infrastructure,workflow,first,setup-msys2 action's own 'Saving package cache' paccache call exited 127 after a good install; action failed itself.
+74,cause,unclear,infrastructure,unclear,first,"Log unavailable (HTTP 404); only 'Set up job' on a self-hosted runner failed and a re-run passed, so the cause isn't shown."
+76,cause,unclear,code_change,unclear,first,":mediamp-mpv:allTests failed with no test name or message; the change touched mediamp-api wasm files, not mpv."
+76,caused_by_change,unclear,yes,unclear,first,"No re-run and no failure message; failing module mediamp-mpv is not what the change touched, but a link can't be ruled out."
+77,cause,unclear,code_change,unclear,first,Gradle reports failing tests in :tenant:codegen:test with no messages; the re-run passed.
+77,caused_by_change,no,yes,no,first,Re-run of the same run passed and the log does not tie the failing tests to the touched runtime files.
+78,cause,unclear,code_change,unclear,first,"56 runtime2 tests failed, message cut to an IllegalArgumentException; change only touched a demo app file, so not code_change."
+78,caused_by_change,no,yes,no,first,Only demoapps/starwars-java ViaductConfiguration.java changed; the failures are in core engine runtime2 tests.
+79,cause,unclear,code_change,unclear,first,Dokka check says 'Site contains broken links' without naming any; no sign the runtime execution files caused it.
+79,caused_by_change,unclear,yes,unclear,first,"No re-run; broken links are unnamed and the change touched internal runtime files, so a link to the change is unknown."
+8,cause,unclear,workflow,unclear,first,Gate ran normally and only reports cpp-tests-ubuntu and cpp-coverage failures; their cause is not in this log.
+8,caused_by_change,no,yes,no,first,Gate failed on other jobs and the re-run of the same run passed; nothing ties the failure to the change.
+80,cause,unclear,code_change,unclear,first,"56 runtime2 tests failed with only a cut IllegalArgumentException; the commit touched a demo app file, so not code_change."
+80,caused_by_change,no,yes,no,first,"Scheduled run; the commit only changed a demo app config file, while the failures are in core engine runtime2 tests."
+82,caused_by_change,unclear,no,no,second,"Only src/test/ts/package-lock.json changed; the failure is a Selenium CDN-fallback IT timeout, unrelated to that lockfile."
+83,cause,unclear,test,unclear,first,ViewScopedUnrenderedIT count 'expected: <1> but was: <0>' failed on all 3 runs; message shows no timing or order cause.
+83,caused_by_change,unclear,no,unclear,first,"No re-run; change edited many view-scoped test pages in the same area and the failure repeated, so it can't be ruled in or out."
+85,cause,unclear,test,unclear,first,Surefire failure with no test name or message in the log; a passing re-run alone does not show it is a test flake.
+86,cause,workflow,network,workflow,first,"Jira auth worked but release step found 'Version 6.1.1 not found'; a release precondition, not a network error."
+87,caused_by_change,yes,no,yes,first,Change touched pom.xml and Maven cannot resolve sonarlint-core 12.1-SNAPSHOT deps it declares; no re-run.
+88,cause,unclear,infrastructure,unclear,first,Log shows only container teardown then exit code 1; no error naming a runner or service problem.
+91,cause,test,code_change,test,first,SQL-injection benchmark crossed a 20% timing threshold while the change touched the process-execution sink; another run passed.
+91,caused_by_change,no,yes,no,first,"Regression is in SQLInjectionDetection timing, unrelated to ProcessExecutionSink edits; another run on the same code passed."
+92,cause,test,code_change,test,first,"One SQL benchmark at +24% over a 20% threshold, others swing both ways; noisy timing check, change is in process sink."
+92,caused_by_change,no,yes,no,first,Change touched ProcessExecutionSink only; the regressed benchmark measures SQL injection detection and others are noisy.
+98,cause,unclear,network,unclear,first,"Failure is NoMethodError 'page_version' for nil in zz_deletion_spec, not the Savon 502s; failed again, cause not shown."
+98,caused_by_change,unclear,no,unclear,first,"Change touched another spec file; zz_deletion_spec failed again on re-run, and shared test data could link them, so unknown."
