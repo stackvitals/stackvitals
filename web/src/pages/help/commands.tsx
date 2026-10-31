@@ -60,7 +60,8 @@ export const COMMANDS: Cmd[] = [
   c(DATA, "Your machine", "stackvitals export owner/repo --format devlake", "DevLake tables (also ctrf, otel --tests, postgres)", AT.explore, "each table as a download"),
   c(DATA, "Your machine", "stackvitals propose owner/repo --set alerts.pickup_p75_hours=6", "A link proposing a settings change that a person submits", AT.settings, "edit and send"),
   c(DATA, "Your machine", "stackvitals ui owner/repo", "Open a repo's pages and Explore from a local copy"),
-  c(SET, "Your machine", "stackvitals ci init owner/repo > .github/workflows/stackvitals.yml", "The workflow file, with this repo's names filled in", AT.setup, "commits it for you"),
+  c(SET, "Your machine", "stackvitals init owner/repo", "Set up a repo: commits the workflow, follows the first run, turns on Pages for a public repo", AT.setup, "the same, with a button"),
+  c(SET, "Your machine", "stackvitals ci init owner/repo > .github/workflows/stackvitals.yml", "Only print the workflow file, with this repo's names filled in", AT.setup, "commits it for you"),
   c(SET, "Your machine", "stackvitals portal check my-org", "What your token can read in an org, before the first run"),
   c(SET, "Your machine", "stackvitals connectors check --all", "Test each connector's key", AT.connections, "one connector at a time"),
   c(SET, "Your machine", "stackvitals serve", "The MCP server for AI agents", AT.agents, "config to copy"),
@@ -85,7 +86,7 @@ export function CommandTable() {
 
 interface Auto { id: string; task: string; at: InApp; replaces: string; noToken: string; withToken: string }
 const AUTOS: Auto[] = [
-  { id: "install", task: "Add StackVitals to a repo", at: AT.setup, replaces: "stackvitals ci init",
+  { id: "install", task: "Add StackVitals to a repo", at: AT.setup, replaces: "stackvitals init",
     noToken: "The workflow file opens on GitHub, ready to commit", withToken: "Commits it, starts the first run, turns on Pages" },
   { id: "decide", task: "Quarantine, mute, snooze or acknowledge", at: AT.decide, replaces: "stackvitals propose --decide",
     noToken: "A prefilled issue you submit on GitHub", withToken: "Starts the workflow, which checks your access and records it" },

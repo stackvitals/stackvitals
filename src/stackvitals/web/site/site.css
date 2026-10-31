@@ -25,7 +25,7 @@ code { font-family: var(--mono); font-size: .9em; background: var(--surface-2); 
   border-bottom: 1px solid var(--line); }
 .site-top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; min-height: 60px; }
 .mark { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; }
-.mark svg { flex: none; }
+.mark img { flex: none; }
 .links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-right: auto; }
 .links a { color: var(--ink-2); text-decoration: none; font-weight: 500; }
 .links a:hover { color: var(--ink); }

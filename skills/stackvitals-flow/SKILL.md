@@ -5,7 +5,7 @@ description: Use when asked what is blocking a repo's pull requests, who should 
 
 # Pull requests: who acts next, and what gets merged here
 
-Needs the StackVitals MCP server with every tool: `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
+Needs the StackVitals MCP server with every tool (`pip install stackvitals`, then in Claude Code `claude mcp add stackvitals -- uvx stackvitals serve --tools all`): `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
 
 Guessing from the PR list misses how this repo actually works. Team Flow keeps the repo's review history, so ask it.
 

@@ -28,7 +28,7 @@ half, the upper end reads "or more". Under 10 items, the page says "too few".
 
 Fewer than 5 items on either side is not a test: it says "too few to tell" and doesn't count against the others.
 
-**Calibration.** Work arrives in batches, so events in a week are not independent. Each number is also tested for each
+**Calibration.** In short: a repo whose numbers usually swing a lot needs a bigger change before it is called a change. Work arrives in batches, so events in a week are not independent. Each number is also tested for each
 of the repo's past 8 weeks, and the spread of those results (mean squared z, each capped at 16) widens this week's
 test. The spread is blended with a typical swing worth 4 weeks:
 - 1.5 for review times, set on half of 20 public repos and checked on the other half;
@@ -81,7 +81,7 @@ Each card's labelled sample is labelled twice, by two different model families, 
 1. **Claude**, which made the first labels.
 2. **Gemini (Flash-Lite)**, from the same codebook and evidence.
 
-Disagreements are settled by a third reading with both answers and the evidence. Cards publish both labellers'
+Disagreements are settled by a third reading (by Claude) with both answers and the evidence. Cards publish both labellers'
 agreement (share and Cohen's kappa) and every changed label. No person has audited the labels yet.
 
 Only links and labels are published, never log text.

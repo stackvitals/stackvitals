@@ -117,8 +117,8 @@ goes through a server of ours, and the keys are only used to read unless you tur
   shows it, an email). With `[identity] aliases` naming those people's GitHub logins, Delivery counts issues done
   per team, and Slack and Discord count a reply from an aliased team member as the team's, so nobody is listed twice.
   Without an alias, an assignee whose email name is a GitHub login of this repo (`bo@acme.com` for `bo`) counts as
-  that login; one whose email or name only reads like a login (`kaushik.yadav@` or "Kaushik Yadav" for
-  `kaushik-yadav`) is not counted, but the Issues view offers the alias line to paste. A public repo keeps no assignee.
+  that login; one whose email or name only reads like a login (`jane.doe@` or "Jane Doe" for
+  `jdoe`) is not counted, but the Issues view offers the alias line to paste. A public repo keeps no assignee.
 - Only connectors whose key is in the workflow count: remove a key, and its issues and incidents stop counting (what
   was pulled stays on the branch and counts again if the key comes back).
 - Like the rest of the history, connector day files are kept 400 days (Copilot reports two years) and count toward
@@ -331,7 +331,6 @@ request's pipeline failed it leaves one note (edited on later pipelines, and to 
 which failures are known flakes or also fail on the default branch. If the push to `stackvitals-data` is refused (a
 protected branch, a push rule, or a token without `write_repository`), the job fails and says so. GitLab has no "after
 the pipeline" trigger, so the job reads its own pipeline while it runs; there is no verdict check to block a merge. It
-is tested against a stand-in GitLab API, not a live project yet. The include works once the `v0` tag is made at launch;
-until then use `main` in its URL and set the `STACKVITALS_REF` variable to `main`.
+is tested against a stand-in GitLab API, not a live project yet.
 
 The merge request, deployment and incident records above come next, in the same job.

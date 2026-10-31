@@ -46,15 +46,15 @@
     },
     {
      "date": "2026-10-23",
-     "from": "known flaky passes the verdict check",
+     "from": "a known flake passed the verdict check",
      "why": "13 of 81 held-out safe calls were the change's own failure; matching past flakes' errors didn't separate them",
      "effect": "known flaky still reads 'likely a flake, re-run it', but the verdict check passes only once CI is green"
     },
     {
      "date": "2026-10-23",
-     "from": "known flaky: likely a flake, re-run it",
+     "from": "a known flake read 'likely a flake, re-run it'",
      "why": "in the agent head-to-head a smaller model trusted it on 2 failures the change caused",
-     "effect": "now asks to check the error isn't from the change before re-running; those 2 were then answered right"
+     "effect": "it asks to check the error isn't from the change before re-running; those 2 were then answered right"
     },
     {
      "date": "2026-10-28",

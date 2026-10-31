@@ -15,3 +15,5 @@ def test_the_threat_model_notes_the_shared_github_io_origin():
 def test_privacy_names_the_public_benchmark_home():
     from stackvitals.core import dataflow
     assert "from stackvitals/stackvitals's releases" in dataflow.markdown()
+    # Shared figures are filed where the share link points: the public home, not the private crawler store.
+    assert "An issue on stackvitals/stackvitals" in dataflow.markdown() and "merge-scout" not in dataflow.markdown()

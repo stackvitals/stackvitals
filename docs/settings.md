@@ -69,7 +69,7 @@ default and is named in the job summary. The app's Settings page edits the same 
 
 | Key | Default | What it does |
 |---|---|---|
-| `provider` | `"off"` | A model reads the log of up to 3 failures the history can't decide and says whether they look like the change, beside the verdict (never in it); needs the triage-key input. Setups for each provider: docs/triage.md (gemini has a free tier). |
+| `provider` | `"off"` | A model reads the log of up to 3 failures the history can't decide and says whether they look like the change, beside the verdict (never in it); needs the triage-key input (docs/triage.md says how). Setups for each provider: docs/triage.md (gemini has a free tier). |
 | `model` | `""` | The model to ask (empty: the provider's suggested small model). |
 | `url` | `""` | Another OpenAI-compatible endpoint (https) instead of the provider's own. |
 | `allow_private` | `false` | Send a private repo's failing logs too (off: free tiers may keep what they're sent). |
@@ -138,22 +138,22 @@ default and is named in the job summary. The app's Settings page edits the same 
 
 | Key | Default | What it does |
 |---|---|---|
-| `pr_comments` | `the workflow input` | One comment on failed PR runs saying which failures are known flakes. |
-| `rerun_flaky` | `the workflow input` | Re-run failed jobs once when every failure is a known flake (needs actions: write). |
-| `quarantine` | `the workflow input` | Keep the quarantine list for the stackvitals ci quarantine command. |
-| `issues` | `the workflow input` | One issue per flaky test or job, closed once fixed (needs issues: write). |
-| `mention_owners` | `the workflow input` | @-mention code owners in those issues (off: owners are named without a notification). |
-| `assign_owners` | `the workflow input` | Assign a new flaky-test issue to its first code owner who is a person. |
-| `preflight_comments` | `the workflow input` | One note on new outside PRs that miss what merged PRs here usually include. |
-| `deps_comments` | `the workflow input` | One comment on same-repo PRs listing changed packages and their verdicts. |
+| `pr_comments` | `on (input pr-comments)` | One comment on failed PR runs saying which failures are known flakes. |
+| `rerun_flaky` | `off (input rerun-flaky)` | Re-run failed jobs once when every failure is a known flake (needs actions: write). |
+| `quarantine` | `off (input quarantine)` | Keep the quarantine list for the stackvitals ci quarantine command. |
+| `issues` | `off (input issues)` | One issue per flaky test or job, closed once fixed (needs issues: write). |
+| `mention_owners` | `off (input mention-owners)` | @-mention code owners in those issues (off: owners are named without a notification). |
+| `assign_owners` | `off` | Assign a new flaky-test issue to its first code owner who is a person. |
+| `preflight_comments` | `off (input preflight-comments)` | One note on new outside PRs that miss what merged PRs here usually include. |
+| `deps_comments` | `off (input deps-comments)` | One comment on same-repo PRs listing changed packages and their verdicts. |
 | `review_requests` | `false` | Off until turned on: request the top suggested reviewer (who knows the folders, who reviewed the author's PRs, eased by load) on ready PRs nobody was asked to review; once per PR. Needs pull-requests: write. |
 | `fix_requests` | `false` | Off until turned on: one issue per failure that breaks the default branch every run, closed with proof once fixed. Needs issues: write. |
 | `fix_by_copilot` | `false` | With fix_requests: assign each new one to Copilot's coding agent. |
 | `size_labels` | `false` | Off until turned on: a size/XS to size/XL label on each open PR by lines changed (under 10, 100, 500, 1000). |
 | `docs_label` | `false` | Off until turned on: label PRs that only change docs (Markdown, docs/, README) as low risk: docs only; never approves. |
-| `label_stuck` | `the workflow input` | Label PRs whose asked-for review has not started after 3 days, and unlabel them later. |
-| `verdict_check` | `the workflow input` | A "StackVitals verdict" check on pull requests: one required check that waits for every workflow on the newest commit and passes once CI is green (and patch coverage holds); known flakes are re-run, never let through (with rerun_flaky, automatically). Needs checks: write. On a private repo also set the repository variable STACKVITALS_EVERY_CI_RUN to true, so passing CI runs start a job. |
-| `verdict_strict` | `the workflow input` | With the verdict check: when a failure the comment called likely from this change goes green on a re-run of the same code, the check stays red until someone with triage access comments /stackvitals accept rerun on the pull request. Off by default (a green re-run passes). |
+| `label_stuck` | `off (input label-stuck)` | Label PRs whose asked-for review has not started after 3 days, and unlabel them later. |
+| `verdict_check` | `off` | A "StackVitals verdict" check on pull requests: one required check that waits for every workflow on the newest commit and passes once CI is green (and patch coverage holds); known flakes are re-run, never let through (with rerun_flaky, automatically). Needs checks: write. On a private repo also set the repository variable STACKVITALS_EVERY_CI_RUN to true, so passing CI runs start a job. |
+| `verdict_strict` | `off` | With the verdict check: when a failure the comment called likely from this change goes green on a re-run of the same code, the check stays red until someone with triage access comments /stackvitals accept rerun on the pull request. Off by default (a green re-run passes). |
 
 ## [agreements]
 
@@ -179,8 +179,8 @@ default and is named in the job summary. The app's Settings page edits the same 
 
 | Key | Default | What it does |
 |---|---|---|
-| `min_scorecard` | `the workflow input` | Projects behind the dependencies scoring under this OpenSSF Scorecard (0 to 10) are listed on the supply page, unless a decision accepted the package. Empty is off. |
-| `max_severity` | `the workflow input` | The pull request check flags a changed package with an open advisory rated above this (low, moderate, high or critical). Empty is off. |
+| `min_scorecard` | `none (off)` | Projects behind the dependencies scoring under this OpenSSF Scorecard (0 to 10) are listed on the supply page, unless a decision accepted the package. Empty is off. |
+| `max_severity` | `none (off)` | The pull request check flags a changed package with an open advisory rated above this (low, moderate, high or critical). Empty is off. |
 
 ## [deps]
 

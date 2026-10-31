@@ -21,6 +21,8 @@ def crawler_pyproject(text: str) -> str:
     # The public crawler needs neither the MCP tool's packages nor its command.
     text = re.sub(r'"(mcp|zstandard|defusedxml)[^"]*",\s*', "", text)
     text = re.sub(r"\n\[project\.scripts\]\n(?:[^\[\n].*\n?)*", "\n", text)
+    # The project links point at the suite's home, not the crawler.
+    text = re.sub(r"\n\[project\.urls\]\n(?:[^\[\n].*\n?)*", "\n", text)
     # Keywords and classifiers describe the suite, not the crawler.
     text = re.sub(r"(?m)^keywords = .*\n", "", text)
     text = re.sub(r"(?ms)^classifiers = \[.*?^\]\n", "", text)

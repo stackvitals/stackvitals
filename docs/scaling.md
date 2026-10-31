@@ -54,7 +54,7 @@ Jobs share one queue (`concurrency`), so a burst of finished CI runs collapses i
 
 These are estimates from run counts, not measured bills. The verdict check needs every CI run, passing ones included,
 to start a job: set the repository variable `STACKVITALS_EVERY_CI_RUN` to `true` (Settings, Secrets and variables,
-Actions, Variables). That roughly multiplies the second row's minutes by six. Turning modules off (`modules:`) shortens
+Actions, Variables). That makes each row's job count six or seven times larger (every CI run instead of the failed 15%); the queue still caps the busiest repos at one job at a time. Turning modules off (`modules:`) shortens
 each job.
 
 ## Free Postgres services (checked 2026-10-21; they change, so check before you rely on them)

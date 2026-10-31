@@ -195,4 +195,4 @@ model families (Claude and Gemini); no person has audited the labels.
 - **Before you rely on it:** [what each rule does](docs/rules.md), [known limitations](docs/limitations.md),
   [what leaves your repo](docs/privacy.md), [threat model](docs/threat-model.md), [enterprise controls](docs/enterprise.md).
 - **More:** [FAQ](docs/faq.md), [how it works](docs/architecture.md), [roadmap](docs/roadmap.md),
-  [contributing](CONTRIBUTING.md), [governance](GOVERNANCE.md), [security](SECURITY.md).
+  [contributing](CONTRIBUTING.md), [code of conduct](CODE_OF_CONDUCT.md), [governance](GOVERNANCE.md), [security](SECURITY.md).

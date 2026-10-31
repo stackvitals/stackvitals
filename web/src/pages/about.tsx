@@ -56,7 +56,7 @@ export default function About({ app }: PageProps) {
           <div><dt>Runs in</dt><dd>Your GitHub Actions</dd></div>
           <div><dt>Keeps data in</dt><dd><code class="code-inline">stackvitals-data</code></dd></div>
           <div><dt>Server</dt><dd>None</dd></div>
-          <div><dt>Price</dt><dd>Free, MIT licence</dd></div>
+          <div><dt>Price</dt><dd>Free, Apache 2.0 licence</dd></div>
         </dl>
       </Card>
     </Section>
@@ -80,7 +80,7 @@ export default function About({ app }: PageProps) {
 
     <Columns>
       <Section title="What it costs and needs" description="Free; it uses your own Actions minutes."
-        info={<InfoButton info={{ title: "Cost", doc: "faq.md", body: "MIT-licensed, no paid tier, no account and no StackVitals-hosted backend. Optional integrations use services and keys you choose." }} />}>
+        info={<InfoButton info={{ title: "Cost", doc: "faq.md", body: "Apache 2.0-licensed (benchmark data CC BY 4.0), no paid tier, no account and no StackVitals-hosted backend. Optional integrations use services and keys you choose." }} />}>
         <Card><Facts rows={[
           ["Price", "Free. No paid tier, no account."],
           ["Actions minutes", "About a minute per run on a small repo, after each CI run and every 3 hours. Free on public repos; private repos use the plan's minutes."],

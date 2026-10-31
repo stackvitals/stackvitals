@@ -291,7 +291,7 @@ function NoToken({ repo, branch, yamlFull, yamlCompact, modules, onConnect }: { 
         </div>
         <PasteNote link={link} />
         <p class="go-or">Or from a terminal:</p>
-        <CodeBlock inline code={cliCommand(repo, modules)} note={<>Then commit and push the file. <code>pip install stackvitals</code> first.</>} />
+        <CodeBlock inline code={cliCommand(repo, modules)} note={<>After <code>pip install stackvitals</code> and <code>gh auth login</code>: it commits the file, follows the first run and turns on the page.</>} />
         {branch === "main" ? <p class="go-or">Default branch isn't <code>main</code>? Change it in GitHub's editor before committing.</p> : null}
       </Card>
     </Section>

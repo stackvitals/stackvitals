@@ -8,13 +8,13 @@
 - [The StackVitals app](docs/app.md): Every run publishes one app over all the modules that ran: https://OWNER.github.io/REPO/ once GitHub Pages serves the stackvitals-data branch.
 - [How StackVitals works](docs/architecture.md): StackVitals has no hosted backend.
 - [What StackVitals reads, and from where](docs/connectors.md): Live means run against the real service; recorded means tested against saved answers in the shape the service's documentation gives, with no account of ours; experimental means built but not yet checked either way.
-- [Coverage and peer groups](docs/coverage.md): When StackVitals compares your repo with "similar public repos", the peers come from the MergeScout crawler, which reads public GitHub repos daily on GitHub Actions.
+- [Coverage and peer groups](docs/coverage.md): When StackVitals compares your repo with "similar public repos", the peers come from the project's crawler (built for MergeScout, the Contribute module, and now feeding every benchmark), which reads public GitHub...
 - [Using delivery numbers without fooling yourself](docs/dora-guide.md): DORA's numbers describe a team's delivery system, not a person's work.
 - [Questions people ask](docs/faq.md): It is licensed under Apache 2.0 and runs in your own GitHub Actions minutes, which are free for public repos and included in every plan for private ones.
 - [StackVitals for an open-source maintainer](docs/guides/maintainer.md): You want red CI to stop eating contributors' time, newcomers answered, and fewer surprise dependency breaks.
 - [StackVitals for an engineering manager](docs/guides/manager.md): You want to know where your team's time goes and whether changes help, without rating people.
 - [StackVitals for a platform team](docs/guides/platform.md): You run GitHub for an org and want one view of every repo, owners that are real, standards people can see coming, and a security review you can sign off.
-- [Install](docs/install.md): StackVitals is a GitHub Action, uses: stackvitals/stackvitals@v0, run by one workflow file in your repo.
+- [Install](docs/install.md): StackVitals has two parts: a GitHub Action, uses: stackvitals/stackvitals@v0, that runs in your repo, and the stackvitals command on your machine, which sets the Action up, opens a private repo's dashboard and runs...
 - [Known limitations](docs/limitations.md): What each part of StackVitals can't see or do, where its measured accuracy is weak, and what it needs from your repo.
 - [Methods: the exact settings behind every number](docs/methods.md): Every headline number in StackVitals carries its sample size and a 95% range.
 - [Modules](docs/modules.md): What each StackVitals module does, how to try it on any public repo from your machine, and how to set it up in your own repo.

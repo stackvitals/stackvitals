@@ -5,7 +5,7 @@ description: Use when asked about a repo's cycle time, DORA metrics (deployment 
 
 # Delivery: where the time goes, and what to fix first
 
-Needs the StackVitals MCP server with every tool: `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
+Needs the StackVitals MCP server with every tool (`pip install stackvitals`, then in Claude Code `claude mcp add stackvitals -- uvx stackvitals serve --tools all`): `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
 
 ## Steps
 

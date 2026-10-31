@@ -5,7 +5,7 @@ is free on public repos and needs only the built-in token.
 
 ## Set it up
 
-[Quickstart](../quickstart.md): one workflow file, then GitHub Pages from the `stackvitals-data` branch. Your
+[Quickstart](../quickstart.md): `stackvitals init owner/repo` adds the workflow file, runs it once and turns on GitHub Pages from the `stackvitals-data` branch. Your
 dashboard is public like your repo. Your code stays in GitHub; the dependency check sends package names to deps.dev
 and the registries unless you set `[deps] outside_lookups = false` ([privacy](../privacy.md)).
 

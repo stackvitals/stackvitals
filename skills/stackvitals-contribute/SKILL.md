@@ -5,7 +5,7 @@ description: Use when someone wants an open-source issue to work on, asks whethe
 
 # Contribute: issues you can get merged
 
-Needs the StackVitals MCP server with every tool: `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
+Needs the StackVitals MCP server with every tool (`pip install stackvitals`, then in Claude Code `claude mcp add stackvitals -- uvx stackvitals serve --tools all`): `stackvitals serve --tools all` (the default 11 leave some of the tools below out).
 
 ## Steps
 

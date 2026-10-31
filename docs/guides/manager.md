@@ -8,13 +8,13 @@ You want to know where your team's time goes and whether changes help, without r
    90 days of CI and a year of pull requests on the first run, so you start with history, not an empty page.
 2. **Open Insights** in the app: one list of what to fix first across CI, reviews and delivery, ranked by hours at
    stake ([modules](../modules.md#insights-what-to-fix-first)). Start at the top.
-3. **Read Delivery** for cycle time in LinearB's phases and DORA's five metrics. Before you share a DORA number,
+3. **Read Delivery** for cycle time in LinearB's phases (coding, pickup, review, deploy) and DORA's five metrics (the industry's standard delivery measures: how often you deploy, how long a change takes to ship, how often a change fails, and how fast you recover). Before you share a DORA number,
    read [the DORA guide](../dora-guide.md): what each number can't tell, how it gets gamed, and why it is never for
    individual reviews.
 
 ## Every week
 
-- The **weekly digest** (Monday, one comment on a pinned issue; add your chat under `[digest] channels`) says what
+- The **weekly digest** (Monday, one comment on a pinned issue; to post it to chat too, set the `webhook` input, then `channels = ["issue", "webhook"]` under `[digest]`) says what
   changed. It reports a change only when it stands out from how much your repo's weeks usually swing, so false alarms
   are rare, but a quiet digest means nothing stood out, not that nothing moved: on small repos even large slowdowns
   can go unflagged ([modules](../modules.md#decide-on-github-hear-back-every-week)).

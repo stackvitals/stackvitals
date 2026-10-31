@@ -67,9 +67,12 @@ and re-scored. Add the revision to `bench/accuracy/registry.json` and publish th
 
 ## Before tagging
 
+- [ ] The version bumped everywhere: `pyproject.toml`, `server.json` (both places), `src/stackvitals/__init__.py`,
+      `src/mergescout/__init__.py` and `src/stackvitals/editors/vscode/package.json`, then `uv lock`. The version
+      check (`python scripts/prelaunch.py --only version`) names any place that disagrees.
 - [ ] `pytest` passes (every test, `tests/local/` included).
 - [ ] `pytest tests --ignore=tests/local` passes (what a fresh clone runs).
-- [ ] A sandbox try run with the built-in `GITHUB_TOKEN`: point the `sandbox-try` branch at the commit to tag, run the
+- [ ] A sandbox try run with the built-in `GITHUB_TOKEN` (maintainers; the project's private sandbox repo): point the `sandbox-try` branch at the commit to tag, run the
       sandbox's "StackVitals try" workflow with every module, and check every run it caused, the sandbox's own CI
       included.
 - [ ] Docs regenerated, with no diff left:
@@ -82,22 +85,31 @@ and re-scored. Add the revision to `bench/accuracy/registry.json` and publish th
 
 ## Publishing
 
-Pushing a version tag (`git tag v0.1.0 && git push origin v0.1.0`) runs `.github/workflows/release.yml`:
+Push the version tag, then move the Action's floating `v0` tag to it (moving `v0` doesn't start a release):
+
+```sh
+git tag vX.Y.Z && git push origin vX.Y.Z
+git tag -f v0 vX.Y.Z && git push -f origin v0
+```
+
+The tag runs `.github/workflows/release.yml`:
 
 1. **build** makes the wheel and sdist with read-only rights and a pinned build backend.
-2. **publish** (in the `release` environment) writes the SBOM, signs every file with Sigstore, adds a build
-   provenance attestation and creates the GitHub release with all of them.
-3. **pypi** (same environment, after `publish`) uploads the wheel and sdist from step 1 to PyPI by
+2. **publish** writes the SBOM, signs every file with Sigstore, adds a build provenance attestation and creates the
+   GitHub release with all of them. It runs in the `release` environment, so a maintainer approves it on the run's
+   page (Review deployments).
+3. **pypi** uploads the wheel and sdist from step 1 to PyPI by
    [trusted publishing](https://docs.pypi.org/trusted-publishers/): PyPI trusts this repo, `release.yml` and the
-   `release` environment, so no PyPI token is stored. It runs only in the project's own repo, and only when the tag
-   matches the package version.
+   `release` environment, so no PyPI token is stored. It is approved a second time the same way, and runs only in the
+   project's own repo and only when the tag matches the package version.
 
-Moving the floating `v0` tag afterwards (`git tag -f v0 v0.1.0 && git push -f origin v0`) doesn't start a release.
+Then:
 
-When the release run succeeds, `.github/workflows/mcp-registry.yml` lists the MCP server in the
-[MCP registry](https://github.com/modelcontextprotocol/registry) (the registry reads the `mcp-name` line in the README
-that PyPI shows). It signs in with GitHub's OIDC token, which proves the `io.github.stackvitals` namespace; a browser
-sign-in can't, because it can't read organization roles. To list again by hand: `gh workflow run mcp-registry.yml`.
-
-Bump `version` in `server.json` (both places) with the package version before each release.
-
+4. **Marketplace:** on the new release's page, Edit, tick "Publish this Action to the GitHub Marketplace" and update
+   the release.
+5. **MCP registry:** when the release run succeeds, `.github/workflows/mcp-registry.yml` lists the MCP server in the
+   [MCP registry](https://github.com/modelcontextprotocol/registry) (the registry reads the `mcp-name` line in the
+   README that PyPI shows). It signs in with GitHub's OIDC token, which proves the `io.github.stackvitals` namespace; a
+   browser sign-in can't, because it can't read organization roles. Check it ran; to list again by hand:
+   `gh workflow run mcp-registry.yml`.
+6. **Check the install:** `pip install stackvitals==X.Y.Z` in a fresh environment, and `stackvitals --help`.

@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.3 (2026-10-31)
+
+- The app's About page and the project site say Apache 2.0 (they said MIT); the site shows the cube logo and the
+  one-command setup.
+- The app's Setup page and Help give `stackvitals init owner/repo` as the terminal way to set a repo up.
+- PyPI lists the project's links (home, docs, source, issues, changelog).
+- Docs: the install page says how to get the command; guides, quickstart and modules lead with `stackvitals init`;
+  contradictions fixed (golden paths, GitLab, GitHub Enterprise Server, sign-in, private repos' CI runs, cycle-time
+  phases); the PR verdicts are a table; the settings page says which switches are on by default; the architecture
+  diagrams list every trigger and show Portal running from the org's repo; a release checklist with the real steps.
+- A code of conduct (Contributor Covenant 2.1), with reports through the repository's private reporting form.
+
 ## 0.1.2 (2026-10-31)
 
 - `stackvitals init owner/repo` sets StackVitals up in one command: commits the workflow (or opens a pull request), follows

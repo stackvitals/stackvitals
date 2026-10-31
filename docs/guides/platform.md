@@ -6,11 +6,11 @@ and a security review you can sign off.
 ## Roll it out
 
 1. **Portal first.** Create a private repo (for example `portal`) and save the workflow from
-   `stackvitals portal init` in it (`stackvitals portal check my-org` first says what your token can read). With the built-in token it reads public repos; for private ones, an org
+   `stackvitals portal init` in it (`stackvitals portal check my-org` first says what your token can read (it uses your `gh auth login` or `GITHUB_TOKEN`)). With the built-in token it reads public repos; for private ones, an org
    owner creates a read-only org App (`stackvitals portal app-link my-org` opens GitHub's form filled in)
    ([modules](../modules.md#portal)).
-2. **The suite per repo.** Each team adds the workflow ([quickstart](../quickstart.md)); `uvx stackvitals ci init
-   OWNER/REPO` writes it with that repo's CI workflows named. Private repos set `pages: artifact` (each run that
+2. **The suite per repo.** Each team runs `stackvitals init OWNER/REPO` ([quickstart](../quickstart.md)), which
+   commits the workflow with that repo's CI workflows named and follows the first run. Private repos set `pages: artifact` (each run that
    changed the app uploads it as a download kept 7 days) or open the app with `stackvitals ui OWNER/REPO`.
 3. **Settings as code.** `.github/stackvitals.toml` per repo; every setting, its default and the permission it needs
    are in [settings.md](../settings.md).

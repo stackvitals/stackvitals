@@ -35,11 +35,34 @@ def _inputs(action_yml: str) -> list[str]:
 def markdown(action_yml: str) -> str:
     owner_repo = ACTION_REF.split("@", 1)[0]
     lines = ["# Install", "",
-             f"StackVitals is a GitHub Action, `uses: {ACTION_REF}`, run by one workflow file in your repo. The file below "
-             "is exactly what `stackvitals ci init owner/repo` prints (that command also fills in your CI workflows' "
-             "names) and what the app's Setup page commits for you. Save it as `.github/workflows/stackvitals.yml`; "
-             "committing it starts the first run. No settings file is needed: a missing `.github/stackvitals.toml` means "
-             "the defaults ([settings.md](settings.md)).", "",
+             f"StackVitals has two parts: a GitHub Action, `uses: {ACTION_REF}`, that runs in your repo, and the "
+             "`stackvitals` command on your machine, which sets the Action up, opens a private repo's dashboard and runs "
+             "the MCP server for AI agents. The Action needs nothing installed; the command is one `pip install`.", "",
+             "## Get the command", "",
+             "```sh",
+             "pip install stackvitals      # Python 3.11 or newer",
+             "gh auth login                # once; or set GITHUB_TOKEN",
+             "```", "",
+             "Or run any command without installing, with [uv](https://docs.astral.sh/uv/): `uvx stackvitals init owner/repo`. Upgrade with "
+             "`pip install -U stackvitals`. `stackvitals sql` needs the SQL extra: `pip install \"stackvitals[sql]\"`. "
+             "The same package holds the CLI, `stackvitals ui` (a dashboard on your machine) and the MCP server "
+             "(`stackvitals serve`).", "",
+             "## Set up a repo", "",
+             "```sh",
+             "stackvitals init owner/repo",
+             "```", "",
+             "`init` commits the workflow file below (or opens a pull request when the branch is protected or a different "
+             "`stackvitals.yml` is there), follows the first run and turns on GitHub Pages for a public repo. A private "
+             "repo keeps Pages off, since a Pages site is public on most plans: open its dashboard with "
+             "`stackvitals ui owner/repo`. The app's Setup page does the same without a terminal. More: "
+             "[quickstart.md](quickstart.md).", "",
+             f"`{ACTION_REF}` follows the latest release; to pin an exact one, use its version tag "
+             f"(`{owner_repo}@vX.Y.Z`, listed under [releases](https://github.com/{owner_repo}/releases)).", "",
+             "The rest of this page is the reference for doing it by hand. The file below is exactly what "
+             "`stackvitals ci init owner/repo` prints (that command also fills in your CI workflows' names) and what "
+             "`init` and the app's Setup page commit for you. Save it as `.github/workflows/stackvitals.yml`; committing "
+             "it starts the first run. No settings file is needed: a missing `.github/stackvitals.toml` means the "
+             "defaults ([settings.md](settings.md)).", "",
              "## Modules", "",
              "Pick modules with the `modules` input, comma separated. To run one alone, list only it, for example "
              "`modules: ci`. Delivery and Insights have no id of their own: they come with `flow`.", "",

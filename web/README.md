@@ -22,7 +22,8 @@ for a repo's `stackvitals-data` branch.
 ## Layout
 
 - `src/main.tsx` entry; `src/boot.ts` runs before paint (theme, favicon, splash)
-- `src/app/` shell (`App.tsx`), hash router, route list (`routes.ts`), repo switcher, logo picker
+- `src/app/` shell (`App.tsx`), hash router, route list (`routes.ts`), adding repos (`AddRepo.tsx`), the brand
+- `src/brand/` the cube logo (`Logo.tsx`; the images are in `web/brand/`)
 - `src/data/` typed file shapes, sources (here, pages, branch), fetch cache and `useFiles`, repo store, formatting, write paths
 - `src/ui/` design system; `src/charts/` scrub chart, sparkline, bars, metric hero and watchlist
 - `src/github/` GitHub API client, token storage, sign-in (PKCE via `worker/relay`), workflow generator, setup steps

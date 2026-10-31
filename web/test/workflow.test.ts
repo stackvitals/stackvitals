@@ -53,8 +53,8 @@ test("the CI guess, the prefilled GitHub link and the CLI command", () => {
   assert.deepEqual(ciGuess(["Release"]), ["Release"]);
   const link = newFile("o/r", "main", FILE, "a: 1\n");
   assert.deepEqual(link, { url: "https://github.com/o/r/new/main?filename=.github%2Fworkflows%2Fstackvitals.yml&value=a%3A+1%0A", kind: "file", paste: null });
-  assert.equal(cliCommand("o/r", [...MODULES]), "stackvitals ci init o/r > .github/workflows/stackvitals.yml");
-  assert.equal(cliCommand("o/r", ["deps", "ci"]), "stackvitals ci init o/r --modules ci,deps > .github/workflows/stackvitals.yml");
+  assert.equal(cliCommand("o/r", [...MODULES]), "stackvitals init o/r");
+  assert.equal(cliCommand("o/r", ["deps", "ci"]), "stackvitals init o/r --modules ci,deps");
   // The compact file fits GitHub's link cap; the full one (with comments) is what gets pasted when it doesn't.
   const setup = newFile("o/r", "main", FILE, workflowTemplate(["CI", "Tests"], { compact: true }), workflowTemplate(["CI", "Tests"]));
   assert.ok(setup.url.length <= GH_LINK_MAX, String(setup.url.length));

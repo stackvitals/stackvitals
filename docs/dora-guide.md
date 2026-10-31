@@ -8,7 +8,8 @@ one can't tell you and how each is gamed, so a team can read them honestly.
 
 DORA groups its [five software delivery metrics](https://dora.dev/guides/dora-metrics/) in two: throughput (deployment
 frequency, change lead time, failed deployment recovery time) and instability (change fail rate, deployment rework
-rate). StackVitals counts the first four with Apache DevLake's definitions (an incident blames the last production
+rate). StackVitals counts deployment frequency, change lead time, failed deployment recovery time and change fail rate with
+Apache DevLake's definitions (an incident blames the last production
 deployment before it), and shows beside the change fail rate a second one where a revert blames the deployment that
 shipped what it undid; rework rate is the share of deployments that shipped an unplanned fix. The tiers (elite,
 high, medium, low) come from DevLake's 2023 table, which predates rework rate, so rework rate has no tier.
@@ -48,4 +49,5 @@ the delivery, and the number stops meaning anything (Goodhart's law).
 ## Further reading
 
 - DORA's own guidance on the metrics and their misuse: <https://dora.dev/guides/dora-metrics-four-keys/>
-- LinearB's definitions of the six cycle-time phases: <https://linearb.helpdocs.io/article/1s38stsugw-glossary-metrics>
+- LinearB's definitions of the four cycle-time phases (coding, pickup, review, deploy; review is shown split into its
+  approve and merge times): <https://linearb.helpdocs.io/article/1s38stsugw-glossary-metrics>

@@ -38,7 +38,7 @@ SETTINGS = (
     Setting("ci.quarantine.never", "list", "Test ids never quarantined, even when flaky.", "ci"),
     Setting("ci.quarantine.max_days", "int", "Days a flaky test may stay in quarantine on its own before it fails builds again and is listed as overdue for a fix; 0 never ends it. Tests someone quarantined by hand stay.", "ci"),
     Setting("ci.coverage.min_patch", "share", "The verdict check fails when fewer of a pull request's added lines ran than this (from the coverage report CI uploads); 0 is off.", "ci"),
-    Setting("ci.triage.provider", "choice", "A model reads the log of up to 3 failures the history can't decide and says whether they look like the change, beside the verdict (never in it); needs the triage-key input. Setups for each provider: docs/triage.md (gemini has a free tier).", "ci", choices=("off", "gemini", "openai", "anthropic", "mistral", "groq")),
+    Setting("ci.triage.provider", "choice", "A model reads the log of up to 3 failures the history can't decide and says whether they look like the change, beside the verdict (never in it); needs the triage-key input (docs/triage.md says how). Setups for each provider: docs/triage.md (gemini has a free tier).", "ci", choices=("off", "gemini", "openai", "anthropic", "mistral", "groq")),
     Setting("ci.triage.model", "text", "The model to ask (empty: the provider's suggested small model).", "ci"),
     Setting("ci.triage.url", "text", "Another OpenAI-compatible endpoint (https) instead of the provider's own.", "ci"),
     Setting("ci.triage.allow_private", "bool", "Send a private repo's failing logs too (off: free tiers may keep what they're sent).", "ci"),
@@ -173,9 +173,25 @@ def to_json() -> list[dict]:
              **({"choices": list(s.choices)} if s.choices else {}), **({"unit": s.unit} if s.unit else {})} for s in SETTINGS]
 
 
-def _shown(value) -> str:
+def _action_inputs() -> dict[str, str]:
+    # The Action's input defaults, from action.yml beside the source (absent from an installed package).
+    import re
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[3] / "action.yml"
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    return dict(re.findall(r'^  ([a-z0-9-]+):\n(?:    .*\n)*?    default: "?([^"\n]*)"?', text, re.M))
+
+
+def _shown(value, key: str = "", kind: str = "") -> str:
     if value is None:
-        return "the workflow input"
+        # Settings with no file default take the workflow input of the same name, else they are off.
+        name = key.rsplit(".", 1)[-1].replace("_", "-")
+        given = _action_inputs().get(name)
+        if given is not None:
+            return f"{'on' if given == 'true' else 'off'} (input {name})"
+        return "off" if kind == "switch" else "none (off)"
     if isinstance(value, bool):
         return "true" if value else "false"
     if isinstance(value, (list, tuple)):
@@ -199,7 +215,7 @@ def markdown() -> str:
             lines += ["", f"## [{section}]", "", "| Key | Default | What it does |", "|---|---|---|"]
         name = s.key.rsplit(".", 1)[-1] if s.kind != "dates" else '"test id or pattern"'
         unit = f" {s.unit}" if s.unit and s.kind not in ("share",) else ""
-        lines.append(f"| `{name}` | `{_shown(default(s.key))}`{unit} | {s.help} |")
+        lines.append(f"| `{name}` | `{_shown(default(s.key), s.key, s.kind)}`{unit} | {s.help} |")
     lines += ["", "Example:", "", "```toml", "[alerts]", "pickup_p75_hours = 6", "channels = [\"webhook\", \"issue\"]", "",
               "[ci.mute]", "\"tests/test_api.py::test_slow_network\" = 2026-12-31", "", "[automation]", "issues = true", "```", ""]
     return "\n".join(lines)

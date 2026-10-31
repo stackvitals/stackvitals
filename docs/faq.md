@@ -67,7 +67,7 @@ command line takes the same two variables when you run it against your server.
 
 ## Is there a login, with roles for who sees what?
 
-Yes, and it is GitHub's own. The app signs in with GitHub and reads each repo's data branch with your access, so a
+Yes, and it is GitHub's own. The app uses your GitHub token (or GitHub sign-in, where the site has a sign-in relay) and reads each repo's data branch with your access, so a
 person sees exactly the repos GitHub already lets them read, and an org's roles (members, outside collaborators, teams)
 apply unchanged; Portal's org view shows only the repos the viewer can open. Nothing is copied to a server of ours to
 guard, so there is no second user list to keep in step. What you don't get is a separate admin screen for roles: you

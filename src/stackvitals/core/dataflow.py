@@ -36,7 +36,7 @@ FLOWS = [
      "sends": f"A download of the crawl's benchmark files from {PUBLIC_HOME or BENCH_REPO}'s releases; nothing about your repo is sent.",
      "when": "every run, cached a day", "off": "Nothing to turn off: it is a download."},
     {"feature": "Shared benchmark figures (opt-in)", "hosts": ["github.com"],
-     "sends": f"An issue on {BENCH_REPO}, filed by a person from a link in the run summary: this repo's rounded CI figures, "
+     "sends": f"An issue on {PUBLIC_HOME or BENCH_REPO}, filed by a person from a link in the run summary: this repo's rounded CI figures, "
               "its language and star tier, a random id kept in the data branch, and its name only with `name = true`. It is "
               "public once filed, and shows the account that filed it.",
      "when": "only when someone files the link", "off": "`[benchmarks] share = false` (the default); close the issue to withdraw it."},

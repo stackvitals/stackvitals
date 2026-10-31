@@ -263,7 +263,7 @@ function Main({ app, c, title, sub }: { app: AppJson; c: CommunityFull; title: s
       <Columns ratio="lead">
         <Card><Answers c={c} /></Card>
         <Facts class="is-figures cm-side" rows={[
-          ["Score", fig(c.score ? `${c.score.score}/100` : "–", c.score ? "against similar public repos" : "after launch, against public repos")],
+          ["Score", fig(c.score ? `${c.score.score}/100` : "–", c.score ? "against similar public repos" : "once enough similar public repos are measured")],
           ["Answered within a day", fig(pct(c.facts?.answered_1d_share), no(c.facts?.answered_1d_share) ? "not enough outside items to say" : "of outside contributors heard back")],
           ["Project's answer, outside issues", fig(kmValue(c.answers?.issues?.km), "median, waiting items counted")],
         ]} />

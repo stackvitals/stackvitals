@@ -1,6 +1,7 @@
 # Coverage and peer groups
 
-When StackVitals compares your repo with "similar public repos", the peers come from the MergeScout crawler, which reads public GitHub repos daily on GitHub Actions. This page says what it reads, what it misses, and how each peer group is formed.
+When StackVitals compares your repo with "similar public repos", the peers come from the project's crawler (built for MergeScout, the Contribute module, and now feeding every
+benchmark), which reads public GitHub repos daily on GitHub Actions. This page says what it reads, what it misses, and how each peer group is formed.
 
 ## What the crawl reads
 

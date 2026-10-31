@@ -312,8 +312,8 @@ def _doc(cs: list[dict], r: dict) -> str:
            f"- Each adjudicator mostly sided with its own family: Claude's {r['cross']['claude_adjudicator_sided_with_claude']} times, "
            f"Gemini's {r['cross']['gemini_adjudicator_sided_with_gemini']} times.",
            "- So each card shows its headline on each labeller's labels as well as the adjudicated ones.",
-           "- A check by six models from three families (OpenAI gpt-5.4-mini and gpt-5-mini, Google gemini-3.8-flash and "
-           "gemini-3.5-flash, Anthropic Claude Sonnet and Haiku), each answering alone the same plain-language questions on "
+           "- A second check: six models from three families (OpenAI gpt-5.4-mini and gpt-5-mini, Google gemini-3.8-flash and "
+           "gemini-3.5-flash, Anthropic Claude Sonnet and Haiku) each answered the same plain-language questions alone, on "
            f"{r['panel6']['items']} labelled items (the CI and reply items drawn first from those the first two labellers "
            "disagreed on). Where a majority formed, it matched the labels on CI causes "
            f"{panel('ci')}, the release behind a bug {panel('incident')}, how releases reach users {panel('deploy')}, "
@@ -325,10 +325,12 @@ def _doc(cs: list[dict], r: dict) -> str:
            "- No person has audited the labels yet.", "",
            "**How sure.** A rule is an *early observation* when its check rests on few cases; its numbers are a direction,",
            "not a settled rate: " + "; ".join(f"`{x['id']}` ({x['strength_why']})" for x in r["registry"]["rules"]
-                                            if x.get("strength") == "early observation") + ". A rule whose bar *failed* is kept "
+                                            if x.get("strength") == "early observation") + ". A rule's *bar* is the accuracy it had to reach before it shipped; for the flaky-test rules it is that at most 5% "
+           "of the failures it calls flaky were really caused by the change (*masking*: a real failure hidden as a flake). "
+           "A rule whose bar *failed* is kept "
            "only where failing costs nothing it promised: " + "; ".join(f"`{x['id']}` ({x['strength_why']})" for x in r["registry"]["rules"]
-                                                           if x.get("strength") == "bar failed") + ". The rest are validated on",
-           "held-out data ([rules.md](rules.md)).", "",
+                                                           if x.get("strength") == "bar failed") + ". The rest are validated: checked against their bar, on held-out data where the rule has one ([rules.md](rules.md) "
+           "says which).", "",
            "**Reproduce a number.** `python bench/accuracy/reproduce.py list` names the command behind every result file;",
            "`reproduce.py check <card>` re-scores it and says whether the numbers match. Scoring reads the evidence each",
            "card was labelled from (the `.work` folders: CI histories, crawl records, logs), which is too large and holds",
@@ -343,7 +345,7 @@ def _doc(cs: list[dict], r: dict) -> str:
             "[registry.json](../bench/accuracy/registry.json).", ""]
     for rule in r["registry"]["rules"]:
         for v in rule.get("revisions") or []:
-            out.append(f"- {v['date']}, `{rule['id']}`: was {v['from']}; {v['why']}; now {v['effect']}.")
+            out.append(f"- {v['date']}, `{rule['id']}`: before, {v['from']}; {v['why']}; after, {v['effect']}.")
     return "\n".join(out) + "\n"
 
 

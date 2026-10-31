@@ -151,7 +151,7 @@ export function ciGuess(names: string[]): string[] {
 
 export function cliCommand(repo: string, modules: readonly string[]): string {
   const m = MODULES.filter((x) => modules.includes(x));
-  return `stackvitals ci init ${repo}${m.length === MODULES.length ? "" : ` --modules ${m.join(",")}`} > ${FILE}`;
+  return `stackvitals init ${repo}${m.length === MODULES.length ? "" : ` --modules ${m.join(",")}`}`;
 }
 
 // StackVitals inside another workflow before it is on PyPI: the Action's own code and pinned packages (its uv.lock),

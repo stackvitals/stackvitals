@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="site-top"><nav class="wrap" aria-label="StackVitals">
-  <a class="mark" href="./"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--logo-tile)"/><path d="M6.5 20.5 16 25.3l9.5-4.8M6.5 15.6 16 20.4l9.5-4.8" fill="none" stroke="var(--logo-fg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5.8 25.5 10.6 16 15.4 6.5 10.6Z" fill="var(--logo-acc)"/></svg>StackVitals</a>
+  <a class="mark" href="./"><img src="app/brand/cube-64.png" width="30" height="30" alt="">StackVitals</a>
   <span class="links"><a href="#watch">What it watches</a><a href="#how">How it works</a><a href="#compare">Compare</a><a href="#questions">Questions</a></span>
   <a class="btn" href="app.html?demo=1">Live demo</a>
   <a class="btn primary" href="app.html#/setup">Set it up</a>
@@ -71,6 +71,9 @@
       <li><span class="n">5</span><b>Open your app</b><span class="time">now</span></li>
     </ol>
     <p><a class="btn primary big" href="app.html#/setup">Start the setup</a></p>
+    <p class="lede after">Or from a terminal, in one command: <code>pip install stackvitals</code>, then
+    <code>stackvitals init your-name/your-repo</code>. A private repo keeps its data private and opens with
+    <code>stackvitals ui your-name/your-repo</code>.</p>
   </section>
 
   <section id="compare" class="band" aria-labelledby="compare-title">
@@ -101,7 +104,7 @@
 </main>
 <footer class="site-foot"><div class="wrap">
   <span class="mark">StackVitals</span>
-  <span class="mute">Free and open source (MIT). It runs in your repo's GitHub Actions and keeps everything in your repo.</span>
+  <span class="mute">Free and open source (Apache 2.0). It runs in your repo's GitHub Actions and keeps everything in your repo.</span>
   <span class="links"><a href="app.html#/setup">Set it up</a><a href="app.html?demo=1#/connections">Connections</a><a href="app.html?demo=1">Live demo</a><a href="#questions">Questions</a></span>
 </div></footer>
 </body>

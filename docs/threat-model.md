@@ -26,7 +26,8 @@ What leaves the repo is listed separately in [privacy.md](privacy.md); how to re
 | A fork PR gets a deps comment or a write | The lockfile check comments only on same-repo PRs | `test_the_pr_check_reads_lockfile_changes_and_never_comments_on_forks` |
 
 **Triggers.** The workflow `stackvitals ci init` writes starts on `workflow_run` (after your CI finishes), a schedule,
-`workflow_dispatch`, a push that changes its settings or workflow file, `issues` and `issue_comment` (commands and app
+`workflow_dispatch`, `repository_dispatch` (deployments and incidents sent with `stackvitals record`, which
+needs a token that can write to the repo), a push that changes its settings or workflow file, `issues` and `issue_comment` (commands and app
 requests, checked against the sender's permission), and `pull_request` only when a lockfile changes. It never uses
 `pull_request_target`. On a fork's pull request GitHub gives that `pull_request` run a read-only token and no secrets,
 and StackVitals reads the lockfiles through the API without checking out or running the PR's code. The Portal's
@@ -59,7 +60,7 @@ and runs only the request text the approval's code names).
 
 | Threat | What stops it | Test |
 |---|---|---|
-| The app's page runs code from elsewhere | Everything is bundled into the data branch; the page allows only its own scripts (`script-src 'self'`) and talks only to GitHub's API and raw files, other repos' Pages sites (`*.github.io`, to read a public repo's published data), Linear's API and the optional sign-in relay; images load only from itself and GitHub's avatar host (`avatars.githubusercontent.com`) | `test_the_app_ships_with_its_libraries_licences_and_no_remote_code` |
+| The app's page runs code from elsewhere | The app is bundled into the data branch (only Explore and the printable module pages load DuckDB and Chart.js from jsDelivr, at pinned versions); the page allows only its own scripts (`script-src 'self'`) and talks only to GitHub's API and raw files, other repos' Pages sites (`*.github.io`, to read a public repo's published data), Linear's API and the optional sign-in relay; images load only from itself and GitHub's avatar host (`avatars.githubusercontent.com`) | `test_the_app_ships_with_its_libraries_licences_and_no_remote_code` |
 | A GitHub token pasted in the app outlives the visit | It stays in the tab's session storage and is gone when the tab closes, unless the person ticks "Remember on this device"; Sign out removes it. It goes only to `api.github.com`. On an `<owner>.github.io` Pages address, every Pages site of that owner shares one origin, so another of the owner's Pages sites opened in the same tab can read the tab's token ("Remember" is off there for the same reason) | |
 | The sign-in relay keeps or leaks tokens | The relay is optional and stateless: it only swaps GitHub's one-time code (with PKCE and a state check) or a refresh token for a token and returns it; it stores nothing and serves only the app's own address | `nothing is logged`, `unknown origins, missing PKCE, foreign redirects and odd grants never reach GitHub` (worker/relay) |
 | A connector secret saved from the app is seen on the way | The value is sealed in the browser (libsodium sealed box) with the repo's own Actions public key; only the sealed value reaches GitHub, and the app never reads a secret back | `a sealed secret opens with the repo's private key and holds the exact value` (web/test) |

@@ -133,8 +133,8 @@ verdict check, `issues: write` for flaky-test issues.
   a docs index, with GitHub's own sign-in and repository roles. It doesn't replace an internal developer portal with
   plugins, live service data from clouds or its own access control (Backstage, Port, Cortex, OpsLevel); it exports
   to Backstage instead.
-- Golden paths open a pull request in a repo the requester can already write to; they never create repos or run
-  arbitrary scripts. Required checks post a check run; a branch rule must still name it.
+- Golden paths open a pull request in a repo the requester can already write to, or create a repo from a template
+  when the org App may create repos; they never run arbitrary scripts. Required checks post a check run; a branch rule must still name it.
 - The built-in token reads public repos only; private repos need an org-owned read-only App. A public portal repo
   leaves private repos out.
 - The org view adds up and takes medians of what each repo published; repos that never ran a module are left out of
@@ -153,7 +153,7 @@ verdict check, `issues: write` for flaky-test issues.
 - **Copilot:** needs an org App with "Organization Copilot metrics: read"; the workflow token can't have it. Each day
   arrives two days late.
 - **Untested live:** comment commands' access check and uploads from other CI systems are covered by tests only.
-- **GitLab:** CI only (flaky jobs, pages, merge request notes; no verdict check); merge requests, deploys and incidents aren't read yet. The GitLab job is tested against a stand-in API, not a live project.
+- **GitLab:** CI only (flaky jobs, pages, merge request notes; no verdict check); the GitLab job doesn't read merge requests, deploys or incidents yet (the command line reads merge requests and deployments: `stackvitals delivery group/project --gitlab`). The GitLab job is tested against a stand-in API, not a live project.
 
 ## The app
 
@@ -195,5 +195,5 @@ What happens when something goes wrong mid-run. Each line is held by a test in `
 | A JSON test report stopped early | Read and marked as cut short | `test_a_json_report_that_stopped_early_says_so` |
 | A pull request's own files try to fool or break the dependency check | Odd file names can't inject workflow commands, a renamed or off-registry package borrows no verdict, an unreadable lockfile is skipped | `test_the_pr_check_cannot_be_fooled_or_broken_by_the_prs_own_files` |
 
-**Not tested yet:** Bors and other merge bots outside GitHub's merge queue, monorepo task runners (Nx, Turborepo,
-Bazel) that skip unchanged tests, and GitHub Enterprise Server.
+**Not tested yet:** Bors and other merge bots outside GitHub's merge queue, and monorepo task runners (Nx, Turborepo,
+Bazel) that skip unchanged tests. GitHub Enterprise Server is tested against a stand-in server only, not a live one.

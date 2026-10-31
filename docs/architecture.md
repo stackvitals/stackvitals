@@ -17,8 +17,10 @@ way back: settings and decisions made in the app.
 ### 1. What starts a run
 
 A run starts when any of these happens: a CI run finishes (`workflow_run`), the 3-hour schedule comes round, a deploy or
-incident is sent from another tool (`stackvitals record`), someone makes a request in the app (`workflow_dispatch`),
-someone comments `/stackvitals` on an issue or pull request, or the workflow or settings file changes (`push`). Each
+incident is sent from another tool (`stackvitals record`, which sends a `repository_dispatch`), someone makes a request
+in the app (an issue it opens, or `workflow_dispatch`), someone comments `/stackvitals` on an issue or pull request
+(`issue_comment`), a pull request changes a lockfile (`pull_request`, for the dependency check), or the workflow or
+settings file changes (`push`). Each
 start is the same job; what it reads depends on what started it.
 
 ### 2. Collect
@@ -33,9 +35,10 @@ Copilot usage, Slack, Teams and Discord ([connectors.md](connectors.md)).
 
 ### 3. Analyse
 
-Six modules read the same collected data in one pass: CI Health (flaky tests and the verdict on each failing pull
+The modules read the same collected data in one pass: CI Health (flaky tests and the verdict on each failing pull
 request), Team Flow (who has to act next), Delivery and DORA (deploys, lead time and failures), Dependencies (vulnerable
-and risky packages), Community (newcomers and first answers) and Portal (owners and scorecards). Insights then puts
+and risky packages), Community (newcomers and first answers) and Portal (owners and scorecards; it runs from the org's own portal repo
+with its own workflow, not in each repo's run). Insights then puts
 every module's findings in one list, ranked by the hours at stake.
 
 Every verdict stands on two things: the **rules registry**, where each rule has an accuracy card measured on public repos
@@ -138,7 +141,7 @@ in `deploy/crawler/`. It publishes aggregates only. Your job reads them; it neve
 | `src/stackvitals/deps` | Dependency Steward |
 | `src/stackvitals/community` | Community health |
 | `src/stackvitals/portal` | Portal: catalog, owners, scorecards, campaigns, golden paths, the org view |
-| `src/stackvitals/connectors` | Jira, Linear, PagerDuty, incident.io, Copilot, Slack, Discord, Discourse |
+| `src/stackvitals/connectors` | Jira, Linear, PagerDuty, incident.io, SonarQube, Copilot and AI-spend keys, Slack, Discord, Discourse (Teams and the other chat alerts are in `core/chat.py`) |
 | `src/stackvitals/web` | the app and the site |
 | `src/stackvitals/mcp_server.py` | the MCP server |
 | `src/mergescout` | Contribute (MergeScout) |

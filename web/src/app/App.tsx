@@ -12,7 +12,7 @@ import { Button } from "../ui/Button";
 import { Icon } from "../ui/icons";
 import { pageTitle } from "../ui/Page";
 import { Sheet } from "../ui/Sheet";
-import { LogoButton } from "./LogoPicker";
+import { Brand } from "./Brand";
 import { Profile } from "./Profile";
 import { href, route, type Route } from "./router";
 import { ROUTES, TABS, routeById, type PageProps, type RouteDef } from "./routes";
@@ -99,7 +99,7 @@ export function App() {
   return <div class="app">
     <a class="skip" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById("main")?.focus(); }}>Skip to content</a>
     <aside class="sidebar" aria-label="Sections">
-      <div class="side-brand"><LogoButton withName /></div>
+      <div class="side-brand"><Brand withName /></div>
       <nav class="side-nav" aria-label="Sections">
         {groups.map((g) => <div class="nav-group" role="group" aria-label={g}>
           <div class="nav-group-label" aria-hidden="true">{g}</div>
@@ -110,7 +110,7 @@ export function App() {
     </aside>
     <div class="main-col">
       <header class={"topbar" + (title.compact ? " is-compact" : "")}>
-        <span class="topbar-logo"><LogoButton /></span>
+        <span class="topbar-logo"><Brand /></span>
         <span class="topbar-title" aria-hidden={!title.compact}>{title.title}</span>
         <Profile />
       </header>

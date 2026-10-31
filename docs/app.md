@@ -17,12 +17,11 @@ explorer, which fetches DuckDB once) and has no tracking. The bundled libraries 
 | `index.html?pages=https://owner.github.io/name/` | Another repo's Pages site |
 | `index.html?welcome` | The Welcome screen |
 
-Links from the earlier app still work: `#/home` opens Overview and `#/integrations` opens Connections.
 
 ## Layout
 
 The sidebar groups the pages: **Health** (Overview, Insights, CI Health, Pull Requests, Delivery, Community,
-Dependencies), **Organisation** (Investment, Portal, Explore), **Team** (Activity, Settings) and **Install** (Setup,
+Dependencies), **Organisation** (Investment, Portal, Explore), **Team** (Activity, Data health, Settings) and **Install** (Setup,
 Connections, Agents, Help, About). A badge shows what waits on a page, for example flaky tests or newcomers waiting. A
 page for a module that isn't set up is dimmed. On a phone the sidebar becomes a tab bar (Overview, Insights, CI, PRs)
 with the rest under **More**.
@@ -58,7 +57,7 @@ Once GitHub is connected, setup takes a few clicks; connecting takes one token, 
 **Setup** picks a repo, checks what it has and suggests a plan (modules ticked from what it finds) that you can change.
 **Set it up** then commits the workflow (a pull request when the branch is protected), starts the first run and shows it
 live, waits for the data branch and turns on Pages for public repos. Each step is saved, so a reload picks up where it
-stopped. Without a token you get the file ready to add on GitHub, the YAML to copy, or the CLI command, and the app
+stopped. Without a token you get the file ready to add on GitHub, the YAML to copy, or the one CLI command (`stackvitals init owner/repo`), and the app
 checks for the first run at a pace that stays inside GitHub's limit for visitors.
 
 ## Pages
