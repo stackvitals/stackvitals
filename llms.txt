@@ -2,6 +2,18 @@
 
 > A free, GitHub-native engineering health suite: one GitHub Action keeps CI, pull request, delivery (DORA), community and dependency history on a data branch in your own repo, with a static app, a CLI and an MCP server over it. No server of ours, no Docker.
 
+## Facts
+
+- Runs as a GitHub Action in your own repo: no server of ours, no Docker, no account; history is kept on a `stackvitals-data` branch in the same repo.
+- Reads GitHub's API with the workflow's own token: Actions runs, jobs, logs and test reports, pull requests, reviews, releases and deployments. It doesn't use git hooks and doesn't point at lines of code.
+- On a pull request whose CI failed, one comment sorts each failure: likely flaky, already failing on main, new, and a few more; no verdict passes the check by itself.
+- Deployments come from GitHub's Deployments API, deploy workflows and releases, found without setup, and from any other tool (Argo CD, Jenkins, a shell script) through `stackvitals record` or a `repository_dispatch` event.
+- It acts as well as reports: alerts to Slack, Teams, Discord or a webhook, opt-in re-runs of flaky jobs, issues, quarantine, suggested reviewers and size labels.
+- Optional connectors: Jira, Linear, PagerDuty, incident.io, Slack and Discord channels, Discourse, GitLab, Bitbucket and Azure DevOps, SonarQube, test reports from Jenkins, CircleCI and Buildkite, AI spend.
+- SQL over the history in the browser and with `stackvitals sql`; an export with DevLake's table names for Postgres; Backstage catalog entities with the repo's level as an annotation (no card inside Backstage).
+- An MCP server gives AI agents the same history and verdicts.
+- Every verdict's rule is checked on public data and the misses are published.
+
 ## Docs
 
 - [How accurate StackVitals is](docs/accuracy.md): The rules behind StackVitals' verdicts and headline numbers were each checked against public data and, where a judgement was needed, against labelled examples.
@@ -24,6 +36,20 @@
 - [How StackVitals grows with you](docs/scaling.md): StackVitals keeps each repo's history in that repo's own stackvitals-data branch.
 - [StackVitals settings](docs/settings.md): Put these in .github/stackvitals.toml on your default branch.
 - [Model triage: setup](docs/triage.md): When StackVitals' history and the log's signs can't decide whether a pull request's failure came from the change, a model can read the failing step's error lines and the changed file names and give its view.
+
+## Compared with
+
+- [StackVitals and CDviz](docs/compare/cdviz.md): CDviz: Delivery observability built on CDEvents, the CD Foundation's event standard: a collector, Postgres with TimescaleDB, and Grafana.
+- [StackVitals and Apache DevLake](docs/compare/devlake.md): Apache DevLake: A data platform that collects DevOps data from about 50 tools into one model and shows it in Grafana, with DORA's five metrics.
+- [StackVitals and Faros Community Edition](docs/compare/faros-community-edition.md): Faros Community Edition: An engineering-operations platform (Airbyte, Postgres, Hasura, Metabase, dbt, n8n).
+- [StackVitals and Trunk Flaky Tests and BuildPulse](docs/compare/flaky-test-tools.md): Trunk Flaky Tests and BuildPulse: Flaky-test services: they read JUnit reports from CI, detect flaky tests and quarantine them.
+- [StackVitals and GrimoireLab](docs/compare/grimoirelab.md): GrimoireLab: CHAOSS's software-analytics toolset: 30+ sources, identity merging and community-health dashboards.
+- [StackVitals and Liatrio's DORA plugin for Backstage](docs/compare/liatrio-backstage.md): Liatrio's DORA plugin for Backstage: A Backstage plugin showing DORA metrics per service.
+- [StackVitals and LinearB](docs/compare/linearb.md): LinearB: A commercial engineering-metrics product with DORA, and gitStream rules that automate pull requests.
+- [StackVitals and Middleware](docs/compare/middleware.md): Middleware: An open-source DORA app (middlewarehq/middleware) with its own web UI.
+- [StackVitals and Pelorus](docs/compare/pelorus.md): Pelorus: A Red Hat community project measuring DORA's four metrics with Prometheus exporters and Grafana.
+- [StackVitals compared with other tools](docs/compare/README.md): What each tool does better, what StackVitals does differently, and what was measured side by side.
+- [StackVitals and Swarmia](docs/compare/swarmia.md): Swarmia: A commercial engineering-effectiveness product: DORA, developer surveys, AI-adoption tracking and software capitalization.
 
 ## Optional
 

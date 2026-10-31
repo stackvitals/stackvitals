@@ -185,6 +185,25 @@ model families (Claude and Gemini); no person has audited the labels.
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/stackvitals/stackvitals/main/docs/assets/divider-dark.png"><img alt="" src="https://raw.githubusercontent.com/stackvitals/stackvitals/main/docs/assets/divider-light.png" width="100%"></picture>
 
+# Compared with other tools
+
+What each one does better, what StackVitals does differently, and what was measured side by side ([docs/compare](docs/compare/README.md)):
+
+| Compared with | Kind |
+|---|---|
+| [Apache DevLake](docs/compare/devlake.md) | Open source (Apache 2.0), self-hosted |
+| [Middleware](docs/compare/middleware.md) | Open source (Apache 2.0), self-hosted |
+| [CDviz](docs/compare/cdviz.md) | Open source (Apache 2.0), self-hosted or EUR 20/month hosted |
+| [Pelorus](docs/compare/pelorus.md) | Open source (Apache 2.0), on OpenShift |
+| [Liatrio's DORA plugin for Backstage](docs/compare/liatrio-backstage.md) | Open source (Apache 2.0) |
+| [Faros Community Edition](docs/compare/faros-community-edition.md) | Open source (Apache 2.0), withdrawn |
+| [GrimoireLab](docs/compare/grimoirelab.md) | Open source (GPL-3.0), self-hosted |
+| [LinearB](docs/compare/linearb.md) | SaaS; gitStream automation is free up to 250 PRs a month |
+| [Swarmia](docs/compare/swarmia.md) | SaaS; free up to 9 developers |
+| [Trunk Flaky Tests and BuildPulse](docs/compare/flaky-test-tools.md) | SaaS |
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/stackvitals/stackvitals/main/docs/assets/divider-dark.png"><img alt="" src="https://raw.githubusercontent.com/stackvitals/stackvitals/main/docs/assets/divider-light.png" width="100%"></picture>
+
 # Learn more
 
 - **Five minutes:** [docs/quickstart.md](docs/quickstart.md). Try CI Health on any public repo first (needs

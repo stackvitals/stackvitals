@@ -31,10 +31,12 @@ gives agents StackVitals' history.
 
 ## How is it different from LinearB, Swarmia, Trunk or DevLake?
 
-They are good tools. StackVitals differs in three ways: it is free and has no hosted backend; the rules behind its verdicts
-and headline numbers are checked on public data with the losses published ([accuracy](accuracy.md)); and it compares like with like (the same repo,
-month and size) before saying something changed. Where we measured their default rules on the same data, the
-results are on the cards, including where theirs tie ours.
+They are good tools, and each does some things better; [docs/compare](compare/README.md) has a page per tool (DevLake,
+Middleware, CDviz, Pelorus, Liatrio's Backstage plugin, Faros, GrimoireLab, LinearB, Swarmia, Trunk and BuildPulse)
+saying where, with sources. StackVitals differs in three ways: it is free and has no hosted backend; the rules behind
+its verdicts and headline numbers are checked on public data with the losses published ([accuracy](accuracy.md)); and it
+compares like with like (the same repo, month and size) before saying something changed. Where we ran another tool on
+the same repos (DevLake and Middleware), the results are on the cards, including where theirs tie or beat ours.
 
 ## Can it rate developers?
 
