@@ -32,3 +32,22 @@ def test_a_built_site_has_the_landing_the_app_and_the_demos(tmp_path):
     assert main(["build", "--out", str(tmp_path / "plain")]) == 0
     landing = (tmp_path / "plain" / "index.html").read_text(encoding="utf-8")
     assert "app.html?demo=1" in landing and 'href="demo/"' not in landing and "<!--REAL-DEMO-->" not in landing
+
+
+def test_a_demo_only_site_can_reach_nothing_but_its_own_files(tmp_path):
+    # The public demo on GitHub Pages: no outside calls, no token box, setup points at the README.
+    from stackvitals.site import README_SETUP, main
+    assert main(["build", "--out", str(tmp_path / "pub"), "--demo-only"]) == 0
+    pub = tmp_path / "pub"
+    for page in pub.glob("*.html"):
+        policy = re.search(r'Content-Security-Policy" content="([^"]*)', page.read_text(encoding="utf-8")).group(1)
+        connect = re.search(r"connect-src ([^;]*)", policy)
+        assert connect is None or connect.group(1) in ("'self'", "'none'"), page.name
+        assert "https://" not in policy, page.name
+    landing = (pub / "index.html").read_text(encoding="utf-8")
+    assert "app.html#/setup" not in landing and landing.count(README_SETUP) == 4
+    assert README_SETUP in (pub / "setup.html").read_text(encoding="utf-8")
+    assert "app.html?demo=1" in landing
+    # The ordinary build keeps the app able to read a user's own repo.
+    main(["build", "--out", str(tmp_path / "full")])
+    assert "https://api.github.com" in (tmp_path / "full" / "app.html").read_text(encoding="utf-8")

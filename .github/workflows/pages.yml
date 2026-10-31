@@ -1,0 +1,44 @@
+name: Demo site
+# Publishes the landing page and the app's example-data demo to GitHub Pages. The site is static and demo-only: its
+# pages may fetch nothing but their own files, so there is no API or backend behind it to call or overload.
+on:
+  release:
+    types: [published]
+  push:
+    branches: [main]
+    paths: ["src/stackvitals/web/**", "src/stackvitals/site.py"]
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.repository == 'stackvitals/stackvitals'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+      - name: Build the demo-only site
+        run: uv run --no-dev stackvitals site build --out _site --demo-only
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write   # Pages checks the deployment with GitHub's OIDC token
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
