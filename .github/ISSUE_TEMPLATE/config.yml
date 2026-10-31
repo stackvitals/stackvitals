@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question
+    url: https://github.com/stackvitals/stackvitals/discussions/categories/q-a
+    about: How to set something up or read a number. Discussions are the best place for questions.
+  - name: Report a security problem
+    url: https://github.com/stackvitals/stackvitals/security/advisories/new
+    about: Privately, through GitHub's reporting form. Please don't open a public issue.

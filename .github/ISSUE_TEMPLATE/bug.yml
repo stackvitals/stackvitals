@@ -1,0 +1,56 @@
+name: Bug report
+description: Something in StackVitals is wrong or broken
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. A wrong verdict or number is a bug too, and the most useful kind.
+        For a security problem, don't open an issue: use the **Security** tab's private reporting instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - The Action (workflow run, PR comment, verdict check)
+        - The web app (dashboard)
+        - The command line (stackvitals ...)
+        - The MCP server (an AI agent)
+        - Setup (stackvitals init or the app's Setup page)
+        - The docs
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: StackVitals version
+      description: "`pip show stackvitals` shows it. For the Action, say if you use `@v0` or a pinned tag."
+      placeholder: "0.1.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Repo
+      options:
+        - Public
+        - Private
+        - Not about a repo
+  - type: input
+    id: link
+    attributes:
+      label: A link we can look at
+      description: The workflow run, pull request or app page, if the repo is public. Leave out anything private.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Job summary or error output
+      description: Paste the relevant part. Remove tokens, private names and anything you don't want public.
+      render: text

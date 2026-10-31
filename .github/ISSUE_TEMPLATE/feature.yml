@@ -1,0 +1,39 @@
+name: Feature request
+description: Something StackVitals should do, or do differently
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you're trying to find out or get done, and what makes it hard today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: What you'd like StackVitals to show or do. A rough idea is fine.
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Area
+      options:
+        - CI Health
+        - Team Flow and Pull Requests
+        - Delivery and DORA
+        - Insights
+        - Dependencies
+        - Community
+        - Portal
+        - The web app
+        - The command line or MCP server
+        - Setup and integrations
+        - Something else
+  - type: textarea
+    id: else
+    attributes:
+      label: Anything else
+      description: Tools you use for this today, links, or examples.
