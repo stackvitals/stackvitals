@@ -67,7 +67,7 @@ def test_the_argo_cd_recipe_in_the_docs_sends_a_payload_that_is_accepted():
     import re
     from pathlib import Path
     doc = (Path(__file__).resolve().parents[2] / "docs" / "connectors.md").read_text(encoding="utf-8")
-    body = re.search(r'(\{"event_type":"stackvitals-deployment".*\}\})', doc.split("Argo CD")[-1]).group(1)
+    body = re.search(r'(\{"event_type":"stackvitals-deployment".*\}\})', doc.split("**Argo CD**")[1]).group(1)
     filled = (body.replace("{{.app.metadata.name}}", "web").replace("{{.app.status.operationState.syncResult.revision}}", "a" * 40)
               .replace("{{.app.status.operationState.finishedAt}}", "2026-10-29T10:00:00Z"))
     payload = json.loads(filled)

@@ -257,12 +257,15 @@ def _pr_feedback(recent: list[dict], latest: dict, payload: dict | None, api, da
                  settings: dict | None = None, private: bool = False, decided: dict | None = None) -> str | None:
     # One comment per PR about every failing workflow on its newest code; a passing PR only edits an old comment.
     trigger = (payload or {}).get("workflow_run") or {}
-    prs, looked = {}, {}
+    prs, looked, announce = {}, {}, set()
     for r in recent:
         if r.get("ev") not in PR_EVENTS or len(prs) >= MAX_PRS:
             continue
         if r["id"] == trigger.get("id"):
             pr = find_pr(api, payload)
+            # Events go out once per triggering run, and never for a fork's pull request.
+            if r.get("ho") in (None, repo.split("/")[0]):
+                announce.add(pr)
         elif r.get("pr"):
             pr = r["pr"][0]
         elif (r.get("ho"), r.get("br")) in looked or len(looked) < MAX_LOOKUPS:
@@ -319,6 +322,12 @@ def _pr_feedback(recent: list[dict], latest: dict, payload: dict | None, api, da
                 held = not (ok.get("verb") == "accept" and (ok.get("at") or "") >= ((found or {}).get("updated_at") or ""))
         if verdict:
             post_verdict(newest, code, items, held)
+        if items and pr in announce:
+            from stackvitals.core import events as outbound
+            sent = outbound.send([outbound.pr_verdict(pr, newest, items, repo, datetime.now(timezone.utc).strftime(
+                "%Y-%m-%dT%H:%M:%SZ"))], settings)
+            if notes is not None:
+                notes += sent
         if not comments:
             continue
         if held:
@@ -538,6 +547,9 @@ def ci_step(ws, env: dict, now: datetime, days: int = 90, window_days: int = 30,
             failed = send_alert(hook, alert_message(names, repo, result, links))
             if failed:
                 notes.append(failed)
+        if fresh:
+            from stackvitals.core import events as outbound
+            notes += outbound.send(outbound.newly_flaky(fresh, repo, now.strftime("%Y-%m-%dT%H:%M:%SZ")), settings, env)
         summary = env.get("GITHUB_STEP_SUMMARY")
         sharing = (settings or {}).get("benchmarks") or {}
         if sharing.get("share"):

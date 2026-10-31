@@ -12,7 +12,13 @@ on:
   schedule:
     - cron: "17 */3 * * *"   # Team Flow every 3 hours, and a CI catch-up
   repository_dispatch:
-    types: [stackvitals-deployment, stackvitals-incident]   # sent by \`stackvitals record\` from any deploy tool
+    # Sent by \`stackvitals record\` from any deploy tool, or as CDEvents (0.4 and 0.5); for Flux add your
+    # "Kustomization/<name>.<namespace>" here.
+    types: [stackvitals-deployment, stackvitals-incident,
+            dev.cdevents.service.deployed.0.3.0, dev.cdevents.service.upgraded.0.3.0, dev.cdevents.service.rolledback.0.3.0,
+            dev.cdevents.incident.detected.0.3.0, dev.cdevents.incident.resolved.0.3.0,
+            dev.cdevents.service.deployed.0.2.0, dev.cdevents.service.upgraded.0.2.0, dev.cdevents.service.rolledback.0.2.0,
+            dev.cdevents.incident.detected.0.2.0, dev.cdevents.incident.resolved.0.2.0]
   workflow_dispatch:
     inputs:
       request:
@@ -125,7 +131,9 @@ export function workflowTemplate(names?: string[] | null, opts: { compact?: bool
   const mods = opts.modules || MODULES;
   if (mods.join(",") !== MODULES.join(",")) text = forModules(text, mods);
   if (!opts.compact) return text;
-  // Without comments, for a prefilled GitHub link (GitHub refuses links much over 6,500 characters).
+  // Without comments, for a prefilled GitHub link (GitHub refuses links much over 6,500 characters); the CDEvents
+  // dispatch types are left out too, so it fits (docs/connectors.md says to add them).
+  text = text.replace(/types: \[stackvitals-deployment, stackvitals-incident,[^\]]*\]/, "types: [stackvitals-deployment, stackvitals-incident]");
   return text.split(/\r?\n/).map(uncommented).filter((l) => l.trim()).join("\n") + "\n";
 }
 

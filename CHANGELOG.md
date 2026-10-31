@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.2.0 (2026-11-01)
+
+- **Compared with other tools:** [docs/compare](docs/compare/README.md) has a page each for Apache DevLake, Middleware,
+  CDviz, Pelorus, Liatrio's Backstage plugin, Faros Community Edition, GrimoireLab, LinearB, Swarmia, and Trunk with
+  BuildPulse: what each does better, what StackVitals does differently, and what was measured side by side, with
+  sources. The README has a short table; `llms.txt` opens with a list of facts.
+- **Deployments and incidents as CDEvents or from Flux:** a `repository_dispatch` carrying a CDEvent (spec 0.4 or 0.5)
+  is read: `service.deployed` and `service.upgraded` as deployments, `service.rolledback` as a failed deployment,
+  `incident.detected` and `incident.resolved` as one incident. A finished Flux reconciliation sent by its
+  `githubdispatch` provider counts as a production deployment. Recipes for Argo CD and Flux are in
+  [docs/connectors.md](docs/connectors.md).
+  **To use it in a workflow set up before 0.2.0**, add the CDEvents types to `repository_dispatch` (`stackvitals init`
+  writes them now); for Flux, add your `Kustomization/<name>.<namespace>`.
+- **Findings as events:** delivery alerts, newly flaky tests and pull request verdicts can go out as CDEvents custom
+  events, as CloudEvents to a URL (the new `events-url` input) and/or as `repository_dispatch` to a repo you name
+  (`[events] dispatch_repo` and the `events-token` input), so other tools and workflows can react. Off until set;
+  names and counts only, never log text; nothing for pull requests from forks.
+
 ## 0.1.4 (2026-10-31)
 
 - PR verdicts catch more failures a change causes (from user feedback):

@@ -25,7 +25,13 @@ on:
   schedule:
     - cron: "17 */3 * * *"   # Team Flow every 3 hours, and a CI catch-up
   repository_dispatch:
-    types: [stackvitals-deployment, stackvitals-incident]   # sent by `stackvitals record` from any deploy tool
+    # Sent by `stackvitals record` from any deploy tool, or as CDEvents (0.4 and 0.5); for Flux add your
+    # "Kustomization/<name>.<namespace>" here.
+    types: [stackvitals-deployment, stackvitals-incident,
+            dev.cdevents.service.deployed.0.3.0, dev.cdevents.service.upgraded.0.3.0, dev.cdevents.service.rolledback.0.3.0,
+            dev.cdevents.incident.detected.0.3.0, dev.cdevents.incident.resolved.0.3.0,
+            dev.cdevents.service.deployed.0.2.0, dev.cdevents.service.upgraded.0.2.0, dev.cdevents.service.rolledback.0.2.0,
+            dev.cdevents.incident.detected.0.2.0, dev.cdevents.incident.resolved.0.2.0]
   workflow_dispatch:
     inputs:
       request:
@@ -140,7 +146,10 @@ def workflow_template(ref: str = ACTION_REF, names: list[str] | None = None, com
         text = _for_modules(text, tuple(modules))
     if not compact:
         return text
-    # Without comments, for a prefilled GitHub link (GitHub refuses links much over 6,500 characters).
+    # Without comments, for a prefilled GitHub link (GitHub refuses links much over 6,500 characters); the CDEvents
+    # dispatch types are left out too, so it fits (docs/connectors.md says to add them).
+    text = re.sub(r"types: \[stackvitals-deployment, stackvitals-incident,[^\]]*\]",
+                  "types: [stackvitals-deployment, stackvitals-incident]", text)
     return "\n".join(kept for kept in (_uncommented(line) for line in text.splitlines()) if kept.strip()) + "\n"
 
 

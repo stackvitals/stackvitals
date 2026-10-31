@@ -134,6 +134,13 @@ default and is named in the job summary. The app's Settings page edits the same 
 | `change_failure_rate` | `0.15` | Alert when more than this share of deployments led to an incident; 0 turns it off. |
 | `channels` | `["webhook"]` | Where alerts go: the webhook from the workflow, and/or one issue in this repo. |
 
+## [events]
+
+| Key | Default | What it does |
+|---|---|---|
+| `send` | `["alert", "newly_flaky", "pr_verdict"]` | Which findings go out as events once the events-url input or dispatch_repo is set: delivery alerts, newly flaky tests, pull request verdicts (CDEvents custom events; names and counts, never log text). |
+| `dispatch_repo` | `""` | A repo (owner/name) that gets each event as a repository_dispatch, so its workflows can react; needs the events-token input with write access to its contents. |
+
 ## [automation]
 
 | Key | Default | What it does |

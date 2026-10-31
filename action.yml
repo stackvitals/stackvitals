@@ -56,6 +56,12 @@ inputs:
   webhook:
     description: Slack, Discord, Microsoft Teams (Workflows) or any JSON webhook URL (pass a secret) to hear when something newly turns flaky and when a delivery number crosses its threshold
     default: ""
+  events-url:
+    description: An HTTP endpoint (pass a secret) that gets findings as CloudEvents, CDEvents' custom form, such as a CDviz collector, Argo Events or n8n
+    default: ""
+  events-token:
+    description: A token (pass a secret) with write access to the contents of the repo named in [events] dispatch_repo, which then gets each finding as a repository_dispatch
+    default: ""
   team-webhooks:
     description: One "@org/team = https://..." line per team (pass a secret); a team's newly flaky tests go to its own chat, the rest to webhook
     default: ""
@@ -178,6 +184,8 @@ runs:
         SV_LABEL_STUCK: ${{ inputs.label-stuck }}
         STACKVITALS_WEBHOOK: ${{ inputs.webhook }}
         STACKVITALS_TEAM_WEBHOOKS: ${{ inputs.team-webhooks }}
+        STACKVITALS_EVENTS_URL: ${{ inputs.events-url }}
+        STACKVITALS_EVENTS_TOKEN: ${{ inputs.events-token }}
         STACKVITALS_JIRA_EMAIL: ${{ inputs.jira-email }}
         STACKVITALS_JIRA_TOKEN: ${{ inputs.jira-token }}
         STACKVITALS_LINEAR_TOKEN: ${{ inputs.linear-token }}

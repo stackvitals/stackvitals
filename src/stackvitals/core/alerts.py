@@ -195,6 +195,10 @@ def alerts_step(ws, env: dict, now: datetime, make_api=None, client: httpx.Clien
         failed = send(env["STACKVITALS_WEBHOOK"], events, ws.repo, client=client, links=links)
         if failed:
             notes.append(failed)
+    if events:
+        # The same alerts as events for other tools (off until an events URL or dispatch repo is set).
+        from stackvitals.core import events as outbound
+        notes += outbound.send(outbound.alerts(events, ws.repo, now.strftime("%Y-%m-%dT%H:%M:%SZ")), cfg, env, client)
     if (events or fired is not None) and "issue" in channels:
         if make_api is None:
             from stackvitals.ci.api import ActionsAPI as make_api

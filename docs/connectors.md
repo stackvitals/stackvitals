@@ -23,6 +23,8 @@ service's documentation gives, with no account of ours; **experimental** means b
 | Bitbucket Cloud and Azure DevOps (pull requests, Bitbucket deployments) | Live | Public repos read without a key: atlassian-connect-express and PowerShell (2026-10-29) |
 | GitLab merge requests and deployments | Live | gitlab-org/cli, 153 merge requests |
 | Deployments and incidents from any tool (`stackvitals record`, repository_dispatch) | Recorded | The command and the dispatch payload against a stand-in API |
+| CDEvents and Flux deployments and incidents (repository_dispatch) | Recorded | Events built from the CDEvents 0.4.1 and 0.5.1 schemas and Flux's documented event; no cluster run |
+| Findings as events (CloudEvents to a URL, repository_dispatch to a repo) | Recorded | Against a stand-in receiver; the event types checked against CDEvents' custom-event schema |
 | GitHub Enterprise Server | Recorded | The API and GraphQL URLs pointed at a stand-in server |
 | AI spend | Live for OpenAI, recorded for Anthropic, Claude Code and Cursor | An OpenAI admin key read 30 days of costs (2026-10-29) |
 | Backstage `catalog-info.yaml` | Live | 198 real files from public repos |
@@ -294,6 +296,65 @@ those systems' checkout folders, so the same failure groups together wherever it
   - **Jenkins** (a `post { success { ... } }` step): `sh 'stackvitals record deployment owner/repo --id "jenkins-$BUILD_TAG" --sha "$GIT_COMMIT" --tool jenkins'`
   - **GitLab CI** (a job after the deploy job): `stackvitals record deployment owner/repo --id "gitlab-$CI_PIPELINE_ID" --sha "$CI_COMMIT_SHA" --environment "$CI_ENVIRONMENT_NAME" --tool gitlab`
   - **Spinnaker, Octopus, a script:** the `curl` line above, with the pipeline's id and commit.
+
+- **As CDEvents (Argo, Tekton, Keptn, Jenkins' CDEvents plugin):** send the CDEvent as the dispatch event's
+  `client_payload` and its `context.type` as `event_type`. Read: `service.deployed` and `service.upgraded` (a
+  deployment), `service.rolledback` (a failed deployment) and `incident.detected` / `incident.resolved` (one incident,
+  matched by `subject.id`), in spec versions 0.5 (`...0.3.0` types) and 0.4 (`...0.2.0`). The environment comes from
+  `subject.content.environment.id` and the commit, when the event has one, from `customData.sha`. Other CDEvents are
+  left alone. Workflows set up before 0.2.0, or from the app's one-click file (kept short to fit a link), need these
+  types added to `repository_dispatch`; `stackvitals init` writes them. For example, Argo CD's notifications engine:
+
+  ```yaml
+  template.stackvitals-cdevent: |
+    webhook:
+      stackvitals:
+        method: POST
+        body: |
+          {"event_type":"dev.cdevents.service.deployed.0.3.0","client_payload":{"context":{"specversion":"0.5.1","id":"{{.app.metadata.name}}-{{.app.status.operationState.syncResult.revision}}","source":"/argocd/{{.app.metadata.name}}","type":"dev.cdevents.service.deployed.0.3.0","timestamp":"{{.app.status.operationState.finishedAt}}"},"subject":{"id":"{{.app.metadata.name}}","source":"/argocd","content":{"environment":{"id":"production"},"artifactId":"pkg:generic/{{.app.metadata.name}}@{{.app.status.operationState.syncResult.revision}}"}},"customData":{"sha":"{{.app.status.operationState.syncResult.revision}}"}}}
+  ```
+
+- **Flux:** its `githubdispatch` provider sends each event to the repo. A finished reconciliation
+  (`ReconciliationSucceeded`, `InstallSucceeded` or `UpgradeSucceeded` at info severity) counts as a production
+  deployment of the commit in its revision; Flux's other events are left alone. Point an Alert for your production
+  Kustomization or HelmRelease at the provider (add `eventMetadata: {environment: staging}` to name another
+  environment), and add its event type, `Kustomization/<name>.<namespace>`, to the workflow's `repository_dispatch`
+  types:
+
+  ```yaml
+  apiVersion: notification.toolkit.fluxcd.io/v1beta3
+  kind: Provider
+  metadata: {name: stackvitals, namespace: flux-system}
+  spec: {type: githubdispatch, address: "https://github.com/owner/repo", secretRef: {name: stackvitals-token}}
+  ---
+  apiVersion: notification.toolkit.fluxcd.io/v1beta3
+  kind: Alert
+  metadata: {name: stackvitals, namespace: flux-system}
+  spec:
+    providerRef: {name: stackvitals}
+    eventSeverity: info
+    eventSources: [{kind: Kustomization, name: webapp, namespace: apps}]
+  ```
+
+  These recipes are checked against each tool's documented payload, not run on a cluster.
+
+## Findings as events
+
+StackVitals can send what it finds to other tools, so a workflow, a collector or an automation can react: a delivery
+alert crossing its limit or coming back under it, a test or job newly turning flaky, and the verdict on a pull request's
+failures. Each is a CDEvents custom event (`dev.cdeventsx.stackvitals-alert.raised.0.1.0`,
+`dev.cdeventsx.stackvitals-flakytest.detected.0.1.0`, `dev.cdeventsx.stackvitals-verdict.posted.0.1.0`), with an id
+that stays the same for the same finding so a receiver can drop repeats. Nothing is sent until you set a target:
+
+- **A URL** (the `events-url` input, from a secret): each event is POSTed as a CloudEvent in structured mode
+  (`application/cloudevents+json`), the form CDviz's collector, Argo Events, Knative and n8n read.
+- **A repo** (`[events] dispatch_repo = "owner/name"` and the `events-token` input, a token with write access to that
+  repo's contents): each event arrives there as a `repository_dispatch` whose `event_type` is the event's type, so a
+  workflow with `on: repository_dispatch: types: [dev.cdeventsx.stackvitals-verdict.posted.0.1.0]` runs on it.
+
+`[events] send` picks which kinds go out (all three by default). Events carry names and counts, never log text; test
+and job names are made inert as in chat messages; a pull request from a fork never sends one; a verdict goes out once
+per CI run that triggered it.
 
 ## Bitbucket and Azure DevOps
 

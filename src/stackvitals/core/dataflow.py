@@ -98,6 +98,12 @@ FLOWS = [
     {"feature": "Chat alerts and the weekly digest", "hosts": ["your webhook's host (Slack, Teams, Discord, other)"],
      "sends": "Alert and digest text: metric names and values, test names, this repo's name, links to its pages.",
      "when": "only with a webhook secret", "off": "Remove the webhook."},
+    {"feature": "Findings as events (CloudEvents and repository_dispatch)",
+     "hosts": ["the events-url you set", "api.github.com (the dispatch repo you name)"],
+     "sends": "A delivery alert (metric, value, limit, n), a newly flaky test's name, or a pull request's failures by verdict "
+              "(names and counts, never log text), as CDEvents custom events; nothing for pull requests from forks.",
+     "when": "only with the events-url input, or [events] dispatch_repo and the events-token input",
+     "off": "Leave events-url and dispatch_repo unset (they are, by default)."},
     {"feature": "Test connection", "hosts": ["each connector's own host (above)", "your webhook's host", "the s3-endpoint you set",
                                             "your model provider", "your GitLab host (`CI_API_V4_URL`)"],
      "sends": "One cheap call per connector asked for, with its own key: it reads one item, never writes to a tracker. A "

@@ -10,6 +10,13 @@ EVENTS = {"stackvitals-deployment": "deployment", "stackvitals-incident": "incid
 STATES = {"success": "SUCCESS", "failure": "FAILURE", "error": "FAILURE"}
 TIME = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$")
 SHA = re.compile(r"^[0-9a-f]{7,40}$")
+# CDEvents 0.4 and 0.5 (the two newest spec versions): deployments, rollbacks and incidents, sent with the event's type
+# as the dispatch event_type and the CDEvent as client_payload.
+CDEVENT = re.compile(r"^dev\.cdevents\.(service\.(deployed|upgraded|rolledback)|incident\.(detected|resolved))\.0\.[23]\.\d+$")
+# Flux's githubdispatch provider: event_type "{Kind}/{name}.{namespace}", client_payload the Flux event.
+FLUX = re.compile(r"^(Kustomization|HelmRelease)/[\w.-]+$")
+FLUX_DONE = {"ReconciliationSucceeded", "InstallSucceeded", "UpgradeSucceeded"}
+COMMIT = re.compile(r"\b([0-9a-f]{40})\b")
 
 
 def _utc(value) -> str | None:
@@ -46,11 +53,56 @@ def parse(kind: str, payload: dict) -> tuple[dict | None, str | None]:
             "tool": str(p.get("tool") or "")[:40] or None}, None
 
 
-def from_event(event_name: str | None, payload: dict | None) -> tuple[dict | None, str | None]:
-    """The record a repository_dispatch event carries; (None, None) for any other event."""
-    if event_name != "repository_dispatch" or not payload or payload.get("action") not in EVENTS:
+def from_cdevent(ev: dict) -> tuple[dict | None, str | None]:
+    """A deployment, rollback (a failed deployment) or incident from a CDEvent; the commit may come in customData.sha."""
+    ctx = ev.get("context") if isinstance(ev.get("context"), dict) else {}
+    subj = ev.get("subject") if isinstance(ev.get("subject"), dict) else {}
+    content = subj.get("content") if isinstance(subj.get("content"), dict) else {}
+    kind = CDEVENT.match(str(ctx.get("type") or ""))
+    if not kind:
+        return None, "context.type must be a CDEvents 0.4 or 0.5 service.deployed, upgraded or rolledback, or incident.detected or resolved type"
+    at = _utc(ctx.get("timestamp"))
+    if not at:
+        return None, "context.timestamp must be a time like 2026-10-29T10:00:00Z"
+    env = (content.get("environment") or {}).get("id") if isinstance(content.get("environment"), dict) else None
+    custom = ev.get("customData") if isinstance(ev.get("customData"), dict) else {}
+    tool = str(ctx.get("source") or "cdevents")
+    if kind[2]:  # service.deployed, upgraded or rolledback; kind[3] is the incident's predicate
+        return parse("deployment", {"id": ctx.get("id"), "finished_at": at, "environment": env, "tool": tool,
+                                    "sha": custom.get("sha") or custom.get("commit"),
+                                    "status": "failure" if kind[2] == "rolledback" else "success"})
+    rid = str(subj.get("id") or "").strip()[:100]
+    if not rid:
+        return None, "subject.id must name the incident (detected and resolved share it)"
+    if kind[3] == "detected":
+        return parse("incident", {"id": rid, "created_at": at, "tool": tool})
+    # A resolved incident updates the one detected with the same subject.id.
+    return {"kind": "incident", "id": rid, "created": None, "resolved": at, "tool": tool[:40]}, None
+
+
+def from_flux(event_type: str, ev: dict) -> tuple[dict | None, str | None]:
+    """A finished Flux reconciliation as a deployment; Flux's other events (progress, errors) are left alone."""
+    if ev.get("severity") != "info" or ev.get("reason") not in FLUX_DONE:
         return None, None
-    return parse(EVENTS[payload["action"]], payload.get("client_payload") or {})
+    meta = ev.get("metadata") if isinstance(ev.get("metadata"), dict) else {}
+    sha = next((m[1] for k, v in meta.items() if k.endswith("revision") and (m := COMMIT.search(str(v)))), None)
+    at = _utc(ev.get("timestamp"))
+    return parse("deployment", {"id": f"flux-{event_type}-{sha or at}", "finished_at": at, "sha": sha, "tool": "flux",
+                                "environment": meta.get("environment") or "production"})
+
+
+def from_event(event_name: str | None, payload: dict | None) -> tuple[dict | None, str | None]:
+    """The record a repository_dispatch event carries (ours, a CDEvent or Flux's); (None, None) for any other event."""
+    if event_name != "repository_dispatch" or not payload:
+        return None, None
+    action, body = str(payload.get("action") or ""), payload.get("client_payload") or {}
+    if action in EVENTS:
+        return parse(EVENTS[action], body)
+    if CDEVENT.match(action):
+        return from_cdevent(body if isinstance(body, dict) else {})
+    if FLUX.match(action):
+        return from_flux(action, body if isinstance(body, dict) else {})
+    return None, None
 
 
 def append(root: Path, rec: dict) -> None:
@@ -72,7 +124,9 @@ def load(root: Path) -> dict:
             rec = json.loads(line)
         except ValueError:
             continue
-        last[(rec.get("kind"), rec.get("id"))] = rec
+        # A later record updates the earlier one; a field it leaves empty (a resolved-only incident) keeps the old value.
+        key = (rec.get("kind"), rec.get("id"))
+        last[key] = {**last.get(key, {}), **{k: v for k, v in rec.items() if v is not None}}
     return {"deployments": [r for (k, _), r in last.items() if k == "deployment"],
             "incidents": [r for (k, _), r in last.items() if k == "incident"]}
 
@@ -80,7 +134,7 @@ def load(root: Path) -> dict:
 def incidents(recorded: dict | None) -> list[dict]:
     """Recorded incidents in the shape Delivery's own incidents take."""
     return [{"source": "recorded", "number": r["id"], "created": r["created"], "resolved": r.get("resolved")}
-            for r in (recorded or {}).get("incidents") or []]
+            for r in (recorded or {}).get("incidents") or [] if r.get("created")]
 
 
 def record_step(ws, env: dict, now) -> dict:

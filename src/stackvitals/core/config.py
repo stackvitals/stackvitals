@@ -38,6 +38,9 @@ AUTOMATION.update({"review_requests": False, "size_labels": False, "docs_label":
                    "fix_by_copilot": False})
 # The weekly digest: on the first scheduled run after this day and hour (UTC), to one pinned issue and/or the webhook.
 DIGEST = {"enabled": True, "day": "monday", "hour": 6, "channels": ["issue"], "pulse": True}
+# Findings sent out as events (core/events.py): which kinds, and a repo to send them to as repository_dispatch.
+EVENTS = {"send": ["alert", "newly_flaky", "pr_verdict"], "dispatch_repo": ""}
+EVENT_KINDS = ("alert", "newly_flaky", "pr_verdict")
 DAYS = ("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
 # Working agreements a team sets for itself (Swarmia's), all off until set; 0 or false is off.
 AGREEMENTS = {"review_within_hours": 0, "merge_within_days": 0, "max_pr_lines": 0, "linked_issue": False,
@@ -83,7 +86,7 @@ TRIAGE_PROVIDERS = ("off", "gemini", "openai", "anthropic", "mistral", "groq")
 DEFAULTS = {"ci": {"monitors": MONITORS, "mute": {}, "quarantine": {"always": [], "never": [], "max_days": 0}, "coverage": {"min_patch": 0.0},
                    "triage": TRIAGE},
             "delivery": DELIVERY,
-            "identity": IDENTITY, "alerts": ALERTS, "automation": AUTOMATION, "digest": DIGEST, "agreements": AGREEMENTS,
+            "identity": IDENTITY, "alerts": ALERTS, "events": EVENTS, "automation": AUTOMATION, "digest": DIGEST, "agreements": AGREEMENTS,
             "connectors": CONNECTORS, "deps": {"licenses": {"deny": []}, "policy": {"min_scorecard": None, "max_severity": None},
                                                            "outside_lookups": True, "guarddog": False}, "investment": {"labels": {}},
             "community": {"capacity": "", "norms": ""}, "benchmarks": {"share": False, "name": False},
@@ -277,6 +280,14 @@ def parse(text: str | None) -> tuple[dict, list[str]]:
         else:
             notes.append(f"alerts.{key} = {value!r} in {FILE} was ignored (thresholds are numbers, 0 turns one off; "
                          f"channels are {', '.join(CHANNELS)}).")
+    for key, value in (doc.get("events") if isinstance(doc.get("events"), dict) else {}).items():
+        if key == "send" and isinstance(value, list) and set(value) <= set(EVENT_KINDS):
+            cfg["events"]["send"] = list(value)
+        elif key == "dispatch_repo" and isinstance(value, str) and (not value or re.fullmatch(r"[A-Za-z0-9-]+/[A-Za-z0-9._-]+", value)):
+            cfg["events"]["dispatch_repo"] = value
+        else:
+            notes.append(f"events.{key} = {value!r} in {FILE} was ignored (send is a list from {', '.join(EVENT_KINDS)}; "
+                         "dispatch_repo is owner/name).")
     for key, value in (doc.get("automation") if isinstance(doc.get("automation"), dict) else {}).items():
         if key in AUTOMATION and isinstance(value, bool):
             cfg["automation"][key] = value

@@ -50,7 +50,13 @@ on:
   schedule:
     - cron: "17 */3 * * *"   # Team Flow every 3 hours, and a CI catch-up
   repository_dispatch:
-    types: [stackvitals-deployment, stackvitals-incident]   # sent by `stackvitals record` from any deploy tool
+    # Sent by `stackvitals record` from any deploy tool, or as CDEvents (0.4 and 0.5); for Flux add your
+    # "Kustomization/<name>.<namespace>" here.
+    types: [stackvitals-deployment, stackvitals-incident,
+            dev.cdevents.service.deployed.0.3.0, dev.cdevents.service.upgraded.0.3.0, dev.cdevents.service.rolledback.0.3.0,
+            dev.cdevents.incident.detected.0.3.0, dev.cdevents.incident.resolved.0.3.0,
+            dev.cdevents.service.deployed.0.2.0, dev.cdevents.service.upgraded.0.2.0, dev.cdevents.service.rolledback.0.2.0,
+            dev.cdevents.incident.detected.0.2.0, dev.cdevents.incident.resolved.0.2.0]
   workflow_dispatch:
     inputs:
       request:
@@ -187,6 +193,8 @@ From [action.yml](https://github.com/stackvitals/stackvitals/blob/main/action.ym
 | `issues` | `false` | Keep one issue per flaky test or job, closed once fixed (needs issues write) |
 | `mention-owners` | `false` | @-mention a flaky test's code owners in the issues StackVitals opens (off: owners are named without a notification) |
 | `webhook` |  | Slack, Discord, Microsoft Teams (Workflows) or any JSON webhook URL (pass a secret) to hear when something newly turns flaky and when a delivery number crosses its threshold |
+| `events-url` |  | An HTTP endpoint (pass a secret) that gets findings as CloudEvents, CDEvents' custom form, such as a CDviz collector, Argo Events or n8n |
+| `events-token` |  | A token (pass a secret) with write access to the contents of the repo named in [events] dispatch_repo, which then gets each finding as a repository_dispatch |
 | `team-webhooks` |  | One "@org/team = https://..." line per team (pass a secret); a team's newly flaky tests go to its own chat, the rest to webhook |
 | `jira-email` |  | The Jira Cloud account's email (pass a secret); with jira-token and [connectors.jira] url, issues, sprints and incidents are read |
 | `jira-token` |  | A Jira Cloud API token for that account (pass a secret; it expires within a year, so set key_expires to be warned) |
