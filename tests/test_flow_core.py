@@ -326,11 +326,8 @@ def test_the_privacy_page_names_every_outside_host_the_code_can_reach():
     assert (root / "docs" / "privacy.md").read_text(encoding="utf-8") == dataflow.markdown()
     known = dataflow.hosts() | dataflow.LINKS
     found = set()
-    # core/compare.py only cites other tools' pages for docs/compare; it may never import anything that reaches a host.
-    cites = root / "src" / "stackvitals" / "core" / "compare.py"
-    assert not re.search(r"^\s*(import|from)\s", cites.read_text(encoding="utf-8"), re.M)
     for path in (root / "src" / "stackvitals").rglob("*"):
-        if path.suffix in (".py", ".js", ".html") and "vendor" not in path.parts and path != cites:
+        if path.suffix in (".py", ".js", ".html") and "vendor" not in path.parts:
             found |= set(re.findall(r"https://([a-zA-Z0-9.-]+\.[a-z]{2,})", path.read_text(encoding="utf-8", errors="replace")))
     assert sorted(found - known) == []
 

@@ -3,8 +3,6 @@ and its first sentence, made from docs/ so it can't fall behind them (a test che
 import re
 from pathlib import Path
 
-from stackvitals.core import compare
-
 # Shown under Optional: true but rarely what an agent needs first.
 OPTIONAL = {"release-checklist.md", "threat-model.md", "roadmap.md", "chaoss.md", "enterprise.md"}
 SUMMARY = ("A free, GitHub-native engineering health suite: one GitHub Action keeps CI, pull request, delivery (DORA), "
@@ -32,14 +30,11 @@ def _first_sentence(text: str) -> str:
 
 def markdown(root: Path) -> str:
     docs = Path(root) / "docs"
-    # Sorted the same on every OS (Windows ignores case, Linux puts README.md first).
-    pages = sorted(docs.rglob("*.md"), key=lambda p: p.relative_to(docs).as_posix().lower())
-    main, compared, optional = [], [], []
+    pages = sorted(p for p in docs.rglob("*.md"))
+    main, optional = [], []
     for p in pages:
         text = p.read_text(encoding="utf-8")
         title = text.splitlines()[0].lstrip("# ").strip() if text.strip() else p.stem
         line = f"- [{title}]({p.relative_to(root).as_posix()}): {_first_sentence(text)}"
-        (optional if p.name in OPTIONAL else compared if p.parent.name == "compare" else main).append(line)
-    # Facts an AI answer can quote, from the same list as the compare pages (core/compare.py).
-    return "\n".join(["# StackVitals", "", f"> {SUMMARY}", "", "## Facts", "", *compare.llms_facts(), "", "## Docs", "",
-                      *main, "", "## Compared with", "", *compared, "", "## Optional", "", *optional, ""])
+        (optional if p.name in OPTIONAL else main).append(line)
+    return "\n".join(["# StackVitals", "", f"> {SUMMARY}", "", "## Docs", "", *main, "", "## Optional", "", *optional, ""])
