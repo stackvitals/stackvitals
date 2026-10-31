@@ -1,5 +1,5 @@
-// Runs before paint (in head) and again right after the splash: theme, motion, favicon and the splash mark.
-import { LOGO_DEF_KEY, asLogo, faviconUrl, logoSvg } from "./brand/mark";
+// Runs before paint (in head) and again right after the splash: theme, motion and the splash mark.
+import { CUBE } from "./brand/Logo";
 
 function read(key: string): unknown {
   try { const v = localStorage.getItem(key); return v === null ? null : JSON.parse(v); } catch { return null; }
@@ -19,8 +19,5 @@ if (!document.getElementById("sv-font")) {
     document.head.appendChild(l);
   }
 }
-const logo = asLogo(read(LOGO_DEF_KEY));
-const icon = document.getElementById("favicon") as HTMLLinkElement | null;
-if (icon) icon.href = faviconUrl(logo);
 const splash = document.getElementById("splash-mark");
-if (splash && !splash.firstChild) splash.innerHTML = logoSvg(logo);
+if (splash && !splash.firstChild) splash.appendChild(Object.assign(document.createElement("img"), { src: CUBE, alt: "" }));

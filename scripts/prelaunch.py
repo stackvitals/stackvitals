@@ -677,12 +677,21 @@ def check_live_link(ctx):
 
 
 def check_live_pypi(ctx):
-    code, _, _ = http("https://pypi.org/pypi/stackvitals/json")
+    # Since launch the name is ours; what matters is that this version isn't on PyPI yet (a version can't be re-uploaded).
+    want = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
+    code, _, body = http("https://pypi.org/pypi/stackvitals/json")
     if code == 404:
-        return Result("live-pypi", "pass", "the name stackvitals is still free on PyPI (404)")
-    if code == 200:
-        return Result("live-pypi", "fail", "stackvitals is already published on PyPI (expected nothing before launch)")
-    return Result("live-pypi", "fail", f"PyPI answered {code or 'nothing'}; can't tell if the name is free")
+        return Result("live-pypi", "pass", f"stackvitals isn't on PyPI yet; {want} will be its first release")
+    if code != 200:
+        return Result("live-pypi", "fail", f"PyPI answered {code or 'nothing'}; can't tell which versions are out")
+    try:
+        out = set(json.loads(body).get("releases") or {})
+    except ValueError:
+        return Result("live-pypi", "fail", "PyPI's answer couldn't be read")
+    if want in out:
+        return Result("live-pypi", "fail", f"{want} is already on PyPI; bump the version before tagging")
+    latest = json.loads(body).get("info", {}).get("version", "?")
+    return Result("live-pypi", "pass", f"{want} isn't on PyPI yet (latest there: {latest})")
 
 
 def check_live_registry(ctx):

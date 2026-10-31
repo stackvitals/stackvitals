@@ -30,7 +30,6 @@
   --shadow-pop: 0 18px 50px rgba(22, 30, 40, .18), 0 2px 6px rgba(22, 30, 40, .08);
   --focus: #2160C4;
   --code-bg: #1E242C; --code-ink: #E6EBF1; --code-dim: #9AA5B1; --code-line: #2E3640;
-  --logo-tile: #2160C4; --logo-fg: #FFFFFF; --logo-acc: #7CF0B6;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
 
@@ -60,7 +59,6 @@
     --shadow-pop: 0 18px 50px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .07);
     --focus: #79AEFF;
     --code-bg: #0B1016; --code-line: #1F2A35;
-    --logo-tile: #2F6FD8;
     color-scheme: dark;
   }
 }
@@ -76,7 +74,6 @@
   --shadow-pop: 0 18px 50px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .07);
   --focus: #79AEFF;
   --code-bg: #0B1016; --code-line: #1F2A35;
-  --logo-tile: #2F6FD8;
   color-scheme: dark;
 }
 

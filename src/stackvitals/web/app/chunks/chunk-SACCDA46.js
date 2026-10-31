@@ -1,0 +1,1 @@
+import{w as a}from"./chunk-GT4EAKAO.js";import{d as o}from"./chunk-G7NGB5UX.js";o();var n="app/brand/cube-128.png";function e({size:r=30}){return a("img",{class:"logo-mark",src:n,width:r,height:r,alt:"","aria-hidden":"true"})}export{e as a};

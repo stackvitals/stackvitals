@@ -18,6 +18,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="module", required=True)
     for name, text in MODULES.items():
         sub.add_parser(name, add_help=False, help=text)
+    sub.add_parser("init", add_help=False, help="Set up StackVitals in one of your repos in one command (`stackvitals init owner/repo`)")
     sub.add_parser("action", add_help=False, help="Run inside GitHub Actions (used by the StackVitals Action)")
     serve = sub.add_parser("serve", help="Run the MCP server on stdio (MergeScout and CI Health tools)")
     serve.add_argument("--tools", choices=["core", "all"], help="core: the 11 core tools (default); all: every tool "
@@ -51,6 +52,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.module == "community":
         from stackvitals.community.cli import main as community_main
         return community_main(rest)
+    if args.module == "init":
+        from stackvitals.core.initcli import main as init_main
+        return init_main(rest)
     if args.module == "action":
         from stackvitals.ci.cli import action_main
         return action_main(rest)

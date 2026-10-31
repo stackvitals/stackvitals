@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 (2026-10-31)
+
+- `stackvitals init owner/repo` sets StackVitals up in one command: commits the workflow (or opens a pull request), follows
+  the first run and turns on Pages for a public repo; a private repo keeps Pages off and opens with `stackvitals ui`.
+- The StackVitals cube is the app's logo in the sidebar, the browser tab and the splash; the logo picker is gone.
+- The README opens with the logo, a short tour and the architecture; the architecture docs open with a detailed diagram.
+
 ## 0.1.1 (2026-10-31)
 
 - The Action's description is shorter, to fit the GitHub Marketplace listing. No other change.

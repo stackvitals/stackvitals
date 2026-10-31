@@ -2,6 +2,20 @@
 
 A GitHub repo is all you need; CI on GitHub Actions makes the CI part useful. Nothing has to be installed: the StackVitals app's Setup page checks your repo and, with a GitHub token, commits the workflow, starts the first run and turns on Pages (public repos only) in a few clicks once GitHub is connected; connecting takes one token, made from a prefilled GitHub page (without a token it opens GitHub with the file ready). From a terminal, [uv](https://docs.astral.sh/uv/) or pipx prints the same file. A public repo gets its monitor on GitHub Pages; a private repo works the same way, and you open its monitor on your machine or as a download instead (step 3), because Pages from a private repo is public on most plans.
 
+## The one-command way
+
+```
+pip install stackvitals
+gh auth login
+stackvitals init OWNER/REPO
+```
+
+`init` does steps 1 to 3 below for you: it commits the workflow (or opens a pull request when the branch is protected or
+a different `stackvitals.yml` is there), follows the first run, checks the `stackvitals-data` branch and turns on Pages
+for a public repo. A private repo keeps Pages off, since a Pages site is public on most plans; open its dashboard with
+`stackvitals ui OWNER/REPO`. `--no-wait` returns once the first run has started; run `init` again to finish. The steps
+below are the same, by hand.
+
 ## 1. Add the workflow
 
 Print a workflow that already names your CI workflows, and save it in your repo:

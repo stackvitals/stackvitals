@@ -121,6 +121,9 @@ function finish(meta) {
   firstScreenCss(meta);
   mkdirSync(join(out, "fonts"), { recursive: true });
   for (const [name, from] of Object.entries(FONTS)) copyFileSync(join(here, "node_modules", from), join(out, "fonts", name));
+  // The cube, for the sidebar, the splash and the tab icon.
+  mkdirSync(join(out, "brand"), { recursive: true });
+  for (const f of readdirSync(join(here, "brand"))) copyFileSync(join(here, "brand", f), join(out, "brand", f));
   writeFileSync(join(out, "LICENSES.md"), licences().replace(/\r\n/g, "\n"));
   for (const [rel, body] of Object.entries(demoFiles())) {
     const target = join(out, "demo", rel);

@@ -28,8 +28,7 @@ page for a module that isn't set up is dimmed. On a phone the sidebar becomes a 
 with the rest under **More**.
 
 The top bar holds the repo switcher: the repos you follow, **Add a repository** (by name or Pages address), your GitHub
-repos, the demo, reloading the data, and appearance (light, dark or auto). Click the logo to pick one of ten marks; the
-choice changes the sidebar, tab icon and splash and is remembered in this browser.
+repos, the demo, reloading the data, and appearance (light, dark or auto).
 
 ## First run
 
@@ -132,7 +131,7 @@ workflow file the same way. Without a connection, open a prefilled issue or copy
 
 ## On this device
 
-The app keeps your repo list, theme, logo and GitHub handle in this browser only. A token stays in this tab unless you
+The app keeps your repo list, theme and GitHub handle in this browser only. A token stays in this tab unless you
 ask to remember it on this device.
 
 ## For agents

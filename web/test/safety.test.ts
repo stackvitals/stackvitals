@@ -7,8 +7,6 @@ import { test } from "node:test";
 import { makeApi } from "../src/github/client";
 import { checkRepo, isRepo, isWorkflowFile } from "../src/github/names";
 import { ACTION_REF } from "../src/github/workflow";
-import { asLogo, STRATA } from "../src/brand/mark";
-import { LOGOS } from "../src/brand/logos";
 import { browserGlobals, fakeGitHub } from "./fake";
 import { load } from "./load.mjs";
 
@@ -80,18 +78,6 @@ test("?repo= and ?pages= with odd values open nothing", async () => {
   browserGlobals();
   (globalThis as any).location.search = "?repo=octo/hello.world";
   assert.equal((await load("src/data/repos.ts")).current.get().id, "branch:octo/hello.world");
-});
-
-test("a remembered logo is parsed against an allowlist", () => {
-  const ok = { id: "x", name: "X", body: '<path d="M1 2L3 4" fill="none" stroke="F" stroke-width="2.6"/><circle cx="16" cy="16" r="4" fill="A" opacity=".5"/>' };
-  assert.equal(asLogo(ok).body, ok.body);
-  const bad = [
-    '<path d="M1 2" style="x"/>', '<path d="M1 2"/><image href="x"/>', '<path d="M1 2" fill="url(javascript:x)"/>',
-    '<path d="M1 2" onload="x"/>', '<rect x="1"></rect><script>1</script>', '<path d="M1 2" fill="a"b"/>', "<path d=\"M1\" fill='x'/>",
-    '<path d="M1 2"/>text', '<foreignObject/>', '<path d="M1 2" xlink:href="#a"/>', '<path d="M1 2" fill="&#106;avascript"/>',
-  ];
-  for (const body of bad) assert.equal(asLogo({ id: "x", name: "X", body }), STRATA, body);
-  for (const l of LOGOS) assert.equal(asLogo(l).body, l.body, l.id);
 });
 
 test("settings commit: a 409 re-reads and re-applies once; protection opens a pull request; a refused branch stops", async () => {
