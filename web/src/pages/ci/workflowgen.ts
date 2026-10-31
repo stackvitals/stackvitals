@@ -13,13 +13,13 @@ export const RUNNERS = ["pytest", "jest", "vitest", "go", "maven", "gradle", "do
 export type RunnerId = (typeof RUNNERS)[number];
 
 // Pinned to full commit SHAs like the repo's own workflows.
-const CHECKOUT = "actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4";
-const SETUP_PY = "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5";
-const SETUP_NODE = "actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4";
+const CHECKOUT = "actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0";
+const SETUP_PY = "actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0";
+const SETUP_NODE = "actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0";
 const SETUP_JAVA = "actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0";
 const SETUP_DOTNET = "actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0";
 const SETUP_RUBY = "ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1.335.0";
-const UPLOAD = "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4";
+const UPLOAD = "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0";
 
 export interface Runner {
   id: RunnerId; name: string; lang: string;

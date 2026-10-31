@@ -5,7 +5,7 @@ import { SETUP_GO, installSteps } from "../../github/workflow";
 export const SCAN_FILE = ".github/workflows/stackvitals-code-scanning.yml";
 export const SCAN_BRANCH = "stackvitals-code-scanning";
 
-const CHECKOUT = "actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4";
+const CHECKOUT = "actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0";
 const UPLOAD = "github/codeql-action/upload-sarif@v4";
 
 // A YAML double-quoted string.

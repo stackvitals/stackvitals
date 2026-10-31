@@ -149,7 +149,7 @@ runs:
         cache-dependency-glob: ""
     # The pinned vulnerability scanner (checked against its SHA-256 when downloaded), kept between runs.
     - if: contains(inputs.modules, 'deps')
-      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
       with:
         path: ${{ runner.tool_cache }}/stackvitals/osv-scanner-2.7.0
         key: stackvitals-osv-scanner-2.7.0-${{ runner.os }}-${{ runner.arch }}
@@ -207,7 +207,7 @@ runs:
       run: PYTHONPATH="$GITHUB_ACTION_PATH/src" uv run --quiet --frozen --only-group action --project "$GITHUB_ACTION_PATH" python -m stackvitals action --modules "$SV_MODULES" --days "$SV_DAYS" --budget "$SV_BUDGET" --tests "$SV_TESTS" --test-artifacts "$SV_TEST_ARTIFACTS" --pr-comments "$SV_PR_COMMENTS" --rerun-flaky "$SV_RERUN" --quarantine "$SV_QUARANTINE" --issues "$SV_ISSUES" --preflight-comments "$SV_PREFLIGHT" --deps-comments "$SV_DEPS_COMMENTS" --mention-owners "$SV_MENTION_OWNERS" --label-stuck "$SV_LABEL_STUCK"
     # The app as a download (opt-in, for private repos), only when this run changed it.
     - if: inputs.pages == 'artifact' && steps.vitals.outputs.pages == 'true'
-      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
       with:
         name: stackvitals-app-${{ github.job }}
         path: ${{ runner.temp }}/stackvitals-pages

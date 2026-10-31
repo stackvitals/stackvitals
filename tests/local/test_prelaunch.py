@@ -91,7 +91,7 @@ def test_private_files_by_name_and_place():
 
 
 def test_loose_uses_allows_shas_local_actions_and_our_own_ref():
-    yml = ("steps:\n  - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4\n  - uses: ./local\n"
+    yml = ("steps:\n  - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0\n  - uses: ./local\n"
            "  - uses: stackvitals/stackvitals@v0\n  - uses: actions/cache@v4\n  - {uses: 'o/a@main', with: {}}\n"
            "  - uses: docker://alpine@sha256:" + "a" * 64 + "\n")
     assert pl.loose_uses(yml, "stackvitals/stackvitals@v0") == ["actions/cache@v4", "o/a@main"]
