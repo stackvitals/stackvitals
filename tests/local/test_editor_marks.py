@@ -6,6 +6,8 @@ from pathlib import Path
 import pytest
 
 MARKS = Path(__file__).resolve().parents[2] / "src" / "stackvitals" / "editors" / "vscode" / "marks.js"
+# The installed folder carries the extension's own version.
+OURS = "stackvitals.stackvitals-flaky-tests-" + json.loads((MARKS.parent / "package.json").read_text())["version"]
 pytestmark = pytest.mark.skipif(not shutil.which("node"), reason="needs node")
 
 
@@ -83,14 +85,14 @@ def test_install_replaces_only_our_older_copies(tmp_path):
     (tmp_path / "stackvitals.stackvitals-flaky-tests-0.0.1").mkdir()
     (tmp_path / "someone.else-1.0.0").mkdir()
     dest = install(tmp_path)
-    assert sorted(p.name for p in tmp_path.iterdir()) == ["someone.else-1.0.0", "stackvitals.stackvitals-flaky-tests-0.1.0"]
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["someone.else-1.0.0", OURS]
     assert sorted(p.name for p in dest.iterdir()) == ["extension.js", "marks.js", "package.json"]
 
 
 def test_cli_installs_into_the_given_folder(tmp_path, capsys):
     from stackvitals.cli import main
     assert main(["editor", "cursor", "--dir", str(tmp_path)]) == 0
-    assert (tmp_path / "stackvitals.stackvitals-flaky-tests-0.1.0" / "extension.js").exists()
+    assert (tmp_path / OURS / "extension.js").exists()
     assert "Reload the editor" in capsys.readouterr().out
 
 
