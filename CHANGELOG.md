@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.4 (2026-10-31)
+
+- PR verdicts catch more failures a change causes (from user feedback):
+  - a failure whose flakes in the last 30 days all came from this same pull request reads **New**, not likely flaky: a
+    race the change added fails now and then and passes on a re-run;
+  - a likely flake that fails on this pull request far more often than on the default branch (2 or more failures, under
+    a 5% chance at main's rate) reads **New**: the change made it worse;
+  - a likely flake shows its failure rate on the default branch; a first flaky-looking failure of a check that passed
+    every recent default-branch run says so;
+  - when a failure blamed on the change, or one of those checks, passes on a re-run of the same commit, the comment
+    says a green re-run doesn't clear it, instead of "CI is passing now".
+  These rules are new and not yet measured on labelled failures; [rules.md](docs/rules.md) says so.
+- A public demo site, https://stackvitals.github.io/stackvitals/, built with `stackvitals site build --demo-only`: it
+  fetches nothing outside itself, and its setup links point at the README. The landing page uses the app's font.
+- `glama.json`, so the Glama listing of the MCP server is maintained by the project.
+
 ## 0.1.3 (2026-10-31)
 
 - The app's About page and the project site say Apache 2.0 (they said MIT); the site shows the cube logo and the

@@ -2,7 +2,7 @@
   "name": "stackvitals-flaky-tests",
   "displayName": "StackVitals flaky tests",
   "description": "Marks the tests your CI history shows are flaky or broken, read from the repo's stackvitals-data branch.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "stackvitals",
   "license": "Apache-2.0",
   "engines": { "vscode": "^1.80.0" },
