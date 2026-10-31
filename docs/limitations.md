@@ -29,6 +29,10 @@ Numbers come from the accuracy cards ([accuracy.md](accuracy.md)).
   readable ones ([features card](../bench/accuracy/features/README.md)).
 - Jobs with rare flakes look like "never flaked" in a short window. Status precision (re-running pinned commits) is
   not measured.
+- A change that makes an already-flaky test fail more often reads "new" once it has failed 2 or more times on the pull
+  request, far above its rate on the default branch. Its first failure still reads "likely flaky" (one run can't tell a
+  5% flake from a 40% one), and a re-run can pass; the row shows the rate on the default branch to compare against.
+  How often this happens isn't measured yet.
 - No verdict lets a failure through, and none says "safe to re-run". Likely flaky, outside failure, already failing,
   maybe flaky and PR details all still block the verdict check until CI is green. GitLab job logs aren't read, so
   there a job that flaked before is never called a likely flake.

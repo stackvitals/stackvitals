@@ -72,6 +72,13 @@ def _pushes(runs: dict, final_att: dict, default_branch: str | None) -> list:
                   and r.get("ev") == "push" and default_branch is not None and r.get("br") == default_branch)
 
 
+def _only_pr(prs: list) -> int | None:
+    """The one pull request every flake came from (each flake's pull request numbers), else None."""
+    found = {tuple(p) for p in prs}
+    only = found.pop() if len(found) == 1 else ()
+    return only[0] if len(only) == 1 else None
+
+
 def _state(ev_all: list, ev_win: list, runs_since: int, broken: bool, now: datetime) -> str:
     if broken:
         return "broken"
@@ -177,7 +184,10 @@ def _tests(data: dict, runs: dict, final_att: dict, since: datetime, now: dateti
         status = monitors.evaluate(ev_all, ev_win, hist, runs_since, now, cfg, (previous or {}).get(tid),
                                    pass_ms.get(tid, ()), fail_ms.get(tid, ()), tid)
         lo, hi = wilson(len(ev_win), len(win))
+        main_win = [r for r in default if when[id(r)] >= since]
         out.append({"id": tid, "suite": name, "runs": len(win),
+                    # Its record on the default branch, so a first failure on a pull request can be checked against it.
+                    "main_runs": len(main_win), "main_failures": sum(tid in failed_ids[id(r)] for r in main_win),
                     "workflow": runs[(mine[-1]["run"], mine[-1]["att"])].get("path") if mine else None,
                     "failures": fail_win[tid],
                     "flake_events": len(ev_win), "flake_rate": round(len(ev_win) / len(win), 4) if win else 0.0,
@@ -190,6 +200,8 @@ def _tests(data: dict, runs: dict, final_att: dict, since: datetime, now: dateti
                     # What kind of flake its usual failure looks like (timing, network, ...), only once it has flaked.
                     "flake": kind_of(messages[tid].most_common(1)[0][0]) if messages[tid] and ev_all else None,
                     "prs_affected": sorted({p for e in ev_win for p in e[2]}),
+                    # Flakes from one pull request alone are that change's (a race it added), not a known flake.
+                    "only_pr": _only_pr([e[2] for e in ev_win]),
                     # Which report (an OS or version in a matrix) the window's flakes came from.
                     "variants": dict(Counter(e[3].get("variant") for e in ev_win if e[3].get("variant")).most_common(5)),
                     # The newest runs that prove it, so anyone can open them.
@@ -474,15 +486,18 @@ def analyze(data: dict, now: datetime, window_days: int = 30, default_branch: st
                 slower = {"before_s": a, "after_s": b, "pct": round((b / a - 1) * 100)}
         lo, hi = wilson(len(ev_win), len(in_window))
         steps = Counter(e[2] for e in ev_win)
+        main_win = [j for r, j in in_window if default_branch is None or r.get("br") == default_branch]
         out_jobs.append({
             "workflow": path, "job": name, "runs": len(in_window),
+            "main_runs": len(main_win), "main_failures": sum(j["c"] in FAIL for j in main_win),
             "failures": sum(1 for _, j in in_window if j["c"] in FAIL),
             "flake_events": len(ev_win), "flake_rate": round(len(ev_win) / len(in_window), 4) if in_window else 0.0,
             "rate_low": round(lo, 4), "rate_high": round(hi, 4), "state": state,
             "last_flake": last_event.strftime("%Y-%m-%dT%H:%M:%SZ") if last_event else None,
             "top_step": steps.most_common(1)[0][0] if steps else None, "flake_steps": sorted(steps),
             "retry_minutes": round(sum(e[3] for e in ev_win), 1),
-            "prs_affected": sorted({p for e in ev_win for p in e[4]}), "evidence": [e[5] for e in ev_all[-5:]],
+            "prs_affected": sorted({p for e in ev_win for p in e[4]}), "only_pr": _only_pr([e[4] for e in ev_win]),
+            "evidence": [e[5] for e in ev_all[-5:]],
             "median_s": _median([s for _, s in durations]), "p95_s": _pct([s for _, s in durations], 0.95),
             "slower": slower, "trend": _trend((_t(r["cr"]), s) for r, s in durations),
             # Each flake is placed at its run's start, so the run that flaked first counts after it, not before.

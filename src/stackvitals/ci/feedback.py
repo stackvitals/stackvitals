@@ -2,6 +2,7 @@ import json
 import re
 from collections import defaultdict
 from importlib import resources
+from math import comb
 from datetime import timedelta
 
 from stackvitals.ci.analyze import FAIL, _downstream, _failed_step
@@ -157,6 +158,11 @@ class Index:
             self.jobs[(j["run"], j["att"])].append(j)
         for t in data.get("tests") or []:
             self.reports[(t["run"], t["att"])].append(t)
+        # Every attempt of each pull request's runs, to compare how often a check fails there with its rate on main.
+        self.runs, self.pr_attempts = runs, defaultdict(set)
+        for key, r in runs.items():
+            for p in r.get("pr") or ():
+                self.pr_attempts[p].add(key)
         on_main = lambda r: r is not None and r.get("ev") == "push" and default_branch and r.get("br") == default_branch  # noqa: E731
         self.main_jobs, self.main_tests = defaultdict(list), defaultdict(list)
         for (rid, att), js in self.jobs.items():
@@ -304,6 +310,71 @@ def _sharpen(verdict: str, text: str | None, changed: list | None, name: str = "
     return verdict, sign, []
 
 
+def _only_here(entry: dict | None, run: dict, verdict: str) -> str | None:
+    """A flaky-looking verdict whose flakes all came from this pull request: the change's own (a race it added), so it
+    reads "new". Returns the detail then, else None."""
+    if verdict not in ("known flaky", "flaked before", "maybe flaky") or not entry or not entry.get("flake_events"):
+        return None
+    if entry.get("only_pr") is None or entry["only_pr"] not in (run.get("pr") or ()):
+        return None
+    times = "once" if entry["flake_events"] == 1 else f"{entry['flake_events']} times"
+    return (f"flaked {times} in the last 30 days, all of them only on this pull request and nowhere else: likely a race "
+            "or order dependence this change added; look at the change before re-running")
+
+
+# Main runs a check must have passed, all of them, for a first flaky-looking failure on a pull request to be worth a look.
+STABLE_MAIN = 20
+# A likely flake reads new when this pull request's failures would come from its main rate less than 5% of the time,
+# with at least 2 failures and 10 main runs to judge by (one failure can't tell a 5% flake from a 40% one).
+WORSE_P, WORSE_MIN_FAILS, WORSE_MIN_MAIN = 0.05, 2, 10
+
+
+def _pr_record(index: Index, run: dict, path: str | None = None, job: str | None = None, suite: str | None = None,
+               test: str | None = None) -> tuple[int, int]:
+    """(failed, ran): how many attempts of this pull request's runs failed this job or test, out of those that ran it."""
+    keys = set().union(*(index.pr_attempts.get(p, set()) for p in run.get("pr") or ()))
+    failed = ran = 0
+    for key in keys:
+        if test:
+            reps = [r for r in index.reports.get(key, ()) if r["name"] == suite]
+            if reps:
+                ran += 1
+                failed += any(f[0] == test for r in reps for f in r["failed"])
+        elif index.runs[key].get("path") == path:
+            js = [j for j in index.jobs.get(key, ()) if j["n"] == job and (j["c"] in FAIL or j["c"] == "success")]
+            if js:
+                ran += 1
+                failed += any(j["c"] in FAIL for j in js)
+    return failed, ran
+
+
+def _tail(k: int, n: int, p: float) -> float:
+    """The chance of k or more failures in n runs at failure rate p."""
+    return sum(comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1))
+
+
+def _main_record(item: dict, entry: dict | None, here: tuple[int, int] | None = None) -> dict:
+    """The check's record on the default branch beside a flaky-looking verdict: a likely flake shows how often it fails
+    there; a "maybe flaky" check that passed every recent run there says so (still maybe flaky: never-flaked timeouts were
+    mostly real flakes on the labels), and a green re-run of it is flagged later."""
+    n = (entry or {}).get("main_runs") or 0
+    if item["verdict"] == "known flaky" and n:
+        # A change can make a flaky check fail far more often: its rate on main lets a reviewer compare.
+        bad = (entry or {}).get("main_failures") or 0
+        k, ran = here or (0, 0)
+        # The main rate is smoothed (one failure and one pass added) so a clean main never makes one failure damning.
+        if k >= WORSE_MIN_FAILS and n >= WORSE_MIN_MAIN and _tail(k, ran, (bad + 1) / (n + 2)) < WORSE_P:
+            return item | {"verdict": "new", "detail": f"flaky, but it failed {k} of {ran} runs on this pull request against "
+                           f"{bad} of {n} ({bad / n:.0%}) on the default branch in the last 30 days: this change likely "
+                           "made it fail more often; look at the change before re-running"}
+        return item | {"detail": item["detail"] + f"; on the default branch it failed {bad} of {n} runs ({bad / n:.0%}) "
+                       "in the last 30 days: if it fails here more often than that, this change may have made it worse"}
+    if item["verdict"] != "maybe flaky" or n < STABLE_MAIN or (entry or {}).get("main_failures"):
+        return item
+    return item | {"stable_on_main": n, "detail": item["detail"] + f"; it passed all {n} runs on the default branch in the "
+                   "last 30 days, so if a re-run passes, look for a race this change added"}
+
+
 def _detail(entry: dict | None, verdict: str, message: str | None = None, step: str | None = None,
             kind: str = "job", hint: str | None = None, sign: str | None = None, named: list | None = None,
             changed: list | None = None) -> str:
@@ -371,9 +442,13 @@ def classify_run(data: dict, result: dict, run_id: int, logs: dict | None = None
             verdict, sign, named = _sharpen(_test_verdict(entry), msg, changed, name=tid)
             hint = flaky_signature(msg) if verdict == "new" else None
             verdict = "maybe flaky" if hint else verdict
+            here = _only_here(entry, run, verdict)
+            verdict = "new" if here else verdict
             item = _with_kind({"kind": "test", "name": tid, "verdict": verdict,
-                               "detail": _detail(entry, verdict, msg, kind="test", hint=hint, sign=sign, named=named,
-                                                 changed=changed)}, msg)
+                               "detail": here or _detail(entry, verdict, msg, kind="test", hint=hint, sign=sign, named=named,
+                                                         changed=changed)}, msg)
+            item = _main_record(item, entry, _pr_record(index, run, suite=(entry or {}).get("suite"), test=tid)
+                                if item["verdict"] == "known flaky" else None)
             before = on_main.get(tid) if verdict in ("new", "flaked before", "maybe flaky", "maybe yours") else None
             if before and _same_test_failure(f, before):
                 item |= {"verdict": "already failing", "detail": f"failed the same way on the default branch {before['ago']} "
@@ -425,8 +500,12 @@ def classify_run(data: dict, result: dict, run_id: int, logs: dict | None = None
             continue
         hint = flaky_signature(mine) if verdict == "new" else None
         verdict = "maybe flaky" if hint else verdict
-        item = _with_kind({**base, "verdict": verdict, "detail": _detail(entry, verdict, step=failing_step, hint=hint, sign=sign,
-                                                                         named=named, changed=changed)}, mine)
+        here = _only_here(entry, run, verdict)
+        verdict = "new" if here else verdict
+        item = _with_kind({**base, "verdict": verdict, "detail": here or _detail(entry, verdict, step=failing_step, hint=hint,
+                                                                                 sign=sign, named=named, changed=changed)}, mine)
+        item = _main_record(item, entry, _pr_record(index, run, path=run.get("path"), job=j["n"])
+                            if item["verdict"] == "known flaky" else None)
         if before:
             item["detail"] += (f"; the default branch failed in this step {before['ago']} before this (run {before['run']})"
                                + (", with a different error" if mine and theirs else ""))
@@ -527,6 +606,16 @@ def blamed_sha(body: str | None) -> str | None:
     return m[1] if m else None
 
 
+def green_note(body: str | None, sha: str) -> str:
+    """Our comment once CI turns green: a warning, without blocking, when the failure it replaces on this same commit
+    looked like the change's own or failed a check main always passes (a race a change adds passes on a re-run)."""
+    if blamed_sha(body) != sha:
+        return f"{MARKER}\n### StackVitals: CI is passing now\nThe latest run passed."
+    return (f"{MARKER}\n### StackVitals: a re-run turned this green\nA failure on this commit looked like the change's own, or "
+            "failed a check that passes on the default branch every time, and passed when run again. That is how a race or "
+            "order dependence a change adds usually shows up: look at it before merging.\n<!-- stackvitals:blamed " + sha + " -->")
+
+
 def render_comment(items: list[dict], repo: str, sha: str | None = None) -> str:
     known = sum(i["verdict"] == "known flaky" for i in items)
     outside = sum(i["verdict"] == "outside failure" for i in items)
@@ -557,7 +646,7 @@ def render_comment(items: list[dict], repo: str, sha: str | None = None) -> str:
     if views:
         # A dash only ever sits inside a JSON string here, so escaping it keeps any "-->" from closing the note.
         folded.append("<!-- stackvitals:triage " + json.dumps(views, ensure_ascii=True).replace("-", "\\u002d") + " -->")
-    if sha and re.fullmatch(r"[0-9a-f]{7,40}", sha) and any(i["verdict"] in BLAMED for i in items):
+    if sha and re.fullmatch(r"[0-9a-f]{7,40}", sha) and any(i["verdict"] in BLAMED or i.get("stable_on_main") for i in items):
         folded.append(f"<!-- stackvitals:blamed {sha} -->")
     return "\n".join([MARKER, "### StackVitals: about this CI failure", head, "",
                       "| Verdict | What failed | Why |", "|---|---|---|", *rows, *more, "", *folded,

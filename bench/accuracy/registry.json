@@ -141,6 +141,34 @@
    "strength_why": "2 held-out matches in 150 failures"
   },
   {
+   "id": "flaky.only_this_pr",
+   "card": "flaky",
+   "version": 1,
+   "rule": "A failure that would read likely flaky, flaked before or maybe flaky, whose flakes in the last 30 days all came from this same pull request (none on the default branch or other pull requests), reads new: a race or order dependence the change added fails now and then and passes on a re-run.",
+   "tuned_on": "none: a public suggestion (2026-10-31) with the failure it describes written as tests",
+   "held_out": "not yet replayed on the labelled pull-request failures",
+   "pass_bar": "none set yet; it only moves a call toward the change and never excuses a failure",
+   "bar_set": "2026-10-31",
+   "result": "untested on labels: the replay needs the held-out reads again",
+   "revisions": [],
+   "strength": "early observation",
+   "strength_why": "not yet measured on labelled failures"
+  },
+  {
+   "id": "flaky.worse_on_pr",
+   "card": "flaky",
+   "version": 1,
+   "rule": "A likely flake that failed 2 or more times on this pull request's runs, where that many failures would come from its default-branch rate (smoothed by one failure and one pass, over 10 or more runs) less than 5% of the time, reads new: the change made a flaky check fail more often.",
+   "tuned_on": "none: a public suggestion (2026-10-31) with the failure it describes written as tests",
+   "held_out": "not yet measured; the plan is regressions seeded into repos of the stackvitals organisation",
+   "pass_bar": "none set yet; it only moves a call toward the change and never excuses a failure",
+   "bar_set": "2026-10-31",
+   "result": "untested on labels",
+   "revisions": [],
+   "strength": "early observation",
+   "strength_why": "not yet measured on seeded or labelled failures"
+  },
+  {
    "id": "flaky.pr_details",
    "card": "flaky",
    "version": 1,

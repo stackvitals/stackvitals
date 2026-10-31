@@ -84,14 +84,14 @@ never = ["tests/test_billing.py::test_charge"]
 
 | Verdict | When | What to do |
 |---|---|---|
-| Likely flaky | The job flaked 3 or more times lately, once in the step that failed now; that step's log shows a flake's sign (an outside service, the runner or a wait failing with no failing test) and names no file the pull request changed. The row shows that evidence. | Check the error, then re-run it. |
+| Likely flaky | The job flaked 3 or more times lately, once in the step that failed now; that step's log shows a flake's sign (an outside service, the runner or a wait failing with no failing test) and names no file the pull request changed. The row shows that evidence, and how often it failed on the default branch: a change can make a flaky test fail far more often. | Check the error, then re-run it. |
 | Maybe yours | The job flaked before, but its failing step names a file the pull request changed. | Look at your change first. |
 | Outside service or runner | The failing step's log says an outside service or the runner failed. | Re-run it. |
 | Flaked before, needs a look | The job flaked before, but too rarely, elsewhere or with no flake's sign to rule out the change. | Look before re-running. |
 | Already failing on main | The default branch fails with the same error (checked in the log: the same step alone isn't enough, since on labelled data 4 of 20 such failures were the change's own). | Not caused by this pull request. |
-| Maybe flaky | It never flaked, but failed the way flaky checks do (a wait running out, a benchmark gate, a live service). | Re-run it once to tell. |
+| Maybe flaky | It never flaked, but failed the way flaky checks do (a wait running out, a benchmark gate, a live service). When it passed all of 20 or more recent default-branch runs, the row says so. | Re-run it once to tell. If the re-run passes, the comment still asks for a look before merging. |
 | PR details | A check on the pull request itself (a changelog label, a description checkbox, a title prefix) in a workflow that runs again when the PR is edited; 23 of 24 labelled matches were this. | Fix the PR, not the code. |
-| New | None of the above. | Likely from this change. |
+| New | None of the above; or every flake in the last 30 days came from this same pull request (a race or order dependence it added fails now and then and passes on a re-run); or a likely flake failed on this pull request far more often than on the default branch (2 or more failures, under a 5% chance at main's rate). | Likely from this change. If a re-run of the same commit passes, the comment says a green re-run doesn't clear it. |
 
 A flaky failure also says what kind it looks like: the environment (timing, network, infrastructure, concurrency) or, when none of those shows, the test's own code (a resource leak, an async wait, time and time zones, randomness, floating point, state shared between tests, files, ordering), and a flaky job or test says when it began: its first flake, how many runs before it were clean, whether that could be chance, and the commits that reached the default branch the day before, worded only as surely as the history allows. Those commits are context, not a culprit: on 5 clear starts in 45 public repos they touched tests or the workflow 9 of 12 times, about as often as random commits there (8 of 12).
 

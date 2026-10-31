@@ -68,6 +68,28 @@ A failure with no flake history whose failing step (or test message) shows a wai
 - **How sure:** early observation (2 held-out matches in 150 failures)
 - **Changed 2026-10-23:** was track record over all 24 signature matches; why: the product says maybe flaky only for never-flaked failures (a whole-release review); effect: the track record counts never-flaked matches: 1 of 6 (0 of 4 tuning, 1 of 2 held out)
 
+## `flaky.only_this_pr` (version 1)
+
+A failure that would read likely flaky, flaked before or maybe flaky, whose flakes in the last 30 days all came from this same pull request (none on the default branch or other pull requests), reads new: a race or order dependence the change added fails now and then and passes on a re-run.
+
+- **Card:** [bench/accuracy/flaky](../bench/accuracy/flaky/README.md)
+- **Tuned on:** none: a public suggestion (2026-10-31) with the failure it describes written as tests
+- **Checked on:** not yet replayed on the labelled pull-request failures
+- **Bar:** none set yet; it only moves a call toward the change and never excuses a failure (set 2026-10-31)
+- **Result:** untested on labels: the replay needs the held-out reads again
+- **How sure:** early observation (not yet measured on labelled failures)
+
+## `flaky.worse_on_pr` (version 1)
+
+A likely flake that failed 2 or more times on this pull request's runs, where that many failures would come from its default-branch rate (smoothed by one failure and one pass, over 10 or more runs) less than 5% of the time, reads new: the change made a flaky check fail more often.
+
+- **Card:** [bench/accuracy/flaky](../bench/accuracy/flaky/README.md)
+- **Tuned on:** none: a public suggestion (2026-10-31) with the failure it describes written as tests
+- **Checked on:** not yet measured; the plan is regressions seeded into repos of the stackvitals organisation
+- **Bar:** none set yet; it only moves a call toward the change and never excuses a failure (set 2026-10-31)
+- **Result:** untested on labels
+- **How sure:** early observation (not yet measured on seeded or labelled failures)
+
 ## `flaky.pr_details` (version 1)
 
 A pull-request failure in a workflow that also runs when the PR's title, description or labels change, with no failing test in the step, whose error lines are about the PR (the pull request, a PR title or label, a label to add or missing, a checkbox, checklist or template left unchecked or incomplete), reads PR details: fix the PR, not the code; it still blocks.

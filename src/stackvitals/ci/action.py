@@ -15,7 +15,7 @@ from stackvitals.ci.automation import (alert_message, apply_decisions, new_flake
                                        should_rerun, sync_issues)
 from stackvitals.ci.collect import PR_EVENTS, collect
 from stackvitals.ci.feedback import (MARKER, classify, find_pr, our_comment, quarantine_note, quarantined_failures,
-                                     remembered, render_comment, upsert_comment, verdict_payload, blamed_sha)
+                                     remembered, render_comment, upsert_comment, verdict_payload, blamed_sha, green_note)
 from stackvitals.ci.owners import attach_owners, read_codeowners, test_files
 from stackvitals.ci.report import detail_name, render_detail, render_html, render_markdown
 from stackvitals.ci.store import DataStore
@@ -339,7 +339,7 @@ def _pr_feedback(recent: list[dict], latest: dict, payload: dict | None, api, da
             existing = [c for c in api._get(f"/repos/{repo}/issues/{pr}/comments", {"per_page": 100}) or []
                         if MARKER in (c.get("body") or "")]
             if existing:
-                outcomes.append(upsert_comment(api, pr, f"{MARKER}\n### StackVitals: CI is passing now\nThe latest run passed."))
+                outcomes.append(upsert_comment(api, pr, green_note(existing[0].get("body"), newest), existing[0]))
     if verdict:
         # A merge queue tests its own commit, so a required verdict must be posted there too.
         queued = {r["sha"] for r in recent if r.get("ev") == "merge_group" and r.get("sha")}

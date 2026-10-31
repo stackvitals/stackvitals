@@ -1,11 +1,13 @@
 /* The project site: one static landing page in the app's look (same font, colours and radii), no scripts. */
-@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-display: swap; font-weight: 200 800;
-  src: url("../app/fonts/plus-jakarta-sans.woff2") format("woff2-variations"), url("../app/fonts/plus-jakarta-sans.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-display: swap; font-weight: 400 500;
+  src: url("../app/fonts/plex-sans-400.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-display: swap; font-weight: 600 800;
+  src: url("../app/fonts/plex-sans-600.woff2") format("woff2"); }
 :root {
   --bg: #F3F4F6; --surface: #FFFFFF; --surface-2: #F6F7F9; --ink: #1B1F24; --ink-2: #4F5763; --ink-3: #626A76;
   --line: #E0E3E8; --accent: #2160C4; --accent-ink: #FFFFFF; --accent-soft: #E5EDFA; --good: #146F40;
   --code-bg: #1E242C; --code-ink: #E6EBF1; --logo-tile: #2160C4; --logo-fg: #FFFFFF; --logo-acc: #7CF0B6;
-  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
   --r-lg: 20px; --r-md: 14px; --r-sm: 10px; color-scheme: light;
 }

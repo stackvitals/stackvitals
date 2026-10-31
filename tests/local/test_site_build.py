@@ -51,3 +51,16 @@ def test_a_demo_only_site_can_reach_nothing_but_its_own_files(tmp_path):
     # The ordinary build keeps the app able to read a user's own repo.
     main(["build", "--out", str(tmp_path / "full")])
     assert "https://api.github.com" in (tmp_path / "full" / "app.html").read_text(encoding="utf-8")
+
+
+def test_every_file_the_landing_pages_name_is_in_the_built_site(tmp_path):
+    # The landing once named a font the app had stopped shipping; Pages answered 404.
+    from stackvitals.site import main
+    main(["build", "--out", str(tmp_path / "s"), "--demo-only"])
+    site = tmp_path / "s"
+    css = (site / "site" / "site.css").read_text(encoding="utf-8")
+    for ref in re.findall(r'url\("?([^")]+)"?\)', css):
+        assert (site / "site" / ref).resolve().exists(), ref
+    for page in ("index.html", "setup.html", "integrations.html"):
+        for ref in re.findall(r'(?:href|src)="([^"#?:]+)(?=[?#"])', (site / page).read_text(encoding="utf-8")):
+            assert (site / ref).exists(), f"{page}: {ref}"
