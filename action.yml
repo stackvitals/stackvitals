@@ -1,5 +1,5 @@
 name: StackVitals
-description: Free, open-source developer suite - CI health, team flow, delivery and DORA, insights and alerts, community and an org portal; the history stays in your own repo.
+description: See where CI, reviews, delivery, dependencies and community slow your team, with the evidence. Free; runs in your Actions.
 author: StackVitals
 branding:
   icon: activity

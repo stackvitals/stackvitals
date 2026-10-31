@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.1.0 (not released yet)
+## 0.1.1 (2026-10-31)
+
+- The Action's description is shorter, to fit the GitHub Marketplace listing. No other change.
+
+## 0.1.0 (2026-10-31)
 
 First release of StackVitals: one Action, one CLI and one MCP server over these modules. History stays in your repo's
 `stackvitals-data` branch, with an app on your repo's GitHub Pages (or `stackvitals ui owner/repo` on your machine).
