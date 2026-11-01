@@ -31,7 +31,7 @@ body:
     id: version
     attributes:
       label: StackVitals version
-      description: "`pip show stackvitals` shows it. For the Action, say if you use `@v0` or a pinned tag."
+      description: "`stackvitals --version` shows it. For the Action, say if you use `@v0` or a pinned tag."
       placeholder: "0.2.0"
     validations:
       required: true

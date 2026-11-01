@@ -2,6 +2,8 @@ import argparse
 import os
 import sys
 
+import stackvitals
+
 MODULES = {
     "ci": "CI health: flaky and slow jobs (`stackvitals ci report owner/repo`)",
     "flow": "Team Flow: who acts next on pull requests (`stackvitals flow report owner/repo`)",
@@ -15,6 +17,7 @@ MODULES = {
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     parser = argparse.ArgumentParser(prog="stackvitals", description="Free, open-source developer suite.")
+    parser.add_argument("--version", action="version", version=f"stackvitals {stackvitals.__version__}")
     sub = parser.add_subparsers(dest="module", required=True)
     for name, text in MODULES.items():
         sub.add_parser(name, add_help=False, help=text)
