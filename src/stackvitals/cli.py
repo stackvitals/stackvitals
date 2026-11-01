@@ -15,6 +15,9 @@ MODULES = {
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     parser = argparse.ArgumentParser(prog="stackvitals", description="Free, open-source developer suite.")
+    from stackvitals import __version__
+
+    parser.add_argument("--version", action="version", version=f"stackvitals {__version__}")
     sub = parser.add_subparsers(dest="module", required=True)
     for name, text in MODULES.items():
         sub.add_parser(name, add_help=False, help=text)
